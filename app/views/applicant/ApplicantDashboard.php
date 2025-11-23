@@ -1,26 +1,5 @@
 <?php
-// Expected data passed from controller (documented for integration):
-// $applicationsInterview = [ ['company'=>'Acme Inc','position'=>'Developer','date'=>'2025-11-01'], ... ];
-// $applicationsReview    = [ ['id'=>1,'company'=>'Globex','position'=>'Analyst'], ... ];
-// $applicationsRejected  = [ ['id'=>2,'company'=>'Umbrella','position'=>'Designer'], ... ];
-// $companiesApproved     = [
-//   [
-//     'id'=>1,
-//     'name'=>'Acme Inc',
-//     'website'=>'https://acme.test',
-//     'mission'=>'Innovate sustainably',
-//     'vision'=>'Global impact',
-//     'story'=>'Founded in 2020 ...',
-//     'positions'=>[
-//        ['id'=>10,'title'=>'Backend Developer','requirements'=>['PHP','MySQL','Git'], 'description'=>'Maintain APIs and optimize DB.'],
-//        ['id'=>11,'title'=>'UI/UX Designer','requirements'=>['Figma','Prototyping'], 'description'=>'Design user-centric interfaces.']
-//     ]
-//   ]
-// ];
-// $applicant            = ['first_name'=>'Juan','middle_name'=>'','last_name'=>'Dela Cruz','email'=>'juan@test.com','gender'=>'Male','contact'=>'+639123456789','birthdate'=>'2000-01-10','status'=>'approved'];
-// $profile              = ['street'=>'','barangay'=>'','municipality'=>'','province'=>'','resume'=>''];
-// $isProfileComplete    = false; // controller should compute based on required fields
-// $isApplicantApproved  = ($applicant['status'] ?? '') === 'approved';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -656,11 +635,14 @@
 					</div>
 					<div>
 						<label>Gender</label>
-						<input type="text" name="gender" value="<?= htmlspecialchars($applicant['gender'] ?? '') ?>" />
+						<div style="display:flex;gap:12px;align-items:center">
+							<label style="font-weight:500"><input type="radio" name="gender" value="Male" <?= (isset($applicant['gender']) && strtolower($applicant['gender']) === 'male') ? 'checked' : '' ?> /> Male</label>
+							<label style="font-weight:500"><input type="radio" name="gender" value="Female" <?= (isset($applicant['gender']) && strtolower($applicant['gender']) === 'female') ? 'checked' : '' ?> /> Female</label>
+						</div>
 					</div>
 					<div>
 						<label>Contact</label>
-						<input type="text" name="contact" value="<?= htmlspecialchars($applicant['contact'] ?? '') ?>" />
+						<input class="phone-input" inputmode="numeric" maxlength="11" pattern="\d{10,11}" type="text" name="contact" value="<?= htmlspecialchars($applicant['contact'] ?? '') ?>" />
 					</div>
 					<div>
 						<label>Street</label>
@@ -707,13 +689,12 @@
 					</div>
 					<div>
 						<label>Contact</label>
-						<input type="text" name="contact" value="<?= htmlspecialchars($applicant['contact'] ?? '') ?>" />
+						<input class="phone-input" inputmode="numeric" maxlength="11" pattern="\d{10,11}" type="text" name="contact" value="<?= htmlspecialchars($applicant['contact'] ?? '') ?>" />
 					</div>
 					<div style="grid-column:1/-1;text-align:right;">
 						<button class="btn" type="submit">Update Account</button>
 					</div>
 				</form>
-				<p class="muted" style="margin-top:8px;">Changes here will reflect in Personal Profile automatically.</p>
 			</div>
 
 			<!-- Change Password -->

@@ -121,7 +121,7 @@ $config['index_page']               = 'index.php';
 |   3 = All
 |
 */
-$config['log_threshold']            = 1; // enable error logging
+$config['log_threshold']            = 1; 
 $config['log_dir']                  = 'runtime/logs/';
 
 /*

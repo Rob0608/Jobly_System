@@ -188,7 +188,7 @@
 
       <div>
         <label>Phone:</label>
-        <input type="text" name="phone" required>
+        <input class="phone-input" inputmode="numeric" maxlength="11" pattern="\d{10,11}" type="text" name="phone" required>
       </div>
 
       <div>

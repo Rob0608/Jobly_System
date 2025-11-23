@@ -104,6 +104,14 @@ class SocialAuthController extends Controller
         if ($role === 'applicant') {
             $this->call->model('ApplicantModel');
             $appModel = new ApplicantModel();
+             // Prevent sign-in if this email is already registered as an employer
+            $this->call->model('CompanyModel');
+            $companyModel = new CompanyModel();
+            if ($companyModel->getCompanyByEmail($email)) {
+                $_SESSION['error'] = 'This Google account email is already registered as an employer. Use employer login instead.';
+                redirect('login');
+                return;
+            }
             $existing = $appModel->getApplicantByEmail($email);
             if ($existing && !empty($existing['birthdate'])) {
                 // Update last_login timestamp

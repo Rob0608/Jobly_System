@@ -40,6 +40,13 @@ public function applications()
         $confirm  = $_POST['password_confirm'] ?? '';
         $birthdate = $_POST['birthdate'] ?? '';
 
+         // Contact validation: only digits, 10-11 characters (e.g. 9123456789 or 09123456789)
+        $contactRaw = trim($_POST['contact'] ?? '');
+        if ($contactRaw === '' || !preg_match('/^\d{10,11}$/', $contactRaw)) {
+            echo "<script>alert('Invalid contact number. Use digits only (10-11 digits).'); window.history.back();</script>";
+            exit;
+        }
+
         // Age validation (must be >= 18) with inline UX (flash message)
         if (empty($birthdate)) {
             if (!isset($_SESSION)) session_start();
@@ -96,7 +103,7 @@ public function applications()
             'last_name'         => $_POST['last_name'] ?? '',
             'birthdate'         => $_POST['birthdate'] ?? null,
             'gender'            => $_POST['gender'] ?? '',
-            'contact'           => $_POST['contact'] ?? '',
+            'contact'           => $contactRaw,
             'email'             => strtolower(trim($_POST['email'] ?? '')),
             'birth_place'       => $_POST['birth_place'] ?? '',
             'barangay'          => $_POST['barangay'] ?? '',
@@ -110,6 +117,36 @@ public function applications()
             'is_verified'       => 0,
             'status'            => 'pending'
         ];
+
+        // Server-side name validation
+        $first = trim($data['first_name']);
+        $middle = trim((string)$data['middle_name']);
+        $last = trim($data['last_name']);
+        // Last name is required; allow letters, spaces, hyphen, apostrophe and period (for suffixes)
+        if ($last === '') {
+            echo "<script>alert('Last name is required.'); window.history.back();</script>";
+            exit;
+        }
+        $namePattern = '/^[\p{L}\s\'\-\.]+$/u';
+        if ($first !== '' && !preg_match($namePattern, $first)) {
+            echo "<script>alert('First name contains invalid characters.'); window.history.back();</script>";
+            exit;
+        }
+        if ($middle !== '' && !preg_match($namePattern, $middle)) {
+            echo "<script>alert('Middle name contains invalid characters.'); window.history.back();</script>";
+            exit;
+        }
+        if (!preg_match($namePattern, $last)) {
+            echo "<script>alert('Last name contains invalid characters.'); window.history.back();</script>";
+            exit;
+        }
+
+       $this->call->model('CompanyModel');
+        $companyModel = new CompanyModel();
+        if ($companyModel->getCompanyByEmail($data['email'])) {
+            echo "<script>alert('This email is already registered as an employer. Please use a different email.'); window.history.back();</script>";
+            exit;
+        }
 
         // Insert applicant
         $appModel->insertApplicant($data);
@@ -338,6 +375,14 @@ public function applications()
             $province   = trim($_POST['province'] ?? '');
             $gender     = trim($_POST['gender'] ?? '');
             $contact    = trim($_POST['contact'] ?? '');
+            
+            // Validate contact: digits only and 10-11 characters
+            if ($contact !== '' && !preg_match('/^\d{10,11}$/', $contact)) {
+                $_SESSION['error'] = 'Invalid contact number. Use digits only (10-11 digits).';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+
             $email      = $_SESSION['applicant_email'] ?? '';
 
             if (empty($email)) { redirect('login'); return; }

@@ -36,6 +36,12 @@ class CompanyController extends Controller
             exit;
         }
 
+         // Phone validation: digits only, 10-11 characters
+        if (!preg_match('/^\d{10,11}$/', $phone)) {
+            echo "<script>alert('Invalid phone number. Use digits only (10-11 digits).'); window.history.back();</script>";
+            exit;
+        }
+
         // Password validation
         $password = $_POST['password'] ?? '';
         $confirm = $_POST['confirm_password'] ?? '';
@@ -81,6 +87,14 @@ class CompanyController extends Controller
         // Prevent duplicate by email
         if ($companyModel->getCompanyByEmail($email)) {
             echo "<script>alert('An account with that email already exists.'); window.history.back();</script>";
+            exit;
+        }
+
+         // Prevent duplicate by email existing in applicants table
+        $this->call->model('ApplicantModel');
+        $appModel = new ApplicantModel();
+        if ($appModel->getApplicantByEmail($email)) {
+            echo "<script>alert('This email is already registered as an applicant. Please use a different email.'); window.history.back();</script>";
             exit;
         }
 

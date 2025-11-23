@@ -112,9 +112,9 @@
 <?php $minBirthdate = date('Y-m-d', strtotime('-60 years')); ?>
 <form id="appRegForm" action="<?= site_url('/applicant/save') ?>" method="POST" enctype="multipart/form-data">
   
-  <div><label>First Name:</label><input type="text" name="first_name" required></div>
-  <div><label>Middle Name:</label><input type="text" name="middle_name"></div>
-  <div><label>Last Name:</label><input type="text" name="last_name" required></div>
+  <div><label>First Name:</label><input class="name-input" maxlength="64" type="text" name="first_name" required></div>
+  <div><label>Middle Name:</label><input class="name-input" maxlength="64" type="text" name="middle_name"></div>
+  <div><label>Last Name:</label><input class="name-input" maxlength="64" type="text" name="last_name" required></div>
   <div class="birthdate-wrapper" style="position:relative;">
     <label>Birthdate:</label>
     <input type="date" name="birthdate" id="birthdate" required max="<?= $maxBirthdate; ?>" min="<?= $minBirthdate; ?>">
@@ -132,8 +132,8 @@
   <div>
     <label>Contact Number:</label>
     <div style="display:flex; gap:8px;">
-      <span style="padding:10px 12px; background:#f1f5f9; border:1px solid #d1d5db; border-radius:10px;">+63</span>
-      <input type="text" name="contact" placeholder="9123456789" required>
+  	  <span style="padding:10px 12px; background:#f1f5f9; border:1px solid #d1d5db; border-radius:10px;">+63</span>
+       <input class="phone-input" inputmode="numeric" maxlength="11" pattern="\d{10,11}" type="text" name="contact" placeholder="9123456789" required>
     </div>
   </div>
 
@@ -282,6 +282,45 @@
       hint.textContent = 'Passwords do not match.';
       confirmPwd.focus();
     }
+  });
+
+  // 🔹 Phone input: strip non-digits and prevent letters while typing
+  document.querySelectorAll('.phone-input').forEach(function(el){
+    el.addEventListener('input', function(e){
+      // Remove any non-digit characters
+      const cleaned = this.value.replace(/\D+/g, '');
+      if (cleaned.length > 11) {
+        this.value = cleaned.slice(0,11);
+      } else {
+        this.value = cleaned;
+      }
+    });
+    // Prevent non-numeric keys (allow navigation keys)
+    el.addEventListener('keydown', function(e){
+      const allowed = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+      if (allowed.includes(e.key)) return;
+      if (/\d/.test(e.key)) return;
+      // allow Ctrl/Cmd+A/C/V/X
+      if (e.ctrlKey || e.metaKey) return;
+      e.preventDefault();
+    });
+  });
+
+  // 🔹 Name inputs: allow letters, spaces, hyphen, apostrophe and period only
+  document.querySelectorAll('.name-input').forEach(function(el){
+    el.addEventListener('input', function(){
+      // Keep letters (unicode), spaces, hyphen, apostrophe and period
+      const cleaned = this.value.replace(/[^\p{L}\s'\-\.]/gu, '');
+      // Collapse multiple spaces
+      this.value = cleaned.replace(/\s{2,}/g,' ');
+    });
+    el.addEventListener('keydown', function(e){
+      const allowed = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+      if (allowed.includes(e.key)) return;
+      if (/^[\p{L}\s'\-\.]$/u.test(e.key)) return;
+      if (e.ctrlKey || e.metaKey) return;
+      e.preventDefault();
+    });
   });
 </script>
 </body>
