@@ -364,5 +364,22 @@ async function searchAddress(query) {
   }
 }
 </script>
+  <script>
+// Client-side phone input enforcement: strip non-digits and limit length
+document.querySelectorAll('.phone-input').forEach(function(el){
+  // prevent letters while typing
+  el.addEventListener('input', function(e){
+    var cleaned = this.value.replace(/\D+/g,'');
+    if(cleaned.length > 11) cleaned = cleaned.slice(0,11);
+    if(this.value !== cleaned) this.value = cleaned;
+  });
+
+  // block non-digit key presses for better UX
+  el.addEventListener('keypress', function(e){
+    var ch = String.fromCharCode(e.which || e.keyCode);
+    if(/\D/.test(ch)) e.preventDefault();
+  });
+});
+</script>
 </body>
 </html>
