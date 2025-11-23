@@ -615,15 +615,15 @@
 				<form action="<?= site_url('/applicant/profile/save') ?>" method="POST" enctype="multipart/form-data" class="form-grid">
 					<div>
 						<label>First Name</label>
-						<input type="text" name="first_name" value="<?= htmlspecialchars($applicant['first_name'] ?? '') ?>" readonly />
+						<input class="name-input" type="text" name="first_name" value="<?= htmlspecialchars($applicant['first_name'] ?? '') ?>" readonly />
 					</div>
 					<div>
 						<label>Middle Name</label>
-						<input type="text" name="middle_name" value="<?= htmlspecialchars($applicant['middle_name'] ?? '') ?>" readonly />
+						<input class="name-input" type="text" name="middle_name" value="<?= htmlspecialchars($applicant['middle_name'] ?? '') ?>" readonly />
 					</div>
 						<div>
 						<label>Last Name</label>
-						<input type="text" name="last_name" value="<?= htmlspecialchars($applicant['last_name'] ?? '') ?>" readonly />
+						<input class="name-input" type="text" name="last_name" value="<?= htmlspecialchars($applicant['last_name'] ?? '') ?>" readonly />
 					</div>
 					<div>
 						<label>Email</label>
@@ -673,15 +673,15 @@
 				<form action="<?= site_url('/applicant/account/update') ?>" method="POST" class="form-grid" id="accountForm">
 					<div>
 						<label>First Name</label>
-						<input type="text" name="first_name" value="<?= htmlspecialchars($applicant['first_name'] ?? '') ?>" />
+						<input class="name-input" type="text" name="first_name" value="<?= htmlspecialchars($applicant['first_name'] ?? '') ?>" />
 					</div>
 					<div>
 						<label>Middle Name</label>
-						<input type="text" name="middle_name" value="<?= htmlspecialchars($applicant['middle_name'] ?? '') ?>" />
+						<input class="name-input" type="text" name="middle_name" value="<?= htmlspecialchars($applicant['middle_name'] ?? '') ?>" />
 					</div>
 					<div>
 						<label>Last Name</label>
-						<input type="text" name="last_name" value="<?= htmlspecialchars($applicant['last_name'] ?? '') ?>" />
+						<input class="name-input" type="text" name="last_name" value="<?= htmlspecialchars($applicant['last_name'] ?? '') ?>" />
 					</div>
 					<div>
 						<label>Email</label>
@@ -695,7 +695,7 @@
 						<button class="btn" type="submit">Update Account</button>
 					</div>
 				</form>
-			</div>
+								</div>
 
 			<!-- Change Password -->
 			<div id="set-password" class="settings-panel">
@@ -1028,6 +1028,35 @@ function notify(message, type='info'){
 	cont.appendChild(toast);
 	setTimeout(()=>{ toast.style.opacity='0'; toast.style.transition='opacity .4s'; setTimeout(()=>toast.remove(), 400); }, 3500);
 }
+
+// Client-side phone and name input enforcement
+document.querySelectorAll('.phone-input').forEach(function(el){
+	el.addEventListener('input', function(){
+		this.value = this.value.replace(/\D+/g, '').slice(0,11);
+	});
+	el.addEventListener('keydown', function(e){
+		const allowed = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+		if (allowed.includes(e.key)) return;
+		if (/\d/.test(e.key)) return;
+		if (e.ctrlKey || e.metaKey) return;
+		e.preventDefault();
+	});
+});
+
+document.querySelectorAll('.name-input').forEach(function(el){
+	el.addEventListener('input', function(){
+		// Allow letters, spaces, hyphen, apostrophe and period (for suffixes)
+		const cleaned = this.value.replace(/[^\p{L}\s'\-\.]/gu, '');
+		this.value = cleaned.replace(/\s{2,}/g,' ');
+	});
+	el.addEventListener('keydown', function(e){
+		const allowed = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+		if (allowed.includes(e.key)) return;
+		if (/^[\p{L}\s'\-\.]$/u.test(e.key)) return;
+		if (e.ctrlKey || e.metaKey) return;
+		e.preventDefault();
+	});
+});
 
 <?php if(!empty($_SESSION['success'])): ?>
 	notify(<?= json_encode($_SESSION['success']) ?>, 'success');

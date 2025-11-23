@@ -405,7 +405,7 @@ public function applications()
             redirect('applicant/dashboard#settings');
         }
 
-        // Update account (basic fields). Placeholder implementation
+        // Update account (basic fields).
         public function updateAccount()
         {
             if (!isset($_SESSION)) session_start();
@@ -413,9 +413,76 @@ public function applications()
                 redirect('login');
                 return;
             }
-            // TODO: Update applicant row in DB
-            $_SESSION['success'] = 'Account updated (placeholder).';
+
+            $currentEmail = $_SESSION['applicant_email'] ?? '';
+            if (empty($currentEmail)) { redirect('login'); return; }
+
+            $first = trim($_POST['first_name'] ?? '');
+            $middle = trim($_POST['middle_name'] ?? '');
+            $last = trim($_POST['last_name'] ?? '');
+            $contact = trim($_POST['contact'] ?? '');
+            $email = strtolower(trim($_POST['email'] ?? '')) ?: $currentEmail;
+
+            // Validate names: disallow digits and most symbols; allow letters, spaces, hyphen, apostrophe and period
+            $namePattern = '/^[\p{L}\s\'\-\.]+$/u';
+            if ($first === '' || $last === '') {
+                $_SESSION['error'] = 'First and last name are required.';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+            if (!preg_match($namePattern, $first) || ($middle !== '' && !preg_match($namePattern, $middle)) || !preg_match($namePattern, $last)) {
+                $_SESSION['error'] = 'Name fields contain invalid characters. Numbers are not allowed.';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+
+            // Validate contact: digits only 10-11 or empty
+            if ($contact !== '' && !preg_match('/^\d{10,11}$/', $contact)) {
+                $_SESSION['error'] = 'Invalid contact number. Use digits only (10-11 digits).';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+
+            // Check email uniqueness (not used by another company or applicant)
+            $this->call->model('CompanyModel');
+            $companyModel = new CompanyModel();
+            if ($email !== $currentEmail && $companyModel->getCompanyByEmail($email)) {
+                $_SESSION['error'] = 'This email is already registered as an employer.';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+            $this->call->model('ApplicantModel');
+            $appModel = new ApplicantModel();
+            $exists = $appModel->getApplicantByEmail($email);
+            if ($email !== $currentEmail && $exists) {
+                $_SESSION['error'] = 'This email is already used by another applicant.';
+                redirect('applicant/dashboard#settings');
+                return;
+            }
+
+            try {
+                $this->call->database();
+                $update = [
+                    'first_name' => $first,
+                    'middle_name' => $middle ?: null,
+                    'last_name' => $last,
+                    'contact' => $contact,
+                ];
+                // allow changing email if provided and not duplicate
+                if ($email !== $currentEmail) { $update['email'] = $email; }
+
+                $this->db->table('applicants')->where('email', $currentEmail)->update($update);
+
+                // Update session values if changed
+                $_SESSION['applicant_name'] = trim($first . ' ' . $last);
+                if ($email !== $currentEmail) { $_SESSION['applicant_email'] = $email; }
+                $_SESSION['success'] = 'Account updated.';
+            } catch (Exception $e) {
+                $_SESSION['error'] = 'Failed to update account.';
+                error_log('Update account error: ' . $e->getMessage());
+            }
             redirect('applicant/dashboard#settings');
+            return;
         }
 
         public function changePassword()
