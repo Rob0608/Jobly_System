@@ -241,6 +241,20 @@ class Database {
         try {
             $this->db = new PDO($dsn, $username, $password, $options);
              $this->driver = $this->db->getAttribute(PDO::ATTR_DRIVER_NAME);
+            // Ensure connection uses a consistent charset and collation to avoid
+            // "Illegal mix of collations" errors when the server or tables
+            // use different collations. Prefer a collation provided in the
+            // configuration, otherwise default to utf8mb4_unicode_ci.
+            if ($this->driver === 'mysql') {
+                $collation = isset($database_config['collation']) ? $database_config['collation'] : 'utf8mb4_unicode_ci';
+                try {
+                    $this->db->exec("SET NAMES utf8mb4 COLLATE " . $this->db->quote($collation));
+                    $this->db->exec("SET collation_connection = " . $this->db->quote($collation));
+                } catch (Exception $e) {
+                    // Log but don't break the app at connection time
+                    error_log('Database: failed to set connection collation: ' . $e->getMessage());
+                }
+            }
         } catch (Exception $e) {
             throw new PDOException($e->getMessage());
         }

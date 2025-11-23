@@ -109,6 +109,10 @@ define('ROOT_DIR',  __DIR__ . DIRECTORY_SEPARATOR);
 define('SYSTEM_DIR', ROOT_DIR . $system_path . DIRECTORY_SEPARATOR);
 define('APP_DIR', ROOT_DIR . $application_folder . DIRECTORY_SEPARATOR);
 define('PUBLIC_DIR', $public_folder);
+// Backwards compatibility: some views/controllers expect `APPPATH`
+if (! defined('APPPATH')) {
+	define('APPPATH', APP_DIR);
+}
 
 /*
  * ------------------------------------------------------
