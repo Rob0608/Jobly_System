@@ -159,15 +159,32 @@ class CompanyController extends Controller
         $mail = new PHPMailer(true);
 
         try {
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'robabarintos@gmail.com';
-            $mail->Password   = 'hxxo dwds hflu ykjh'; // Gmail App Password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            // Load SMTP settings from environment with sensible defaults
+            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
+            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
+            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
-            $mail->setFrom('robabarintos@gmail.com', 'Company Verification');
+            $mail->isSMTP();
+            $mail->Host       = $smtpHost;
+            $mail->SMTPAuth   = $smtpAuth;
+            $mail->Username   = $smtpUser;
+            $mail->Password   = $smtpPass;
+            if (strtolower($smtpSecure) === 'ssl') {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            } else {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            }
+            $mail->Port       = $smtpPort;
+            if ($smtpDebug > 0) {
+                $mail->SMTPDebug = $smtpDebug;
+                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
+            }
+
+            $mail->setFrom($smtpUser, 'Company Verification');
             $mail->addAddress($data['email'], $data['company_name']);
 
             $mail->isHTML(true);
@@ -182,7 +199,7 @@ class CompanyController extends Controller
 
             $mail->send();
         } catch (Exception $e) {
-            error_log('Mailer Error: ' . $mail->ErrorInfo);
+            error_log('Mailer Exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
         }
     }
 
@@ -349,15 +366,31 @@ class CompanyController extends Controller
     {
         $mail = new PHPMailer(true);
         try {
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'robabarintos@gmail.com';
-            $mail->Password = 'hxxo dwds hflu ykjh'; // Gmail app password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
+            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
+            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
-            $mail->setFrom('robabarintos@gmail.com', 'Job Portal');
+            $mail->isSMTP();
+            $mail->Host = $smtpHost;
+            $mail->SMTPAuth = $smtpAuth;
+            $mail->Username = $smtpUser;
+            $mail->Password = $smtpPass;
+            if (strtolower($smtpSecure) === 'ssl') {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            } else {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            }
+            $mail->Port = $smtpPort;
+            if ($smtpDebug > 0) {
+                $mail->SMTPDebug = $smtpDebug;
+                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
+            }
+
+            $mail->setFrom($smtpUser, 'Job Portal');
             $mail->addAddress($applicantEmail);
             $mail->isHTML(true);
             $mail->Subject = 'Congratulations! You Passed the Interview Round';
@@ -391,7 +424,7 @@ class CompanyController extends Controller
             $mail->Body = $body;
             $mail->send();
         } catch (Exception $e) {
-            error_log('Failed to send passed notification email: ' . $e->getMessage());
+            error_log('Failed to send passed notification email: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
         }
     }
 
@@ -400,16 +433,31 @@ class CompanyController extends Controller
     {
         $mail = new PHPMailer(true);
         try {
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'robabarintos@gmail.com';
-            $mail->Password = 'hxxo dwds hflu ykjh'; // Gmail app password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
-            $mail->SMTPDebug = 0; // Set to 2 for debugging
+            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
+            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
+            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
-            $mail->setFrom('robabarintos@gmail.com', 'Job Portal');
+            $mail->isSMTP();
+            $mail->Host = $smtpHost;
+            $mail->SMTPAuth = $smtpAuth;
+            $mail->Username = $smtpUser;
+            $mail->Password = $smtpPass;
+            if (strtolower($smtpSecure) === 'ssl') {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            } else {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            }
+            $mail->Port = $smtpPort;
+            if ($smtpDebug > 0) {
+                $mail->SMTPDebug = $smtpDebug;
+                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
+            }
+
+            $mail->setFrom($smtpUser, 'Job Portal');
             $mail->addAddress($applicantEmail);
             $mail->isHTML(true);
             $mail->Subject = 'Interview Schedule Notification - Job Portal';
@@ -456,7 +504,7 @@ class CompanyController extends Controller
             $result = $mail->send();
             error_log('Interview notification email sent to: ' . $applicantEmail . ' - Result: ' . ($result ? 'Success' : 'Failed'));
         } catch (Exception $e) {
-            error_log('Failed to send interview notification email to ' . $applicantEmail . ': ' . $e->getMessage());
+            error_log('Failed to send interview notification email to ' . $applicantEmail . ': ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
         }
     }
 

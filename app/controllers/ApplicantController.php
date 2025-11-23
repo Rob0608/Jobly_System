@@ -127,15 +127,32 @@ public function applications()
         $mail = new PHPMailer(true);
 
         try {
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'robabarintos@gmail.com'; // your Gmail
-            $mail->Password   = 'hxxodwdshfluykjh'; // your Gmail app password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            // Load SMTP settings from environment with sensible defaults
+            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
+            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls'; // 'tls' or 'ssl'
+            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
+            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
-            $mail->setFrom('robabarintos@gmail.com', 'Applicant Verification');
+            $mail->isSMTP();
+            $mail->Host       = $smtpHost;
+            $mail->SMTPAuth   = $smtpAuth;
+            $mail->Username   = $smtpUser;
+            $mail->Password   = $smtpPass;
+            if (strtolower($smtpSecure) === 'ssl') {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            } else {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            }
+            $mail->Port       = $smtpPort;
+            if ($smtpDebug > 0) {
+                $mail->SMTPDebug = $smtpDebug;
+                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
+            }
+
+            $mail->setFrom($smtpUser, 'Applicant Verification');
             $mail->addAddress($data['email'], $data['first_name'] . ' ' . $data['last_name']);
 
             $mail->isHTML(true);
@@ -150,7 +167,7 @@ public function applications()
 
             $mail->send();
         } catch (Exception $e) {
-            error_log('Mailer Error: ' . $mail->ErrorInfo);
+            error_log('Mailer Exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
         }
     }
 
@@ -558,18 +575,35 @@ public function applications()
             // Email the employer with the resume attached
             $sent = false;
             try {
+                // Load SMTP settings from environment
+                $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+                $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+                $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+                $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
+                $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+                $smtpAuth = getenv('SMTP_AUTH') !== 'false';
+                $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
+
                 $mail = new PHPMailer(true);
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com';
-                $mail->SMTPAuth   = true;
-                $mail->Username   = 'robabarintos@gmail.com';
-                $mail->Password   = 'hxxodwdshfluykjh';
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port       = 587;
+                $mail->Host       = $smtpHost;
+                $mail->SMTPAuth   = $smtpAuth;
+                $mail->Username   = $smtpUser;
+                $mail->Password   = $smtpPass;
+                if (strtolower($smtpSecure) === 'ssl') {
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                } else {
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                }
+                $mail->Port       = $smtpPort;
+                if ($smtpDebug > 0) {
+                    $mail->SMTPDebug = $smtpDebug;
+                    $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
+                }
 
                 $toEmail = $company['email'] ?? '';
                 if ($toEmail) {
-                    $mail->setFrom('robabarintos@gmail.com', 'JOBLY Applications');
+                    $mail->setFrom($smtpUser, 'JOBLY Applications');
                     $mail->addAddress($toEmail, $company['company_name'] ?? 'Employer');
                     $mail->Subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
                     $body = "<p>You have a new application.</p>"
@@ -582,6 +616,7 @@ public function applications()
                     $sent = true;
                 }
             } catch (Exception $e) {
+                error_log('Employer email send exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
                 // keep going; we'll still record application locally
             }
 
