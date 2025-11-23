@@ -5,6 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require_once 'app/third_party/PHPMailer/src/Exception.php';
 require_once 'app/third_party/PHPMailer/src/PHPMailer.php';
 require_once 'app/third_party/PHPMailer/src/SMTP.php';
+require_once __DIR__ . '/../helpers/phpmailer_helper.php';
 
 class ApplicantController extends Controller
 {
@@ -124,54 +125,23 @@ public function applications()
     // ✅ Send verification email (using PHPMailer)
     private function sendVerificationMail(array $data)
     {
-        $mail = new PHPMailer(true);
+        $subject = 'Your Applicant Verification Code';
+        $body = "
+            <h3>Hello, {$data['first_name']}!</h3>
+            <p>Thank you for registering as an applicant.</p>
+            <p>Here is your 4-digit verification code:</p>
+            <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
+            <p>Enter this code on the verification page to activate your account.</p>
+        ";
 
-        try {
-            // Load SMTP settings from environment with sensible defaults
-            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME');
-            $smtpPass = getenv('SMTP_PASSWORD');
-            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls'; // 'tls' or 'ssl'
-            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
-            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-
-            if (empty($smtpUser) || empty($smtpPass)) {
-                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
-                return false;
-            }
-            $mail->isSMTP();
-            $mail->Host       = $smtpHost;
-            $mail->SMTPAuth   = $smtpAuth;
-            $mail->Username   = $smtpUser;
-            $mail->Password   = $smtpPass;
-            if (strtolower($smtpSecure) === 'ssl') {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            } else {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            }
-            $mail->Port       = $smtpPort;
-            if ($smtpDebug > 0) {
-                $mail->SMTPDebug = $smtpDebug;
-                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
-            }
-
-            $mail->setFrom($smtpUser, 'Applicant Verification');
-            $mail->addAddress($data['email'], $data['first_name'] . ' ' . $data['last_name']);
-
-            $mail->isHTML(true);
-            $mail->Subject = 'Your Applicant Verification Code';
-            $mail->Body = "
-                <h3>Hello, {$data['first_name']}!</h3>
-                <p>Thank you for registering as an applicant.</p>
-                <p>Here is your 4-digit verification code:</p>
-                <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
-                <p>Enter this code on the verification page to activate your account.</p>
-            ";
-
-            $mail->send();
-        } catch (Exception $e) {
-            error_log('Mailer Exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
+        $res = phpmailer_send([
+            'to' => [$data['email'] => ($data['first_name'] . ' ' . $data['last_name'])],
+            'subject' => $subject,
+            'body' => $body,
+            'from_name' => 'Applicant Verification'
+        ]);
+        if (!$res['success']) {
+            error_log('Applicant verification email failed: ' . ($res['error'] ?? json_encode($res)));
         }
     }
 
@@ -576,57 +546,27 @@ public function applications()
                 } catch (Exception $e) { $company = []; }
             }
 
-            // Email the employer with the resume attached
+            // Email the employer with the resume attached (centralized helper)
             $sent = false;
-            try {
-                // Load SMTP settings from environment
-                $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-                $smtpUser = getenv('SMTP_USERNAME');
-                $smtpPass = getenv('SMTP_PASSWORD');
-                $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-                $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
-                $smtpAuth = getenv('SMTP_AUTH') !== 'false';
-                $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
+            $toEmail = $company['email'] ?? '';
+            if (!empty($toEmail)) {
+                $subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
+                $body = "<p>You have a new application.</p>"
+                      . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
+                      . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
 
-                $mail = new PHPMailer(true);
-                if (empty($smtpUser) || empty($smtpPass)) {
-                    error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
-                    // don't attempt to send
+                $res = phpmailer_send([
+                    'to' => [$toEmail => ($company['company_name'] ?? 'Employer')],
+                    'subject' => $subject,
+                    'body' => $body,
+                    'attachments' => [[$targetDirFs . $fileName, 'Resume.pdf']],
+                    'from_name' => 'JOBLY Applications'
+                ]);
+                if (!empty($res['success'])) {
+                    $sent = true;
                 } else {
-                    $mail->isSMTP();
-                $mail->Host       = $smtpHost;
-                $mail->SMTPAuth   = $smtpAuth;
-                $mail->Username   = $smtpUser;
-                $mail->Password   = $smtpPass;
-                if (strtolower($smtpSecure) === 'ssl') {
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-                } else {
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    error_log('Employer email failed: ' . ($res['error'] ?? json_encode($res)));
                 }
-                $mail->Port       = $smtpPort;
-                if ($smtpDebug > 0) {
-                    $mail->SMTPDebug = $smtpDebug;
-                    $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
-                }
-
-                $toEmail = $company['email'] ?? '';
-                    if ($toEmail) {
-                        $mail->setFrom($smtpUser, 'JOBLY Applications');
-                        $mail->addAddress($toEmail, $company['company_name'] ?? 'Employer');
-                        $mail->Subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
-                        $body = "<p>You have a new application.</p>"
-                              . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
-                              . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
-                        $mail->isHTML(true);
-                        $mail->Body = $body;
-                        $mail->addAttachment($targetDirFs . $fileName, 'Resume.pdf');
-                        $mail->send();
-                        $sent = true;
-                    }
-                }
-            } catch (Exception $e) {
-                error_log('Employer email send exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
-                // keep going; we'll still record application locally
             }
 
             // Insert application record in company_applications table

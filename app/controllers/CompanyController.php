@@ -7,6 +7,7 @@ require_once 'app/third_party/PHPMailer/src/Exception.php';
 require_once 'app/third_party/PHPMailer/src/PHPMailer.php';
 require_once 'app/third_party/PHPMailer/src/SMTP.php';
 require_once __DIR__ . '/../../vendor/autoload.php'; // ✅ make sure autoload works
+require_once __DIR__ . '/../helpers/phpmailer_helper.php';
 
 class CompanyController extends Controller
 {
@@ -156,53 +157,23 @@ class CompanyController extends Controller
     // ✅ Send verification email
     private function sendVerificationMail(array $data)
     {
-        $mail = new PHPMailer(true);
+        $subject = 'Your Company Verification Code';
+        $body = "
+            <h3>Hello, {$data['company_name']}!</h3>
+            <p>Thank you for registering your company.</p>
+            <p>Your 4-digit verification code is:</p>
+            <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
+            <p>Enter this code on the verification page to activate your account.</p>
+        ";
 
-        try {
-            // Load SMTP settings from environment with sensible defaults
-            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME');
-            $smtpPass = getenv('SMTP_PASSWORD');
-            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
-            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
-            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-            if (empty($smtpUser) || empty($smtpPass)) {
-                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
-                return false;
-            }
-            $mail->isSMTP();
-            $mail->Host       = $smtpHost;
-            $mail->SMTPAuth   = $smtpAuth;
-            $mail->Username   = $smtpUser;
-            $mail->Password   = $smtpPass;
-            if (strtolower($smtpSecure) === 'ssl') {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            } else {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            }
-            $mail->Port       = $smtpPort;
-            if ($smtpDebug > 0) {
-                $mail->SMTPDebug = $smtpDebug;
-                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
-            }
-
-            $mail->setFrom($smtpUser, 'Company Verification');
-            $mail->addAddress($data['email'], $data['company_name']);
-
-            $mail->isHTML(true);
-            $mail->Subject = 'Your Company Verification Code';
-            $mail->Body = "
-                <h3>Hello, {$data['company_name']}!</h3>
-                <p>Thank you for registering your company.</p>
-                <p>Your 4-digit verification code is:</p>
-                <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
-                <p>Enter this code on the verification page to activate your account.</p>
-            ";
-
-            $mail->send();
-        } catch (Exception $e) {
-            error_log('Mailer Exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
+        $res = phpmailer_send([
+            'to' => [$data['email'] => $data['company_name']],
+            'subject' => $subject,
+            'body' => $body,
+            'from_name' => 'Company Verification'
+        ]);
+        if (!$res['success']) {
+            error_log('Company verification email failed: ' . ($res['error'] ?? json_encode($res)));
         }
     }
 
@@ -367,41 +338,8 @@ class CompanyController extends Controller
     // Send email notification when applicant passes
     private function sendPassedNotificationEmail($applicantEmail)
     {
-        $mail = new PHPMailer(true);
-        try {
-            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME');
-            $smtpPass = getenv('SMTP_PASSWORD');
-            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
-            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
-            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-            if (empty($smtpUser) || empty($smtpPass)) {
-                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
-                return false;
-            }
-            $mail->isSMTP();
-            $mail->Host = $smtpHost;
-            $mail->SMTPAuth = $smtpAuth;
-            $mail->Username = $smtpUser;
-            $mail->Password = $smtpPass;
-            if (strtolower($smtpSecure) === 'ssl') {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            } else {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            }
-            $mail->Port = $smtpPort;
-            if ($smtpDebug > 0) {
-                $mail->SMTPDebug = $smtpDebug;
-                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
-            }
-
-            $mail->setFrom($smtpUser, 'Job Portal');
-            $mail->addAddress($applicantEmail);
-            $mail->isHTML(true);
-            $mail->Subject = 'Congratulations! You Passed the Interview Round';
-
-            $body = "
+        $subject = 'Congratulations! You Passed the Interview Round';
+        $body = "
             <html>
             <head>
                 <style>
@@ -427,55 +365,26 @@ class CompanyController extends Controller
             </body>
             </html>";
 
-            $mail->Body = $body;
-            $mail->send();
-        } catch (Exception $e) {
-            error_log('Failed to send passed notification email: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
+        $res = phpmailer_send([
+            'to' => $applicantEmail,
+            'subject' => $subject,
+            'body' => $body,
+            'from_name' => 'Job Portal'
+        ]);
+        if (!$res['success']) {
+            error_log('Passed notification email failed: ' . ($res['error'] ?? json_encode($res)));
         }
     }
 
     // Send interview schedule notification email
     private function sendInterviewNotificationEmail($applicantEmail, $scheduleDate, $position)
     {
-        $mail = new PHPMailer(true);
-        try {
-            $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME');
-            $smtpPass = getenv('SMTP_PASSWORD');
-            $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-            $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
-            $smtpAuth = getenv('SMTP_AUTH') !== 'false';
-            $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-            if (empty($smtpUser) || empty($smtpPass)) {
-                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
-                return false;
-            }
-            $mail->isSMTP();
-            $mail->Host = $smtpHost;
-            $mail->SMTPAuth = $smtpAuth;
-            $mail->Username = $smtpUser;
-            $mail->Password = $smtpPass;
-            if (strtolower($smtpSecure) === 'ssl') {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            } else {
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            }
-            $mail->Port = $smtpPort;
-            if ($smtpDebug > 0) {
-                $mail->SMTPDebug = $smtpDebug;
-                $mail->Debugoutput = function($str, $level) { error_log('PHPMailer: '.trim($str)); };
-            }
+        // Format the schedule date for display
+        $dateObj = new DateTime($scheduleDate, new DateTimeZone('Asia/Manila'));
+        $formattedDate = $dateObj->format('F d, Y h:i A');
 
-            $mail->setFrom($smtpUser, 'Job Portal');
-            $mail->addAddress($applicantEmail);
-            $mail->isHTML(true);
-            $mail->Subject = 'Interview Schedule Notification - Job Portal';
-
-            // Format the schedule date for display
-            $dateObj = new DateTime($scheduleDate, new DateTimeZone('Asia/Manila'));
-            $formattedDate = $dateObj->format('F d, Y h:i A');
-
-            $body = "
+        $subject = 'Interview Schedule Notification - Job Portal';
+        $body = "
             <html>
             <head>
                 <style>
@@ -509,11 +418,14 @@ class CompanyController extends Controller
             </body>
             </html>";
 
-            $mail->Body = $body;
-            $result = $mail->send();
-            error_log('Interview notification email sent to: ' . $applicantEmail . ' - Result: ' . ($result ? 'Success' : 'Failed'));
-        } catch (Exception $e) {
-            error_log('Failed to send interview notification email to ' . $applicantEmail . ': ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));
+        $res = phpmailer_send([
+            'to' => $applicantEmail,
+            'subject' => $subject,
+            'body' => $body,
+            'from_name' => 'Job Portal'
+        ]);
+        if (!$res['success']) {
+            error_log('Interview notification email failed: ' . ($res['error'] ?? json_encode($res)));
         }
     }
 
