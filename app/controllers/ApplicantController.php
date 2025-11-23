@@ -129,13 +129,17 @@ public function applications()
         try {
             // Load SMTP settings from environment with sensible defaults
             $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
-            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpUser = getenv('SMTP_USERNAME');
+            $smtpPass = getenv('SMTP_PASSWORD');
             $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
             $smtpSecure = getenv('SMTP_SECURE') ?: 'tls'; // 'tls' or 'ssl'
             $smtpAuth = getenv('SMTP_AUTH') !== 'false';
             $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
+            if (empty($smtpUser) || empty($smtpPass)) {
+                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
+                return false;
+            }
             $mail->isSMTP();
             $mail->Host       = $smtpHost;
             $mail->SMTPAuth   = $smtpAuth;
@@ -577,15 +581,19 @@ public function applications()
             try {
                 // Load SMTP settings from environment
                 $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-                $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
-                $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+                $smtpUser = getenv('SMTP_USERNAME');
+                $smtpPass = getenv('SMTP_PASSWORD');
                 $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
                 $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
                 $smtpAuth = getenv('SMTP_AUTH') !== 'false';
                 $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
                 $mail = new PHPMailer(true);
-                $mail->isSMTP();
+                if (empty($smtpUser) || empty($smtpPass)) {
+                    error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
+                    // don't attempt to send
+                } else {
+                    $mail->isSMTP();
                 $mail->Host       = $smtpHost;
                 $mail->SMTPAuth   = $smtpAuth;
                 $mail->Username   = $smtpUser;
@@ -602,18 +610,19 @@ public function applications()
                 }
 
                 $toEmail = $company['email'] ?? '';
-                if ($toEmail) {
-                    $mail->setFrom($smtpUser, 'JOBLY Applications');
-                    $mail->addAddress($toEmail, $company['company_name'] ?? 'Employer');
-                    $mail->Subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
-                    $body = "<p>You have a new application.</p>"
-                          . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
-                          . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
-                    $mail->isHTML(true);
-                    $mail->Body = $body;
-                    $mail->addAttachment($targetDirFs . $fileName, 'Resume.pdf');
-                    $mail->send();
-                    $sent = true;
+                    if ($toEmail) {
+                        $mail->setFrom($smtpUser, 'JOBLY Applications');
+                        $mail->addAddress($toEmail, $company['company_name'] ?? 'Employer');
+                        $mail->Subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
+                        $body = "<p>You have a new application.</p>"
+                              . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
+                              . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
+                        $mail->isHTML(true);
+                        $mail->Body = $body;
+                        $mail->addAttachment($targetDirFs . $fileName, 'Resume.pdf');
+                        $mail->send();
+                        $sent = true;
+                    }
                 }
             } catch (Exception $e) {
                 error_log('Employer email send exception: ' . $e->getMessage() . ' | PHPMailer Info: ' . ($mail->ErrorInfo ?? ''));

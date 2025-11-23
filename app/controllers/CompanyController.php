@@ -161,13 +161,16 @@ class CompanyController extends Controller
         try {
             // Load SMTP settings from environment with sensible defaults
             $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
-            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpUser = getenv('SMTP_USERNAME');
+            $smtpPass = getenv('SMTP_PASSWORD');
             $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
             $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
             $smtpAuth = getenv('SMTP_AUTH') !== 'false';
             $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-
+            if (empty($smtpUser) || empty($smtpPass)) {
+                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
+                return false;
+            }
             $mail->isSMTP();
             $mail->Host       = $smtpHost;
             $mail->SMTPAuth   = $smtpAuth;
@@ -367,13 +370,16 @@ class CompanyController extends Controller
         $mail = new PHPMailer(true);
         try {
             $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
-            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpUser = getenv('SMTP_USERNAME');
+            $smtpPass = getenv('SMTP_PASSWORD');
             $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
             $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
             $smtpAuth = getenv('SMTP_AUTH') !== 'false';
             $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-
+            if (empty($smtpUser) || empty($smtpPass)) {
+                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
+                return false;
+            }
             $mail->isSMTP();
             $mail->Host = $smtpHost;
             $mail->SMTPAuth = $smtpAuth;
@@ -434,13 +440,16 @@ class CompanyController extends Controller
         $mail = new PHPMailer(true);
         try {
             $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-            $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
-            $smtpPass = getenv('SMTP_PASSWORD') ?: 'hxxodwdshfluykjh';
+            $smtpUser = getenv('SMTP_USERNAME');
+            $smtpPass = getenv('SMTP_PASSWORD');
             $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
             $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
             $smtpAuth = getenv('SMTP_AUTH') !== 'false';
             $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
-
+            if (empty($smtpUser) || empty($smtpPass)) {
+                error_log('SMTP credentials missing: set SMTP_USERNAME and SMTP_PASSWORD in environment');
+                return false;
+            }
             $mail->isSMTP();
             $mail->Host = $smtpHost;
             $mail->SMTPAuth = $smtpAuth;
