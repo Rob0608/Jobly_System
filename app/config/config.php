@@ -53,9 +53,19 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |   Set these via environment or directly for development.
 |   Redirect URI must match in Google Console.
 */
-$config['google_client_id'] = '1000422010753-ro6eirfnt491jqrg2184l6sdlr2t7bav.apps.googleusercontent.com';
-$config['google_client_secret'] = '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';
-$config['google_redirect_uri'] = 'https://jobly-system.onrender.com/index.php/auth/google/callback';
+$config['google_client_id'] = getenv('GOOGLE_CLIENT_ID');
+$config['google_client_secret'] = getenv('GOOGLE_CLIENT_SECRET');
+$config['google_redirect_uri'] = getenv('GOOGLE_REDIRECT_URI');
+
+// Fail-fast in production if Google OAuth config is missing
+if (empty($config['google_client_id']) || empty($config['google_client_secret']) || empty($config['google_redirect_uri'])) {
+	if ($config['ENVIRONMENT'] === 'production') {
+		// In production, throw so misconfiguration is addressed immediately
+		throw new RuntimeException('Google OAuth configuration missing. Set GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET and GOOGLE_REDIRECT_URI in environment.');
+	}
+	// In development, warn to error log so it is visible but non-fatal
+	error_log('Warning: Google OAuth env vars not set (GOOGLE_CLIENT_ID/GOOGLE_CLIENT_SECRET/GOOGLE_REDIRECT_URI).');
+}
 /*
 | Optional CA bundle path to fix cURL error 60 on Windows/WAMP.
 | Download from https://curl.se/ca/cacert.pem and set absolute path below.
