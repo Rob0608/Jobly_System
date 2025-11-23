@@ -29,11 +29,14 @@ function phpmailer_send(array $opts)
     $from = $opts['from'] ?? getenv('SMTP_USERNAME');
     $from_name = $opts['from_name'] ?? 'Job Portal';
 
+    // Restore previous (inline) SMTP credentials as fallback
+    // NOTE: keeping hardcoded credentials in code is insecure — consider using environment variables.
     $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-    $smtpUser = getenv('SMTP_USERNAME');
-    $smtpPass = getenv('SMTP_PASSWORD');
-    $smtpPort = intval(getenv('SMTP_PORT') ?: 587);
-    $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+    $smtpUser = getenv('SMTP_USERNAME') ?: 'abarintoscristan@gmail.com';
+    $smtpPass = getenv('SMTP_PASSWORD') ?: 'aufb puoo iwka pmeg';
+    // Default to SMTPS on port 465 like the original implementation
+    $smtpPort = intval(getenv('SMTP_PORT') ?: 465);
+    $smtpSecure = getenv('SMTP_SECURE') ?: 'ssl';
     $smtpAuth = getenv('SMTP_AUTH') !== 'false';
     $smtpDebug = intval(getenv('SMTP_DEBUG') ?: 0);
 
@@ -51,7 +54,7 @@ function phpmailer_send(array $opts)
         $mail->SMTPAuth = $smtpAuth;
         $mail->Username = $smtpUser;
         $mail->Password = $smtpPass;
-        if (strtolower($smtpSecure) === 'ssl') {
+        if (strtolower($smtpSecure) === 'ssl' || $smtpPort === 465) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         } else {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
@@ -100,4 +103,25 @@ function phpmailer_send(array $opts)
         $log('PHPMailer send failed: ' . $e->getMessage() . ' | ' . ($mail->ErrorInfo ?? ''));
         return ['success' => false, 'error' => $e->getMessage(), 'info' => $mail->ErrorInfo ?? ''];
     }
+
+}
+
+/**
+ * Backwards-compatible wrapper matching the previous `mailer_helper` signature.
+ * Returns true on success or an error string on failure.
+ */
+function mailer_helper($recipient, $subject, $message, $attachment_path = null)
+{
+    $opts = [
+        'to' => $recipient,
+        'subject' => $subject,
+        'body' => $message,
+        'attachments' => []
+    ];
+    if ($attachment_path) {
+        $opts['attachments'] = [$attachment_path];
+    }
+    $res = phpmailer_send($opts);
+    if (!empty($res['success'])) return true;
+    return $res['error'] ?? 'Unknown error';
 }
