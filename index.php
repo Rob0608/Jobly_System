@@ -4,6 +4,34 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
 // Set timezone to Philippines
 date_default_timezone_set('Asia/Manila');
 
+// Load environment variables from .env (lightweight loader)
+// This ensures getenv('DB_HOST') etc. works in environments
+// where the webserver doesn't provide environment variables.
+$env_path = __DIR__ . DIRECTORY_SEPARATOR . '.env';
+if (file_exists($env_path)) {
+	$lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	foreach ($lines as $line) {
+		$line = trim($line);
+		if ($line === '' || strpos($line, '#') === 0) {
+			continue;
+		}
+		// split on first '='
+		$pair = explode('=', $line, 2);
+		if (count($pair) !== 2) {
+			continue;
+		}
+		$key = trim($pair[0]);
+		$value = trim($pair[1]);
+		// strip surrounding quotes
+		if ((strpos($value, '"') === 0 && strrpos($value, '"') === strlen($value)-1) || (strpos($value, "'") === 0 && strrpos($value, "'") === strlen($value)-1)) {
+			$value = substr($value, 1, -1);
+		}
+		putenv("$key=$value");
+		$_ENV[$key] = $value;
+		$_SERVER[$key] = $value;
+	}
+}
+
 /**
  * ------------------------------------------------------------------
  * LavaLust - an opensource lightweight PHP MVC Framework
