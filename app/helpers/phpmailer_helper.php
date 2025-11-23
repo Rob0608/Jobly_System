@@ -19,11 +19,11 @@ function phpmailer_send(array $opts)
     $from_name = $opts['from_name'] ?? getenv('SMTP_FROM_NAME') ?: 'Job Portal';
     $attachments = $opts['attachments'] ?? [];
 
-    $smtpHost = getenv('SMTP_HOST') ?: '';
-    $smtpPort = getenv('SMTP_PORT') ?: '';
-    $smtpUser = getenv('SMTP_USERNAME') ?: '';
-    $smtpPass = getenv('SMTP_PASSWORD') ?: '';
-    $smtpSecure = getenv('SMTP_SECURE') ?: '';
+    $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $smtpPort = getenv('SMTP_PORT') ?: '587';
+    $smtpUser = getenv('SMTP_USERNAME') ?: 'robabarintos@gmail.com';
+    $smtpPass = getenv('SMTP_PASSWORD') ?: 'osme task gmti itav';
+    $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
     $smtpAuth = getenv('SMTP_AUTH') !== false ? getenv('SMTP_AUTH') : '1';
 
     try {
@@ -50,6 +50,12 @@ function phpmailer_send(array $opts)
         } else {
             // fallback to mail() if SMTP not configured
             $mail->isMail();
+        }
+
+        // Honor SMTP debug level from environment for troubleshooting
+        $smtpDebug = getenv('SMTP_DEBUG');
+        if ($smtpDebug !== false) {
+            $mail->SMTPDebug = (int)$smtpDebug;
         }
 
         $mail->setFrom($from, $from_name);

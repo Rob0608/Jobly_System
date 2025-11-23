@@ -35,7 +35,7 @@ User → Click "Sign in with Google"
 ```php
 // Google OAuth Credentials
 $config['google_client_id'] = '1000422010753-ro6eirfnt491jqrg2184l6sdlr2t7bav.apps.googleusercontent.com';
-$config['google_client_secret'] = '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';
+$config['google_client_secret'] = 'REDACTED_GOOGLE_CLIENT_SECRET';
 $config['google_redirect_uri'] = 'http://localhost/LavaLust-Final/index.php/auth/google/callback';
 ```
 
@@ -640,7 +640,7 @@ curl -X POST http://localhost/LavaLust-Final/api/reviews/submit \
 ```php
 // app/config/config.php
 $config['google_client_id'] = '1000422010753-ro6eirfnt491jqrg2184l6sdlr2t7bav.apps.googleusercontent.com';
-$config['google_client_secret'] = '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';
+$config['google_client_secret'] = 'REDACTED_GOOGLE_CLIENT_SECRET';
 $config['google_redirect_uri'] = 'http://localhost/LavaLust-Final/index.php/auth/google/callback';
 $config['ca_bundle_path'] = 'C:/wamp64/bin/php/php8.3.14/extras/ssl/cacert.pem';
 ```

@@ -53,9 +53,11 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |   Set these via environment or directly for development.
 |   Redirect URI must match in Google Console.
 */
-$config['google_client_id'] = '1064821785950-f68i3up7vmq0m73ondq0v0r7n3q9rk8b.apps.googleusercontent.com';
-$config['google_client_secret'] = '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';
-$config['google_redirect_uri'] = 'https://jobly-system.onrender.com/index.php/auth/google/callback';
+// Load Google OAuth credentials from environment to avoid committing secrets.
+// In production set these in Render / your host environment variables.
+$config['google_client_id'] = getenv('GOOGLE_CLIENT_ID') ?: '1064821785950-f68i3up7vmq0m73ondq0v0r7n3q9rk8b.apps.googleusercontent.com';
+$config['google_client_secret'] = getenv('GOOGLE_CLIENT_SECRET') ?: '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';
+$config['google_redirect_uri'] = getenv('GOOGLE_REDIRECT_URI') ?: 'https://jobly-system.onrender.com/index.php/auth/google/callback';
 /*
 | Optional CA bundle path to fix cURL error 60 on Windows/WAMP.
 | Download from https://curl.se/ca/cacert.pem and set absolute path below.
