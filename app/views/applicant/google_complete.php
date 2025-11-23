@@ -41,15 +41,15 @@
       <form action="<?= site_url('auth/google/complete') ?>" method="POST" id="googleForm">
         <div>
           <label>First Name</label>
-          <input class="input" type="text" name="first_name" value="<?= htmlspecialchars($given_name ?? '') ?>" required>
+          <input class="input name-input" maxlength="64" type="text" name="first_name" value="<?= htmlspecialchars($given_name ?? '') ?>" required>
         </div>
         <div>
           <label>Middle Name</label>
-          <input class="input" type="text" name="middle_name" value="">
+          <input class="input name-input" maxlength="64" type="text" name="middle_name" value="">
         </div>
         <div>
           <label>Last Name</label>
-          <input class="input" type="text" name="last_name" value="<?= htmlspecialchars($family_name ?? '') ?>" required>
+          <input class="input name-input" maxlength="64" type="text" name="last_name" value="<?= htmlspecialchars($family_name ?? '') ?>" required>
         </div>
         <div>
           <label>Birthdate</label>
@@ -99,6 +99,21 @@
         ageHint.style.display = 'block';
         birthdate.focus();
       }
+    });
+
+    // Client-side name restrictions: disallow digits; allow letters, spaces, hyphen, apostrophe, period
+    document.querySelectorAll('.name-input').forEach(function(el){
+      el.addEventListener('input', function(){
+        const cleaned = this.value.replace(/[^\p{L}\s'\-\.]/gu, '');
+        this.value = cleaned.replace(/\s{2,}/g,' ');
+      });
+      el.addEventListener('keydown', function(e){
+        const allowed = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+        if (allowed.includes(e.key)) return;
+        if (/^[\p{L}\s'\-\.]$/u.test(e.key)) return;
+        if (e.ctrlKey || e.metaKey) return;
+        e.preventDefault();
+      });
     });
   </script>
 </body>

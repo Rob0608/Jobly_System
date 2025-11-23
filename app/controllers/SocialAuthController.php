@@ -151,6 +151,19 @@ class SocialAuthController extends Controller
         $last = trim($_POST['last_name'] ?? '');
         $birthdate = $_POST['birthdate'] ?? '';
 
+        // Server-side name validation: disallow digits; allow letters, spaces, hyphen, apostrophe and period
+        $namePattern = '/^[\p{L}\s\'\-\.]+$/u';
+        if ($first === '' || $last === '') {
+            $_SESSION['error'] = 'First and last name are required.';
+            redirect('login');
+            return;
+        }
+        if (!preg_match($namePattern, $first) || !preg_match($namePattern, $last) || ($middle !== '' && !preg_match($namePattern, $middle))) {
+            $_SESSION['error'] = 'Name fields contain invalid characters. Numbers are not allowed.';
+            redirect('login');
+            return;
+        }
+
         if (empty($email) || empty($first) || empty($last) || empty($birthdate)) {
             $_SESSION['error'] = 'Please complete all required fields.';
             redirect('login');
