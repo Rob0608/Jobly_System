@@ -1,0 +1,35 @@
+AddDefaultCharset UTF-8
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /LavaLust-Final/
+
+    <Files "index.php">
+        Require all granted
+    </Files>
+
+    # Block direct access to internal folders
+    RedirectMatch 403 ^/(app|scheme|console|runtime)/
+
+    # Block sensitive file extensions
+    <FilesMatch "\.(env|json|xml|log|md|lock|git|ini|bak|sql)$">
+        Require all denied
+    </FilesMatch>
+
+    Options -Indexes
+
+    # If request is a real file or directory, serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Else route to front controller
+    RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+    # Preserve HTTP Authorization header (for future auth handling)
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    php_flag display_errors On
+</IfModule>

@@ -1,0 +1,14 @@
+{
+    "name": "robabarintos/lava-lust-final",
+    "authors": [
+        {
+            "name": "Rob Abarintos",
+            "email": "robabarintos@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/laravel-google-calendar": "*",
+        "alexpechkarev/google-maps": "^12.1",
+        "php" : "^8.0"
+    }
+}
