@@ -22,16 +22,12 @@ class PersistentDirectory extends \Google\Model
   protected $gcePdType = GceRegionalPersistentDisk::class;
   protected $gcePdDataType = '';
   /**
-   * Optional. Location of this directory in the running workstation.
-   *
    * @var string
    */
   public $mountPath;
 
   /**
-   * A PersistentDirectory backed by a Compute Engine persistent disk.
-   *
-   * @param GceRegionalPersistentDisk $gcePd
+   * @param GceRegionalPersistentDisk
    */
   public function setGcePd(GceRegionalPersistentDisk $gcePd)
   {
@@ -45,9 +41,7 @@ class PersistentDirectory extends \Google\Model
     return $this->gcePd;
   }
   /**
-   * Optional. Location of this directory in the running workstation.
-   *
-   * @param string $mountPath
+   * @param string
    */
   public function setMountPath($mountPath)
   {

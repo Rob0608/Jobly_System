@@ -22,28 +22,18 @@ class DiskMigrationJobTargetDetails extends \Google\Model
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
-   * Optional. A map of labels to associate with the disk.
-   *
    * @var string[]
    */
   public $labels;
   protected $targetDiskType = ComputeEngineDisk::class;
   protected $targetDiskDataType = '';
   /**
-   * Required. The name of the resource of type TargetProject which represents
-   * the Compute Engine project in which to create the disk. Should be of the
-   * form: projects/{project}/locations/global/targetProjects/{target-project}
-   *
    * @var string
    */
   public $targetProject;
 
   /**
-   * Optional. The encryption to apply to the disk. If the DiskMigrationJob
-   * parent Source resource has an encryption, this field must be set to the
-   * same encryption key.
-   *
-   * @param Encryption $encryption
+   * @param Encryption
    */
   public function setEncryption(Encryption $encryption)
   {
@@ -57,9 +47,7 @@ class DiskMigrationJobTargetDetails extends \Google\Model
     return $this->encryption;
   }
   /**
-   * Optional. A map of labels to associate with the disk.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -73,9 +61,7 @@ class DiskMigrationJobTargetDetails extends \Google\Model
     return $this->labels;
   }
   /**
-   * Required. The target disk.
-   *
-   * @param ComputeEngineDisk $targetDisk
+   * @param ComputeEngineDisk
    */
   public function setTargetDisk(ComputeEngineDisk $targetDisk)
   {
@@ -89,11 +75,7 @@ class DiskMigrationJobTargetDetails extends \Google\Model
     return $this->targetDisk;
   }
   /**
-   * Required. The name of the resource of type TargetProject which represents
-   * the Compute Engine project in which to create the disk. Should be of the
-   * form: projects/{project}/locations/global/targetProjects/{target-project}
-   *
-   * @param string $targetProject
+   * @param string
    */
   public function setTargetProject($targetProject)
   {

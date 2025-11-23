@@ -20,28 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata extends \Google\Model
 {
   /**
-   * The Cloud Bigtable instance id.
-   *
    * @var string
    */
   public $instanceId;
   /**
-   * The Cloud Bigtable table id.
-   *
    * @var string
    */
   public $tableId;
   /**
-   * Tenant project ID.
-   *
    * @var string
    */
   public $tenantProjectId;
 
   /**
-   * The Cloud Bigtable instance id.
-   *
-   * @param string $instanceId
+   * @param string
    */
   public function setInstanceId($instanceId)
   {
@@ -55,9 +47,7 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata extends 
     return $this->instanceId;
   }
   /**
-   * The Cloud Bigtable table id.
-   *
-   * @param string $tableId
+   * @param string
    */
   public function setTableId($tableId)
   {
@@ -71,9 +61,7 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata extends 
     return $this->tableId;
   }
   /**
-   * Tenant project ID.
-   *
-   * @param string $tenantProjectId
+   * @param string
    */
   public function setTenantProjectId($tenantProjectId)
   {

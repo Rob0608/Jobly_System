@@ -20,22 +20,16 @@ namespace Google\Service\Compute;
 class BackendServiceTlsSettingsSubjectAltName extends \Google\Model
 {
   /**
-   * The SAN specified as a DNS Name.
-   *
    * @var string
    */
   public $dnsName;
   /**
-   * The SAN specified as a URI.
-   *
    * @var string
    */
   public $uniformResourceIdentifier;
 
   /**
-   * The SAN specified as a DNS Name.
-   *
-   * @param string $dnsName
+   * @param string
    */
   public function setDnsName($dnsName)
   {
@@ -49,9 +43,7 @@ class BackendServiceTlsSettingsSubjectAltName extends \Google\Model
     return $this->dnsName;
   }
   /**
-   * The SAN specified as a URI.
-   *
-   * @param string $uniformResourceIdentifier
+   * @param string
    */
   public function setUniformResourceIdentifier($uniformResourceIdentifier)
   {

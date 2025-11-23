@@ -20,71 +20,40 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
 {
   /**
-   * Default value.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * The tool call has been triggered.
-   */
-  public const STATE_TRIGGERED = 'TRIGGERED';
-  /**
-   * The tool call requires confirmation from a human.
-   */
-  public const STATE_NEEDS_CONFIRMATION = 'NEEDS_CONFIRMATION';
-  /**
-   * Optional. The name of the tool's action associated with this call.
-   *
    * @var string
    */
   public $action;
   /**
-   * Optional. The answer record associated with this tool call.
-   *
    * @var string
    */
   public $answerRecord;
   /**
-   * Output only. Create time of the tool call.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. The action's input parameters.
-   *
    * @var array[]
    */
   public $inputParameters;
   /**
-   * Output only. State of the tool call
-   *
    * @var string
    */
   public $state;
   /**
-   * Optional. The tool associated with this call. Format:
-   * `projects//locations//tools/`.
-   *
    * @var string
    */
   public $tool;
   /**
-   * Optional. A human readable description of the tool.
-   *
    * @var string
    */
   public $toolDisplayDetails;
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
-   *
    * @var string
    */
   public $toolDisplayName;
 
   /**
-   * Optional. The name of the tool's action associated with this call.
-   *
-   * @param string $action
+   * @param string
    */
   public function setAction($action)
   {
@@ -98,9 +67,7 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->action;
   }
   /**
-   * Optional. The answer record associated with this tool call.
-   *
-   * @param string $answerRecord
+   * @param string
    */
   public function setAnswerRecord($answerRecord)
   {
@@ -114,9 +81,7 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->answerRecord;
   }
   /**
-   * Output only. Create time of the tool call.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -130,9 +95,7 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. The action's input parameters.
-   *
-   * @param array[] $inputParameters
+   * @param array[]
    */
   public function setInputParameters($inputParameters)
   {
@@ -146,28 +109,21 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->inputParameters;
   }
   /**
-   * Output only. State of the tool call
-   *
-   * Accepted values: STATE_UNSPECIFIED, TRIGGERED, NEEDS_CONFIRMATION
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * Optional. The tool associated with this call. Format:
-   * `projects//locations//tools/`.
-   *
-   * @param string $tool
+   * @param string
    */
   public function setTool($tool)
   {
@@ -181,9 +137,7 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->tool;
   }
   /**
-   * Optional. A human readable description of the tool.
-   *
-   * @param string $toolDisplayDetails
+   * @param string
    */
   public function setToolDisplayDetails($toolDisplayDetails)
   {
@@ -197,9 +151,7 @@ class GoogleCloudDialogflowV2beta1ToolCall extends \Google\Model
     return $this->toolDisplayDetails;
   }
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
-   *
-   * @param string $toolDisplayName
+   * @param string
    */
   public function setToolDisplayName($toolDisplayName)
   {

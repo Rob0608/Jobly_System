@@ -20,54 +20,28 @@ namespace Google\Service\Compute;
 class ReservationSubBlockHealthInfo extends \Google\Model
 {
   /**
-   * The reservation subBlock is degraded.
-   */
-  public const HEALTH_STATUS_DEGRADED = 'DEGRADED';
-  /**
-   * The reservation subBlock is healthy.
-   */
-  public const HEALTH_STATUS_HEALTHY = 'HEALTHY';
-  /**
-   * The health status of the reservation subBlock is unspecified.
-   */
-  public const HEALTH_STATUS_HEALTH_STATUS_UNSPECIFIED = 'HEALTH_STATUS_UNSPECIFIED';
-  /**
-   * The number of degraded hosts in the reservation subBlock.
-   *
    * @var int
    */
   public $degradedHostCount;
   /**
-   * The number of degraded infrastructure (e.g NV link domain) in the
-   * reservation subblock.
-   *
    * @var int
    */
   public $degradedInfraCount;
   /**
-   * The health status of the reservation subBlock.
-   *
    * @var string
    */
   public $healthStatus;
   /**
-   * The number of healthy hosts in the reservation subBlock.
-   *
    * @var int
    */
   public $healthyHostCount;
   /**
-   * The number of healthy infrastructure (e.g NV link domain) in the
-   * reservation subblock.
-   *
    * @var int
    */
   public $healthyInfraCount;
 
   /**
-   * The number of degraded hosts in the reservation subBlock.
-   *
-   * @param int $degradedHostCount
+   * @param int
    */
   public function setDegradedHostCount($degradedHostCount)
   {
@@ -81,10 +55,7 @@ class ReservationSubBlockHealthInfo extends \Google\Model
     return $this->degradedHostCount;
   }
   /**
-   * The number of degraded infrastructure (e.g NV link domain) in the
-   * reservation subblock.
-   *
-   * @param int $degradedInfraCount
+   * @param int
    */
   public function setDegradedInfraCount($degradedInfraCount)
   {
@@ -98,27 +69,21 @@ class ReservationSubBlockHealthInfo extends \Google\Model
     return $this->degradedInfraCount;
   }
   /**
-   * The health status of the reservation subBlock.
-   *
-   * Accepted values: DEGRADED, HEALTHY, HEALTH_STATUS_UNSPECIFIED
-   *
-   * @param self::HEALTH_STATUS_* $healthStatus
+   * @param string
    */
   public function setHealthStatus($healthStatus)
   {
     $this->healthStatus = $healthStatus;
   }
   /**
-   * @return self::HEALTH_STATUS_*
+   * @return string
    */
   public function getHealthStatus()
   {
     return $this->healthStatus;
   }
   /**
-   * The number of healthy hosts in the reservation subBlock.
-   *
-   * @param int $healthyHostCount
+   * @param int
    */
   public function setHealthyHostCount($healthyHostCount)
   {
@@ -132,10 +97,7 @@ class ReservationSubBlockHealthInfo extends \Google\Model
     return $this->healthyHostCount;
   }
   /**
-   * The number of healthy infrastructure (e.g NV link domain) in the
-   * reservation subblock.
-   *
-   * @param int $healthyInfraCount
+   * @param int
    */
   public function setHealthyInfraCount($healthyInfraCount)
   {

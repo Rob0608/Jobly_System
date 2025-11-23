@@ -19,83 +19,30 @@ namespace Google\Service\CloudFilestore;
 
 class ReplicaConfig extends \Google\Collection
 {
-  /**
-   * State not set.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * The replica is being created.
-   */
-  public const STATE_CREATING = 'CREATING';
-  /**
-   * The replica is ready.
-   */
-  public const STATE_READY = 'READY';
-  /**
-   * The replica is being removed.
-   */
-  public const STATE_REMOVING = 'REMOVING';
-  /**
-   * The replica is experiencing an issue and might be unusable. You can get
-   * further details from the `stateReasons` field of the `ReplicaConfig`
-   * object.
-   */
-  public const STATE_FAILED = 'FAILED';
-  /**
-   * The replica is being promoted.
-   */
-  public const STATE_PROMOTING = 'PROMOTING';
-  /**
-   * The replica is being paused.
-   */
-  public const STATE_PAUSING = 'PAUSING';
-  /**
-   * The replica is paused.
-   */
-  public const STATE_PAUSED = 'PAUSED';
-  /**
-   * The replica is being resumed.
-   */
-  public const STATE_RESUMING = 'RESUMING';
   protected $collection_key = 'stateReasons';
   /**
-   * Output only. The timestamp of the latest replication snapshot taken on the
-   * active instance and is already replicated safely.
-   *
    * @var string
    */
   public $lastActiveSyncTime;
   /**
-   * Optional. The peer instance.
-   *
    * @var string
    */
   public $peerInstance;
   /**
-   * Output only. The replica state.
-   *
    * @var string
    */
   public $state;
   /**
-   * Output only. Additional information about the replication state, if
-   * available.
-   *
    * @var string[]
    */
   public $stateReasons;
   /**
-   * Output only. The time when the replica state was updated.
-   *
    * @var string
    */
   public $stateUpdateTime;
 
   /**
-   * Output only. The timestamp of the latest replication snapshot taken on the
-   * active instance and is already replicated safely.
-   *
-   * @param string $lastActiveSyncTime
+   * @param string
    */
   public function setLastActiveSyncTime($lastActiveSyncTime)
   {
@@ -109,9 +56,7 @@ class ReplicaConfig extends \Google\Collection
     return $this->lastActiveSyncTime;
   }
   /**
-   * Optional. The peer instance.
-   *
-   * @param string $peerInstance
+   * @param string
    */
   public function setPeerInstance($peerInstance)
   {
@@ -125,29 +70,21 @@ class ReplicaConfig extends \Google\Collection
     return $this->peerInstance;
   }
   /**
-   * Output only. The replica state.
-   *
-   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, REMOVING, FAILED,
-   * PROMOTING, PAUSING, PAUSED, RESUMING
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * Output only. Additional information about the replication state, if
-   * available.
-   *
-   * @param string[] $stateReasons
+   * @param string[]
    */
   public function setStateReasons($stateReasons)
   {
@@ -161,9 +98,7 @@ class ReplicaConfig extends \Google\Collection
     return $this->stateReasons;
   }
   /**
-   * Output only. The time when the replica state was updated.
-   *
-   * @param string $stateUpdateTime
+   * @param string
    */
   public function setStateUpdateTime($stateUpdateTime)
   {

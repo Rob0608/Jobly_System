@@ -20,25 +20,16 @@ namespace Google\Service\SaaSServiceManagement;
 class ErrorBudget extends \Google\Model
 {
   /**
-   * Optional. The maximum number of failed units allowed in a location without
-   * pausing the rollout.
-   *
    * @var int
    */
   public $allowedCount;
   /**
-   * Optional. The maximum percentage of units allowed to fail (0, 100] within a
-   * location without pausing the rollout.
-   *
    * @var int
    */
   public $allowedPercentage;
 
   /**
-   * Optional. The maximum number of failed units allowed in a location without
-   * pausing the rollout.
-   *
-   * @param int $allowedCount
+   * @param int
    */
   public function setAllowedCount($allowedCount)
   {
@@ -52,10 +43,7 @@ class ErrorBudget extends \Google\Model
     return $this->allowedCount;
   }
   /**
-   * Optional. The maximum percentage of units allowed to fail (0, 100] within a
-   * location without pausing the rollout.
-   *
-   * @param int $allowedPercentage
+   * @param int
    */
   public function setAllowedPercentage($allowedPercentage)
   {

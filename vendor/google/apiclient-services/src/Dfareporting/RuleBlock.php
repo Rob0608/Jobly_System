@@ -24,9 +24,7 @@ class RuleBlock extends \Google\Collection
   protected $fieldFilterDataType = 'array';
 
   /**
-   * Optional. A list of non-auto field filters
-   *
-   * @param FieldFilter[] $fieldFilter
+   * @param FieldFilter[]
    */
   public function setFieldFilter($fieldFilter)
   {

@@ -20,28 +20,17 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseRecentSearchSuggestion extends \Google\Model
 {
   /**
-   * The time when this recent rearch happened.
-   *
    * @var string
    */
   public $recentSearchTime;
-  /**
-   * The score of each suggestion. The score is in the range of [0, 1].
-   *
-   * @var 
-   */
   public $score;
   /**
-   * The suggestion for the query.
-   *
    * @var string
    */
   public $suggestion;
 
   /**
-   * The time when this recent rearch happened.
-   *
-   * @param string $recentSearchTime
+   * @param string
    */
   public function setRecentSearchTime($recentSearchTime)
   {
@@ -63,9 +52,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseRecentSearchSugge
     return $this->score;
   }
   /**
-   * The suggestion for the query.
-   *
-   * @param string $suggestion
+   * @param string
    */
   public function setSuggestion($suggestion)
   {

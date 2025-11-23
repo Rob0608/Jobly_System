@@ -20,16 +20,12 @@ namespace Google\Service\Backupdr;
 class AlloyDBClusterDataSourceProperties extends \Google\Model
 {
   /**
-   * Output only. Name of the AlloyDB cluster backed up by the datasource.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Output only. Name of the AlloyDB cluster backed up by the datasource.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

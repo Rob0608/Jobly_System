@@ -17,76 +17,20 @@
 
 namespace Google\Service\DataManager;
 
-class Item extends \Google\Collection
+class Item extends \Google\Model
 {
-  protected $collection_key = 'additionalItemParameters';
-  protected $additionalItemParametersType = ItemParameter::class;
-  protected $additionalItemParametersDataType = 'array';
   /**
-   * Optional. A unique identifier to reference the item.
-   *
-   * @var string
-   */
-  public $itemId;
-  /**
-   * Optional. The product ID within the Merchant Center account.
-   *
    * @var string
    */
   public $merchantProductId;
   /**
-   * Optional. The number of this item associated with the event.
-   *
    * @var string
    */
   public $quantity;
-  /**
-   * Optional. The unit price excluding tax, shipping, and any transaction level
-   * discounts.
-   *
-   * @var 
-   */
   public $unitPrice;
 
   /**
-   * Optional. A bucket of any [event parameters related to an item](https://dev
-   * elopers.google.com/analytics/devguides/collection/protocol/ga4/reference/ev
-   * ents) to be included within the event that were not already specified using
-   * other structured fields.
-   *
-   * @param ItemParameter[] $additionalItemParameters
-   */
-  public function setAdditionalItemParameters($additionalItemParameters)
-  {
-    $this->additionalItemParameters = $additionalItemParameters;
-  }
-  /**
-   * @return ItemParameter[]
-   */
-  public function getAdditionalItemParameters()
-  {
-    return $this->additionalItemParameters;
-  }
-  /**
-   * Optional. A unique identifier to reference the item.
-   *
-   * @param string $itemId
-   */
-  public function setItemId($itemId)
-  {
-    $this->itemId = $itemId;
-  }
-  /**
-   * @return string
-   */
-  public function getItemId()
-  {
-    return $this->itemId;
-  }
-  /**
-   * Optional. The product ID within the Merchant Center account.
-   *
-   * @param string $merchantProductId
+   * @param string
    */
   public function setMerchantProductId($merchantProductId)
   {
@@ -100,9 +44,7 @@ class Item extends \Google\Collection
     return $this->merchantProductId;
   }
   /**
-   * Optional. The number of this item associated with the event.
-   *
-   * @param string $quantity
+   * @param string
    */
   public function setQuantity($quantity)
   {

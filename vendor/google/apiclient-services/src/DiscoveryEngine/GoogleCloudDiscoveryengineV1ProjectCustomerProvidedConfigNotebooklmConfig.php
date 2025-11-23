@@ -22,18 +22,12 @@ class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfig 
   protected $modelArmorConfigType = GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig::class;
   protected $modelArmorConfigDataType = '';
   /**
-   * Optional. Whether to disable the notebook sharing feature for the project.
-   * Default to false if not specified.
-   *
    * @var bool
    */
   public $optOutNotebookSharing;
 
   /**
-   * Model Armor configuration to be used for sanitizing user prompts and LLM
-   * responses.
-   *
-   * @param GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig $modelArmorConfig
+   * @param GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig
    */
   public function setModelArmorConfig(GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig $modelArmorConfig)
   {
@@ -47,10 +41,7 @@ class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfig 
     return $this->modelArmorConfig;
   }
   /**
-   * Optional. Whether to disable the notebook sharing feature for the project.
-   * Default to false if not specified.
-   *
-   * @param bool $optOutNotebookSharing
+   * @param bool
    */
   public function setOptOutNotebookSharing($optOutNotebookSharing)
   {

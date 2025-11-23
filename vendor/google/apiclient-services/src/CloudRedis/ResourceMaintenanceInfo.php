@@ -25,17 +25,12 @@ class ResourceMaintenanceInfo extends \Google\Collection
   protected $maintenanceScheduleType = ResourceMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
-   *
    * @var string
    */
   public $maintenanceVersion;
 
   /**
-   * Optional. List of Deny maintenance period for the database resource.
-   *
-   * @param ResourceMaintenanceDenySchedule[] $denyMaintenanceSchedules
+   * @param ResourceMaintenanceDenySchedule[]
    */
   public function setDenyMaintenanceSchedules($denyMaintenanceSchedules)
   {
@@ -49,9 +44,7 @@ class ResourceMaintenanceInfo extends \Google\Collection
     return $this->denyMaintenanceSchedules;
   }
   /**
-   * Optional. Maintenance window for the database resource.
-   *
-   * @param ResourceMaintenanceSchedule $maintenanceSchedule
+   * @param ResourceMaintenanceSchedule
    */
   public function setMaintenanceSchedule(ResourceMaintenanceSchedule $maintenanceSchedule)
   {
@@ -65,10 +58,7 @@ class ResourceMaintenanceInfo extends \Google\Collection
     return $this->maintenanceSchedule;
   }
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
-   *
-   * @param string $maintenanceVersion
+   * @param string
    */
   public function setMaintenanceVersion($maintenanceVersion)
   {

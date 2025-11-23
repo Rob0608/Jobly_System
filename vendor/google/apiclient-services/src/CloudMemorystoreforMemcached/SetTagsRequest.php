@@ -20,39 +20,24 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class SetTagsRequest extends \Google\Model
 {
   /**
-   * Required. The full One Platform resource name of the service resource.
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. A unique identifier for this request. Must be a valid UUID. This
-   * request is only idempotent if a `request_id` is provided.
-   *
    * @var string
    */
   public $requestId;
   /**
-   * Required. These bindings will override any bindings previously set and will
-   * be effective immediately. Each item in the map must be expressed as " : ".
-   * For example: "123/environment" : "production", "123/costCenter" :
-   * "marketing"
-   *
    * @var string[]
    */
   public $tags;
   /**
-   * Optional. A checksum based on the current bindings which can be passed to
-   * prevent race conditions. If not passed, etag check would be skipped.
-   *
    * @var string
    */
   public $tagsEtag;
 
   /**
-   * Required. The full One Platform resource name of the service resource.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -66,10 +51,7 @@ class SetTagsRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. A unique identifier for this request. Must be a valid UUID. This
-   * request is only idempotent if a `request_id` is provided.
-   *
-   * @param string $requestId
+   * @param string
    */
   public function setRequestId($requestId)
   {
@@ -83,12 +65,7 @@ class SetTagsRequest extends \Google\Model
     return $this->requestId;
   }
   /**
-   * Required. These bindings will override any bindings previously set and will
-   * be effective immediately. Each item in the map must be expressed as " : ".
-   * For example: "123/environment" : "production", "123/costCenter" :
-   * "marketing"
-   *
-   * @param string[] $tags
+   * @param string[]
    */
   public function setTags($tags)
   {
@@ -102,10 +79,7 @@ class SetTagsRequest extends \Google\Model
     return $this->tags;
   }
   /**
-   * Optional. A checksum based on the current bindings which can be passed to
-   * prevent race conditions. If not passed, etag check would be skipped.
-   *
-   * @param string $tagsEtag
+   * @param string
    */
   public function setTagsEtag($tagsEtag)
   {

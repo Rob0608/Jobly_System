@@ -20,29 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig extends \Google\Model
 {
   /**
-   * Optional. Any additional parameters needed for FEDERATED.
-   *
    * @var array[]
    */
   public $additionalParams;
   /**
-   * Optional. Any authentication parameters specific to FEDERATED connectors.
-   *
    * @var array[]
    */
   public $authParams;
   /**
-   * Optional. Any authentication parameters specific to FEDERATED connectors in
-   * json string format.
-   *
    * @var string
    */
   public $jsonAuthParams;
 
   /**
-   * Optional. Any additional parameters needed for FEDERATED.
-   *
-   * @param array[] $additionalParams
+   * @param array[]
    */
   public function setAdditionalParams($additionalParams)
   {
@@ -56,9 +47,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig extends \Goo
     return $this->additionalParams;
   }
   /**
-   * Optional. Any authentication parameters specific to FEDERATED connectors.
-   *
-   * @param array[] $authParams
+   * @param array[]
    */
   public function setAuthParams($authParams)
   {
@@ -72,10 +61,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig extends \Goo
     return $this->authParams;
   }
   /**
-   * Optional. Any authentication parameters specific to FEDERATED connectors in
-   * json string format.
-   *
-   * @param string $jsonAuthParams
+   * @param string
    */
   public function setJsonAuthParams($jsonAuthParams)
   {

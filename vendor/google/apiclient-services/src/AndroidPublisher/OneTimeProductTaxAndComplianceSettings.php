@@ -21,9 +21,6 @@ class OneTimeProductTaxAndComplianceSettings extends \Google\Collection
 {
   protected $collection_key = 'regionalTaxConfigs';
   /**
-   * Whether this one-time product is declared as a product representing a
-   * tokenized digital asset.
-   *
    * @var bool
    */
   public $isTokenizedDigitalAsset;
@@ -31,10 +28,7 @@ class OneTimeProductTaxAndComplianceSettings extends \Google\Collection
   protected $regionalTaxConfigsDataType = 'array';
 
   /**
-   * Whether this one-time product is declared as a product representing a
-   * tokenized digital asset.
-   *
-   * @param bool $isTokenizedDigitalAsset
+   * @param bool
    */
   public function setIsTokenizedDigitalAsset($isTokenizedDigitalAsset)
   {
@@ -48,9 +42,7 @@ class OneTimeProductTaxAndComplianceSettings extends \Google\Collection
     return $this->isTokenizedDigitalAsset;
   }
   /**
-   * Regional tax configuration.
-   *
-   * @param RegionalTaxConfig[] $regionalTaxConfigs
+   * @param RegionalTaxConfig[]
    */
   public function setRegionalTaxConfigs($regionalTaxConfigs)
   {

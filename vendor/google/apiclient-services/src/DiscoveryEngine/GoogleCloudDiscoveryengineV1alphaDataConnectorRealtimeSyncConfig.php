@@ -20,25 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig extends \Google\Model
 {
   /**
-   * Optional. The ID of the Secret Manager secret used for webhook secret.
-   *
    * @var string
    */
   public $realtimeSyncSecret;
   protected $streamingErrorType = GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError::class;
   protected $streamingErrorDataType = '';
   /**
-   * Optional. Webhook url for the connector to specify additional params for
-   * realtime sync.
-   *
    * @var string
    */
   public $webhookUri;
 
   /**
-   * Optional. The ID of the Secret Manager secret used for webhook secret.
-   *
-   * @param string $realtimeSyncSecret
+   * @param string
    */
   public function setRealtimeSyncSecret($realtimeSyncSecret)
   {
@@ -52,9 +45,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig extends \
     return $this->realtimeSyncSecret;
   }
   /**
-   * Optional. Streaming error details.
-   *
-   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError $streamingError
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError
    */
   public function setStreamingError(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError $streamingError)
   {
@@ -68,10 +59,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig extends \
     return $this->streamingError;
   }
   /**
-   * Optional. Webhook url for the connector to specify additional params for
-   * realtime sync.
-   *
-   * @param string $webhookUri
+   * @param string
    */
   public function setWebhookUri($webhookUri)
   {

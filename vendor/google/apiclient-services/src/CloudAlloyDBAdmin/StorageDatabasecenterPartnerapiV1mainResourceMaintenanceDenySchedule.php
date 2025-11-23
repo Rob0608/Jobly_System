@@ -27,9 +27,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule exten
   protected $timeDataType = '';
 
   /**
-   * Optional. Deny period end date.
-   *
-   * @param GoogleTypeDate $endDate
+   * @param GoogleTypeDate
    */
   public function setEndDate(GoogleTypeDate $endDate)
   {
@@ -43,9 +41,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule exten
     return $this->endDate;
   }
   /**
-   * Optional. The start date of the deny maintenance period.
-   *
-   * @param GoogleTypeDate $startDate
+   * @param GoogleTypeDate
    */
   public function setStartDate(GoogleTypeDate $startDate)
   {
@@ -59,10 +55,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule exten
     return $this->startDate;
   }
   /**
-   * Optional. Time in UTC when the deny period starts on start_date and ends on
-   * end_date.
-   *
-   * @param GoogleTypeTimeOfDay $time
+   * @param GoogleTypeTimeOfDay
    */
   public function setTime(GoogleTypeTimeOfDay $time)
   {

@@ -21,16 +21,10 @@ class GoogleCloudAiplatformV1RubricGroup extends \Google\Collection
 {
   protected $collection_key = 'rubrics';
   /**
-   * Human-readable name for the group. This should be unique within a given
-   * context if used for display or selection. Example: "Instruction Following
-   * V1", "Content Quality - Summarization Task".
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Unique identifier for the group.
-   *
    * @var string
    */
   public $groupId;
@@ -38,11 +32,7 @@ class GoogleCloudAiplatformV1RubricGroup extends \Google\Collection
   protected $rubricsDataType = 'array';
 
   /**
-   * Human-readable name for the group. This should be unique within a given
-   * context if used for display or selection. Example: "Instruction Following
-   * V1", "Content Quality - Summarization Task".
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -56,9 +46,7 @@ class GoogleCloudAiplatformV1RubricGroup extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Unique identifier for the group.
-   *
-   * @param string $groupId
+   * @param string
    */
   public function setGroupId($groupId)
   {
@@ -72,9 +60,7 @@ class GoogleCloudAiplatformV1RubricGroup extends \Google\Collection
     return $this->groupId;
   }
   /**
-   * Rubrics that are part of this group.
-   *
-   * @param GoogleCloudAiplatformV1Rubric[] $rubrics
+   * @param GoogleCloudAiplatformV1Rubric[]
    */
   public function setRubrics($rubrics)
   {

@@ -20,30 +20,20 @@ namespace Google\Service\WorkloadManager;
 class AgentStatusConfigValue extends \Google\Model
 {
   /**
-   * Output only. Whether the configuration value is the default value or
-   * overridden.
-   *
    * @var bool
    */
   public $isDefault;
   /**
-   * Output only. The name of the configuration value.
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. The value of the configuration value.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * Output only. Whether the configuration value is the default value or
-   * overridden.
-   *
-   * @param bool $isDefault
+   * @param bool
    */
   public function setIsDefault($isDefault)
   {
@@ -57,9 +47,7 @@ class AgentStatusConfigValue extends \Google\Model
     return $this->isDefault;
   }
   /**
-   * Output only. The name of the configuration value.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -73,9 +61,7 @@ class AgentStatusConfigValue extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. The value of the configuration value.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

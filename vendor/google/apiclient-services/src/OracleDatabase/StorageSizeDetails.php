@@ -20,25 +20,16 @@ namespace Google\Service\OracleDatabase;
 class StorageSizeDetails extends \Google\Model
 {
   /**
-   * Output only. The data storage size, in gigabytes, that is applicable for
-   * virtual machine DBSystem.
-   *
    * @var int
    */
   public $dataStorageSizeInGbs;
   /**
-   * Output only. The RECO/REDO storage size, in gigabytes, that is applicable
-   * for virtual machine DBSystem.
-   *
    * @var int
    */
   public $recoStorageSizeInGbs;
 
   /**
-   * Output only. The data storage size, in gigabytes, that is applicable for
-   * virtual machine DBSystem.
-   *
-   * @param int $dataStorageSizeInGbs
+   * @param int
    */
   public function setDataStorageSizeInGbs($dataStorageSizeInGbs)
   {
@@ -52,10 +43,7 @@ class StorageSizeDetails extends \Google\Model
     return $this->dataStorageSizeInGbs;
   }
   /**
-   * Output only. The RECO/REDO storage size, in gigabytes, that is applicable
-   * for virtual machine DBSystem.
-   *
-   * @param int $recoStorageSizeInGbs
+   * @param int
    */
   public function setRecoStorageSizeInGbs($recoStorageSizeInGbs)
   {

@@ -21,29 +21,20 @@ class ActivityNetworkInfo extends \Google\Collection
 {
   protected $collection_key = 'ipAsn';
   /**
-   * IP Address of the user doing the action.
-   *
    * @var int[]
    */
   public $ipAsn;
   /**
-   * ISO 3166-1 alpha-2 region code of the user doing the action.
-   *
    * @var string
    */
   public $regionCode;
   /**
-   * ISO 3166-2 region code (states and provinces) for countries of the user
-   * doing the action.
-   *
    * @var string
    */
   public $subdivisionCode;
 
   /**
-   * IP Address of the user doing the action.
-   *
-   * @param int[] $ipAsn
+   * @param int[]
    */
   public function setIpAsn($ipAsn)
   {
@@ -57,9 +48,7 @@ class ActivityNetworkInfo extends \Google\Collection
     return $this->ipAsn;
   }
   /**
-   * ISO 3166-1 alpha-2 region code of the user doing the action.
-   *
-   * @param string $regionCode
+   * @param string
    */
   public function setRegionCode($regionCode)
   {
@@ -73,10 +62,7 @@ class ActivityNetworkInfo extends \Google\Collection
     return $this->regionCode;
   }
   /**
-   * ISO 3166-2 region code (states and provinces) for countries of the user
-   * doing the action.
-   *
-   * @param string $subdivisionCode
+   * @param string
    */
   public function setSubdivisionCode($subdivisionCode)
   {

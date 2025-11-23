@@ -20,30 +20,20 @@ namespace Google\Service\OracleDatabase;
 class MinorVersion extends \Google\Model
 {
   /**
-   * Optional. The ID of the Grid Image.
-   *
    * @var string
    */
   public $gridImageId;
   /**
-   * Identifier. The name of the MinorVersion resource with the format: projects
-   * /{project}/locations/{region}/giVersions/{gi_version}/minorVersions/{minor_
-   * version}
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. The valid Oracle grid infrastructure software version.
-   *
    * @var string
    */
   public $version;
 
   /**
-   * Optional. The ID of the Grid Image.
-   *
-   * @param string $gridImageId
+   * @param string
    */
   public function setGridImageId($gridImageId)
   {
@@ -57,11 +47,7 @@ class MinorVersion extends \Google\Model
     return $this->gridImageId;
   }
   /**
-   * Identifier. The name of the MinorVersion resource with the format: projects
-   * /{project}/locations/{region}/giVersions/{gi_version}/minorVersions/{minor_
-   * version}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -75,9 +61,7 @@ class MinorVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The valid Oracle grid infrastructure software version.
-   *
-   * @param string $version
+   * @param string
    */
   public function setVersion($version)
   {

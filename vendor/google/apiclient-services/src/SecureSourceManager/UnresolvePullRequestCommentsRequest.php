@@ -21,29 +21,16 @@ class UnresolvePullRequestCommentsRequest extends \Google\Collection
 {
   protected $collection_key = 'names';
   /**
-   * Optional. If set, at least one comment in a thread is required, rest of the
-   * comments in the same thread will be automatically updated to unresolved. If
-   * unset, all comments in the same thread need be present.
-   *
    * @var bool
    */
   public $autoFill;
   /**
-   * Required. The names of the pull request comments to unresolve. Format: `pro
-   * jects/{project_number}/locations/{location_id}/repositories/{repository_id}
-   * /pullRequests/{pull_request_id}/pullRequestComments/{comment_id}` Only
-   * comments from the same threads are allowed in the same request.
-   *
    * @var string[]
    */
   public $names;
 
   /**
-   * Optional. If set, at least one comment in a thread is required, rest of the
-   * comments in the same thread will be automatically updated to unresolved. If
-   * unset, all comments in the same thread need be present.
-   *
-   * @param bool $autoFill
+   * @param bool
    */
   public function setAutoFill($autoFill)
   {
@@ -57,12 +44,7 @@ class UnresolvePullRequestCommentsRequest extends \Google\Collection
     return $this->autoFill;
   }
   /**
-   * Required. The names of the pull request comments to unresolve. Format: `pro
-   * jects/{project_number}/locations/{location_id}/repositories/{repository_id}
-   * /pullRequests/{pull_request_id}/pullRequestComments/{comment_id}` Only
-   * comments from the same threads are allowed in the same request.
-   *
-   * @param string[] $names
+   * @param string[]
    */
   public function setNames($names)
   {

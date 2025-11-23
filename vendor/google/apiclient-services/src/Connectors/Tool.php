@@ -23,22 +23,16 @@ class Tool extends \Google\Collection
   protected $annotationsType = ToolAnnotations::class;
   protected $annotationsDataType = '';
   /**
-   * List of tool names that this tool depends on.
-   *
    * @var string[]
    */
   public $dependsOn;
   /**
-   * Description of the tool.
-   *
    * @var string
    */
   public $description;
   protected $inputSchemaType = JsonSchema::class;
   protected $inputSchemaDataType = '';
   /**
-   * Name of the tool.
-   *
    * @var string
    */
   public $name;
@@ -46,9 +40,7 @@ class Tool extends \Google\Collection
   protected $outputSchemaDataType = '';
 
   /**
-   * Annotations for the tool.
-   *
-   * @param ToolAnnotations $annotations
+   * @param ToolAnnotations
    */
   public function setAnnotations(ToolAnnotations $annotations)
   {
@@ -62,9 +54,7 @@ class Tool extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * List of tool names that this tool depends on.
-   *
-   * @param string[] $dependsOn
+   * @param string[]
    */
   public function setDependsOn($dependsOn)
   {
@@ -78,9 +68,7 @@ class Tool extends \Google\Collection
     return $this->dependsOn;
   }
   /**
-   * Description of the tool.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -94,9 +82,7 @@ class Tool extends \Google\Collection
     return $this->description;
   }
   /**
-   * JSON schema for the input parameters of the tool.
-   *
-   * @param JsonSchema $inputSchema
+   * @param JsonSchema
    */
   public function setInputSchema(JsonSchema $inputSchema)
   {
@@ -110,9 +96,7 @@ class Tool extends \Google\Collection
     return $this->inputSchema;
   }
   /**
-   * Name of the tool.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -126,9 +110,7 @@ class Tool extends \Google\Collection
     return $this->name;
   }
   /**
-   * JSON schema for the output of the tool.
-   *
-   * @param JsonSchema $outputSchema
+   * @param JsonSchema
    */
   public function setOutputSchema(JsonSchema $outputSchema)
   {

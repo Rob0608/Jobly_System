@@ -20,53 +20,34 @@ namespace Google\Service\BigtableAdmin;
 class UpdateTableMetadata extends \Google\Model
 {
   /**
-   * If set, the time at which this operation finished or was canceled.
-   * DEPRECATED: Use finish_time instead.
-   *
-   * @deprecated
    * @var string
    */
   public $endTime;
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
    * @var string
    */
   public $finishTime;
   /**
-   * The name of the table being updated.
-   *
    * @var string
    */
   public $name;
   /**
-   * The time at which the original request was received.
-   *
    * @var string
    */
   public $requestTime;
   /**
-   * The time at which this operation started. DEPRECATED: Use request_time
-   * instead.
-   *
-   * @deprecated
    * @var string
    */
   public $startTime;
 
   /**
-   * If set, the time at which this operation finished or was canceled.
-   * DEPRECATED: Use finish_time instead.
-   *
-   * @deprecated
-   * @param string $endTime
+   * @param string
    */
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getEndTime()
@@ -74,9 +55,7 @@ class UpdateTableMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
-   * @param string $finishTime
+   * @param string
    */
   public function setFinishTime($finishTime)
   {
@@ -90,9 +69,7 @@ class UpdateTableMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * The name of the table being updated.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -106,9 +83,7 @@ class UpdateTableMetadata extends \Google\Model
     return $this->name;
   }
   /**
-   * The time at which the original request was received.
-   *
-   * @param string $requestTime
+   * @param string
    */
   public function setRequestTime($requestTime)
   {
@@ -122,18 +97,13 @@ class UpdateTableMetadata extends \Google\Model
     return $this->requestTime;
   }
   /**
-   * The time at which this operation started. DEPRECATED: Use request_time
-   * instead.
-   *
-   * @deprecated
-   * @param string $startTime
+   * @param string
    */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getStartTime()

@@ -57,12 +57,7 @@ class Logger {
         if (! file_exists($logfile)) {
             $logdir = config_item('log_dir');
             if (!is_dir($logdir)) {
-                // create directory safely to avoid race-condition warnings
-                if (!mkdir($logdir, 0777, true) && !is_dir($logdir)) {
-                    // Could not create log directory; fallback: write error to PHP error log
-                    error_log("Logger: failed to create log directory: {$logdir}");
-                    return;
-                }
+                @mkdir($logdir, 0777, true);
             }
             $fh = @fopen($logfile, 'w');
             if ($fh) {

@@ -20,32 +20,20 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductListing extends \Google\Model
 {
   /**
-   * Required. The description of this product in the language of this listing.
-   * The maximum length is 200 characters.
-   *
    * @var string
    */
   public $description;
   /**
-   * Required. The language of this listing, as defined by BCP-47, e.g., "en-
-   * US".
-   *
    * @var string
    */
   public $languageCode;
   /**
-   * Required. The title of this product in the language of this listing. The
-   * maximum length is 55 characters.
-   *
    * @var string
    */
   public $title;
 
   /**
-   * Required. The description of this product in the language of this listing.
-   * The maximum length is 200 characters.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -59,10 +47,7 @@ class OneTimeProductListing extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. The language of this listing, as defined by BCP-47, e.g., "en-
-   * US".
-   *
-   * @param string $languageCode
+   * @param string
    */
   public function setLanguageCode($languageCode)
   {
@@ -76,10 +61,7 @@ class OneTimeProductListing extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * Required. The title of this product in the language of this listing. The
-   * maximum length is 55 characters.
-   *
-   * @param string $title
+   * @param string
    */
   public function setTitle($title)
   {

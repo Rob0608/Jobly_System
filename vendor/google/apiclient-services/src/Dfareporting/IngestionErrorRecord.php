@@ -23,16 +23,12 @@ class IngestionErrorRecord extends \Google\Collection
   protected $errorsType = FieldError::class;
   protected $errorsDataType = 'array';
   /**
-   * Output only. The record ID of the ingestion error record.
-   *
    * @var string
    */
   public $recordId;
 
   /**
-   * Output only. The list of field errors of the ingestion error record.
-   *
-   * @param FieldError[] $errors
+   * @param FieldError[]
    */
   public function setErrors($errors)
   {
@@ -46,9 +42,7 @@ class IngestionErrorRecord extends \Google\Collection
     return $this->errors;
   }
   /**
-   * Output only. The record ID of the ingestion error record.
-   *
-   * @param string $recordId
+   * @param string
    */
   public function setRecordId($recordId)
   {

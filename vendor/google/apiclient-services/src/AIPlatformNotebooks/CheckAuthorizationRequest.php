@@ -20,18 +20,12 @@ namespace Google\Service\AIPlatformNotebooks;
 class CheckAuthorizationRequest extends \Google\Model
 {
   /**
-   * Optional. The details of the OAuth authorization response. This may include
-   * additional params such as dry_run, version_info, origin, propagate, etc.
-   *
    * @var string[]
    */
   public $authorizationDetails;
 
   /**
-   * Optional. The details of the OAuth authorization response. This may include
-   * additional params such as dry_run, version_info, origin, propagate, etc.
-   *
-   * @param string[] $authorizationDetails
+   * @param string[]
    */
   public function setAuthorizationDetails($authorizationDetails)
   {

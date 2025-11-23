@@ -21,26 +21,18 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
-   * The standard List next-page token.
-   *
    * @var string
    */
   public $nextPageToken;
   protected $operationsType = GoogleLongrunningOperation::class;
   protected $operationsDataType = 'array';
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * ListOperationsRequest.return_partial_success and reads across collections
-   * e.g. when attempting to list all resources across all supported locations.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * The standard List next-page token.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -54,9 +46,7 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * A list of operations that matches the specified filter in the request.
-   *
-   * @param GoogleLongrunningOperation[] $operations
+   * @param GoogleLongrunningOperation[]
    */
   public function setOperations($operations)
   {
@@ -70,11 +60,7 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
     return $this->operations;
   }
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * ListOperationsRequest.return_partial_success and reads across collections
-   * e.g. when attempting to list all resources across all supported locations.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

@@ -21,17 +21,10 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
 {
   protected $collection_key = 'classMethods';
   /**
-   * Optional. The OSS agent framework used to develop the agent. Currently
-   * supported values: "google-adk", "langchain", "langgraph", "ag2", "llama-
-   * index", "custom".
-   *
    * @var string
    */
   public $agentFramework;
   /**
-   * Optional. Declarations for object class methods in OpenAPI specification
-   * format.
-   *
    * @var array[]
    */
   public $classMethods;
@@ -40,24 +33,12 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   protected $packageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec::class;
   protected $packageSpecDataType = '';
   /**
-   * Optional. The service account that the Reasoning Engine artifact runs as.
-   * It should have "roles/storage.objectViewer" for reading the user project's
-   * Cloud Storage and "roles/aiplatform.user" for using Vertex extensions. If
-   * not specified, the Vertex AI Reasoning Engine Service Agent in the project
-   * will be used.
-   *
    * @var string
    */
   public $serviceAccount;
-  protected $sourceCodeSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec::class;
-  protected $sourceCodeSpecDataType = '';
 
   /**
-   * Optional. The OSS agent framework used to develop the agent. Currently
-   * supported values: "google-adk", "langchain", "langgraph", "ag2", "llama-
-   * index", "custom".
-   *
-   * @param string $agentFramework
+   * @param string
    */
   public function setAgentFramework($agentFramework)
   {
@@ -71,10 +52,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
     return $this->agentFramework;
   }
   /**
-   * Optional. Declarations for object class methods in OpenAPI specification
-   * format.
-   *
-   * @param array[] $classMethods
+   * @param array[]
    */
   public function setClassMethods($classMethods)
   {
@@ -88,9 +66,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
     return $this->classMethods;
   }
   /**
-   * Optional. The specification of a Reasoning Engine deployment.
-   *
-   * @param GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec $deploymentSpec
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec
    */
   public function setDeploymentSpec(GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec $deploymentSpec)
   {
@@ -104,13 +80,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
     return $this->deploymentSpec;
   }
   /**
-   * Optional. User provided package spec of the ReasoningEngine. Ignored when
-   * users directly specify a deployment image through
-   * `deployment_spec.first_party_image_override`, but keeping the
-   * field_behavior to avoid introducing breaking changes. The
-   * `deployment_source` field should not be set if `package_spec` is specified.
-   *
-   * @param GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec $packageSpec
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec
    */
   public function setPackageSpec(GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec $packageSpec)
   {
@@ -124,13 +94,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
     return $this->packageSpec;
   }
   /**
-   * Optional. The service account that the Reasoning Engine artifact runs as.
-   * It should have "roles/storage.objectViewer" for reading the user project's
-   * Cloud Storage and "roles/aiplatform.user" for using Vertex extensions. If
-   * not specified, the Vertex AI Reasoning Engine Service Agent in the project
-   * will be used.
-   *
-   * @param string $serviceAccount
+   * @param string
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -142,22 +106,6 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
-  }
-  /**
-   * Deploy from source code files with a defined entrypoint.
-   *
-   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec $sourceCodeSpec
-   */
-  public function setSourceCodeSpec(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec $sourceCodeSpec)
-  {
-    $this->sourceCodeSpec = $sourceCodeSpec;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec
-   */
-  public function getSourceCodeSpec()
-  {
-    return $this->sourceCodeSpec;
   }
 }
 

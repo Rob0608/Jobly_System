@@ -21,22 +21,12 @@ class PairData extends \Google\Collection
 {
   protected $collection_key = 'pairIds';
   /**
-   * Required. Cleanroom-provided PII data, hashed with SHA256, and encrypted
-   * with an EC commutative cipher using publisher key for the
-   * [PAIR]((//support.google.com/admanager/answer/15067908)) user list. At most
-   * 10 `pairIds` can be provided in a single AudienceMember.
-   *
    * @var string[]
    */
   public $pairIds;
 
   /**
-   * Required. Cleanroom-provided PII data, hashed with SHA256, and encrypted
-   * with an EC commutative cipher using publisher key for the
-   * [PAIR]((//support.google.com/admanager/answer/15067908)) user list. At most
-   * 10 `pairIds` can be provided in a single AudienceMember.
-   *
-   * @param string[] $pairIds
+   * @param string[]
    */
   public function setPairIds($pairIds)
   {

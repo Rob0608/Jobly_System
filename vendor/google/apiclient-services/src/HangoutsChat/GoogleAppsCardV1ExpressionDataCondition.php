@@ -20,38 +20,19 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1ExpressionDataCondition extends \Google\Model
 {
   /**
-   * Unspecified condition type.
-   */
-  public const CONDITION_TYPE_CONDITION_TYPE_UNSPECIFIED = 'CONDITION_TYPE_UNSPECIFIED';
-  /**
-   * The expression evaluation was successful.
-   */
-  public const CONDITION_TYPE_EXPRESSION_EVALUATION_SUCCESS = 'EXPRESSION_EVALUATION_SUCCESS';
-  /**
-   * The expression evaluation was unsuccessful.
-   */
-  public const CONDITION_TYPE_EXPRESSION_EVALUATION_FAILURE = 'EXPRESSION_EVALUATION_FAILURE';
-  /**
-   * The type of the condition.
-   *
    * @var string
    */
   public $conditionType;
 
   /**
-   * The type of the condition.
-   *
-   * Accepted values: CONDITION_TYPE_UNSPECIFIED, EXPRESSION_EVALUATION_SUCCESS,
-   * EXPRESSION_EVALUATION_FAILURE
-   *
-   * @param self::CONDITION_TYPE_* $conditionType
+   * @param string
    */
   public function setConditionType($conditionType)
   {
     $this->conditionType = $conditionType;
   }
   /**
-   * @return self::CONDITION_TYPE_*
+   * @return string
    */
   public function getConditionType()
   {

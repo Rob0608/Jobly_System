@@ -20,38 +20,20 @@ namespace Google\Service\Networkconnectivity;
 class AutomatedDnsCreationSpec extends \Google\Model
 {
   /**
-   * Required. The DNS suffix to use for the DNS record. Must end with a dot.
-   * This should be a valid DNS domain name as per RFC 1035. Each label (between
-   * dots) can contain letters, digits, and hyphens, and must not start or end
-   * with a hyphen. Example: "my-service.example.com.", "internal."
-   *
    * @var string
    */
   public $dnsSuffix;
   /**
-   * Required. The hostname (the first label of the FQDN) to use for the DNS
-   * record. This should be a valid DNS label as per RFC 1035. Generally, this
-   * means the hostname can contain letters, digits, and hyphens, and must not
-   * start or end with a hyphen. Example: "my-instance", "db-1"
-   *
    * @var string
    */
   public $hostname;
   /**
-   * Optional. The Time To Live for the DNS record, in seconds. If not provided,
-   * a default of 30 seconds will be used.
-   *
    * @var string
    */
   public $ttl;
 
   /**
-   * Required. The DNS suffix to use for the DNS record. Must end with a dot.
-   * This should be a valid DNS domain name as per RFC 1035. Each label (between
-   * dots) can contain letters, digits, and hyphens, and must not start or end
-   * with a hyphen. Example: "my-service.example.com.", "internal."
-   *
-   * @param string $dnsSuffix
+   * @param string
    */
   public function setDnsSuffix($dnsSuffix)
   {
@@ -65,12 +47,7 @@ class AutomatedDnsCreationSpec extends \Google\Model
     return $this->dnsSuffix;
   }
   /**
-   * Required. The hostname (the first label of the FQDN) to use for the DNS
-   * record. This should be a valid DNS label as per RFC 1035. Generally, this
-   * means the hostname can contain letters, digits, and hyphens, and must not
-   * start or end with a hyphen. Example: "my-instance", "db-1"
-   *
-   * @param string $hostname
+   * @param string
    */
   public function setHostname($hostname)
   {
@@ -84,10 +61,7 @@ class AutomatedDnsCreationSpec extends \Google\Model
     return $this->hostname;
   }
   /**
-   * Optional. The Time To Live for the DNS record, in seconds. If not provided,
-   * a default of 30 seconds will be used.
-   *
-   * @param string $ttl
+   * @param string
    */
   public function setTtl($ttl)
   {

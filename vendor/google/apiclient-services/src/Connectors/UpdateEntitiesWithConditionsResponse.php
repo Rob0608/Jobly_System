@@ -20,22 +20,16 @@ namespace Google\Service\Connectors;
 class UpdateEntitiesWithConditionsResponse extends \Google\Model
 {
   /**
-   * Metadata like service latency, etc.
-   *
    * @var array[]
    */
   public $metadata;
   /**
-   * Response returned by the external system.
-   *
    * @var array[]
    */
   public $response;
 
   /**
-   * Metadata like service latency, etc.
-   *
-   * @param array[] $metadata
+   * @param array[]
    */
   public function setMetadata($metadata)
   {
@@ -49,9 +43,7 @@ class UpdateEntitiesWithConditionsResponse extends \Google\Model
     return $this->metadata;
   }
   /**
-   * Response returned by the external system.
-   *
-   * @param array[] $response
+   * @param array[]
    */
   public function setResponse($response)
   {

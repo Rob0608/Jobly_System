@@ -35,9 +35,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
   protected $userUtteranceDataType = '';
 
   /**
-   * Optional. Action performed by the agent as a message.
-   *
-   * @param GoogleCloudDialogflowCxV3AgentUtterance $agentUtterance
+   * @param GoogleCloudDialogflowCxV3AgentUtterance
    */
   public function setAgentUtterance(GoogleCloudDialogflowCxV3AgentUtterance $agentUtterance)
   {
@@ -51,9 +49,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->agentUtterance;
   }
   /**
-   * Optional. Action performed on behalf of the agent by invoking a CX flow.
-   *
-   * @param GoogleCloudDialogflowCxV3FlowInvocation $flowInvocation
+   * @param GoogleCloudDialogflowCxV3FlowInvocation
    */
   public function setFlowInvocation(GoogleCloudDialogflowCxV3FlowInvocation $flowInvocation)
   {
@@ -67,10 +63,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->flowInvocation;
   }
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a
-   * target CX flow.
-   *
-   * @param GoogleCloudDialogflowCxV3FlowTransition $flowTransition
+   * @param GoogleCloudDialogflowCxV3FlowTransition
    */
   public function setFlowTransition(GoogleCloudDialogflowCxV3FlowTransition $flowTransition)
   {
@@ -84,10 +77,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->flowTransition;
   }
   /**
-   * Optional. Action performed on behalf of the agent by invoking a child
-   * playbook.
-   *
-   * @param GoogleCloudDialogflowCxV3PlaybookInvocation $playbookInvocation
+   * @param GoogleCloudDialogflowCxV3PlaybookInvocation
    */
   public function setPlaybookInvocation(GoogleCloudDialogflowCxV3PlaybookInvocation $playbookInvocation)
   {
@@ -101,10 +91,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->playbookInvocation;
   }
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a
-   * target playbook.
-   *
-   * @param GoogleCloudDialogflowCxV3PlaybookTransition $playbookTransition
+   * @param GoogleCloudDialogflowCxV3PlaybookTransition
    */
   public function setPlaybookTransition(GoogleCloudDialogflowCxV3PlaybookTransition $playbookTransition)
   {
@@ -118,9 +105,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->playbookTransition;
   }
   /**
-   * Optional. Action performed on behalf of the agent by calling a plugin tool.
-   *
-   * @param GoogleCloudDialogflowCxV3ToolUse $toolUse
+   * @param GoogleCloudDialogflowCxV3ToolUse
    */
   public function setToolUse(GoogleCloudDialogflowCxV3ToolUse $toolUse)
   {
@@ -134,9 +119,7 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->toolUse;
   }
   /**
-   * Optional. Agent obtained a message from the customer.
-   *
-   * @param GoogleCloudDialogflowCxV3UserUtterance $userUtterance
+   * @param GoogleCloudDialogflowCxV3UserUtterance
    */
   public function setUserUtterance(GoogleCloudDialogflowCxV3UserUtterance $userUtterance)
   {

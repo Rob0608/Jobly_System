@@ -22,37 +22,24 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
   protected $placeAnswerSourcesType = GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources::class;
   protected $placeAnswerSourcesDataType = '';
   /**
-   * This Place's resource name, in `places/{place_id}` format. This can be used
-   * to look up the place in the Google Maps API.
-   *
    * @var string
    */
   public $placeId;
   /**
-   * The text of the place answer.
-   *
    * @var string
    */
   public $text;
   /**
-   * The title of the place.
-   *
    * @var string
    */
   public $title;
   /**
-   * The URI of the place.
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * The sources that were used to generate the place answer. This includes
-   * review snippets and photos that were used to generate the answer, as well
-   * as URIs to flag content.
-   *
-   * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources $placeAnswerSources
+   * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources
    */
   public function setPlaceAnswerSources(GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources $placeAnswerSources)
   {
@@ -66,10 +53,7 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
     return $this->placeAnswerSources;
   }
   /**
-   * This Place's resource name, in `places/{place_id}` format. This can be used
-   * to look up the place in the Google Maps API.
-   *
-   * @param string $placeId
+   * @param string
    */
   public function setPlaceId($placeId)
   {
@@ -83,9 +67,7 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
     return $this->placeId;
   }
   /**
-   * The text of the place answer.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -99,9 +81,7 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
     return $this->text;
   }
   /**
-   * The title of the place.
-   *
-   * @param string $title
+   * @param string
    */
   public function setTitle($title)
   {
@@ -115,9 +95,7 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
     return $this->title;
   }
   /**
-   * The URI of the place.
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

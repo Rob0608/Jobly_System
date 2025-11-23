@@ -21,9 +21,6 @@ class ListSchemaBundlesResponse extends \Google\Collection
 {
   protected $collection_key = 'schemaBundles';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -31,10 +28,7 @@ class ListSchemaBundlesResponse extends \Google\Collection
   protected $schemaBundlesDataType = 'array';
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -48,9 +42,7 @@ class ListSchemaBundlesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The schema bundles from the specified table.
-   *
-   * @param SchemaBundle[] $schemaBundles
+   * @param SchemaBundle[]
    */
   public function setSchemaBundles($schemaBundles)
   {

@@ -23,16 +23,12 @@ class ListMinorVersionsResponse extends \Google\Collection
   protected $minorVersionsType = MinorVersion::class;
   protected $minorVersionsDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of MinorVersions.
-   *
-   * @param MinorVersion[] $minorVersions
+   * @param MinorVersion[]
    */
   public function setMinorVersions($minorVersions)
   {
@@ -46,9 +42,7 @@ class ListMinorVersionsResponse extends \Google\Collection
     return $this->minorVersions;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

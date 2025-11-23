@@ -20,26 +20,16 @@ namespace Google\Service\Sheets;
 class RichLinkProperties extends \Google\Model
 {
   /**
-   * Output only. The [MIME
-   * type](https://developers.google.com/drive/api/v3/mime-types) of the link,
-   * if there's one (for example, when it's a file in Drive).
-   *
    * @var string
    */
   public $mimeType;
   /**
-   * Required. The URI to the link. This is always present.
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * Output only. The [MIME
-   * type](https://developers.google.com/drive/api/v3/mime-types) of the link,
-   * if there's one (for example, when it's a file in Drive).
-   *
-   * @param string $mimeType
+   * @param string
    */
   public function setMimeType($mimeType)
   {
@@ -53,9 +43,7 @@ class RichLinkProperties extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * Required. The URI to the link. This is always present.
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

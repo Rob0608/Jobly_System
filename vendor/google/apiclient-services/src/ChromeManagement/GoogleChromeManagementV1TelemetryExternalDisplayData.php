@@ -20,46 +20,32 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
 {
   /**
-   * The display name.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * The EDID version.
-   *
    * @var string
    */
   public $edidVersion;
   /**
-   * The refresh rate.
-   *
    * @var string
    */
   public $refreshRate;
   /**
-   * The horizontal resolution.
-   *
    * @var int
    */
   public $resolutionHorizontal;
   /**
-   * The vertical resolution.
-   *
    * @var int
    */
   public $resolutionVertical;
   /**
-   * The serial number.
-   *
    * @var int
    */
   public $serialNumber;
 
   /**
-   * The display name.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -73,9 +59,7 @@ class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
     return $this->displayName;
   }
   /**
-   * The EDID version.
-   *
-   * @param string $edidVersion
+   * @param string
    */
   public function setEdidVersion($edidVersion)
   {
@@ -89,9 +73,7 @@ class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
     return $this->edidVersion;
   }
   /**
-   * The refresh rate.
-   *
-   * @param string $refreshRate
+   * @param string
    */
   public function setRefreshRate($refreshRate)
   {
@@ -105,9 +87,7 @@ class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
     return $this->refreshRate;
   }
   /**
-   * The horizontal resolution.
-   *
-   * @param int $resolutionHorizontal
+   * @param int
    */
   public function setResolutionHorizontal($resolutionHorizontal)
   {
@@ -121,9 +101,7 @@ class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
     return $this->resolutionHorizontal;
   }
   /**
-   * The vertical resolution.
-   *
-   * @param int $resolutionVertical
+   * @param int
    */
   public function setResolutionVertical($resolutionVertical)
   {
@@ -137,9 +115,7 @@ class GoogleChromeManagementV1TelemetryExternalDisplayData extends \Google\Model
     return $this->resolutionVertical;
   }
   /**
-   * The serial number.
-   *
-   * @param int $serialNumber
+   * @param int
    */
   public function setSerialNumber($serialNumber)
   {

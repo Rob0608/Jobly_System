@@ -22,23 +22,16 @@ class GoogleMapsPlacesV1PlaceConsumerAlert extends \Google\Model
   protected $detailsType = GoogleMapsPlacesV1PlaceConsumerAlertDetails::class;
   protected $detailsDataType = '';
   /**
-   * The language code of the consumer alert message. This is a BCP 47 language
-   * code.
-   *
    * @var string
    */
   public $languageCode;
   /**
-   * The overview of the consumer alert message.
-   *
    * @var string
    */
   public $overview;
 
   /**
-   * The details of the consumer alert message.
-   *
-   * @param GoogleMapsPlacesV1PlaceConsumerAlertDetails $details
+   * @param GoogleMapsPlacesV1PlaceConsumerAlertDetails
    */
   public function setDetails(GoogleMapsPlacesV1PlaceConsumerAlertDetails $details)
   {
@@ -52,10 +45,7 @@ class GoogleMapsPlacesV1PlaceConsumerAlert extends \Google\Model
     return $this->details;
   }
   /**
-   * The language code of the consumer alert message. This is a BCP 47 language
-   * code.
-   *
-   * @param string $languageCode
+   * @param string
    */
   public function setLanguageCode($languageCode)
   {
@@ -69,9 +59,7 @@ class GoogleMapsPlacesV1PlaceConsumerAlert extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * The overview of the consumer alert message.
-   *
-   * @param string $overview
+   * @param string
    */
   public function setOverview($overview)
   {

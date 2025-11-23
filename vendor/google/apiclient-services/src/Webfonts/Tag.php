@@ -20,22 +20,16 @@ namespace Google\Service\Webfonts;
 class Tag extends \Google\Model
 {
   /**
-   * The name of the tag.
-   *
    * @var string
    */
   public $name;
   /**
-   * The weight of the tag.
-   *
    * @var float
    */
   public $weight;
 
   /**
-   * The name of the tag.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -49,9 +43,7 @@ class Tag extends \Google\Model
     return $this->name;
   }
   /**
-   * The weight of the tag.
-   *
-   * @param float $weight
+   * @param float
    */
   public function setWeight($weight)
   {

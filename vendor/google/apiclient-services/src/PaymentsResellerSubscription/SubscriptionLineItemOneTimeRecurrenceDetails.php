@@ -23,9 +23,7 @@ class SubscriptionLineItemOneTimeRecurrenceDetails extends \Google\Model
   protected $servicePeriodDataType = '';
 
   /**
-   * Output only. The service period of the ONE_TIME line item.
-   *
-   * @param ServicePeriod $servicePeriod
+   * @param ServicePeriod
    */
   public function setServicePeriod(ServicePeriod $servicePeriod)
   {

@@ -24,10 +24,7 @@ class DesiredAdditionalIPRangesConfig extends \Google\Collection
   protected $additionalIpRangesConfigsDataType = 'array';
 
   /**
-   * List of additional IP ranges configs where each AdditionalIPRangesConfig
-   * corresponds to one subnetwork's IP ranges
-   *
-   * @param AdditionalIPRangesConfig[] $additionalIpRangesConfigs
+   * @param AdditionalIPRangesConfig[]
    */
   public function setAdditionalIpRangesConfigs($additionalIpRangesConfigs)
   {

@@ -21,42 +21,28 @@ class ProductStatusDestinationStatus extends \Google\Collection
 {
   protected $collection_key = 'pendingCountries';
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
-   *
    * @var string[]
    */
   public $approvedCountries;
   /**
-   * The name of the destination
-   *
    * @var string
    */
   public $destination;
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
-   *
    * @var string[]
    */
   public $disapprovedCountries;
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending
-   * approval.
-   *
    * @var string[]
    */
   public $pendingCountries;
   /**
-   * Deprecated. Destination approval status in `targetCountry` of the offer.
-   *
-   * @deprecated
    * @var string
    */
   public $status;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
-   *
-   * @param string[] $approvedCountries
+   * @param string[]
    */
   public function setApprovedCountries($approvedCountries)
   {
@@ -70,9 +56,7 @@ class ProductStatusDestinationStatus extends \Google\Collection
     return $this->approvedCountries;
   }
   /**
-   * The name of the destination
-   *
-   * @param string $destination
+   * @param string
    */
   public function setDestination($destination)
   {
@@ -86,9 +70,7 @@ class ProductStatusDestinationStatus extends \Google\Collection
     return $this->destination;
   }
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
-   *
-   * @param string[] $disapprovedCountries
+   * @param string[]
    */
   public function setDisapprovedCountries($disapprovedCountries)
   {
@@ -102,10 +84,7 @@ class ProductStatusDestinationStatus extends \Google\Collection
     return $this->disapprovedCountries;
   }
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending
-   * approval.
-   *
-   * @param string[] $pendingCountries
+   * @param string[]
    */
   public function setPendingCountries($pendingCountries)
   {
@@ -119,17 +98,13 @@ class ProductStatusDestinationStatus extends \Google\Collection
     return $this->pendingCountries;
   }
   /**
-   * Deprecated. Destination approval status in `targetCountry` of the offer.
-   *
-   * @deprecated
-   * @param string $status
+   * @param string
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getStatus()

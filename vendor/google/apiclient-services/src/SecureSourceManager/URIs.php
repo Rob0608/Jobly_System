@@ -20,28 +20,20 @@ namespace Google\Service\SecureSourceManager;
 class URIs extends \Google\Model
 {
   /**
-   * Output only. API is the URI for API access.
-   *
    * @var string
    */
   public $api;
   /**
-   * Output only. git_https is the git HTTPS URI for git operations.
-   *
    * @var string
    */
   public $gitHttps;
   /**
-   * Output only. HTML is the URI for user to view the repository in a browser.
-   *
    * @var string
    */
   public $html;
 
   /**
-   * Output only. API is the URI for API access.
-   *
-   * @param string $api
+   * @param string
    */
   public function setApi($api)
   {
@@ -55,9 +47,7 @@ class URIs extends \Google\Model
     return $this->api;
   }
   /**
-   * Output only. git_https is the git HTTPS URI for git operations.
-   *
-   * @param string $gitHttps
+   * @param string
    */
   public function setGitHttps($gitHttps)
   {
@@ -71,9 +61,7 @@ class URIs extends \Google\Model
     return $this->gitHttps;
   }
   /**
-   * Output only. HTML is the URI for user to view the repository in a browser.
-   *
-   * @param string $html
+   * @param string
    */
   public function setHtml($html)
   {

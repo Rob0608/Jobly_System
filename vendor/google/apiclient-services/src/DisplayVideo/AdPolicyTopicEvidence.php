@@ -28,15 +28,10 @@ class AdPolicyTopicEvidence extends \Google\Model
   protected $destinationTextListType = AdPolicyTopicEvidenceDestinationTextList::class;
   protected $destinationTextListDataType = '';
   /**
-   * HTTP code returned when the final URL was crawled.
-   *
    * @var int
    */
   public $httpCode;
   /**
-   * The language the ad was detected to be written in. This field uses IETF
-   * language tags, such as "en-US".
-   *
    * @var string
    */
   public $languageCode;
@@ -52,9 +47,7 @@ class AdPolicyTopicEvidence extends \Google\Model
   protected $websiteListDataType = '';
 
   /**
-   * Counterfeit enforcement that caused a policy violation.
-   *
-   * @param AdPolicyTopicEvidenceCounterfeit $counterfeit
+   * @param AdPolicyTopicEvidenceCounterfeit
    */
   public function setCounterfeit(AdPolicyTopicEvidenceCounterfeit $counterfeit)
   {
@@ -68,9 +61,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->counterfeit;
   }
   /**
-   * A mismatch between the ad destination URLs.
-   *
-   * @param AdPolicyTopicEvidenceDestinationMismatch $destinationMismatch
+   * @param AdPolicyTopicEvidenceDestinationMismatch
    */
   public function setDestinationMismatch(AdPolicyTopicEvidenceDestinationMismatch $destinationMismatch)
   {
@@ -84,9 +75,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->destinationMismatch;
   }
   /**
-   * Information on HTTP or DNS errors related to the ad destination.
-   *
-   * @param AdPolicyTopicEvidenceDestinationNotWorking $destinationNotWorking
+   * @param AdPolicyTopicEvidenceDestinationNotWorking
    */
   public function setDestinationNotWorking(AdPolicyTopicEvidenceDestinationNotWorking $destinationNotWorking)
   {
@@ -100,9 +89,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->destinationNotWorking;
   }
   /**
-   * The text in the destination of the ad that is causing a policy violation.
-   *
-   * @param AdPolicyTopicEvidenceDestinationTextList $destinationTextList
+   * @param AdPolicyTopicEvidenceDestinationTextList
    */
   public function setDestinationTextList(AdPolicyTopicEvidenceDestinationTextList $destinationTextList)
   {
@@ -116,9 +103,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->destinationTextList;
   }
   /**
-   * HTTP code returned when the final URL was crawled.
-   *
-   * @param int $httpCode
+   * @param int
    */
   public function setHttpCode($httpCode)
   {
@@ -132,10 +117,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->httpCode;
   }
   /**
-   * The language the ad was detected to be written in. This field uses IETF
-   * language tags, such as "en-US".
-   *
-   * @param string $languageCode
+   * @param string
    */
   public function setLanguageCode($languageCode)
   {
@@ -149,9 +131,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * Legal related regulation enforcement that caused a policy violation.
-   *
-   * @param AdPolicyTopicEvidenceLegalRemoval $legalRemoval
+   * @param AdPolicyTopicEvidenceLegalRemoval
    */
   public function setLegalRemoval(AdPolicyTopicEvidenceLegalRemoval $legalRemoval)
   {
@@ -165,9 +145,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->legalRemoval;
   }
   /**
-   * T&S proactive enforcement that caused a policy violation.
-   *
-   * @param AdPolicyTopicEvidenceRegionalRequirements $regionalRequirements
+   * @param AdPolicyTopicEvidenceRegionalRequirements
    */
   public function setRegionalRequirements(AdPolicyTopicEvidenceRegionalRequirements $regionalRequirements)
   {
@@ -181,9 +159,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->regionalRequirements;
   }
   /**
-   * List of evidence found in the text of the ad.
-   *
-   * @param AdPolicyTopicEvidenceTextList $textList
+   * @param AdPolicyTopicEvidenceTextList
    */
   public function setTextList(AdPolicyTopicEvidenceTextList $textList)
   {
@@ -197,9 +173,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->textList;
   }
   /**
-   * Trademark terms that caused a policy violation.
-   *
-   * @param AdPolicyTopicEvidenceTrademark $trademark
+   * @param AdPolicyTopicEvidenceTrademark
    */
   public function setTrademark(AdPolicyTopicEvidenceTrademark $trademark)
   {
@@ -213,9 +187,7 @@ class AdPolicyTopicEvidence extends \Google\Model
     return $this->trademark;
   }
   /**
-   * List of websites linked with the ad.
-   *
-   * @param AdPolicyTopicEvidenceWebsiteList $websiteList
+   * @param AdPolicyTopicEvidenceWebsiteList
    */
   public function setWebsiteList(AdPolicyTopicEvidenceWebsiteList $websiteList)
   {

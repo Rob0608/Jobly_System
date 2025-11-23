@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources extends \Googl
   protected $reviewSnippetsDataType = 'array';
 
   /**
-   * Snippets of reviews that were used to generate the answer.
-   *
-   * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet[] $reviewSnippets
+   * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet[]
    */
   public function setReviewSnippets($reviewSnippets)
   {

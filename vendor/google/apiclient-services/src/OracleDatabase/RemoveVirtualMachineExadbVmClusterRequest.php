@@ -21,30 +21,16 @@ class RemoveVirtualMachineExadbVmClusterRequest extends \Google\Collection
 {
   protected $collection_key = 'hostnames';
   /**
-   * Required. The list of host names of db nodes to be removed from the
-   * ExadbVmCluster.
-   *
    * @var string[]
    */
   public $hostnames;
   /**
-   * Optional. An optional ID to identify the request. This value is used to
-   * identify duplicate requests. If you make a request with the same request ID
-   * and the original request is still in progress or completed, the server
-   * ignores the second request. This prevents clients from accidentally
-   * creating duplicate commitments. The request ID must be a valid UUID with
-   * the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
-   *
    * @var string
    */
   public $requestId;
 
   /**
-   * Required. The list of host names of db nodes to be removed from the
-   * ExadbVmCluster.
-   *
-   * @param string[] $hostnames
+   * @param string[]
    */
   public function setHostnames($hostnames)
   {
@@ -58,15 +44,7 @@ class RemoveVirtualMachineExadbVmClusterRequest extends \Google\Collection
     return $this->hostnames;
   }
   /**
-   * Optional. An optional ID to identify the request. This value is used to
-   * identify duplicate requests. If you make a request with the same request ID
-   * and the original request is still in progress or completed, the server
-   * ignores the second request. This prevents clients from accidentally
-   * creating duplicate commitments. The request ID must be a valid UUID with
-   * the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
-   *
-   * @param string $requestId
+   * @param string
    */
   public function setRequestId($requestId)
   {

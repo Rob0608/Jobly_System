@@ -20,24 +20,16 @@ namespace Google\Service\Compute;
 class InstanceSettingsMetadata extends \Google\Model
 {
   /**
-   * A metadata key/value items map. The total size of all keys and values must
-   * be less than 512KB.
-   *
    * @var string[]
    */
   public $items;
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
-   *
    * @var string
    */
   public $kind;
 
   /**
-   * A metadata key/value items map. The total size of all keys and values must
-   * be less than 512KB.
-   *
-   * @param string[] $items
+   * @param string[]
    */
   public function setItems($items)
   {
@@ -51,9 +43,7 @@ class InstanceSettingsMetadata extends \Google\Model
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {

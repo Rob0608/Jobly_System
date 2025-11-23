@@ -26,9 +26,7 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesResponse extends \Googl
   protected $userLicensesDataType = 'array';
 
   /**
-   * A sample of errors encountered while processing the request.
-   *
-   * @param GoogleRpcStatus[] $errorSamples
+   * @param GoogleRpcStatus[]
    */
   public function setErrorSamples($errorSamples)
   {
@@ -42,9 +40,7 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesResponse extends \Googl
     return $this->errorSamples;
   }
   /**
-   * UserLicenses successfully updated.
-   *
-   * @param GoogleCloudDiscoveryengineV1UserLicense[] $userLicenses
+   * @param GoogleCloudDiscoveryengineV1UserLicense[]
    */
   public function setUserLicenses($userLicenses)
   {

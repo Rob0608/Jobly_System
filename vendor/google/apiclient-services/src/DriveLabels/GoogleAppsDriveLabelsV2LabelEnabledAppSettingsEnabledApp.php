@@ -20,37 +20,19 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp extends \Google\Model
 {
   /**
-   * Unspecified
-   */
-  public const APP_APP_UNSPECIFIED = 'APP_UNSPECIFIED';
-  /**
-   * Drive
-   */
-  public const APP_DRIVE = 'DRIVE';
-  /**
-   * Gmail
-   */
-  public const APP_GMAIL = 'GMAIL';
-  /**
-   * Optional. The name of the app.
-   *
    * @var string
    */
   public $app;
 
   /**
-   * Optional. The name of the app.
-   *
-   * Accepted values: APP_UNSPECIFIED, DRIVE, GMAIL
-   *
-   * @param self::APP_* $app
+   * @param string
    */
   public function setApp($app)
   {
     $this->app = $app;
   }
   /**
-   * @return self::APP_*
+   * @return string
    */
   public function getApp()
   {

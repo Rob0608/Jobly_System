@@ -20,28 +20,20 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class ConnectionPoolConfig extends \Google\Model
 {
   /**
-   * Optional. Whether to enable Managed Connection Pool (MCP).
-   *
    * @var bool
    */
   public $enabled;
   /**
-   * Optional. Connection Pool flags, as a list of "key": "value" pairs.
-   *
    * @var string[]
    */
   public $flags;
   /**
-   * Output only. The number of running poolers per instance.
-   *
    * @var int
    */
   public $poolerCount;
 
   /**
-   * Optional. Whether to enable Managed Connection Pool (MCP).
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {
@@ -55,9 +47,7 @@ class ConnectionPoolConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Optional. Connection Pool flags, as a list of "key": "value" pairs.
-   *
-   * @param string[] $flags
+   * @param string[]
    */
   public function setFlags($flags)
   {
@@ -71,9 +61,7 @@ class ConnectionPoolConfig extends \Google\Model
     return $this->flags;
   }
   /**
-   * Output only. The number of running poolers per instance.
-   *
-   * @param int $poolerCount
+   * @param int
    */
   public function setPoolerCount($poolerCount)
   {

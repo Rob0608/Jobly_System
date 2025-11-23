@@ -23,17 +23,12 @@ class FetchBackupPlanAssociationsForResourceTypeResponse extends \Google\Collect
   protected $backupPlanAssociationsType = BackupPlanAssociation::class;
   protected $backupPlanAssociationsDataType = 'array';
   /**
-   * Output only. A token, which can be sent as `page_token` to retrieve the
-   * next page. If this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * Output only. The BackupPlanAssociations from the specified parent.
-   *
-   * @param BackupPlanAssociation[] $backupPlanAssociations
+   * @param BackupPlanAssociation[]
    */
   public function setBackupPlanAssociations($backupPlanAssociations)
   {
@@ -47,10 +42,7 @@ class FetchBackupPlanAssociationsForResourceTypeResponse extends \Google\Collect
     return $this->backupPlanAssociations;
   }
   /**
-   * Output only. A token, which can be sent as `page_token` to retrieve the
-   * next page. If this field is omitted, there are no subsequent pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

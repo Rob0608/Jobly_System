@@ -20,50 +20,24 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductPreOrderOffer extends \Google\Model
 {
   /**
-   * Unspecified price change behavior. Must not be used.
-   */
-  public const PRICE_CHANGE_BEHAVIOR_PRE_ORDER_PRICE_CHANGE_BEHAVIOR_UNSPECIFIED = 'PRE_ORDER_PRICE_CHANGE_BEHAVIOR_UNSPECIFIED';
-  /**
-   * The buyer gets charged the minimum between the initial price at the time of
-   * pre-order and the final offer price on the release date.
-   */
-  public const PRICE_CHANGE_BEHAVIOR_PRE_ORDER_PRICE_CHANGE_BEHAVIOR_TWO_POINT_LOWEST = 'PRE_ORDER_PRICE_CHANGE_BEHAVIOR_TWO_POINT_LOWEST';
-  /**
-   * The buyer gets the same price as the one they pre-ordered, regardless of
-   * any price changes that may have happened after the pre-order.
-   */
-  public const PRICE_CHANGE_BEHAVIOR_PRE_ORDER_PRICE_CHANGE_BEHAVIOR_NEW_ORDERS_ONLY = 'PRE_ORDER_PRICE_CHANGE_BEHAVIOR_NEW_ORDERS_ONLY';
-  /**
-   * Required. Time when the pre-order will stop being available.
-   *
    * @var string
    */
   public $endTime;
   /**
-   * Required. Immutable. Specifies how price changes affect pre-existing pre-
-   * orders.
-   *
    * @var string
    */
   public $priceChangeBehavior;
   /**
-   * Required. Time on which the product associated with the pre-order will be
-   * released and the pre-order orders fulfilled.
-   *
    * @var string
    */
   public $releaseTime;
   /**
-   * Required. Time when the pre-order will start being available.
-   *
    * @var string
    */
   public $startTime;
 
   /**
-   * Required. Time when the pre-order will stop being available.
-   *
-   * @param string $endTime
+   * @param string
    */
   public function setEndTime($endTime)
   {
@@ -77,31 +51,21 @@ class OneTimeProductPreOrderOffer extends \Google\Model
     return $this->endTime;
   }
   /**
-   * Required. Immutable. Specifies how price changes affect pre-existing pre-
-   * orders.
-   *
-   * Accepted values: PRE_ORDER_PRICE_CHANGE_BEHAVIOR_UNSPECIFIED,
-   * PRE_ORDER_PRICE_CHANGE_BEHAVIOR_TWO_POINT_LOWEST,
-   * PRE_ORDER_PRICE_CHANGE_BEHAVIOR_NEW_ORDERS_ONLY
-   *
-   * @param self::PRICE_CHANGE_BEHAVIOR_* $priceChangeBehavior
+   * @param string
    */
   public function setPriceChangeBehavior($priceChangeBehavior)
   {
     $this->priceChangeBehavior = $priceChangeBehavior;
   }
   /**
-   * @return self::PRICE_CHANGE_BEHAVIOR_*
+   * @return string
    */
   public function getPriceChangeBehavior()
   {
     return $this->priceChangeBehavior;
   }
   /**
-   * Required. Time on which the product associated with the pre-order will be
-   * released and the pre-order orders fulfilled.
-   *
-   * @param string $releaseTime
+   * @param string
    */
   public function setReleaseTime($releaseTime)
   {
@@ -115,9 +79,7 @@ class OneTimeProductPreOrderOffer extends \Google\Model
     return $this->releaseTime;
   }
   /**
-   * Required. Time when the pre-order will start being available.
-   *
-   * @param string $startTime
+   * @param string
    */
   public function setStartTime($startTime)
   {

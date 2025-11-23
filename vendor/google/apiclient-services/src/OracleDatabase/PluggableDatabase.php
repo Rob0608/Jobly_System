@@ -20,23 +20,14 @@ namespace Google\Service\OracleDatabase;
 class PluggableDatabase extends \Google\Model
 {
   /**
-   * Output only. The date and time that the PluggableDatabase was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Identifier. The name of the PluggableDatabase resource in the following
-   * format: projects/{project}/locations/{region}/pluggableDatabases/{pluggable
-   * _database}
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. HTTPS link to OCI resources exposed to Customer via UI
-   * Interface.
-   *
    * @var string
    */
   public $ociUrl;
@@ -44,9 +35,7 @@ class PluggableDatabase extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * Output only. The date and time that the PluggableDatabase was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -60,11 +49,7 @@ class PluggableDatabase extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Identifier. The name of the PluggableDatabase resource in the following
-   * format: projects/{project}/locations/{region}/pluggableDatabases/{pluggable
-   * _database}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -78,10 +63,7 @@ class PluggableDatabase extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. HTTPS link to OCI resources exposed to Customer via UI
-   * Interface.
-   *
-   * @param string $ociUrl
+   * @param string
    */
   public function setOciUrl($ociUrl)
   {
@@ -95,9 +77,7 @@ class PluggableDatabase extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * Optional. The properties of the PluggableDatabase.
-   *
-   * @param PluggableDatabaseProperties $properties
+   * @param PluggableDatabaseProperties
    */
   public function setProperties(PluggableDatabaseProperties $properties)
   {

@@ -21,8 +21,6 @@ class ListPluggableDatabasesResponse extends \Google\Collection
 {
   protected $collection_key = 'pluggableDatabases';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -30,9 +28,7 @@ class ListPluggableDatabasesResponse extends \Google\Collection
   protected $pluggableDatabasesDataType = 'array';
 
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,9 +42,7 @@ class ListPluggableDatabasesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of PluggableDatabases.
-   *
-   * @param PluggableDatabase[] $pluggableDatabases
+   * @param PluggableDatabase[]
    */
   public function setPluggableDatabases($pluggableDatabases)
   {

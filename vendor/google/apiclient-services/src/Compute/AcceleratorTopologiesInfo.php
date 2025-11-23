@@ -24,9 +24,7 @@ class AcceleratorTopologiesInfo extends \Google\Collection
   protected $acceleratorTopologyInfosDataType = 'array';
 
   /**
-   * Info for each accelerator topology.
-   *
-   * @param AcceleratorTopologiesInfoAcceleratorTopologyInfo[] $acceleratorTopologyInfos
+   * @param AcceleratorTopologiesInfoAcceleratorTopologyInfo[]
    */
   public function setAcceleratorTopologyInfos($acceleratorTopologyInfos)
   {

@@ -23,17 +23,12 @@ class FetchDataSourceReferencesForResourceTypeResponse extends \Google\Collectio
   protected $dataSourceReferencesType = DataSourceReference::class;
   protected $dataSourceReferencesDataType = 'array';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The DataSourceReferences from the specified parent.
-   *
-   * @param DataSourceReference[] $dataSourceReferences
+   * @param DataSourceReference[]
    */
   public function setDataSourceReferences($dataSourceReferences)
   {
@@ -47,10 +42,7 @@ class FetchDataSourceReferencesForResourceTypeResponse extends \Google\Collectio
     return $this->dataSourceReferences;
   }
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

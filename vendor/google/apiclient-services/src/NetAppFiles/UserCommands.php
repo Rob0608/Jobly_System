@@ -21,16 +21,12 @@ class UserCommands extends \Google\Collection
 {
   protected $collection_key = 'commands';
   /**
-   * Output only. List of commands to be executed by the customer.
-   *
    * @var string[]
    */
   public $commands;
 
   /**
-   * Output only. List of commands to be executed by the customer.
-   *
-   * @param string[] $commands
+   * @param string[]
    */
   public function setCommands($commands)
   {

@@ -9,6 +9,7 @@
     "require": {
         "spatie/laravel-google-calendar": "*",
         "alexpechkarev/google-maps": "^12.1",
+        "phpmailer/phpmailer": "^6.8",
         "php" : "^8.0"
     }
 }

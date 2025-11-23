@@ -25,16 +25,12 @@ class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends \Google\Collection
   protected $entityValidationOutputType = GoogleCloudDocumentaiV1DocumentEntityValidationOutput::class;
   protected $entityValidationOutputDataType = '';
   /**
-   * The revision id.
-   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * The entities in this revision.
-   *
-   * @param GoogleCloudDocumentaiV1DocumentEntity[] $entities
+   * @param GoogleCloudDocumentaiV1DocumentEntity[]
    */
   public function setEntities($entities)
   {
@@ -48,9 +44,7 @@ class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends \Google\Collection
     return $this->entities;
   }
   /**
-   * The entity validation output for this revision.
-   *
-   * @param GoogleCloudDocumentaiV1DocumentEntityValidationOutput $entityValidationOutput
+   * @param GoogleCloudDocumentaiV1DocumentEntityValidationOutput
    */
   public function setEntityValidationOutput(GoogleCloudDocumentaiV1DocumentEntityValidationOutput $entityValidationOutput)
   {
@@ -64,9 +58,7 @@ class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends \Google\Collection
     return $this->entityValidationOutput;
   }
   /**
-   * The revision id.
-   *
-   * @param string $revisionId
+   * @param string
    */
   public function setRevisionId($revisionId)
   {

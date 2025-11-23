@@ -88,9 +88,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
   protected $trajectorySingleToolUseResultsDataType = '';
 
   /**
-   * Results for bleu metric.
-   *
-   * @param GoogleCloudAiplatformV1BleuResults $bleuResults
+   * @param GoogleCloudAiplatformV1BleuResults
    */
   public function setBleuResults(GoogleCloudAiplatformV1BleuResults $bleuResults)
   {
@@ -104,9 +102,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->bleuResults;
   }
   /**
-   * Result for coherence metric.
-   *
-   * @param GoogleCloudAiplatformV1CoherenceResult $coherenceResult
+   * @param GoogleCloudAiplatformV1CoherenceResult
    */
   public function setCoherenceResult(GoogleCloudAiplatformV1CoherenceResult $coherenceResult)
   {
@@ -120,9 +116,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->coherenceResult;
   }
   /**
-   * Translation metrics. Result for Comet metric.
-   *
-   * @param GoogleCloudAiplatformV1CometResult $cometResult
+   * @param GoogleCloudAiplatformV1CometResult
    */
   public function setCometResult(GoogleCloudAiplatformV1CometResult $cometResult)
   {
@@ -136,9 +130,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->cometResult;
   }
   /**
-   * Auto metric evaluation results. Results for exact match metric.
-   *
-   * @param GoogleCloudAiplatformV1ExactMatchResults $exactMatchResults
+   * @param GoogleCloudAiplatformV1ExactMatchResults
    */
   public function setExactMatchResults(GoogleCloudAiplatformV1ExactMatchResults $exactMatchResults)
   {
@@ -152,10 +144,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->exactMatchResults;
   }
   /**
-   * LLM-based metric evaluation result. General text generation metrics,
-   * applicable to other categories. Result for fluency metric.
-   *
-   * @param GoogleCloudAiplatformV1FluencyResult $fluencyResult
+   * @param GoogleCloudAiplatformV1FluencyResult
    */
   public function setFluencyResult(GoogleCloudAiplatformV1FluencyResult $fluencyResult)
   {
@@ -169,9 +158,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->fluencyResult;
   }
   /**
-   * Result for fulfillment metric.
-   *
-   * @param GoogleCloudAiplatformV1FulfillmentResult $fulfillmentResult
+   * @param GoogleCloudAiplatformV1FulfillmentResult
    */
   public function setFulfillmentResult(GoogleCloudAiplatformV1FulfillmentResult $fulfillmentResult)
   {
@@ -185,9 +172,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->fulfillmentResult;
   }
   /**
-   * Result for groundedness metric.
-   *
-   * @param GoogleCloudAiplatformV1GroundednessResult $groundednessResult
+   * @param GoogleCloudAiplatformV1GroundednessResult
    */
   public function setGroundednessResult(GoogleCloudAiplatformV1GroundednessResult $groundednessResult)
   {
@@ -201,10 +186,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->groundednessResult;
   }
   /**
-   * Metric results for each instance. The order of the metric results is
-   * guaranteed to be the same as the order of the instances in the request.
-   *
-   * @param GoogleCloudAiplatformV1MetricResult[] $metricResults
+   * @param GoogleCloudAiplatformV1MetricResult[]
    */
   public function setMetricResults($metricResults)
   {
@@ -218,9 +200,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->metricResults;
   }
   /**
-   * Result for Metricx metric.
-   *
-   * @param GoogleCloudAiplatformV1MetricxResult $metricxResult
+   * @param GoogleCloudAiplatformV1MetricxResult
    */
   public function setMetricxResult(GoogleCloudAiplatformV1MetricxResult $metricxResult)
   {
@@ -234,9 +214,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->metricxResult;
   }
   /**
-   * Result for pairwise metric.
-   *
-   * @param GoogleCloudAiplatformV1PairwiseMetricResult $pairwiseMetricResult
+   * @param GoogleCloudAiplatformV1PairwiseMetricResult
    */
   public function setPairwiseMetricResult(GoogleCloudAiplatformV1PairwiseMetricResult $pairwiseMetricResult)
   {
@@ -250,9 +228,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->pairwiseMetricResult;
   }
   /**
-   * Result for pairwise question answering quality metric.
-   *
-   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityResult $pairwiseQuestionAnsweringQualityResult
+   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityResult
    */
   public function setPairwiseQuestionAnsweringQualityResult(GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityResult $pairwiseQuestionAnsweringQualityResult)
   {
@@ -266,9 +242,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->pairwiseQuestionAnsweringQualityResult;
   }
   /**
-   * Result for pairwise summarization quality metric.
-   *
-   * @param GoogleCloudAiplatformV1PairwiseSummarizationQualityResult $pairwiseSummarizationQualityResult
+   * @param GoogleCloudAiplatformV1PairwiseSummarizationQualityResult
    */
   public function setPairwiseSummarizationQualityResult(GoogleCloudAiplatformV1PairwiseSummarizationQualityResult $pairwiseSummarizationQualityResult)
   {
@@ -282,9 +256,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->pairwiseSummarizationQualityResult;
   }
   /**
-   * Generic metrics. Result for pointwise metric.
-   *
-   * @param GoogleCloudAiplatformV1PointwiseMetricResult $pointwiseMetricResult
+   * @param GoogleCloudAiplatformV1PointwiseMetricResult
    */
   public function setPointwiseMetricResult(GoogleCloudAiplatformV1PointwiseMetricResult $pointwiseMetricResult)
   {
@@ -298,9 +270,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->pointwiseMetricResult;
   }
   /**
-   * Result for question answering correctness metric.
-   *
-   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult $questionAnsweringCorrectnessResult
+   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult
    */
   public function setQuestionAnsweringCorrectnessResult(GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult $questionAnsweringCorrectnessResult)
   {
@@ -314,9 +284,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->questionAnsweringCorrectnessResult;
   }
   /**
-   * Result for question answering helpfulness metric.
-   *
-   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessResult $questionAnsweringHelpfulnessResult
+   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessResult
    */
   public function setQuestionAnsweringHelpfulnessResult(GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessResult $questionAnsweringHelpfulnessResult)
   {
@@ -330,10 +298,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->questionAnsweringHelpfulnessResult;
   }
   /**
-   * Question answering only metrics. Result for question answering quality
-   * metric.
-   *
-   * @param GoogleCloudAiplatformV1QuestionAnsweringQualityResult $questionAnsweringQualityResult
+   * @param GoogleCloudAiplatformV1QuestionAnsweringQualityResult
    */
   public function setQuestionAnsweringQualityResult(GoogleCloudAiplatformV1QuestionAnsweringQualityResult $questionAnsweringQualityResult)
   {
@@ -347,9 +312,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->questionAnsweringQualityResult;
   }
   /**
-   * Result for question answering relevance metric.
-   *
-   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult $questionAnsweringRelevanceResult
+   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult
    */
   public function setQuestionAnsweringRelevanceResult(GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult $questionAnsweringRelevanceResult)
   {
@@ -363,9 +326,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->questionAnsweringRelevanceResult;
   }
   /**
-   * Results for rouge metric.
-   *
-   * @param GoogleCloudAiplatformV1RougeResults $rougeResults
+   * @param GoogleCloudAiplatformV1RougeResults
    */
   public function setRougeResults(GoogleCloudAiplatformV1RougeResults $rougeResults)
   {
@@ -379,9 +340,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->rougeResults;
   }
   /**
-   * Result for rubric based instruction following metric.
-   *
-   * @param GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult $rubricBasedInstructionFollowingResult
+   * @param GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult
    */
   public function setRubricBasedInstructionFollowingResult(GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult $rubricBasedInstructionFollowingResult)
   {
@@ -395,9 +354,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->rubricBasedInstructionFollowingResult;
   }
   /**
-   * Result for safety metric.
-   *
-   * @param GoogleCloudAiplatformV1SafetyResult $safetyResult
+   * @param GoogleCloudAiplatformV1SafetyResult
    */
   public function setSafetyResult(GoogleCloudAiplatformV1SafetyResult $safetyResult)
   {
@@ -411,9 +368,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->safetyResult;
   }
   /**
-   * Result for summarization helpfulness metric.
-   *
-   * @param GoogleCloudAiplatformV1SummarizationHelpfulnessResult $summarizationHelpfulnessResult
+   * @param GoogleCloudAiplatformV1SummarizationHelpfulnessResult
    */
   public function setSummarizationHelpfulnessResult(GoogleCloudAiplatformV1SummarizationHelpfulnessResult $summarizationHelpfulnessResult)
   {
@@ -427,9 +382,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->summarizationHelpfulnessResult;
   }
   /**
-   * Summarization only metrics. Result for summarization quality metric.
-   *
-   * @param GoogleCloudAiplatformV1SummarizationQualityResult $summarizationQualityResult
+   * @param GoogleCloudAiplatformV1SummarizationQualityResult
    */
   public function setSummarizationQualityResult(GoogleCloudAiplatformV1SummarizationQualityResult $summarizationQualityResult)
   {
@@ -443,9 +396,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->summarizationQualityResult;
   }
   /**
-   * Result for summarization verbosity metric.
-   *
-   * @param GoogleCloudAiplatformV1SummarizationVerbosityResult $summarizationVerbosityResult
+   * @param GoogleCloudAiplatformV1SummarizationVerbosityResult
    */
   public function setSummarizationVerbosityResult(GoogleCloudAiplatformV1SummarizationVerbosityResult $summarizationVerbosityResult)
   {
@@ -459,9 +410,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->summarizationVerbosityResult;
   }
   /**
-   * Tool call metrics. Results for tool call valid metric.
-   *
-   * @param GoogleCloudAiplatformV1ToolCallValidResults $toolCallValidResults
+   * @param GoogleCloudAiplatformV1ToolCallValidResults
    */
   public function setToolCallValidResults(GoogleCloudAiplatformV1ToolCallValidResults $toolCallValidResults)
   {
@@ -475,9 +424,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->toolCallValidResults;
   }
   /**
-   * Results for tool name match metric.
-   *
-   * @param GoogleCloudAiplatformV1ToolNameMatchResults $toolNameMatchResults
+   * @param GoogleCloudAiplatformV1ToolNameMatchResults
    */
   public function setToolNameMatchResults(GoogleCloudAiplatformV1ToolNameMatchResults $toolNameMatchResults)
   {
@@ -491,9 +438,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->toolNameMatchResults;
   }
   /**
-   * Results for tool parameter key match metric.
-   *
-   * @param GoogleCloudAiplatformV1ToolParameterKeyMatchResults $toolParameterKeyMatchResults
+   * @param GoogleCloudAiplatformV1ToolParameterKeyMatchResults
    */
   public function setToolParameterKeyMatchResults(GoogleCloudAiplatformV1ToolParameterKeyMatchResults $toolParameterKeyMatchResults)
   {
@@ -507,9 +452,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->toolParameterKeyMatchResults;
   }
   /**
-   * Results for tool parameter key value match metric.
-   *
-   * @param GoogleCloudAiplatformV1ToolParameterKVMatchResults $toolParameterKvMatchResults
+   * @param GoogleCloudAiplatformV1ToolParameterKVMatchResults
    */
   public function setToolParameterKvMatchResults(GoogleCloudAiplatformV1ToolParameterKVMatchResults $toolParameterKvMatchResults)
   {
@@ -523,9 +466,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->toolParameterKvMatchResults;
   }
   /**
-   * Result for trajectory any order match metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectoryAnyOrderMatchResults $trajectoryAnyOrderMatchResults
+   * @param GoogleCloudAiplatformV1TrajectoryAnyOrderMatchResults
    */
   public function setTrajectoryAnyOrderMatchResults(GoogleCloudAiplatformV1TrajectoryAnyOrderMatchResults $trajectoryAnyOrderMatchResults)
   {
@@ -539,9 +480,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->trajectoryAnyOrderMatchResults;
   }
   /**
-   * Result for trajectory exact match metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectoryExactMatchResults $trajectoryExactMatchResults
+   * @param GoogleCloudAiplatformV1TrajectoryExactMatchResults
    */
   public function setTrajectoryExactMatchResults(GoogleCloudAiplatformV1TrajectoryExactMatchResults $trajectoryExactMatchResults)
   {
@@ -555,9 +494,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->trajectoryExactMatchResults;
   }
   /**
-   * Result for trajectory in order match metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectoryInOrderMatchResults $trajectoryInOrderMatchResults
+   * @param GoogleCloudAiplatformV1TrajectoryInOrderMatchResults
    */
   public function setTrajectoryInOrderMatchResults(GoogleCloudAiplatformV1TrajectoryInOrderMatchResults $trajectoryInOrderMatchResults)
   {
@@ -571,9 +508,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->trajectoryInOrderMatchResults;
   }
   /**
-   * Result for trajectory precision metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectoryPrecisionResults $trajectoryPrecisionResults
+   * @param GoogleCloudAiplatformV1TrajectoryPrecisionResults
    */
   public function setTrajectoryPrecisionResults(GoogleCloudAiplatformV1TrajectoryPrecisionResults $trajectoryPrecisionResults)
   {
@@ -587,9 +522,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->trajectoryPrecisionResults;
   }
   /**
-   * Results for trajectory recall metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectoryRecallResults $trajectoryRecallResults
+   * @param GoogleCloudAiplatformV1TrajectoryRecallResults
    */
   public function setTrajectoryRecallResults(GoogleCloudAiplatformV1TrajectoryRecallResults $trajectoryRecallResults)
   {
@@ -603,9 +536,7 @@ class GoogleCloudAiplatformV1EvaluateInstancesResponse extends \Google\Collectio
     return $this->trajectoryRecallResults;
   }
   /**
-   * Results for trajectory single tool use metric.
-   *
-   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseResults $trajectorySingleToolUseResults
+   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseResults
    */
   public function setTrajectorySingleToolUseResults(GoogleCloudAiplatformV1TrajectorySingleToolUseResults $trajectorySingleToolUseResults)
   {

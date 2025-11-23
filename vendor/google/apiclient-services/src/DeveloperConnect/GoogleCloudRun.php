@@ -20,18 +20,12 @@ namespace Google\Service\DeveloperConnect;
 class GoogleCloudRun extends \Google\Model
 {
   /**
-   * Required. Immutable. The name of the Cloud Run service. Format:
-   * `projects/{project}/locations/{location}/services/{service}`.
-   *
    * @var string
    */
   public $serviceUri;
 
   /**
-   * Required. Immutable. The name of the Cloud Run service. Format:
-   * `projects/{project}/locations/{location}/services/{service}`.
-   *
-   * @param string $serviceUri
+   * @param string
    */
   public function setServiceUri($serviceUri)
   {

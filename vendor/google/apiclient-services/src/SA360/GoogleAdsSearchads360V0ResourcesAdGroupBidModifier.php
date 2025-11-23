@@ -19,21 +19,10 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
 {
-  /**
-   * The modifier for the bid when the criterion matches. The modifier must be
-   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent. Use
-   * 0 to opt out of a Device type.
-   *
-   * @var 
-   */
   public $bidModifier;
   protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
   protected $deviceDataType = '';
   /**
-   * Immutable. The resource name of the ad group bid modifier. Ad group bid
-   * modifier resource names have the form:
-   * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
-   *
    * @var string
    */
   public $resourceName;
@@ -47,9 +36,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
     return $this->bidModifier;
   }
   /**
-   * Immutable. A device criterion.
-   *
-   * @param GoogleAdsSearchads360V0CommonDeviceInfo $device
+   * @param GoogleAdsSearchads360V0CommonDeviceInfo
    */
   public function setDevice(GoogleAdsSearchads360V0CommonDeviceInfo $device)
   {
@@ -63,11 +50,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
     return $this->device;
   }
   /**
-   * Immutable. The resource name of the ad group bid modifier. Ad group bid
-   * modifier resource names have the form:
-   * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
-   *
-   * @param string $resourceName
+   * @param string
    */
   public function setResourceName($resourceName)
   {

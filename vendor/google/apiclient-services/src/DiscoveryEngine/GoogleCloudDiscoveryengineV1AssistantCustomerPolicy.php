@@ -26,9 +26,7 @@ class GoogleCloudDiscoveryengineV1AssistantCustomerPolicy extends \Google\Collec
   protected $modelArmorConfigDataType = '';
 
   /**
-   * Optional. List of banned phrases.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase[] $bannedPhrases
+   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase[]
    */
   public function setBannedPhrases($bannedPhrases)
   {
@@ -42,10 +40,7 @@ class GoogleCloudDiscoveryengineV1AssistantCustomerPolicy extends \Google\Collec
     return $this->bannedPhrases;
   }
   /**
-   * Optional. Model Armor configuration to be used for sanitizing user prompts
-   * and assistant responses.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicyModelArmorConfig $modelArmorConfig
+   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicyModelArmorConfig
    */
   public function setModelArmorConfig(GoogleCloudDiscoveryengineV1AssistantCustomerPolicyModelArmorConfig $modelArmorConfig)
   {

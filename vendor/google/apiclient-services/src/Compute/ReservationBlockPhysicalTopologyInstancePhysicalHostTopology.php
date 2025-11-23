@@ -20,22 +20,16 @@ namespace Google\Service\Compute;
 class ReservationBlockPhysicalTopologyInstancePhysicalHostTopology extends \Google\Model
 {
   /**
-   * Host hash for a given instance
-   *
    * @var string
    */
   public $host;
   /**
-   * Sub block hash for a given instance
-   *
    * @var string
    */
   public $subBlock;
 
   /**
-   * Host hash for a given instance
-   *
-   * @param string $host
+   * @param string
    */
   public function setHost($host)
   {
@@ -49,9 +43,7 @@ class ReservationBlockPhysicalTopologyInstancePhysicalHostTopology extends \Goog
     return $this->host;
   }
   /**
-   * Sub block hash for a given instance
-   *
-   * @param string $subBlock
+   * @param string
    */
   public function setSubBlock($subBlock)
   {

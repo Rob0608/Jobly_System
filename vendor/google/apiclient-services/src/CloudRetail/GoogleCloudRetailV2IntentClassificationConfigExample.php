@@ -20,37 +20,24 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2IntentClassificationConfigExample extends \Google\Model
 {
   /**
-   * Required. Whether the example is classified positively.
-   *
    * @var bool
    */
   public $classifiedPositive;
   /**
-   * Optional. The intent_type must match one of the predefined intent types
-   * defined at https://cloud.google.com/retail/docs/reference/rpc/google.cloud.
-   * retail.v2alpha#querytype
-   *
    * @var string
    */
   public $intentType;
   /**
-   * Required. Example query.
-   *
    * @var string
    */
   public $query;
   /**
-   * Optional. The reason for the intent classification. This is used to explain
-   * the intent classification decision.
-   *
    * @var string
    */
   public $reason;
 
   /**
-   * Required. Whether the example is classified positively.
-   *
-   * @param bool $classifiedPositive
+   * @param bool
    */
   public function setClassifiedPositive($classifiedPositive)
   {
@@ -64,11 +51,7 @@ class GoogleCloudRetailV2IntentClassificationConfigExample extends \Google\Model
     return $this->classifiedPositive;
   }
   /**
-   * Optional. The intent_type must match one of the predefined intent types
-   * defined at https://cloud.google.com/retail/docs/reference/rpc/google.cloud.
-   * retail.v2alpha#querytype
-   *
-   * @param string $intentType
+   * @param string
    */
   public function setIntentType($intentType)
   {
@@ -82,9 +65,7 @@ class GoogleCloudRetailV2IntentClassificationConfigExample extends \Google\Model
     return $this->intentType;
   }
   /**
-   * Required. Example query.
-   *
-   * @param string $query
+   * @param string
    */
   public function setQuery($query)
   {
@@ -98,10 +79,7 @@ class GoogleCloudRetailV2IntentClassificationConfigExample extends \Google\Model
     return $this->query;
   }
   /**
-   * Optional. The reason for the intent classification. This is used to explain
-   * the intent classification decision.
-   *
-   * @param string $reason
+   * @param string
    */
   public function setReason($reason)
   {

@@ -23,16 +23,12 @@ class ListExadbVmClustersResponse extends \Google\Collection
   protected $exadbVmClustersType = ExadbVmCluster::class;
   protected $exadbVmClustersDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of ExadbVmClusters.
-   *
-   * @param ExadbVmCluster[] $exadbVmClusters
+   * @param ExadbVmCluster[]
    */
   public function setExadbVmClusters($exadbVmClusters)
   {
@@ -46,9 +42,7 @@ class ListExadbVmClustersResponse extends \Google\Collection
     return $this->exadbVmClusters;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

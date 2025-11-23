@@ -20,25 +20,6 @@ namespace Google\Service\Compute;
 class ResourcePolicy extends \Google\Model
 {
   /**
-   * Resource policy is being created.
-   */
-  public const STATUS_CREATING = 'CREATING';
-  /**
-   * Resource policy is being deleted.
-   */
-  public const STATUS_DELETING = 'DELETING';
-  /**
-   * Resource policy is expired and will not run again.
-   */
-  public const STATUS_EXPIRED = 'EXPIRED';
-  public const STATUS_INVALID = 'INVALID';
-  /**
-   * Resource policy is ready to be used.
-   */
-  public const STATUS_READY = 'READY';
-  /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
-   *
    * @var string
    */
   public $creationTimestamp;
@@ -51,30 +32,16 @@ class ResourcePolicy extends \Google\Model
   protected $groupPlacementPolicyType = ResourcePolicyGroupPlacementPolicy::class;
   protected $groupPlacementPolicyDataType = '';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
-   *
    * @var string
    */
   public $id;
   protected $instanceSchedulePolicyType = ResourcePolicyInstanceSchedulePolicy::class;
   protected $instanceSchedulePolicyDataType = '';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for
-   * resource policies.
-   *
    * @var string
    */
   public $kind;
   /**
-   * The name of the resource, provided by the client when initially creating
-   * the resource. The resource name must be 1-63 characters long, and comply
-   * withRFC1035. Specifically, the name must be 1-63 characters long and match
-   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be
-   * a dash, lowercase letter, or digit, except the last character, which cannot
-   * be a dash.
-   *
    * @var string
    */
   public $name;
@@ -85,16 +52,12 @@ class ResourcePolicy extends \Google\Model
   protected $resourceStatusType = ResourcePolicyResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
-   *
    * @var string
    */
   public $selfLink;
   protected $snapshotSchedulePolicyType = ResourcePolicySnapshotSchedulePolicy::class;
   protected $snapshotSchedulePolicyDataType = '';
   /**
-   * [Output Only] The status of resource policy creation.
-   *
    * @var string
    */
   public $status;
@@ -102,9 +65,7 @@ class ResourcePolicy extends \Google\Model
   protected $workloadPolicyDataType = '';
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
-   *
-   * @param string $creationTimestamp
+   * @param string
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -118,7 +79,7 @@ class ResourcePolicy extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -132,9 +93,7 @@ class ResourcePolicy extends \Google\Model
     return $this->description;
   }
   /**
-   * Resource policy for disk consistency groups.
-   *
-   * @param ResourcePolicyDiskConsistencyGroupPolicy $diskConsistencyGroupPolicy
+   * @param ResourcePolicyDiskConsistencyGroupPolicy
    */
   public function setDiskConsistencyGroupPolicy(ResourcePolicyDiskConsistencyGroupPolicy $diskConsistencyGroupPolicy)
   {
@@ -148,9 +107,7 @@ class ResourcePolicy extends \Google\Model
     return $this->diskConsistencyGroupPolicy;
   }
   /**
-   * Resource policy for instances for placement configuration.
-   *
-   * @param ResourcePolicyGroupPlacementPolicy $groupPlacementPolicy
+   * @param ResourcePolicyGroupPlacementPolicy
    */
   public function setGroupPlacementPolicy(ResourcePolicyGroupPlacementPolicy $groupPlacementPolicy)
   {
@@ -164,10 +121,7 @@ class ResourcePolicy extends \Google\Model
     return $this->groupPlacementPolicy;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
-   *
-   * @param string $id
+   * @param string
    */
   public function setId($id)
   {
@@ -181,9 +135,7 @@ class ResourcePolicy extends \Google\Model
     return $this->id;
   }
   /**
-   * Resource policy for scheduling instance operations.
-   *
-   * @param ResourcePolicyInstanceSchedulePolicy $instanceSchedulePolicy
+   * @param ResourcePolicyInstanceSchedulePolicy
    */
   public function setInstanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicy $instanceSchedulePolicy)
   {
@@ -197,10 +149,7 @@ class ResourcePolicy extends \Google\Model
     return $this->instanceSchedulePolicy;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for
-   * resource policies.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -214,15 +163,7 @@ class ResourcePolicy extends \Google\Model
     return $this->kind;
   }
   /**
-   * The name of the resource, provided by the client when initially creating
-   * the resource. The resource name must be 1-63 characters long, and comply
-   * withRFC1035. Specifically, the name must be 1-63 characters long and match
-   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be
-   * a dash, lowercase letter, or digit, except the last character, which cannot
-   * be a dash.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -236,7 +177,7 @@ class ResourcePolicy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string $region
+   * @param string
    */
   public function setRegion($region)
   {
@@ -250,9 +191,7 @@ class ResourcePolicy extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] The system status of the resource policy.
-   *
-   * @param ResourcePolicyResourceStatus $resourceStatus
+   * @param ResourcePolicyResourceStatus
    */
   public function setResourceStatus(ResourcePolicyResourceStatus $resourceStatus)
   {
@@ -266,9 +205,7 @@ class ResourcePolicy extends \Google\Model
     return $this->resourceStatus;
   }
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
-   *
-   * @param string $selfLink
+   * @param string
    */
   public function setSelfLink($selfLink)
   {
@@ -282,9 +219,7 @@ class ResourcePolicy extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * Resource policy for persistent disks for creating snapshots.
-   *
-   * @param ResourcePolicySnapshotSchedulePolicy $snapshotSchedulePolicy
+   * @param ResourcePolicySnapshotSchedulePolicy
    */
   public function setSnapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy $snapshotSchedulePolicy)
   {
@@ -298,27 +233,21 @@ class ResourcePolicy extends \Google\Model
     return $this->snapshotSchedulePolicy;
   }
   /**
-   * [Output Only] The status of resource policy creation.
-   *
-   * Accepted values: CREATING, DELETING, EXPIRED, INVALID, READY
-   *
-   * @param self::STATUS_* $status
+   * @param string
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return self::STATUS_*
+   * @return string
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * Resource policy for defining instance placement for MIGs.
-   *
-   * @param ResourcePolicyWorkloadPolicy $workloadPolicy
+   * @param ResourcePolicyWorkloadPolicy
    */
   public function setWorkloadPolicy(ResourcePolicyWorkloadPolicy $workloadPolicy)
   {

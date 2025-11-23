@@ -20,18 +20,12 @@ namespace Google\Service\NetAppFiles;
 class CacheConfig extends \Google\Model
 {
   /**
-   * Optional. Flag indicating whether a CIFS change notification is enabled for
-   * the FlexCache volume.
-   *
    * @var bool
    */
   public $cifsChangeNotifyEnabled;
 
   /**
-   * Optional. Flag indicating whether a CIFS change notification is enabled for
-   * the FlexCache volume.
-   *
-   * @param bool $cifsChangeNotifyEnabled
+   * @param bool
    */
   public function setCifsChangeNotifyEnabled($cifsChangeNotifyEnabled)
   {

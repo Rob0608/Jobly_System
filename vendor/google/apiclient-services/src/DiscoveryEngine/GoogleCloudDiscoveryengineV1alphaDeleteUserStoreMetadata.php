@@ -20,23 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata extends \Google\Model
 {
   /**
-   * The number of end users under the user store that failed to be deleted.
-   *
    * @var string
    */
   public $failureCount;
   /**
-   * The number of end users under the user store that were successfully
-   * deleted.
-   *
    * @var string
    */
   public $successCount;
 
   /**
-   * The number of end users under the user store that failed to be deleted.
-   *
-   * @param string $failureCount
+   * @param string
    */
   public function setFailureCount($failureCount)
   {
@@ -50,10 +43,7 @@ class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata extends \Google\M
     return $this->failureCount;
   }
   /**
-   * The number of end users under the user store that were successfully
-   * deleted.
-   *
-   * @param string $successCount
+   * @param string
    */
   public function setSuccessCount($successCount)
   {

@@ -20,22 +20,16 @@ namespace Google\Service\Directory;
 class BluetoothAdapterInfo extends \Google\Model
 {
   /**
-   * Output only. The MAC address of the adapter.
-   *
    * @var string
    */
   public $address;
   /**
-   * Output only. The number of devices connected to this adapter.
-   *
    * @var int
    */
   public $numConnectedDevices;
 
   /**
-   * Output only. The MAC address of the adapter.
-   *
-   * @param string $address
+   * @param string
    */
   public function setAddress($address)
   {
@@ -49,9 +43,7 @@ class BluetoothAdapterInfo extends \Google\Model
     return $this->address;
   }
   /**
-   * Output only. The number of devices connected to this adapter.
-   *
-   * @param int $numConnectedDevices
+   * @param int
    */
   public function setNumConnectedDevices($numConnectedDevices)
   {

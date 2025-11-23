@@ -26,14 +26,10 @@ class BackupDRMetadata extends \Google\Model
   protected $backupdrConfigurationType = BackupDRConfiguration::class;
   protected $backupdrConfigurationDataType = '';
   /**
-   * Required. Full resource name of this instance.
-   *
    * @var string
    */
   public $fullResourceName;
   /**
-   * Required. Last time backup configuration was refreshed.
-   *
    * @var string
    */
   public $lastRefreshTime;
@@ -41,9 +37,7 @@ class BackupDRMetadata extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * Backup configuration for this instance.
-   *
-   * @param BackupConfiguration $backupConfiguration
+   * @param BackupConfiguration
    */
   public function setBackupConfiguration(BackupConfiguration $backupConfiguration)
   {
@@ -57,9 +51,7 @@ class BackupDRMetadata extends \Google\Model
     return $this->backupConfiguration;
   }
   /**
-   * Latest backup run information for this instance.
-   *
-   * @param BackupRun $backupRun
+   * @param BackupRun
    */
   public function setBackupRun(BackupRun $backupRun)
   {
@@ -73,9 +65,7 @@ class BackupDRMetadata extends \Google\Model
     return $this->backupRun;
   }
   /**
-   * BackupDR configuration for this instance.
-   *
-   * @param BackupDRConfiguration $backupdrConfiguration
+   * @param BackupDRConfiguration
    */
   public function setBackupdrConfiguration(BackupDRConfiguration $backupdrConfiguration)
   {
@@ -89,9 +79,7 @@ class BackupDRMetadata extends \Google\Model
     return $this->backupdrConfiguration;
   }
   /**
-   * Required. Full resource name of this instance.
-   *
-   * @param string $fullResourceName
+   * @param string
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -105,9 +93,7 @@ class BackupDRMetadata extends \Google\Model
     return $this->fullResourceName;
   }
   /**
-   * Required. Last time backup configuration was refreshed.
-   *
-   * @param string $lastRefreshTime
+   * @param string
    */
   public function setLastRefreshTime($lastRefreshTime)
   {
@@ -121,9 +107,7 @@ class BackupDRMetadata extends \Google\Model
     return $this->lastRefreshTime;
   }
   /**
-   * Required. Database resource id.
-   *
-   * @param DatabaseResourceId $resourceId
+   * @param DatabaseResourceId
    */
   public function setResourceId(DatabaseResourceId $resourceId)
   {

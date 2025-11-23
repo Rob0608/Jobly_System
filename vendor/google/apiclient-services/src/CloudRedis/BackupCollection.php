@@ -20,69 +20,44 @@ namespace Google\Service\CloudRedis;
 class BackupCollection extends \Google\Model
 {
   /**
-   * Output only. The full resource path of the cluster the backup collection
-   * belongs to. Example:
-   * projects/{project}/locations/{location}/clusters/{cluster}
-   *
    * @var string
    */
   public $cluster;
   /**
-   * Output only. The cluster uid of the backup collection.
-   *
    * @var string
    */
   public $clusterUid;
   /**
-   * Output only. The time when the backup collection was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. The KMS key used to encrypt the backups under this backup
-   * collection.
-   *
    * @var string
    */
   public $kmsKey;
   /**
-   * Output only. The last time a backup was created in the backup collection.
-   *
    * @var string
    */
   public $lastBackupTime;
   /**
-   * Identifier. Full resource path of the backup collection.
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. Total number of backups in the backup collection.
-   *
    * @var string
    */
   public $totalBackupCount;
   /**
-   * Output only. Total size of all backups in the backup collection.
-   *
    * @var string
    */
   public $totalBackupSizeBytes;
   /**
-   * Output only. System assigned unique identifier of the backup collection.
-   *
    * @var string
    */
   public $uid;
 
   /**
-   * Output only. The full resource path of the cluster the backup collection
-   * belongs to. Example:
-   * projects/{project}/locations/{location}/clusters/{cluster}
-   *
-   * @param string $cluster
+   * @param string
    */
   public function setCluster($cluster)
   {
@@ -96,9 +71,7 @@ class BackupCollection extends \Google\Model
     return $this->cluster;
   }
   /**
-   * Output only. The cluster uid of the backup collection.
-   *
-   * @param string $clusterUid
+   * @param string
    */
   public function setClusterUid($clusterUid)
   {
@@ -112,9 +85,7 @@ class BackupCollection extends \Google\Model
     return $this->clusterUid;
   }
   /**
-   * Output only. The time when the backup collection was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -128,10 +99,7 @@ class BackupCollection extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. The KMS key used to encrypt the backups under this backup
-   * collection.
-   *
-   * @param string $kmsKey
+   * @param string
    */
   public function setKmsKey($kmsKey)
   {
@@ -145,9 +113,7 @@ class BackupCollection extends \Google\Model
     return $this->kmsKey;
   }
   /**
-   * Output only. The last time a backup was created in the backup collection.
-   *
-   * @param string $lastBackupTime
+   * @param string
    */
   public function setLastBackupTime($lastBackupTime)
   {
@@ -161,9 +127,7 @@ class BackupCollection extends \Google\Model
     return $this->lastBackupTime;
   }
   /**
-   * Identifier. Full resource path of the backup collection.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -177,9 +141,7 @@ class BackupCollection extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. Total number of backups in the backup collection.
-   *
-   * @param string $totalBackupCount
+   * @param string
    */
   public function setTotalBackupCount($totalBackupCount)
   {
@@ -193,9 +155,7 @@ class BackupCollection extends \Google\Model
     return $this->totalBackupCount;
   }
   /**
-   * Output only. Total size of all backups in the backup collection.
-   *
-   * @param string $totalBackupSizeBytes
+   * @param string
    */
   public function setTotalBackupSizeBytes($totalBackupSizeBytes)
   {
@@ -209,9 +169,7 @@ class BackupCollection extends \Google\Model
     return $this->totalBackupSizeBytes;
   }
   /**
-   * Output only. System assigned unique identifier of the backup collection.
-   *
-   * @param string $uid
+   * @param string
    */
   public function setUid($uid)
   {

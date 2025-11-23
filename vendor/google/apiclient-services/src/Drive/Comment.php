@@ -21,73 +21,44 @@ class Comment extends \Google\Collection
 {
   protected $collection_key = 'replies';
   /**
-   * A region of the document represented as a JSON string. For details on
-   * defining anchor properties, refer to [Manage comments and
-   * replies](https://developers.google.com/workspace/drive/api/v3/manage-
-   * comments).
-   *
    * @var string
    */
   public $anchor;
   /**
-   * Output only. The email of the user who is assigned to this comment, if none
-   * is assigned this will be unset.
-   *
    * @var string
    */
   public $assigneeEmailAddress;
   protected $authorType = User::class;
   protected $authorDataType = '';
   /**
-   * The plain text content of the comment. This field is used for setting the
-   * content, while `htmlContent` should be displayed.
-   *
    * @var string
    */
   public $content;
   /**
-   * The time at which the comment was created (RFC 3339 date-time).
-   *
    * @var string
    */
   public $createdTime;
   /**
-   * Output only. Whether the comment has been deleted. A deleted comment has no
-   * content.
-   *
    * @var bool
    */
   public $deleted;
   /**
-   * Output only. The content of the comment with HTML formatting.
-   *
    * @var string
    */
   public $htmlContent;
   /**
-   * Output only. The ID of the comment.
-   *
    * @var string
    */
   public $id;
   /**
-   * Output only. Identifies what kind of resource this is. Value: the fixed
-   * string `"drive#comment"`.
-   *
    * @var string
    */
   public $kind;
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if
-   * none were mentioned this will be an empty list.
-   *
    * @var string[]
    */
   public $mentionedEmailAddresses;
   /**
-   * The last time the comment or any of its replies was modified (RFC 3339
-   * date-time).
-   *
    * @var string
    */
   public $modifiedTime;
@@ -96,19 +67,12 @@ class Comment extends \Google\Collection
   protected $repliesType = Reply::class;
   protected $repliesDataType = 'array';
   /**
-   * Output only. Whether the comment has been resolved by one of its replies.
-   *
    * @var bool
    */
   public $resolved;
 
   /**
-   * A region of the document represented as a JSON string. For details on
-   * defining anchor properties, refer to [Manage comments and
-   * replies](https://developers.google.com/workspace/drive/api/v3/manage-
-   * comments).
-   *
-   * @param string $anchor
+   * @param string
    */
   public function setAnchor($anchor)
   {
@@ -122,10 +86,7 @@ class Comment extends \Google\Collection
     return $this->anchor;
   }
   /**
-   * Output only. The email of the user who is assigned to this comment, if none
-   * is assigned this will be unset.
-   *
-   * @param string $assigneeEmailAddress
+   * @param string
    */
   public function setAssigneeEmailAddress($assigneeEmailAddress)
   {
@@ -139,10 +100,7 @@ class Comment extends \Google\Collection
     return $this->assigneeEmailAddress;
   }
   /**
-   * Output only. The author of the comment. The author's email address and
-   * permission ID will not be populated.
-   *
-   * @param User $author
+   * @param User
    */
   public function setAuthor(User $author)
   {
@@ -156,10 +114,7 @@ class Comment extends \Google\Collection
     return $this->author;
   }
   /**
-   * The plain text content of the comment. This field is used for setting the
-   * content, while `htmlContent` should be displayed.
-   *
-   * @param string $content
+   * @param string
    */
   public function setContent($content)
   {
@@ -173,9 +128,7 @@ class Comment extends \Google\Collection
     return $this->content;
   }
   /**
-   * The time at which the comment was created (RFC 3339 date-time).
-   *
-   * @param string $createdTime
+   * @param string
    */
   public function setCreatedTime($createdTime)
   {
@@ -189,10 +142,7 @@ class Comment extends \Google\Collection
     return $this->createdTime;
   }
   /**
-   * Output only. Whether the comment has been deleted. A deleted comment has no
-   * content.
-   *
-   * @param bool $deleted
+   * @param bool
    */
   public function setDeleted($deleted)
   {
@@ -206,9 +156,7 @@ class Comment extends \Google\Collection
     return $this->deleted;
   }
   /**
-   * Output only. The content of the comment with HTML formatting.
-   *
-   * @param string $htmlContent
+   * @param string
    */
   public function setHtmlContent($htmlContent)
   {
@@ -222,9 +170,7 @@ class Comment extends \Google\Collection
     return $this->htmlContent;
   }
   /**
-   * Output only. The ID of the comment.
-   *
-   * @param string $id
+   * @param string
    */
   public function setId($id)
   {
@@ -238,10 +184,7 @@ class Comment extends \Google\Collection
     return $this->id;
   }
   /**
-   * Output only. Identifies what kind of resource this is. Value: the fixed
-   * string `"drive#comment"`.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -255,10 +198,7 @@ class Comment extends \Google\Collection
     return $this->kind;
   }
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if
-   * none were mentioned this will be an empty list.
-   *
-   * @param string[] $mentionedEmailAddresses
+   * @param string[]
    */
   public function setMentionedEmailAddresses($mentionedEmailAddresses)
   {
@@ -272,10 +212,7 @@ class Comment extends \Google\Collection
     return $this->mentionedEmailAddresses;
   }
   /**
-   * The last time the comment or any of its replies was modified (RFC 3339
-   * date-time).
-   *
-   * @param string $modifiedTime
+   * @param string
    */
   public function setModifiedTime($modifiedTime)
   {
@@ -289,11 +226,7 @@ class Comment extends \Google\Collection
     return $this->modifiedTime;
   }
   /**
-   * The file content to which the comment refers, typically within the anchor
-   * region. For a text file, for example, this would be the text at the
-   * location of the comment.
-   *
-   * @param CommentQuotedFileContent $quotedFileContent
+   * @param CommentQuotedFileContent
    */
   public function setQuotedFileContent(CommentQuotedFileContent $quotedFileContent)
   {
@@ -307,10 +240,7 @@ class Comment extends \Google\Collection
     return $this->quotedFileContent;
   }
   /**
-   * Output only. The full list of replies to the comment in chronological
-   * order.
-   *
-   * @param Reply[] $replies
+   * @param Reply[]
    */
   public function setReplies($replies)
   {
@@ -324,9 +254,7 @@ class Comment extends \Google\Collection
     return $this->replies;
   }
   /**
-   * Output only. Whether the comment has been resolved by one of its replies.
-   *
-   * @param bool $resolved
+   * @param bool
    */
   public function setResolved($resolved)
   {

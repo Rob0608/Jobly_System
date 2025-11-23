@@ -20,24 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantToolInfo extends \Google\Model
 {
   /**
-   * The display name of the tool.
-   *
    * @var string
    */
   public $toolDisplayName;
   /**
-   * The name of the tool as defined by
-   * DataConnectorService.QueryAvailableActions. Note: it's using `action` in
-   * the DataConnectorService apis, but they are the same as the `tool` here.
-   *
    * @var string
    */
   public $toolName;
 
   /**
-   * The display name of the tool.
-   *
-   * @param string $toolDisplayName
+   * @param string
    */
   public function setToolDisplayName($toolDisplayName)
   {
@@ -51,11 +43,7 @@ class GoogleCloudDiscoveryengineV1AssistantToolInfo extends \Google\Model
     return $this->toolDisplayName;
   }
   /**
-   * The name of the tool as defined by
-   * DataConnectorService.QueryAvailableActions. Note: it's using `action` in
-   * the DataConnectorService apis, but they are the same as the `tool` here.
-   *
-   * @param string $toolName
+   * @param string
    */
   public function setToolName($toolName)
   {

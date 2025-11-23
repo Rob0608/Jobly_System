@@ -20,50 +20,30 @@ namespace Google\Service\ParameterManager;
 class ParameterVersion extends \Google\Model
 {
   /**
-   * Output only. [Output only] Create time stamp
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. Disabled boolean to determine if a ParameterVersion acts as a
-   * metadata only resource (payload is never returned if disabled is true). If
-   * true any calls will always default to BASIC view even if the user
-   * explicitly passes FULL view as part of the request. A render call on a
-   * disabled resource fails with an error. Default value is False.
-   *
    * @var bool
    */
   public $disabled;
   /**
-   * Optional. Output only. [Output only] The resource name of the KMS key
-   * version used to encrypt the ParameterVersion payload. This field is
-   * populated only if the Parameter resource has customer managed encryption
-   * key (CMEK) configured.
-   *
    * @var string
    */
   public $kmsKeyVersion;
   /**
-   * Identifier. [Output only] The resource name of the ParameterVersion in the
-   * format `projects/locations/parameters/versions`.
-   *
    * @var string
    */
   public $name;
   protected $payloadType = ParameterVersionPayload::class;
   protected $payloadDataType = '';
   /**
-   * Output only. [Output only] Update time stamp
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -77,13 +57,7 @@ class ParameterVersion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. Disabled boolean to determine if a ParameterVersion acts as a
-   * metadata only resource (payload is never returned if disabled is true). If
-   * true any calls will always default to BASIC view even if the user
-   * explicitly passes FULL view as part of the request. A render call on a
-   * disabled resource fails with an error. Default value is False.
-   *
-   * @param bool $disabled
+   * @param bool
    */
   public function setDisabled($disabled)
   {
@@ -97,12 +71,7 @@ class ParameterVersion extends \Google\Model
     return $this->disabled;
   }
   /**
-   * Optional. Output only. [Output only] The resource name of the KMS key
-   * version used to encrypt the ParameterVersion payload. This field is
-   * populated only if the Parameter resource has customer managed encryption
-   * key (CMEK) configured.
-   *
-   * @param string $kmsKeyVersion
+   * @param string
    */
   public function setKmsKeyVersion($kmsKeyVersion)
   {
@@ -116,10 +85,7 @@ class ParameterVersion extends \Google\Model
     return $this->kmsKeyVersion;
   }
   /**
-   * Identifier. [Output only] The resource name of the ParameterVersion in the
-   * format `projects/locations/parameters/versions`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -133,11 +99,7 @@ class ParameterVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. Immutable. Payload content of a ParameterVersion resource. This
-   * is only returned when the request provides the View value of FULL (default
-   * for GET request).
-   *
-   * @param ParameterVersionPayload $payload
+   * @param ParameterVersionPayload
    */
   public function setPayload(ParameterVersionPayload $payload)
   {
@@ -151,9 +113,7 @@ class ParameterVersion extends \Google\Model
     return $this->payload;
   }
   /**
-   * Output only. [Output only] Update time stamp
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

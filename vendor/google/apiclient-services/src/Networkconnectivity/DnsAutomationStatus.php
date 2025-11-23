@@ -19,50 +19,19 @@ namespace Google\Service\Networkconnectivity;
 
 class DnsAutomationStatus extends \Google\Model
 {
-  /**
-   * Default value. This value is unused.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * DNS record creation is pending.
-   */
-  public const STATE_PENDING_CREATE = 'PENDING_CREATE';
-  /**
-   * DNS record is active.
-   */
-  public const STATE_ACTIVE = 'ACTIVE';
-  /**
-   * DNS record deletion is pending.
-   */
-  public const STATE_PENDING_DELETE = 'PENDING_DELETE';
-  /**
-   * DNS record creation failed.
-   */
-  public const STATE_CREATE_FAILED = 'CREATE_FAILED';
-  /**
-   * DNS record deletion failed.
-   */
-  public const STATE_DELETE_FAILED = 'DELETE_FAILED';
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
-   * Output only. The fully qualified domain name of the DNS record.
-   *
    * @var string
    */
   public $fqdn;
   /**
-   * Output only. The current state of DNS automation.
-   *
    * @var string
    */
   public $state;
 
   /**
-   * Output only. The error details if the state is CREATE_FAILED or
-   * DELETE_FAILED.
-   *
-   * @param GoogleRpcStatus $error
+   * @param GoogleRpcStatus
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -76,9 +45,7 @@ class DnsAutomationStatus extends \Google\Model
     return $this->error;
   }
   /**
-   * Output only. The fully qualified domain name of the DNS record.
-   *
-   * @param string $fqdn
+   * @param string
    */
   public function setFqdn($fqdn)
   {
@@ -92,19 +59,14 @@ class DnsAutomationStatus extends \Google\Model
     return $this->fqdn;
   }
   /**
-   * Output only. The current state of DNS automation.
-   *
-   * Accepted values: STATE_UNSPECIFIED, PENDING_CREATE, ACTIVE, PENDING_DELETE,
-   * CREATE_FAILED, DELETE_FAILED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {

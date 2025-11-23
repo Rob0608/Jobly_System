@@ -23,22 +23,16 @@ class ListMulticloudDataTransferConfigsResponse extends \Google\Collection
   protected $multicloudDataTransferConfigsType = MulticloudDataTransferConfig::class;
   protected $multicloudDataTransferConfigsDataType = 'array';
   /**
-   * The next page token.
-   *
    * @var string
    */
   public $nextPageToken;
   /**
-   * Locations that could not be reached.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * The list of `MulticloudDataTransferConfig` resources to be listed.
-   *
-   * @param MulticloudDataTransferConfig[] $multicloudDataTransferConfigs
+   * @param MulticloudDataTransferConfig[]
    */
   public function setMulticloudDataTransferConfigs($multicloudDataTransferConfigs)
   {
@@ -52,9 +46,7 @@ class ListMulticloudDataTransferConfigsResponse extends \Google\Collection
     return $this->multicloudDataTransferConfigs;
   }
   /**
-   * The next page token.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -68,9 +60,7 @@ class ListMulticloudDataTransferConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Locations that could not be reached.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

@@ -19,43 +19,22 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class Product extends \Google\Collection
 {
-  /**
-   * Unspecified. It's reserved as an unexpected value, should not be used.
-   */
-  public const PRODUCT_TYPE_PRODUCT_TYPE_UNSPECIFIED = 'PRODUCT_TYPE_UNSPECIFIED';
-  /**
-   * The product is a subscription.
-   */
-  public const PRODUCT_TYPE_PRODUCT_TYPE_SUBSCRIPTION = 'PRODUCT_TYPE_SUBSCRIPTION';
-  /**
-   * The product is a bundled subscription plan, which includes multiple
-   * subscription elements.
-   */
-  public const PRODUCT_TYPE_PRODUCT_TYPE_BUNDLE_SUBSCRIPTION = 'PRODUCT_TYPE_BUNDLE_SUBSCRIPTION';
   protected $collection_key = 'titles';
   protected $bundleDetailsType = ProductBundleDetails::class;
   protected $bundleDetailsDataType = '';
   protected $finiteBillingCycleDetailsType = FiniteBillingCycleDetails::class;
   protected $finiteBillingCycleDetailsDataType = '';
   /**
-   * Identifier. Response only. Resource name of the product. It will have the
-   * format of "partners/{partner_id}/products/{product_id}"
-   *
    * @var string
    */
   public $name;
   protected $priceConfigsType = ProductPriceConfig::class;
   protected $priceConfigsDataType = 'array';
   /**
-   * Output only. Specifies the type of the product.
-   *
    * @var string
    */
   public $productType;
   /**
-   * Output only. 2-letter ISO region code where the product is available in.
-   * Ex. "US" Please refers to: https://en.wikipedia.org/wiki/ISO_3166-1
-   *
    * @var string[]
    */
   public $regionCodes;
@@ -65,9 +44,7 @@ class Product extends \Google\Collection
   protected $titlesDataType = 'array';
 
   /**
-   * Output only. Specifies the details for a bundle product.
-   *
-   * @param ProductBundleDetails $bundleDetails
+   * @param ProductBundleDetails
    */
   public function setBundleDetails(ProductBundleDetails $bundleDetails)
   {
@@ -81,10 +58,7 @@ class Product extends \Google\Collection
     return $this->bundleDetails;
   }
   /**
-   * Optional. Details for a subscription line item with finite billing cycles.
-   * If unset, the line item will be charged indefinitely.
-   *
-   * @param FiniteBillingCycleDetails $finiteBillingCycleDetails
+   * @param FiniteBillingCycleDetails
    */
   public function setFiniteBillingCycleDetails(FiniteBillingCycleDetails $finiteBillingCycleDetails)
   {
@@ -98,10 +72,7 @@ class Product extends \Google\Collection
     return $this->finiteBillingCycleDetails;
   }
   /**
-   * Identifier. Response only. Resource name of the product. It will have the
-   * format of "partners/{partner_id}/products/{product_id}"
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -115,9 +86,7 @@ class Product extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. Price configs for the product in the available regions.
-   *
-   * @param ProductPriceConfig[] $priceConfigs
+   * @param ProductPriceConfig[]
    */
   public function setPriceConfigs($priceConfigs)
   {
@@ -131,29 +100,21 @@ class Product extends \Google\Collection
     return $this->priceConfigs;
   }
   /**
-   * Output only. Specifies the type of the product.
-   *
-   * Accepted values: PRODUCT_TYPE_UNSPECIFIED, PRODUCT_TYPE_SUBSCRIPTION,
-   * PRODUCT_TYPE_BUNDLE_SUBSCRIPTION
-   *
-   * @param self::PRODUCT_TYPE_* $productType
+   * @param string
    */
   public function setProductType($productType)
   {
     $this->productType = $productType;
   }
   /**
-   * @return self::PRODUCT_TYPE_*
+   * @return string
    */
   public function getProductType()
   {
     return $this->productType;
   }
   /**
-   * Output only. 2-letter ISO region code where the product is available in.
-   * Ex. "US" Please refers to: https://en.wikipedia.org/wiki/ISO_3166-1
-   *
-   * @param string[] $regionCodes
+   * @param string[]
    */
   public function setRegionCodes($regionCodes)
   {
@@ -167,9 +128,7 @@ class Product extends \Google\Collection
     return $this->regionCodes;
   }
   /**
-   * Output only. Specifies the length of the billing cycle of the subscription.
-   *
-   * @param Duration $subscriptionBillingCycleDuration
+   * @param Duration
    */
   public function setSubscriptionBillingCycleDuration(Duration $subscriptionBillingCycleDuration)
   {
@@ -183,9 +142,7 @@ class Product extends \Google\Collection
     return $this->subscriptionBillingCycleDuration;
   }
   /**
-   * Output only. Localized human readable name of the product.
-   *
-   * @param GoogleTypeLocalizedText[] $titles
+   * @param GoogleTypeLocalizedText[]
    */
   public function setTitles($titles)
   {

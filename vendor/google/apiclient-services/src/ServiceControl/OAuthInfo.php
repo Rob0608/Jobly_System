@@ -20,18 +20,12 @@ namespace Google\Service\ServiceControl;
 class OAuthInfo extends \Google\Model
 {
   /**
-   * The OAuth client ID of the 1P or 3P application acting on behalf of the
-   * user.
-   *
    * @var string
    */
   public $oauthClientId;
 
   /**
-   * The OAuth client ID of the 1P or 3P application acting on behalf of the
-   * user.
-   *
-   * @param string $oauthClientId
+   * @param string
    */
   public function setOauthClientId($oauthClientId)
   {

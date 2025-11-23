@@ -21,8 +21,6 @@ class MulticloudDataTransferSupportedService extends \Google\Collection
 {
   protected $collection_key = 'serviceConfigs';
   /**
-   * Identifier. The name of the service.
-   *
    * @var string
    */
   public $name;
@@ -30,9 +28,7 @@ class MulticloudDataTransferSupportedService extends \Google\Collection
   protected $serviceConfigsDataType = 'array';
 
   /**
-   * Identifier. The name of the service.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -46,10 +42,7 @@ class MulticloudDataTransferSupportedService extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. The network service tier or regional endpoint supported for
-   * the service.
-   *
-   * @param ServiceConfig[] $serviceConfigs
+   * @param ServiceConfig[]
    */
   public function setServiceConfigs($serviceConfigs)
   {

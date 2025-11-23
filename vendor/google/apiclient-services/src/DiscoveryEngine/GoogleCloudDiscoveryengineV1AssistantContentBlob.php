@@ -20,22 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantContentBlob extends \Google\Model
 {
   /**
-   * Required. Raw bytes.
-   *
    * @var string
    */
   public $data;
   /**
-   * Required. The media type (MIME type) of the generated data.
-   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * Required. Raw bytes.
-   *
-   * @param string $data
+   * @param string
    */
   public function setData($data)
   {
@@ -49,9 +43,7 @@ class GoogleCloudDiscoveryengineV1AssistantContentBlob extends \Google\Model
     return $this->data;
   }
   /**
-   * Required. The media type (MIME type) of the generated data.
-   *
-   * @param string $mimeType
+   * @param string
    */
   public function setMimeType($mimeType)
   {

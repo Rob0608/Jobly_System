@@ -24,12 +24,7 @@ class BatchCreatePullRequestCommentsRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * Required. The request message specifying the resources to create. There
-   * should be exactly one CreatePullRequestCommentRequest with CommentDetail
-   * being REVIEW in the list, and no more than 100
-   * CreatePullRequestCommentRequests with CommentDetail being CODE in the list
-   *
-   * @param CreatePullRequestCommentRequest[] $requests
+   * @param CreatePullRequestCommentRequest[]
    */
   public function setRequests($requests)
   {

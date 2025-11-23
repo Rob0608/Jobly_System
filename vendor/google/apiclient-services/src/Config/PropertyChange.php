@@ -21,42 +21,28 @@ class PropertyChange extends \Google\Collection
 {
   protected $collection_key = 'beforeSensitivePaths';
   /**
-   * Output only. Representations of the object value after the actions.
-   *
    * @var array
    */
   public $after;
   /**
-   * Output only. The paths of sensitive fields in `after`. Paths are relative
-   * to `path`.
-   *
    * @var string[]
    */
   public $afterSensitivePaths;
   /**
-   * Output only. Representations of the object value before the actions.
-   *
    * @var array
    */
   public $before;
   /**
-   * Output only. The paths of sensitive fields in `before`. Paths are relative
-   * to `path`.
-   *
    * @var string[]
    */
   public $beforeSensitivePaths;
   /**
-   * Output only. The path of the property change.
-   *
    * @var string
    */
   public $path;
 
   /**
-   * Output only. Representations of the object value after the actions.
-   *
-   * @param array $after
+   * @param array
    */
   public function setAfter($after)
   {
@@ -70,10 +56,7 @@ class PropertyChange extends \Google\Collection
     return $this->after;
   }
   /**
-   * Output only. The paths of sensitive fields in `after`. Paths are relative
-   * to `path`.
-   *
-   * @param string[] $afterSensitivePaths
+   * @param string[]
    */
   public function setAfterSensitivePaths($afterSensitivePaths)
   {
@@ -87,9 +70,7 @@ class PropertyChange extends \Google\Collection
     return $this->afterSensitivePaths;
   }
   /**
-   * Output only. Representations of the object value before the actions.
-   *
-   * @param array $before
+   * @param array
    */
   public function setBefore($before)
   {
@@ -103,10 +84,7 @@ class PropertyChange extends \Google\Collection
     return $this->before;
   }
   /**
-   * Output only. The paths of sensitive fields in `before`. Paths are relative
-   * to `path`.
-   *
-   * @param string[] $beforeSensitivePaths
+   * @param string[]
    */
   public function setBeforeSensitivePaths($beforeSensitivePaths)
   {
@@ -120,9 +98,7 @@ class PropertyChange extends \Google\Collection
     return $this->beforeSensitivePaths;
   }
   /**
-   * Output only. The path of the property change.
-   *
-   * @param string $path
+   * @param string
    */
   public function setPath($path)
   {

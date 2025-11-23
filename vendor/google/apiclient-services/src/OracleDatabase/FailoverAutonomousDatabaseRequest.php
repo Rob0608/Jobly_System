@@ -20,16 +20,12 @@ namespace Google\Service\OracleDatabase;
 class FailoverAutonomousDatabaseRequest extends \Google\Model
 {
   /**
-   * Required. The peer database name to fail over to.
-   *
    * @var string
    */
   public $peerAutonomousDatabase;
 
   /**
-   * Required. The peer database name to fail over to.
-   *
-   * @param string $peerAutonomousDatabase
+   * @param string
    */
   public function setPeerAutonomousDatabase($peerAutonomousDatabase)
   {

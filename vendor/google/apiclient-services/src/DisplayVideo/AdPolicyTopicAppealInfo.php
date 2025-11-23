@@ -20,35 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AdPolicyTopicAppealInfo extends \Google\Model
 {
   /**
-   * Unknown or not specified.
-   */
-  public const APPEAL_TYPE_AD_POLICY_APPEAL_TYPE_UNKNOWN = 'AD_POLICY_APPEAL_TYPE_UNKNOWN';
-  /**
-   * The decision can be appealed through a self-service appeal.
-   */
-  public const APPEAL_TYPE_SELF_SERVICE_APPEAL = 'SELF_SERVICE_APPEAL';
-  /**
-   * The decision can be appealed using an appeal form.
-   */
-  public const APPEAL_TYPE_APPEAL_FORM = 'APPEAL_FORM';
-  /**
-   * Only available when appeal_type is `APPEAL_FORM`.
-   *
    * @var string
    */
   public $appealFormLink;
   /**
-   * Whether the decision can be appealed through a self-service appeal or an
-   * appeal form.
-   *
    * @var string
    */
   public $appealType;
 
   /**
-   * Only available when appeal_type is `APPEAL_FORM`.
-   *
-   * @param string $appealFormLink
+   * @param string
    */
   public function setAppealFormLink($appealFormLink)
   {
@@ -62,20 +43,14 @@ class AdPolicyTopicAppealInfo extends \Google\Model
     return $this->appealFormLink;
   }
   /**
-   * Whether the decision can be appealed through a self-service appeal or an
-   * appeal form.
-   *
-   * Accepted values: AD_POLICY_APPEAL_TYPE_UNKNOWN, SELF_SERVICE_APPEAL,
-   * APPEAL_FORM
-   *
-   * @param self::APPEAL_TYPE_* $appealType
+   * @param string
    */
   public function setAppealType($appealType)
   {
     $this->appealType = $appealType;
   }
   /**
-   * @return self::APPEAL_TYPE_*
+   * @return string
    */
   public function getAppealType()
   {

@@ -21,17 +21,10 @@ class ResourceUpdateErrorErrors extends \Google\Collection
 {
   protected $collection_key = 'errorDetails';
   /**
-   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
-   * for internal use-only (like componentization) (thus the visibility "none")
-   * and in case of public exposure it is strongly recommended to follow pattern
-   * of: https://aip.dev/193 and expose as details field.
-   *
    * @var string[]
    */
   public $arguments;
   /**
-   * [Output Only] The error type identifier for this error.
-   *
    * @var string
    */
   public $code;
@@ -40,26 +33,16 @@ class ResourceUpdateErrorErrors extends \Google\Collection
   protected $errorDetailsType = ResourceUpdateErrorErrorsErrorDetails::class;
   protected $errorDetailsDataType = 'array';
   /**
-   * [Output Only] Indicates the field in the request that caused the error.
-   * This property is optional.
-   *
    * @var string
    */
   public $location;
   /**
-   * [Output Only] An optional, human-readable error message.
-   *
    * @var string
    */
   public $message;
 
   /**
-   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
-   * for internal use-only (like componentization) (thus the visibility "none")
-   * and in case of public exposure it is strongly recommended to follow pattern
-   * of: https://aip.dev/193 and expose as details field.
-   *
-   * @param string[] $arguments
+   * @param string[]
    */
   public function setArguments($arguments)
   {
@@ -73,9 +56,7 @@ class ResourceUpdateErrorErrors extends \Google\Collection
     return $this->arguments;
   }
   /**
-   * [Output Only] The error type identifier for this error.
-   *
-   * @param string $code
+   * @param string
    */
   public function setCode($code)
   {
@@ -89,7 +70,7 @@ class ResourceUpdateErrorErrors extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param DebugInfo $debugInfo
+   * @param DebugInfo
    */
   public function setDebugInfo(DebugInfo $debugInfo)
   {
@@ -103,12 +84,7 @@ class ResourceUpdateErrorErrors extends \Google\Collection
     return $this->debugInfo;
   }
   /**
-   * [Output Only] An optional list of messages that contain the error details.
-   * There is a set of defined message types to use for providing details.The
-   * syntax depends on the error code. For example, QuotaExceededInfo will have
-   * details when the error code is QUOTA_EXCEEDED.
-   *
-   * @param ResourceUpdateErrorErrorsErrorDetails[] $errorDetails
+   * @param ResourceUpdateErrorErrorsErrorDetails[]
    */
   public function setErrorDetails($errorDetails)
   {
@@ -122,10 +98,7 @@ class ResourceUpdateErrorErrors extends \Google\Collection
     return $this->errorDetails;
   }
   /**
-   * [Output Only] Indicates the field in the request that caused the error.
-   * This property is optional.
-   *
-   * @param string $location
+   * @param string
    */
   public function setLocation($location)
   {
@@ -139,9 +112,7 @@ class ResourceUpdateErrorErrors extends \Google\Collection
     return $this->location;
   }
   /**
-   * [Output Only] An optional, human-readable error message.
-   *
-   * @param string $message
+   * @param string
    */
   public function setMessage($message)
   {

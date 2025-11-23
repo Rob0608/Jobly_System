@@ -20,22 +20,16 @@ namespace Google\Service\SaaSServiceManagement;
 class UnitDependency extends \Google\Model
 {
   /**
-   * Output only. Alias for the name of the dependency.
-   *
    * @var string
    */
   public $alias;
   /**
-   * Output only. A reference to the Unit object.
-   *
    * @var string
    */
   public $unit;
 
   /**
-   * Output only. Alias for the name of the dependency.
-   *
-   * @param string $alias
+   * @param string
    */
   public function setAlias($alias)
   {
@@ -49,9 +43,7 @@ class UnitDependency extends \Google\Model
     return $this->alias;
   }
   /**
-   * Output only. A reference to the Unit object.
-   *
-   * @param string $unit
+   * @param string
    */
   public function setUnit($unit)
   {

@@ -20,18 +20,12 @@ namespace Google\Service\Compute;
 class InterconnectAttachmentL2ForwardingGeneveHeader extends \Google\Model
 {
   /**
-   * Optional. VNI is a 24-bit unique virtual network identifier, from 0 to
-   * 16,777,215.
-   *
    * @var string
    */
   public $vni;
 
   /**
-   * Optional. VNI is a 24-bit unique virtual network identifier, from 0 to
-   * 16,777,215.
-   *
-   * @param string $vni
+   * @param string
    */
   public function setVni($vni)
   {

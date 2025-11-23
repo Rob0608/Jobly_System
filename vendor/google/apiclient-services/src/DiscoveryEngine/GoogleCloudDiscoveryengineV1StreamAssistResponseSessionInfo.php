@@ -20,20 +20,12 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1StreamAssistResponseSessionInfo extends \Google\Model
 {
   /**
-   * Name of the newly generated or continued session. Format: `projects/{projec
-   * t}/locations/{location}/collections/{collection}/engines/{engine}/sessions/
-   * {session}`.
-   *
    * @var string
    */
   public $session;
 
   /**
-   * Name of the newly generated or continued session. Format: `projects/{projec
-   * t}/locations/{location}/collections/{collection}/engines/{engine}/sessions/
-   * {session}`.
-   *
-   * @param string $session
+   * @param string
    */
   public function setSession($session)
   {

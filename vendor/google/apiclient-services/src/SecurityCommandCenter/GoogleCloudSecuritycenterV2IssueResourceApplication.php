@@ -22,17 +22,12 @@ class GoogleCloudSecuritycenterV2IssueResourceApplication extends \Google\Model
   protected $attributesType = GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes::class;
   protected $attributesDataType = '';
   /**
-   * The resource name of an Application. Format: `projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}`
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Consumer provided attributes for the application
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes $attributes
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes
    */
   public function setAttributes(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes $attributes)
   {
@@ -46,10 +41,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplication extends \Google\Model
     return $this->attributes;
   }
   /**
-   * The resource name of an Application. Format: `projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

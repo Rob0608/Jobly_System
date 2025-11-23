@@ -20,24 +20,16 @@ namespace Google\Service\CloudIdentity;
 class InboundOidcSsoProfile extends \Google\Model
 {
   /**
-   * Immutable. The customer. For example: `customers/C0123abc`.
-   *
    * @var string
    */
   public $customer;
   /**
-   * Human-readable name of the OIDC SSO profile.
-   *
    * @var string
    */
   public $displayName;
   protected $idpConfigType = OidcIdpConfig::class;
   protected $idpConfigDataType = '';
   /**
-   * Output only. [Resource
-   * name](https://cloud.google.com/apis/design/resource_names) of the OIDC SSO
-   * profile.
-   *
    * @var string
    */
   public $name;
@@ -45,9 +37,7 @@ class InboundOidcSsoProfile extends \Google\Model
   protected $rpConfigDataType = '';
 
   /**
-   * Immutable. The customer. For example: `customers/C0123abc`.
-   *
-   * @param string $customer
+   * @param string
    */
   public function setCustomer($customer)
   {
@@ -61,9 +51,7 @@ class InboundOidcSsoProfile extends \Google\Model
     return $this->customer;
   }
   /**
-   * Human-readable name of the OIDC SSO profile.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -77,9 +65,7 @@ class InboundOidcSsoProfile extends \Google\Model
     return $this->displayName;
   }
   /**
-   * OIDC identity provider configuration.
-   *
-   * @param OidcIdpConfig $idpConfig
+   * @param OidcIdpConfig
    */
   public function setIdpConfig(OidcIdpConfig $idpConfig)
   {
@@ -93,11 +79,7 @@ class InboundOidcSsoProfile extends \Google\Model
     return $this->idpConfig;
   }
   /**
-   * Output only. [Resource
-   * name](https://cloud.google.com/apis/design/resource_names) of the OIDC SSO
-   * profile.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -111,11 +93,7 @@ class InboundOidcSsoProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * OIDC relying party (RP) configuration for this OIDC SSO profile. These are
-   * the RP details provided by Google that should be configured on the
-   * corresponding identity provider.
-   *
-   * @param OidcRpConfig $rpConfig
+   * @param OidcRpConfig
    */
   public function setRpConfig(OidcRpConfig $rpConfig)
   {

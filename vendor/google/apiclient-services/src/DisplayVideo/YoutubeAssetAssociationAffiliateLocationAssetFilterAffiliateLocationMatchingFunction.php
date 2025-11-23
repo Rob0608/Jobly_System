@@ -24,10 +24,7 @@ class YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchi
   protected $chainsDataType = 'array';
 
   /**
-   * Optional. The selected affiliate location chain IDs. This field is required
-   * if affiliate_location_matching_type is `SELECTED_CHAINS`.
-   *
-   * @param YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationChain[] $chains
+   * @param YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationChain[]
    */
   public function setChains($chains)
   {

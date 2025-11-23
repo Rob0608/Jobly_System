@@ -23,10 +23,7 @@ class GenerateUserSessionResponse extends \Google\Model
   protected $userSessionDataType = '';
 
   /**
-   * The generated user session. The token size is proportional to the size of
-   * the intent payload.
-   *
-   * @param UserSession $userSession
+   * @param UserSession
    */
   public function setUserSession(UserSession $userSession)
   {

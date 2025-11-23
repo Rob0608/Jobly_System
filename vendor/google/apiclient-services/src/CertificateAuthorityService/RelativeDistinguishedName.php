@@ -24,9 +24,7 @@ class RelativeDistinguishedName extends \Google\Collection
   protected $attributesDataType = 'array';
 
   /**
-   * Attributes describes the attribute value assertions in the RDN.
-   *
-   * @param AttributeTypeAndValue[] $attributes
+   * @param AttributeTypeAndValue[]
    */
   public function setAttributes($attributes)
   {

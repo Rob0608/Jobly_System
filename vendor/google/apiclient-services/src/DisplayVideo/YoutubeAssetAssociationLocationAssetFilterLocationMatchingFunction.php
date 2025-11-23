@@ -21,33 +21,20 @@ class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction extends
 {
   protected $collection_key = 'locationAssetIds';
   /**
-   * Optional. The business name to match with. This field is optional and can
-   * only be set if location_matching_type is `FILTER`.
-   *
    * @var string
    */
   public $business;
   /**
-   * Optional. The labels to match with. Labels are logically OR'ed together.
-   * This field is optional and can only be set if location_matching_type is
-   * `FILTER`.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Optional. The selected location asset IDs. This field is required if
-   * location_matching_type is `SELECTED_ASSETS`.
-   *
    * @var string[]
    */
   public $locationAssetIds;
 
   /**
-   * Optional. The business name to match with. This field is optional and can
-   * only be set if location_matching_type is `FILTER`.
-   *
-   * @param string $business
+   * @param string
    */
   public function setBusiness($business)
   {
@@ -61,11 +48,7 @@ class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction extends
     return $this->business;
   }
   /**
-   * Optional. The labels to match with. Labels are logically OR'ed together.
-   * This field is optional and can only be set if location_matching_type is
-   * `FILTER`.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -79,10 +62,7 @@ class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction extends
     return $this->labels;
   }
   /**
-   * Optional. The selected location asset IDs. This field is required if
-   * location_matching_type is `SELECTED_ASSETS`.
-   *
-   * @param string[] $locationAssetIds
+   * @param string[]
    */
   public function setLocationAssetIds($locationAssetIds)
   {

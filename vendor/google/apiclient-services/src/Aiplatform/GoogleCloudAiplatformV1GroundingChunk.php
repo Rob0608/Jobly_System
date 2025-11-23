@@ -27,9 +27,7 @@ class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
   protected $webDataType = '';
 
   /**
-   * A grounding chunk from Google Maps. See the `Maps` message for details.
-   *
-   * @param GoogleCloudAiplatformV1GroundingChunkMaps $maps
+   * @param GoogleCloudAiplatformV1GroundingChunkMaps
    */
   public function setMaps(GoogleCloudAiplatformV1GroundingChunkMaps $maps)
   {
@@ -43,10 +41,7 @@ class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
     return $this->maps;
   }
   /**
-   * A grounding chunk from a data source retrieved by a retrieval tool, such as
-   * Vertex AI Search. See the `RetrievedContext` message for details
-   *
-   * @param GoogleCloudAiplatformV1GroundingChunkRetrievedContext $retrievedContext
+   * @param GoogleCloudAiplatformV1GroundingChunkRetrievedContext
    */
   public function setRetrievedContext(GoogleCloudAiplatformV1GroundingChunkRetrievedContext $retrievedContext)
   {
@@ -60,10 +55,7 @@ class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
     return $this->retrievedContext;
   }
   /**
-   * A grounding chunk from a web page, typically from Google Search. See the
-   * `Web` message for details.
-   *
-   * @param GoogleCloudAiplatformV1GroundingChunkWeb $web
+   * @param GoogleCloudAiplatformV1GroundingChunkWeb
    */
   public function setWeb(GoogleCloudAiplatformV1GroundingChunkWeb $web)
   {

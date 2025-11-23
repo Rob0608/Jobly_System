@@ -23,16 +23,12 @@ class GoogleCloudAiplatformV1ListEvaluationSetsResponse extends \Google\Collecti
   protected $evaluationSetsType = GoogleCloudAiplatformV1EvaluationSet::class;
   protected $evaluationSetsDataType = 'array';
   /**
-   * A token to retrieve the next page of results.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * List of EvaluationSets in the requested page.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationSet[] $evaluationSets
+   * @param GoogleCloudAiplatformV1EvaluationSet[]
    */
   public function setEvaluationSets($evaluationSets)
   {
@@ -46,9 +42,7 @@ class GoogleCloudAiplatformV1ListEvaluationSetsResponse extends \Google\Collecti
     return $this->evaluationSets;
   }
   /**
-   * A token to retrieve the next page of results.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

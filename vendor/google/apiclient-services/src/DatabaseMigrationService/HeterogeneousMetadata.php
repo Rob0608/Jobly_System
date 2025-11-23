@@ -20,16 +20,12 @@ namespace Google\Service\DatabaseMigrationService;
 class HeterogeneousMetadata extends \Google\Model
 {
   /**
-   * The number of unsupported events.
-   *
    * @var string
    */
   public $unsupportedEventsCount;
 
   /**
-   * The number of unsupported events.
-   *
-   * @param string $unsupportedEventsCount
+   * @param string
    */
   public function setUnsupportedEventsCount($unsupportedEventsCount)
   {

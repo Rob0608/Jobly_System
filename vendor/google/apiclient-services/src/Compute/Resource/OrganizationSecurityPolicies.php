@@ -42,9 +42,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
    * hierarchical security policies will be automatically enrolled into Cloud
    * Armor Enterprise if not already enrolled.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.addAssociation instead.
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.addAssociation instead if possible.
    * (organizationSecurityPolicies.addAssociation)
    *
    * @param string $securityPolicy Name of the security policy to update.
@@ -77,12 +76,7 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
     return $this->call('addAssociation', [$params], Operation::class);
   }
   /**
-   * Inserts a rule into a security policy.
-   *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.addRule instead.
-   * (organizationSecurityPolicies.addRule)
+   * Inserts a rule into a security policy. (organizationSecurityPolicies.addRule)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param SecurityPolicyRule $postBody
@@ -112,10 +106,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Copies rules to the specified security policy.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.cloneRules instead.
-   * (organizationSecurityPolicies.copyRules)
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.copyRules instead. (organizationSecurityPolicies.copyRules)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param array $optParams Optional parameters.
@@ -146,10 +138,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Deletes the specified policy.
    *
-   * Use this API to remove Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to remove firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.delete instead.
-   * (organizationSecurityPolicies.delete)
+   * Use of this API to remove firewall policies is deprecated. Use
+   * firewallPolicies.delete instead. (organizationSecurityPolicies.delete)
    *
    * @param string $securityPolicy Name of the security policy to delete.
    * @param array $optParams Optional parameters.
@@ -178,10 +168,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * List all of the ordered rules present in a single specified policy.
    *
-   * Use this API to read Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to read firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.get instead.
-   * (organizationSecurityPolicies.get)
+   * Use of this API to read firewall policies is deprecated. Use
+   * firewallPolicies.get instead. (organizationSecurityPolicies.get)
    *
    * @param string $securityPolicy Name of the security policy to get.
    * @param array $optParams Optional parameters.
@@ -197,9 +185,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Gets an association with the specified name.
    *
-   * Use this API to read Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to read firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.getAssociation instead.
+   * Use of this API to read firewall policies is deprecated. Use
+   * firewallPolicies.getAssociation instead if possible.
    * (organizationSecurityPolicies.getAssociation)
    *
    * @param string $securityPolicy Name of the security policy to which the
@@ -220,10 +207,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Gets a rule at the specified priority.
    *
-   * Use this API to read Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to read firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.getRule instead.
-   * (organizationSecurityPolicies.getRule)
+   * Use of this API to read firewall policies is deprecated. Use
+   * firewallPolicies.getRule instead. (organizationSecurityPolicies.getRule)
    *
    * @param string $securityPolicy Name of the security policy to which the
    * queried rule belongs.
@@ -244,10 +229,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
    * Creates a new policy in the specified organization using the data included in
    * the request.
    *
-   * Use this API to add Cloud Armor policies. Previously, alpha and beta versions
-   * of this API were used to add firewall policies. This usage is now disabled
-   * for most organizations. Use firewallPolicies.insert instead.
-   * (organizationSecurityPolicies.insert)
+   * Use of this API to insert firewall policies is deprecated. Use
+   * firewallPolicies.insert instead. (organizationSecurityPolicies.insert)
    *
    * @param SecurityPolicy $postBody
    * @param array $optParams Optional parameters.
@@ -280,9 +263,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
    * List all the policies that have been configured for the specified
    * organization.
    *
-   * Use this API to read Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to read firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.list instead.
+   * Use of this API to read firewall policies is deprecated. Use
+   * firewallPolicies.list instead.
    * (organizationSecurityPolicies.listOrganizationSecurityPolicies)
    *
    * @param array $optParams Optional parameters.
@@ -369,10 +351,9 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Lists associations of a specified target, i.e., organization or folder.
    *
-   * Use this API to read Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to read firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.listAssociations
-   * instead. (organizationSecurityPolicies.listAssociations)
+   * Use of this API to read firewall policies is deprecated. Use
+   * firewallPolicies.listAssociations instead if possible.
+   * (organizationSecurityPolicies.listAssociations)
    *
    * @param array $optParams Optional parameters.
    *
@@ -475,10 +456,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Moves the specified security policy.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.move instead.
-   * (organizationSecurityPolicies.move)
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.move instead. (organizationSecurityPolicies.move)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param array $optParams Optional parameters.
@@ -508,10 +487,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Patches the specified policy with the data included in the request.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.patch instead.
-   * (organizationSecurityPolicies.patch)
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.patch instead. (organizationSecurityPolicies.patch)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param SecurityPolicy $postBody
@@ -541,10 +518,8 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Patches a rule at the specified priority.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.patchRule instead.
-   * (organizationSecurityPolicies.patchRule)
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.patchRule instead. (organizationSecurityPolicies.patchRule)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param SecurityPolicyRule $postBody
@@ -575,10 +550,9 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   /**
    * Removes an association for the specified security policy.
    *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.removeAssociation
-   * instead. (organizationSecurityPolicies.removeAssociation)
+   * Use of this API to modify firewall policies is deprecated. Use
+   * firewallPolicies.removeAssociation instead if possible.
+   * (organizationSecurityPolicies.removeAssociation)
    *
    * @param string $securityPolicy Name of the security policy to update.
    * @param array $optParams Optional parameters.
@@ -607,10 +581,6 @@ class OrganizationSecurityPolicies extends \Google\Service\Resource
   }
   /**
    * Deletes a rule at the specified priority.
-   *
-   * Use this API to modify Cloud Armor policies. Previously, alpha and beta
-   * versions of this API were used to modify firewall policies. This usage is now
-   * disabled for most organizations. Use firewallPolicies.removeRule instead.
    * (organizationSecurityPolicies.removeRule)
    *
    * @param string $securityPolicy Name of the security policy to update.

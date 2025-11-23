@@ -23,9 +23,7 @@ class DirectoryServicesConfig extends \Google\Model
   protected $ldapDataType = '';
 
   /**
-   * Configuration for LDAP servers.
-   *
-   * @param LdapConfig $ldap
+   * @param LdapConfig
    */
   public function setLdap(LdapConfig $ldap)
   {

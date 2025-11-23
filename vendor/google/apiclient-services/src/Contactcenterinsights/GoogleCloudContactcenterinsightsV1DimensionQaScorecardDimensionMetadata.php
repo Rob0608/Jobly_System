@@ -20,16 +20,12 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1DimensionQaScorecardDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The QA scorecard ID.
-   *
    * @var string
    */
   public $qaScorecardId;
 
   /**
-   * Optional. The QA scorecard ID.
-   *
-   * @param string $qaScorecardId
+   * @param string
    */
   public function setQaScorecardId($qaScorecardId)
   {

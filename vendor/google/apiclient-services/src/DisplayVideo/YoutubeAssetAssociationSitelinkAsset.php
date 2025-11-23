@@ -20,16 +20,12 @@ namespace Google\Service\DisplayVideo;
 class YoutubeAssetAssociationSitelinkAsset extends \Google\Model
 {
   /**
-   * Required. ID of the sitelink asset.
-   *
    * @var string
    */
   public $assetId;
 
   /**
-   * Required. ID of the sitelink asset.
-   *
-   * @param string $assetId
+   * @param string
    */
   public function setAssetId($assetId)
   {

@@ -20,18 +20,12 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RubricContentProperty extends \Google\Model
 {
   /**
-   * Description of the property being evaluated. Example: "The model's response
-   * is grammatically correct."
-   *
    * @var string
    */
   public $description;
 
   /**
-   * Description of the property being evaluated. Example: "The model's response
-   * is grammatically correct."
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {

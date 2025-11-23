@@ -53,6 +53,27 @@ class CompanyModel extends Model
         return !empty($query);
     }
 
+    // Check if a company name already exists. Optionally exclude a company id (for updates).
+    public function existsByName($companyName, $excludeId = null)
+    {
+        $this->call->database();
+
+        try {
+            if ($excludeId) {
+                $sql = "SELECT id FROM {$this->table} WHERE company_name = ? AND id != ? LIMIT 1";
+                $stmt = $this->db->raw($sql, [$companyName, (int)$excludeId]);
+            } else {
+                $sql = "SELECT id FROM {$this->table} WHERE company_name = ? LIMIT 1";
+                $stmt = $this->db->raw($sql, [$companyName]);
+            }
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return !empty($row);
+        } catch (Exception $e) {
+            error_log('CompanyModel::existsByName error: ' . $e->getMessage());
+            return false;
+        }
+    }
+
     // ✅ Verify company using verification code
     public function verifyCode($email, $code)
     {

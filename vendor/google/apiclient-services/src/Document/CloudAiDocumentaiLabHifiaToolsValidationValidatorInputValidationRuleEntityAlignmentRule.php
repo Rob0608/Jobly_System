@@ -26,9 +26,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntity
   protected $fieldsDataType = 'array';
 
   /**
-   * The alignment rule to apply to the fields.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule $alignmentRule
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule
    */
   public function setAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule $alignmentRule)
   {
@@ -42,9 +40,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntity
     return $this->alignmentRule;
   }
   /**
-   * The fields to be aligned.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField[] $fields
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField[]
    */
   public function setFields($fields)
   {

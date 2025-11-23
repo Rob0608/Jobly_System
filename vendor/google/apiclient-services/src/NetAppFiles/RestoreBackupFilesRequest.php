@@ -21,31 +21,20 @@ class RestoreBackupFilesRequest extends \Google\Collection
 {
   protected $collection_key = 'fileList';
   /**
-   * Required. The backup resource name, in the format `projects/{project_id}/lo
-   * cations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
-   *
    * @var string
    */
   public $backup;
   /**
-   * Required. List of files to be restored in the form of their absolute path
-   * as in source volume.
-   *
    * @var string[]
    */
   public $fileList;
   /**
-   * Optional. Absolute directory path in the destination volume.
-   *
    * @var string
    */
   public $restoreDestinationPath;
 
   /**
-   * Required. The backup resource name, in the format `projects/{project_id}/lo
-   * cations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
-   *
-   * @param string $backup
+   * @param string
    */
   public function setBackup($backup)
   {
@@ -59,10 +48,7 @@ class RestoreBackupFilesRequest extends \Google\Collection
     return $this->backup;
   }
   /**
-   * Required. List of files to be restored in the form of their absolute path
-   * as in source volume.
-   *
-   * @param string[] $fileList
+   * @param string[]
    */
   public function setFileList($fileList)
   {
@@ -76,9 +62,7 @@ class RestoreBackupFilesRequest extends \Google\Collection
     return $this->fileList;
   }
   /**
-   * Optional. Absolute directory path in the destination volume.
-   *
-   * @param string $restoreDestinationPath
+   * @param string
    */
   public function setRestoreDestinationPath($restoreDestinationPath)
   {

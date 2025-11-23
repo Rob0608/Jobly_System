@@ -20,16 +20,12 @@ namespace Google\Service\PaymentsResellerSubscription;
 class SubscriptionMigrationDetails extends \Google\Model
 {
   /**
-   * Output only. The migrated subscription id in the legacy system.
-   *
    * @var string
    */
   public $migratedSubscriptionId;
 
   /**
-   * Output only. The migrated subscription id in the legacy system.
-   *
-   * @param string $migratedSubscriptionId
+   * @param string
    */
   public function setMigratedSubscriptionId($migratedSubscriptionId)
   {

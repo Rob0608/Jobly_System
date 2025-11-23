@@ -83,7 +83,7 @@
             <button type="button" class="toggle" id="togglePwd" aria-label="Show password">Show</button>
           </div>
           <div class="actions">
-            <span class="muted">Forgot password?</span>
+            <a class="muted" href="<?= site_url('forgot') ?>" style="text-decoration:none">Forgot password?</a>
             <button class="btn" type="submit">Login</button>
           </div>
         </form>

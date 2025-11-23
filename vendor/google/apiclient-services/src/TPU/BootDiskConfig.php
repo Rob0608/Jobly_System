@@ -23,9 +23,7 @@ class BootDiskConfig extends \Google\Model
   protected $customerEncryptionKeyDataType = '';
 
   /**
-   * Optional. Customer encryption key for boot disk.
-   *
-   * @param CustomerEncryptionKey $customerEncryptionKey
+   * @param CustomerEncryptionKey
    */
   public function setCustomerEncryptionKey(CustomerEncryptionKey $customerEncryptionKey)
   {

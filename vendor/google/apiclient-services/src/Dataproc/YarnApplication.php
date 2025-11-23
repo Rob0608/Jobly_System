@@ -20,88 +20,32 @@ namespace Google\Service\Dataproc;
 class YarnApplication extends \Google\Model
 {
   /**
-   * Status is unspecified.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * Status is NEW.
-   */
-  public const STATE_NEW = 'NEW';
-  /**
-   * Status is NEW_SAVING.
-   */
-  public const STATE_NEW_SAVING = 'NEW_SAVING';
-  /**
-   * Status is SUBMITTED.
-   */
-  public const STATE_SUBMITTED = 'SUBMITTED';
-  /**
-   * Status is ACCEPTED.
-   */
-  public const STATE_ACCEPTED = 'ACCEPTED';
-  /**
-   * Status is RUNNING.
-   */
-  public const STATE_RUNNING = 'RUNNING';
-  /**
-   * Status is FINISHED.
-   */
-  public const STATE_FINISHED = 'FINISHED';
-  /**
-   * Status is FAILED.
-   */
-  public const STATE_FAILED = 'FAILED';
-  /**
-   * Status is KILLED.
-   */
-  public const STATE_KILLED = 'KILLED';
-  /**
-   * Optional. The cumulative memory usage of the application for a job,
-   * measured in mb-seconds.
-   *
    * @var string
    */
   public $memoryMbSeconds;
   /**
-   * Required. The application name.
-   *
    * @var string
    */
   public $name;
   /**
-   * Required. The numerical progress of the application, from 1 to 100.
-   *
    * @var float
    */
   public $progress;
   /**
-   * Required. The application state.
-   *
    * @var string
    */
   public $state;
   /**
-   * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or
-   * TimelineServer that provides application-specific information. The URL uses
-   * the internal hostname, and requires a proxy server for resolution and,
-   * possibly, access.
-   *
    * @var string
    */
   public $trackingUrl;
   /**
-   * Optional. The cumulative CPU time consumed by the application for a job,
-   * measured in vcore-seconds.
-   *
    * @var string
    */
   public $vcoreSeconds;
 
   /**
-   * Optional. The cumulative memory usage of the application for a job,
-   * measured in mb-seconds.
-   *
-   * @param string $memoryMbSeconds
+   * @param string
    */
   public function setMemoryMbSeconds($memoryMbSeconds)
   {
@@ -115,9 +59,7 @@ class YarnApplication extends \Google\Model
     return $this->memoryMbSeconds;
   }
   /**
-   * Required. The application name.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -131,9 +73,7 @@ class YarnApplication extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The numerical progress of the application, from 1 to 100.
-   *
-   * @param float $progress
+   * @param float
    */
   public function setProgress($progress)
   {
@@ -147,31 +87,21 @@ class YarnApplication extends \Google\Model
     return $this->progress;
   }
   /**
-   * Required. The application state.
-   *
-   * Accepted values: STATE_UNSPECIFIED, NEW, NEW_SAVING, SUBMITTED, ACCEPTED,
-   * RUNNING, FINISHED, FAILED, KILLED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or
-   * TimelineServer that provides application-specific information. The URL uses
-   * the internal hostname, and requires a proxy server for resolution and,
-   * possibly, access.
-   *
-   * @param string $trackingUrl
+   * @param string
    */
   public function setTrackingUrl($trackingUrl)
   {
@@ -185,10 +115,7 @@ class YarnApplication extends \Google\Model
     return $this->trackingUrl;
   }
   /**
-   * Optional. The cumulative CPU time consumed by the application for a job,
-   * measured in vcore-seconds.
-   *
-   * @param string $vcoreSeconds
+   * @param string
    */
   public function setVcoreSeconds($vcoreSeconds)
   {

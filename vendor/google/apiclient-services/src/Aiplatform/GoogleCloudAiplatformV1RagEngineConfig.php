@@ -20,9 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RagEngineConfig extends \Google\Model
 {
   /**
-   * Identifier. The name of the RagEngineConfig. Format:
-   * `projects/{project}/locations/{location}/ragEngineConfig`
-   *
    * @var string
    */
   public $name;
@@ -30,10 +27,7 @@ class GoogleCloudAiplatformV1RagEngineConfig extends \Google\Model
   protected $ragManagedDbConfigDataType = '';
 
   /**
-   * Identifier. The name of the RagEngineConfig. Format:
-   * `projects/{project}/locations/{location}/ragEngineConfig`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -47,9 +41,7 @@ class GoogleCloudAiplatformV1RagEngineConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * The config of the RagManagedDb used by RagEngine.
-   *
-   * @param GoogleCloudAiplatformV1RagManagedDbConfig $ragManagedDbConfig
+   * @param GoogleCloudAiplatformV1RagManagedDbConfig
    */
   public function setRagManagedDbConfig(GoogleCloudAiplatformV1RagManagedDbConfig $ragManagedDbConfig)
   {

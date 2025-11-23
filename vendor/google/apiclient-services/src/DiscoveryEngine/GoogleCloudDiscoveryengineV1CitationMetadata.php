@@ -24,9 +24,7 @@ class GoogleCloudDiscoveryengineV1CitationMetadata extends \Google\Collection
   protected $citationsDataType = 'array';
 
   /**
-   * Output only. List of citations.
-   *
-   * @param GoogleCloudDiscoveryengineV1Citation[] $citations
+   * @param GoogleCloudDiscoveryengineV1Citation[]
    */
   public function setCitations($citations)
   {

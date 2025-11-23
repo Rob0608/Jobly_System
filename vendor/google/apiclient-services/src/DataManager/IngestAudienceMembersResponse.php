@@ -20,16 +20,12 @@ namespace Google\Service\DataManager;
 class IngestAudienceMembersResponse extends \Google\Model
 {
   /**
-   * The auto-generated ID of the request.
-   *
    * @var string
    */
   public $requestId;
 
   /**
-   * The auto-generated ID of the request.
-   *
-   * @param string $requestId
+   * @param string
    */
   public function setRequestId($requestId)
   {

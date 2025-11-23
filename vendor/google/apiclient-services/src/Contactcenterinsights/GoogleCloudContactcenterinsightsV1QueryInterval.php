@@ -20,22 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1QueryInterval extends \Google\Model
 {
   /**
-   * Required. The end time of the time window.
-   *
    * @var string
    */
   public $endTime;
   /**
-   * Required. The start time of the time window.
-   *
    * @var string
    */
   public $startTime;
 
   /**
-   * Required. The end time of the time window.
-   *
-   * @param string $endTime
+   * @param string
    */
   public function setEndTime($endTime)
   {
@@ -49,9 +43,7 @@ class GoogleCloudContactcenterinsightsV1QueryInterval extends \Google\Model
     return $this->endTime;
   }
   /**
-   * Required. The start time of the time window.
-   *
-   * @param string $startTime
+   * @param string
    */
   public function setStartTime($startTime)
   {

@@ -20,28 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1KeyValueMap extends \Google\Model
 {
   /**
-   * Required. Flag that specifies whether entry values will be encrypted. This
-   * field is retained for backward compatibility and the value of encrypted
-   * will always be `true`. Apigee X and hybrid do not support unencrypted key
-   * value maps.
-   *
    * @var bool
    */
   public $encrypted;
   /**
-   * Required. ID of the key value map.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Required. Flag that specifies whether entry values will be encrypted. This
-   * field is retained for backward compatibility and the value of encrypted
-   * will always be `true`. Apigee X and hybrid do not support unencrypted key
-   * value maps.
-   *
-   * @param bool $encrypted
+   * @param bool
    */
   public function setEncrypted($encrypted)
   {
@@ -55,9 +43,7 @@ class GoogleCloudApigeeV1KeyValueMap extends \Google\Model
     return $this->encrypted;
   }
   /**
-   * Required. ID of the key value map.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

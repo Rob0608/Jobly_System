@@ -19,32 +19,12 @@ namespace Google\Service\DataManager;
 
 class IngestEventsRequest extends \Google\Collection
 {
-  /**
-   * Unspecified Encoding type. Should never be used.
-   */
-  public const ENCODING_ENCODING_UNSPECIFIED = 'ENCODING_UNSPECIFIED';
-  /**
-   * Hex encoding.
-   */
-  public const ENCODING_HEX = 'HEX';
-  /**
-   * Base 64 encoding.
-   */
-  public const ENCODING_BASE64 = 'BASE64';
   protected $collection_key = 'events';
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   protected $destinationsType = Destination::class;
   protected $destinationsDataType = 'array';
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user
-   * identifiers. For hashed user identifiers, this is the encoding type of the
-   * hashed string. For encrypted hashed user identifiers, this is the encoding
-   * type of the outer encrypted string, but not necessarily the inner hashed
-   * string, meaning the inner hashed string could be encoded in a different way
-   * than the outer encrypted string. For non `UserData` uploads, this field is
-   * ignored.
-   *
    * @var string
    */
   public $encoding;
@@ -53,19 +33,12 @@ class IngestEventsRequest extends \Google\Collection
   protected $eventsType = Event::class;
   protected $eventsDataType = 'array';
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not
-   * executed. Only errors are returned, not results.
-   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * Optional. Request-level consent to apply to all users in the request. User-
-   * level consent overrides request-level consent, and can be specified in each
-   * Event.
-   *
-   * @param Consent $consent
+   * @param Consent
    */
   public function setConsent(Consent $consent)
   {
@@ -79,9 +52,7 @@ class IngestEventsRequest extends \Google\Collection
     return $this->consent;
   }
   /**
-   * Required. The list of destinations to send the events to.
-   *
-   * @param Destination[] $destinations
+   * @param Destination[]
    */
   public function setDestinations($destinations)
   {
@@ -95,35 +66,21 @@ class IngestEventsRequest extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user
-   * identifiers. For hashed user identifiers, this is the encoding type of the
-   * hashed string. For encrypted hashed user identifiers, this is the encoding
-   * type of the outer encrypted string, but not necessarily the inner hashed
-   * string, meaning the inner hashed string could be encoded in a different way
-   * than the outer encrypted string. For non `UserData` uploads, this field is
-   * ignored.
-   *
-   * Accepted values: ENCODING_UNSPECIFIED, HEX, BASE64
-   *
-   * @param self::ENCODING_* $encoding
+   * @param string
    */
   public function setEncoding($encoding)
   {
     $this->encoding = $encoding;
   }
   /**
-   * @return self::ENCODING_*
+   * @return string
    */
   public function getEncoding()
   {
     return $this->encoding;
   }
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's
-   * assumed that uploaded identifying information is hashed but not encrypted.
-   * For non `UserData` uploads, this field is ignored.
-   *
-   * @param EncryptionInfo $encryptionInfo
+   * @param EncryptionInfo
    */
   public function setEncryptionInfo(EncryptionInfo $encryptionInfo)
   {
@@ -137,10 +94,7 @@ class IngestEventsRequest extends \Google\Collection
     return $this->encryptionInfo;
   }
   /**
-   * Required. The list of events to send to the specified destinations. At most
-   * 2000 Event resources can be sent in a single request.
-   *
-   * @param Event[] $events
+   * @param Event[]
    */
   public function setEvents($events)
   {
@@ -154,10 +108,7 @@ class IngestEventsRequest extends \Google\Collection
     return $this->events;
   }
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not
-   * executed. Only errors are returned, not results.
-   *
-   * @param bool $validateOnly
+   * @param bool
    */
   public function setValidateOnly($validateOnly)
   {

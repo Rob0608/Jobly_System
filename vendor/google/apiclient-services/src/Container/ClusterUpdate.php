@@ -19,61 +19,6 @@ namespace Google\Service\Container;
 
 class ClusterUpdate extends \Google\Collection
 {
-  /**
-   * Default value.
-   */
-  public const DESIRED_DATAPATH_PROVIDER_DATAPATH_PROVIDER_UNSPECIFIED = 'DATAPATH_PROVIDER_UNSPECIFIED';
-  /**
-   * Use the IPTables implementation based on kube-proxy.
-   */
-  public const DESIRED_DATAPATH_PROVIDER_LEGACY_DATAPATH = 'LEGACY_DATAPATH';
-  /**
-   * Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE
-   * Dataplane V2 documentation](https://cloud.google.com/kubernetes-
-   * engine/docs/how-to/dataplane-v2) for more.
-   */
-  public const DESIRED_DATAPATH_PROVIDER_ADVANCED_DATAPATH = 'ADVANCED_DATAPATH';
-  /**
-   * Unspecified, will be inferred as default -
-   * IN_TRANSIT_ENCRYPTION_UNSPECIFIED.
-   */
-  public const DESIRED_IN_TRANSIT_ENCRYPTION_CONFIG_IN_TRANSIT_ENCRYPTION_CONFIG_UNSPECIFIED = 'IN_TRANSIT_ENCRYPTION_CONFIG_UNSPECIFIED';
-  /**
-   * In-transit encryption is disabled.
-   */
-  public const DESIRED_IN_TRANSIT_ENCRYPTION_CONFIG_IN_TRANSIT_ENCRYPTION_DISABLED = 'IN_TRANSIT_ENCRYPTION_DISABLED';
-  /**
-   * Data in-transit is encrypted using inter-node transparent encryption.
-   */
-  public const DESIRED_IN_TRANSIT_ENCRYPTION_CONFIG_IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT = 'IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT';
-  /**
-   * Default value. Same as DISABLED
-   */
-  public const DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED = 'PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED';
-  /**
-   * No private access to or from Google Services
-   */
-  public const DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED = 'PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED';
-  /**
-   * Enables private IPv6 access to Google Services from GKE
-   */
-  public const DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE = 'PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE';
-  /**
-   * Enables private IPv6 access to and from Google Services
-   */
-  public const DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL = 'PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL';
-  /**
-   * Default value, will be defaulted as IPV4 only
-   */
-  public const DESIRED_STACK_TYPE_STACK_TYPE_UNSPECIFIED = 'STACK_TYPE_UNSPECIFIED';
-  /**
-   * Cluster is IPV4 only
-   */
-  public const DESIRED_STACK_TYPE_IPV4 = 'IPV4';
-  /**
-   * Cluster can use both IPv4 and IPv6
-   */
-  public const DESIRED_STACK_TYPE_IPV4_IPV6 = 'IPV4_IPV6';
   protected $collection_key = 'desiredLocations';
   protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $additionalPodRangesConfigDataType = '';
@@ -104,54 +49,34 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredDatabaseEncryptionType = DatabaseEncryption::class;
   protected $desiredDatabaseEncryptionDataType = '';
   /**
-   * The desired datapath provider for the cluster.
-   *
    * @var string
    */
   public $desiredDatapathProvider;
   /**
-   * Override the default setting of whether future created nodes have private
-   * IP addresses only, namely NetworkConfig.default_enable_private_nodes
-   *
    * @var bool
    */
   public $desiredDefaultEnablePrivateNodes;
   protected $desiredDefaultSnatStatusType = DefaultSnatStatus::class;
   protected $desiredDefaultSnatStatusDataType = '';
   /**
-   * Enable/Disable L4 LB VPC firewall reconciliation for the cluster.
-   *
    * @var bool
    */
   public $desiredDisableL4LbFirewallReconciliation;
   protected $desiredDnsConfigType = DNSConfig::class;
   protected $desiredDnsConfigDataType = '';
   /**
-   * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
-   *
    * @var bool
    */
   public $desiredEnableCiliumClusterwideNetworkPolicy;
   /**
-   * Enable/Disable FQDN Network Policy for the cluster.
-   *
    * @var bool
    */
   public $desiredEnableFqdnNetworkPolicy;
   /**
-   * Enable/Disable Multi-Networking for the cluster
-   *
    * @var bool
    */
   public $desiredEnableMultiNetworking;
   /**
-   * Enable/Disable private endpoint for the cluster's master. Deprecated: Use d
-   * esired_control_plane_endpoints_config.ip_endpoints_config.enable_public_end
-   * point instead. Note that the value of enable_public_endpoint is reversed:
-   * if enable_private_endpoint is false, then enable_public_endpoint will be
-   * true.
-   *
-   * @deprecated
    * @var bool
    */
   public $desiredEnablePrivateEndpoint;
@@ -166,15 +91,10 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredIdentityServiceConfigType = IdentityServiceConfig::class;
   protected $desiredIdentityServiceConfigDataType = '';
   /**
-   * The desired image type for the node pool. NOTE: Set the "desired_node_pool"
-   * field as well.
-   *
    * @var string
    */
   public $desiredImageType;
   /**
-   * Specify the details of in-transit encryption.
-   *
    * @var string
    */
   public $desiredInTransitEncryptionConfig;
@@ -185,42 +105,18 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredL4ilbSubsettingConfigType = ILBSubsettingConfig::class;
   protected $desiredL4ilbSubsettingConfigDataType = '';
   /**
-   * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. This list must always include the
-   * cluster's primary zone. Warning: changing cluster locations will update the
-   * locations of all node pools and will result in nodes being added and/or
-   * removed.
-   *
    * @var string[]
    */
   public $desiredLocations;
   protected $desiredLoggingConfigType = LoggingConfig::class;
   protected $desiredLoggingConfigDataType = '';
   /**
-   * The logging service the cluster should use to write logs. Currently
-   * available options: * `logging.googleapis.com/kubernetes` - The Cloud
-   * Logging service with a Kubernetes-native resource model *
-   * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the
-   * cluster. If left as an empty string,`logging.googleapis.com/kubernetes`
-   * will be used for GKE 1.14+ or `logging.googleapis.com` for earlier
-   * versions.
-   *
    * @var string
    */
   public $desiredLoggingService;
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $desiredMasterAuthorizedNetworksConfigDataType = '';
   /**
-   * The Kubernetes version to change the master to. Users may specify either
-   * explicit versions offered by Kubernetes Engine or version aliases, which
-   * have the following behavior: - "latest": picks the highest valid Kubernetes
-   * version - "1.X": picks the highest valid patch+gke.N patch in the 1.X
-   * version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
-   * - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the
-   * default Kubernetes version
-   *
    * @var string
    */
   public $desiredMasterVersion;
@@ -229,15 +125,6 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredMonitoringConfigType = MonitoringConfig::class;
   protected $desiredMonitoringConfigDataType = '';
   /**
-   * The monitoring service the cluster should use to write metrics. Currently
-   * available options: * `monitoring.googleapis.com/kubernetes` - The Cloud
-   * Monitoring service with a Kubernetes-native resource model *
-   * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported
-   * from the cluster. If left as an empty
-   * string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
-   * `monitoring.googleapis.com` for earlier versions.
-   *
    * @var string
    */
   public $desiredMonitoringService;
@@ -258,25 +145,12 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredNodePoolAutoscalingType = NodePoolAutoscaling::class;
   protected $desiredNodePoolAutoscalingDataType = '';
   /**
-   * The node pool to be upgraded. This field is mandatory if
-   * "desired_node_version", "desired_image_family" or
-   * "desired_node_pool_autoscaling" is specified and there is more than one
-   * node pool on the cluster.
-   *
    * @var string
    */
   public $desiredNodePoolId;
   protected $desiredNodePoolLoggingConfigType = NodePoolLoggingConfig::class;
   protected $desiredNodePoolLoggingConfigDataType = '';
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade). Users
-   * may specify either explicit versions offered by Kubernetes Engine or
-   * version aliases, which have the following behavior: - "latest": picks the
-   * highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid
-   * gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit
-   * Kubernetes version - "-": picks the Kubernetes master version
-   *
    * @var string
    */
   public $desiredNodeVersion;
@@ -289,13 +163,9 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredPrivateClusterConfigType = PrivateClusterConfig::class;
   protected $desiredPrivateClusterConfigDataType = '';
   /**
-   * The desired state of IPv6 connectivity to Google Services.
-   *
    * @var string
    */
   public $desiredPrivateIpv6GoogleAccess;
-  protected $desiredPrivilegedAdmissionConfigType = PrivilegedAdmissionConfig::class;
-  protected $desiredPrivilegedAdmissionConfigDataType = '';
   protected $desiredRbacBindingConfigType = RBACBindingConfig::class;
   protected $desiredRbacBindingConfigDataType = '';
   protected $desiredReleaseChannelType = ReleaseChannel::class;
@@ -311,10 +181,6 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredShieldedNodesType = ShieldedNodes::class;
   protected $desiredShieldedNodesDataType = '';
   /**
-   * The desired stack type of the cluster. If a stack type is provided and does
-   * not match the current stack type of the cluster, update will attempt to
-   * change the stack type to the new type.
-   *
    * @var string
    */
   public $desiredStackType;
@@ -327,10 +193,6 @@ class ClusterUpdate extends \Google\Collection
   protected $enableK8sBetaApisType = K8sBetaAPIConfig::class;
   protected $enableK8sBetaApisDataType = '';
   /**
-   * The current etag of the cluster. If an etag is provided and does not match
-   * the current etag of the cluster, update will be blocked and an ABORTED
-   * error will be returned.
-   *
    * @var string
    */
   public $etag;
@@ -342,10 +204,7 @@ class ClusterUpdate extends \Google\Collection
   protected $userManagedKeysConfigDataType = '';
 
   /**
-   * The additional pod ranges to be added to the cluster. These pod ranges can
-   * be used by node pools to allocate pod IPs.
-   *
-   * @param AdditionalPodRangesConfig $additionalPodRangesConfig
+   * @param AdditionalPodRangesConfig
    */
   public function setAdditionalPodRangesConfig(AdditionalPodRangesConfig $additionalPodRangesConfig)
   {
@@ -359,9 +218,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->additionalPodRangesConfig;
   }
   /**
-   * The desired config for additional subnetworks attached to the cluster.
-   *
-   * @param DesiredAdditionalIPRangesConfig $desiredAdditionalIpRangesConfig
+   * @param DesiredAdditionalIPRangesConfig
    */
   public function setDesiredAdditionalIpRangesConfig(DesiredAdditionalIPRangesConfig $desiredAdditionalIpRangesConfig)
   {
@@ -375,9 +232,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAdditionalIpRangesConfig;
   }
   /**
-   * Configurations for the various addons available to run in the cluster.
-   *
-   * @param AddonsConfig $desiredAddonsConfig
+   * @param AddonsConfig
    */
   public function setDesiredAddonsConfig(AddonsConfig $desiredAddonsConfig)
   {
@@ -391,10 +246,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAddonsConfig;
   }
   /**
-   * Configuration for limiting anonymous access to all endpoints except the
-   * health checks.
-   *
-   * @param AnonymousAuthenticationConfig $desiredAnonymousAuthenticationConfig
+   * @param AnonymousAuthenticationConfig
    */
   public function setDesiredAnonymousAuthenticationConfig(AnonymousAuthenticationConfig $desiredAnonymousAuthenticationConfig)
   {
@@ -408,9 +260,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAnonymousAuthenticationConfig;
   }
   /**
-   * The desired authenticator groups config for the cluster.
-   *
-   * @param AuthenticatorGroupsConfig $desiredAuthenticatorGroupsConfig
+   * @param AuthenticatorGroupsConfig
    */
   public function setDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig $desiredAuthenticatorGroupsConfig)
   {
@@ -424,9 +274,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAuthenticatorGroupsConfig;
   }
   /**
-   * AutoIpamConfig contains all information related to Auto IPAM
-   *
-   * @param AutoIpamConfig $desiredAutoIpamConfig
+   * @param AutoIpamConfig
    */
   public function setDesiredAutoIpamConfig(AutoIpamConfig $desiredAutoIpamConfig)
   {
@@ -440,9 +288,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAutoIpamConfig;
   }
   /**
-   * WorkloadPolicyConfig is the configuration related to GCW workload policy
-   *
-   * @param WorkloadPolicyConfig $desiredAutopilotWorkloadPolicyConfig
+   * @param WorkloadPolicyConfig
    */
   public function setDesiredAutopilotWorkloadPolicyConfig(WorkloadPolicyConfig $desiredAutopilotWorkloadPolicyConfig)
   {
@@ -456,9 +302,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredAutopilotWorkloadPolicyConfig;
   }
   /**
-   * The desired configuration options for the Binary Authorization feature.
-   *
-   * @param BinaryAuthorization $desiredBinaryAuthorization
+   * @param BinaryAuthorization
    */
   public function setDesiredBinaryAuthorization(BinaryAuthorization $desiredBinaryAuthorization)
   {
@@ -472,9 +316,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredBinaryAuthorization;
   }
   /**
-   * Cluster-level autoscaling configuration.
-   *
-   * @param ClusterAutoscaling $desiredClusterAutoscaling
+   * @param ClusterAutoscaling
    */
   public function setDesiredClusterAutoscaling(ClusterAutoscaling $desiredClusterAutoscaling)
   {
@@ -488,9 +330,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredClusterAutoscaling;
   }
   /**
-   * Enable/Disable Compliance Posture features for the cluster.
-   *
-   * @param CompliancePostureConfig $desiredCompliancePostureConfig
+   * @param CompliancePostureConfig
    */
   public function setDesiredCompliancePostureConfig(CompliancePostureConfig $desiredCompliancePostureConfig)
   {
@@ -504,9 +344,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredCompliancePostureConfig;
   }
   /**
-   * The desired containerd config for the cluster.
-   *
-   * @param ContainerdConfig $desiredContainerdConfig
+   * @param ContainerdConfig
    */
   public function setDesiredContainerdConfig(ContainerdConfig $desiredContainerdConfig)
   {
@@ -520,9 +358,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredContainerdConfig;
   }
   /**
-   * Control plane endpoints configuration.
-   *
-   * @param ControlPlaneEndpointsConfig $desiredControlPlaneEndpointsConfig
+   * @param ControlPlaneEndpointsConfig
    */
   public function setDesiredControlPlaneEndpointsConfig(ControlPlaneEndpointsConfig $desiredControlPlaneEndpointsConfig)
   {
@@ -536,9 +372,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredControlPlaneEndpointsConfig;
   }
   /**
-   * The desired configuration for the fine-grained cost management feature.
-   *
-   * @param CostManagementConfig $desiredCostManagementConfig
+   * @param CostManagementConfig
    */
   public function setDesiredCostManagementConfig(CostManagementConfig $desiredCostManagementConfig)
   {
@@ -552,9 +386,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredCostManagementConfig;
   }
   /**
-   * Configuration of etcd encryption.
-   *
-   * @param DatabaseEncryption $desiredDatabaseEncryption
+   * @param DatabaseEncryption
    */
   public function setDesiredDatabaseEncryption(DatabaseEncryption $desiredDatabaseEncryption)
   {
@@ -568,29 +400,21 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredDatabaseEncryption;
   }
   /**
-   * The desired datapath provider for the cluster.
-   *
-   * Accepted values: DATAPATH_PROVIDER_UNSPECIFIED, LEGACY_DATAPATH,
-   * ADVANCED_DATAPATH
-   *
-   * @param self::DESIRED_DATAPATH_PROVIDER_* $desiredDatapathProvider
+   * @param string
    */
   public function setDesiredDatapathProvider($desiredDatapathProvider)
   {
     $this->desiredDatapathProvider = $desiredDatapathProvider;
   }
   /**
-   * @return self::DESIRED_DATAPATH_PROVIDER_*
+   * @return string
    */
   public function getDesiredDatapathProvider()
   {
     return $this->desiredDatapathProvider;
   }
   /**
-   * Override the default setting of whether future created nodes have private
-   * IP addresses only, namely NetworkConfig.default_enable_private_nodes
-   *
-   * @param bool $desiredDefaultEnablePrivateNodes
+   * @param bool
    */
   public function setDesiredDefaultEnablePrivateNodes($desiredDefaultEnablePrivateNodes)
   {
@@ -604,9 +428,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredDefaultEnablePrivateNodes;
   }
   /**
-   * The desired status of whether to disable default sNAT for this cluster.
-   *
-   * @param DefaultSnatStatus $desiredDefaultSnatStatus
+   * @param DefaultSnatStatus
    */
   public function setDesiredDefaultSnatStatus(DefaultSnatStatus $desiredDefaultSnatStatus)
   {
@@ -620,9 +442,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredDefaultSnatStatus;
   }
   /**
-   * Enable/Disable L4 LB VPC firewall reconciliation for the cluster.
-   *
-   * @param bool $desiredDisableL4LbFirewallReconciliation
+   * @param bool
    */
   public function setDesiredDisableL4LbFirewallReconciliation($desiredDisableL4LbFirewallReconciliation)
   {
@@ -636,9 +456,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredDisableL4LbFirewallReconciliation;
   }
   /**
-   * DNSConfig contains clusterDNS config for this cluster.
-   *
-   * @param DNSConfig $desiredDnsConfig
+   * @param DNSConfig
    */
   public function setDesiredDnsConfig(DNSConfig $desiredDnsConfig)
   {
@@ -652,9 +470,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredDnsConfig;
   }
   /**
-   * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
-   *
-   * @param bool $desiredEnableCiliumClusterwideNetworkPolicy
+   * @param bool
    */
   public function setDesiredEnableCiliumClusterwideNetworkPolicy($desiredEnableCiliumClusterwideNetworkPolicy)
   {
@@ -668,9 +484,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredEnableCiliumClusterwideNetworkPolicy;
   }
   /**
-   * Enable/Disable FQDN Network Policy for the cluster.
-   *
-   * @param bool $desiredEnableFqdnNetworkPolicy
+   * @param bool
    */
   public function setDesiredEnableFqdnNetworkPolicy($desiredEnableFqdnNetworkPolicy)
   {
@@ -684,9 +498,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredEnableFqdnNetworkPolicy;
   }
   /**
-   * Enable/Disable Multi-Networking for the cluster
-   *
-   * @param bool $desiredEnableMultiNetworking
+   * @param bool
    */
   public function setDesiredEnableMultiNetworking($desiredEnableMultiNetworking)
   {
@@ -700,21 +512,13 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredEnableMultiNetworking;
   }
   /**
-   * Enable/Disable private endpoint for the cluster's master. Deprecated: Use d
-   * esired_control_plane_endpoints_config.ip_endpoints_config.enable_public_end
-   * point instead. Note that the value of enable_public_endpoint is reversed:
-   * if enable_private_endpoint is false, then enable_public_endpoint will be
-   * true.
-   *
-   * @deprecated
-   * @param bool $desiredEnablePrivateEndpoint
+   * @param bool
    */
   public function setDesiredEnablePrivateEndpoint($desiredEnablePrivateEndpoint)
   {
     $this->desiredEnablePrivateEndpoint = $desiredEnablePrivateEndpoint;
   }
   /**
-   * @deprecated
    * @return bool
    */
   public function getDesiredEnablePrivateEndpoint()
@@ -722,18 +526,13 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredEnablePrivateEndpoint;
   }
   /**
-   * The desired enterprise configuration for the cluster. Deprecated: GKE
-   * Enterprise features are now available without an Enterprise tier.
-   *
-   * @deprecated
-   * @param DesiredEnterpriseConfig $desiredEnterpriseConfig
+   * @param DesiredEnterpriseConfig
    */
   public function setDesiredEnterpriseConfig(DesiredEnterpriseConfig $desiredEnterpriseConfig)
   {
     $this->desiredEnterpriseConfig = $desiredEnterpriseConfig;
   }
   /**
-   * @deprecated
    * @return DesiredEnterpriseConfig
    */
   public function getDesiredEnterpriseConfig()
@@ -741,9 +540,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredEnterpriseConfig;
   }
   /**
-   * The desired fleet configuration for the cluster.
-   *
-   * @param Fleet $desiredFleet
+   * @param Fleet
    */
   public function setDesiredFleet(Fleet $desiredFleet)
   {
@@ -757,9 +554,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredFleet;
   }
   /**
-   * The desired config of Gateway API on this cluster.
-   *
-   * @param GatewayAPIConfig $desiredGatewayApiConfig
+   * @param GatewayAPIConfig
    */
   public function setDesiredGatewayApiConfig(GatewayAPIConfig $desiredGatewayApiConfig)
   {
@@ -773,9 +568,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredGatewayApiConfig;
   }
   /**
-   * The desired GCFS config for the cluster
-   *
-   * @param GcfsConfig $desiredGcfsConfig
+   * @param GcfsConfig
    */
   public function setDesiredGcfsConfig(GcfsConfig $desiredGcfsConfig)
   {
@@ -789,9 +582,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredGcfsConfig;
   }
   /**
-   * The desired Identity Service component configuration.
-   *
-   * @param IdentityServiceConfig $desiredIdentityServiceConfig
+   * @param IdentityServiceConfig
    */
   public function setDesiredIdentityServiceConfig(IdentityServiceConfig $desiredIdentityServiceConfig)
   {
@@ -805,10 +596,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredIdentityServiceConfig;
   }
   /**
-   * The desired image type for the node pool. NOTE: Set the "desired_node_pool"
-   * field as well.
-   *
-   * @param string $desiredImageType
+   * @param string
    */
   public function setDesiredImageType($desiredImageType)
   {
@@ -822,29 +610,21 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredImageType;
   }
   /**
-   * Specify the details of in-transit encryption.
-   *
-   * Accepted values: IN_TRANSIT_ENCRYPTION_CONFIG_UNSPECIFIED,
-   * IN_TRANSIT_ENCRYPTION_DISABLED,
-   * IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT
-   *
-   * @param self::DESIRED_IN_TRANSIT_ENCRYPTION_CONFIG_* $desiredInTransitEncryptionConfig
+   * @param string
    */
   public function setDesiredInTransitEncryptionConfig($desiredInTransitEncryptionConfig)
   {
     $this->desiredInTransitEncryptionConfig = $desiredInTransitEncryptionConfig;
   }
   /**
-   * @return self::DESIRED_IN_TRANSIT_ENCRYPTION_CONFIG_*
+   * @return string
    */
   public function getDesiredInTransitEncryptionConfig()
   {
     return $this->desiredInTransitEncryptionConfig;
   }
   /**
-   * The desired config of Intra-node visibility.
-   *
-   * @param IntraNodeVisibilityConfig $desiredIntraNodeVisibilityConfig
+   * @param IntraNodeVisibilityConfig
    */
   public function setDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig $desiredIntraNodeVisibilityConfig)
   {
@@ -858,9 +638,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredIntraNodeVisibilityConfig;
   }
   /**
-   * Desired Beta APIs to be enabled for cluster.
-   *
-   * @param K8sBetaAPIConfig $desiredK8sBetaApis
+   * @param K8sBetaAPIConfig
    */
   public function setDesiredK8sBetaApis(K8sBetaAPIConfig $desiredK8sBetaApis)
   {
@@ -874,9 +652,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredK8sBetaApis;
   }
   /**
-   * The desired L4 Internal Load Balancer Subsetting configuration.
-   *
-   * @param ILBSubsettingConfig $desiredL4ilbSubsettingConfig
+   * @param ILBSubsettingConfig
    */
   public function setDesiredL4ilbSubsettingConfig(ILBSubsettingConfig $desiredL4ilbSubsettingConfig)
   {
@@ -890,14 +666,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredL4ilbSubsettingConfig;
   }
   /**
-   * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. This list must always include the
-   * cluster's primary zone. Warning: changing cluster locations will update the
-   * locations of all node pools and will result in nodes being added and/or
-   * removed.
-   *
-   * @param string[] $desiredLocations
+   * @param string[]
    */
   public function setDesiredLocations($desiredLocations)
   {
@@ -911,9 +680,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredLocations;
   }
   /**
-   * The desired logging configuration.
-   *
-   * @param LoggingConfig $desiredLoggingConfig
+   * @param LoggingConfig
    */
   public function setDesiredLoggingConfig(LoggingConfig $desiredLoggingConfig)
   {
@@ -927,16 +694,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredLoggingConfig;
   }
   /**
-   * The logging service the cluster should use to write logs. Currently
-   * available options: * `logging.googleapis.com/kubernetes` - The Cloud
-   * Logging service with a Kubernetes-native resource model *
-   * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the
-   * cluster. If left as an empty string,`logging.googleapis.com/kubernetes`
-   * will be used for GKE 1.14+ or `logging.googleapis.com` for earlier
-   * versions.
-   *
-   * @param string $desiredLoggingService
+   * @param string
    */
   public function setDesiredLoggingService($desiredLoggingService)
   {
@@ -950,19 +708,13 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredLoggingService;
   }
   /**
-   * The desired configuration options for master authorized networks feature.
-   * Deprecated: Use desired_control_plane_endpoints_config.ip_endpoints_config.
-   * authorized_networks_config instead.
-   *
-   * @deprecated
-   * @param MasterAuthorizedNetworksConfig $desiredMasterAuthorizedNetworksConfig
+   * @param MasterAuthorizedNetworksConfig
    */
   public function setDesiredMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig $desiredMasterAuthorizedNetworksConfig)
   {
     $this->desiredMasterAuthorizedNetworksConfig = $desiredMasterAuthorizedNetworksConfig;
   }
   /**
-   * @deprecated
    * @return MasterAuthorizedNetworksConfig
    */
   public function getDesiredMasterAuthorizedNetworksConfig()
@@ -970,15 +722,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredMasterAuthorizedNetworksConfig;
   }
   /**
-   * The Kubernetes version to change the master to. Users may specify either
-   * explicit versions offered by Kubernetes Engine or version aliases, which
-   * have the following behavior: - "latest": picks the highest valid Kubernetes
-   * version - "1.X": picks the highest valid patch+gke.N patch in the 1.X
-   * version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
-   * - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the
-   * default Kubernetes version
-   *
-   * @param string $desiredMasterVersion
+   * @param string
    */
   public function setDesiredMasterVersion($desiredMasterVersion)
   {
@@ -992,10 +736,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredMasterVersion;
   }
   /**
-   * Configuration for issuance of mTLS keys and certificates to Kubernetes
-   * pods.
-   *
-   * @param MeshCertificates $desiredMeshCertificates
+   * @param MeshCertificates
    */
   public function setDesiredMeshCertificates(MeshCertificates $desiredMeshCertificates)
   {
@@ -1009,9 +750,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredMeshCertificates;
   }
   /**
-   * The desired monitoring configuration.
-   *
-   * @param MonitoringConfig $desiredMonitoringConfig
+   * @param MonitoringConfig
    */
   public function setDesiredMonitoringConfig(MonitoringConfig $desiredMonitoringConfig)
   {
@@ -1025,16 +764,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredMonitoringConfig;
   }
   /**
-   * The monitoring service the cluster should use to write metrics. Currently
-   * available options: * `monitoring.googleapis.com/kubernetes` - The Cloud
-   * Monitoring service with a Kubernetes-native resource model *
-   * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported
-   * from the cluster. If left as an empty
-   * string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
-   * `monitoring.googleapis.com` for earlier versions.
-   *
-   * @param string $desiredMonitoringService
+   * @param string
    */
   public function setDesiredMonitoringService($desiredMonitoringService)
   {
@@ -1048,9 +778,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredMonitoringService;
   }
   /**
-   * The desired network performance config.
-   *
-   * @param ClusterNetworkPerformanceConfig $desiredNetworkPerformanceConfig
+   * @param ClusterNetworkPerformanceConfig
    */
   public function setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig $desiredNetworkPerformanceConfig)
   {
@@ -1064,9 +792,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNetworkPerformanceConfig;
   }
   /**
-   * The desired network tier configuration for the cluster.
-   *
-   * @param NetworkTierConfig $desiredNetworkTierConfig
+   * @param NetworkTierConfig
    */
   public function setDesiredNetworkTierConfig(NetworkTierConfig $desiredNetworkTierConfig)
   {
@@ -1080,9 +806,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNetworkTierConfig;
   }
   /**
-   * The desired node kubelet config for the cluster.
-   *
-   * @param NodeKubeletConfig $desiredNodeKubeletConfig
+   * @param NodeKubeletConfig
    */
   public function setDesiredNodeKubeletConfig(NodeKubeletConfig $desiredNodeKubeletConfig)
   {
@@ -1096,10 +820,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodeKubeletConfig;
   }
   /**
-   * The desired node kubelet config for all auto-provisioned node pools in
-   * autopilot clusters and node auto-provisioning enabled clusters.
-   *
-   * @param NodeKubeletConfig $desiredNodePoolAutoConfigKubeletConfig
+   * @param NodeKubeletConfig
    */
   public function setDesiredNodePoolAutoConfigKubeletConfig(NodeKubeletConfig $desiredNodePoolAutoConfigKubeletConfig)
   {
@@ -1113,11 +834,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolAutoConfigKubeletConfig;
   }
   /**
-   * The desired Linux node config for all auto-provisioned node pools in
-   * autopilot clusters and node auto-provisioning enabled clusters. Currently
-   * only `cgroup_mode` can be set here.
-   *
-   * @param LinuxNodeConfig $desiredNodePoolAutoConfigLinuxNodeConfig
+   * @param LinuxNodeConfig
    */
   public function setDesiredNodePoolAutoConfigLinuxNodeConfig(LinuxNodeConfig $desiredNodePoolAutoConfigLinuxNodeConfig)
   {
@@ -1131,10 +848,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolAutoConfigLinuxNodeConfig;
   }
   /**
-   * The desired network tags that apply to all auto-provisioned node pools in
-   * autopilot clusters and node auto-provisioning enabled clusters.
-   *
-   * @param NetworkTags $desiredNodePoolAutoConfigNetworkTags
+   * @param NetworkTags
    */
   public function setDesiredNodePoolAutoConfigNetworkTags(NetworkTags $desiredNodePoolAutoConfigNetworkTags)
   {
@@ -1148,10 +862,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolAutoConfigNetworkTags;
   }
   /**
-   * The desired resource manager tags that apply to all auto-provisioned node
-   * pools in autopilot clusters and node auto-provisioning enabled clusters.
-   *
-   * @param ResourceManagerTags $desiredNodePoolAutoConfigResourceManagerTags
+   * @param ResourceManagerTags
    */
   public function setDesiredNodePoolAutoConfigResourceManagerTags(ResourceManagerTags $desiredNodePoolAutoConfigResourceManagerTags)
   {
@@ -1165,12 +876,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolAutoConfigResourceManagerTags;
   }
   /**
-   * Autoscaler configuration for the node pool specified in
-   * desired_node_pool_id. If there is only one pool in the cluster and
-   * desired_node_pool_id is not provided then the change applies to that single
-   * node pool.
-   *
-   * @param NodePoolAutoscaling $desiredNodePoolAutoscaling
+   * @param NodePoolAutoscaling
    */
   public function setDesiredNodePoolAutoscaling(NodePoolAutoscaling $desiredNodePoolAutoscaling)
   {
@@ -1184,12 +890,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolAutoscaling;
   }
   /**
-   * The node pool to be upgraded. This field is mandatory if
-   * "desired_node_version", "desired_image_family" or
-   * "desired_node_pool_autoscaling" is specified and there is more than one
-   * node pool on the cluster.
-   *
-   * @param string $desiredNodePoolId
+   * @param string
    */
   public function setDesiredNodePoolId($desiredNodePoolId)
   {
@@ -1203,9 +904,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolId;
   }
   /**
-   * The desired node pool logging configuration defaults for the cluster.
-   *
-   * @param NodePoolLoggingConfig $desiredNodePoolLoggingConfig
+   * @param NodePoolLoggingConfig
    */
   public function setDesiredNodePoolLoggingConfig(NodePoolLoggingConfig $desiredNodePoolLoggingConfig)
   {
@@ -1219,15 +918,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodePoolLoggingConfig;
   }
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade). Users
-   * may specify either explicit versions offered by Kubernetes Engine or
-   * version aliases, which have the following behavior: - "latest": picks the
-   * highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid
-   * gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit
-   * Kubernetes version - "-": picks the Kubernetes master version
-   *
-   * @param string $desiredNodeVersion
+   * @param string
    */
   public function setDesiredNodeVersion($desiredNodeVersion)
   {
@@ -1241,9 +932,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNodeVersion;
   }
   /**
-   * The desired notification configuration.
-   *
-   * @param NotificationConfig $desiredNotificationConfig
+   * @param NotificationConfig
    */
   public function setDesiredNotificationConfig(NotificationConfig $desiredNotificationConfig)
   {
@@ -1257,9 +946,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNotificationConfig;
   }
   /**
-   * The desired parent product config for the cluster.
-   *
-   * @param ParentProductConfig $desiredParentProductConfig
+   * @param ParentProductConfig
    */
   public function setDesiredParentProductConfig(ParentProductConfig $desiredParentProductConfig)
   {
@@ -1273,9 +960,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredParentProductConfig;
   }
   /**
-   * The desired config for pod autoscaling.
-   *
-   * @param PodAutoscaling $desiredPodAutoscaling
+   * @param PodAutoscaling
    */
   public function setDesiredPodAutoscaling(PodAutoscaling $desiredPodAutoscaling)
   {
@@ -1289,22 +974,13 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredPodAutoscaling;
   }
   /**
-   * The desired private cluster configuration. master_global_access_config is
-   * the only field that can be changed via this field. See also
-   * ClusterUpdate.desired_enable_private_endpoint for modifying other fields
-   * within PrivateClusterConfig. Deprecated: Use
-   * desired_control_plane_endpoints_config.ip_endpoints_config.global_access
-   * instead.
-   *
-   * @deprecated
-   * @param PrivateClusterConfig $desiredPrivateClusterConfig
+   * @param PrivateClusterConfig
    */
   public function setDesiredPrivateClusterConfig(PrivateClusterConfig $desiredPrivateClusterConfig)
   {
     $this->desiredPrivateClusterConfig = $desiredPrivateClusterConfig;
   }
   /**
-   * @deprecated
    * @return PrivateClusterConfig
    */
   public function getDesiredPrivateClusterConfig()
@@ -1312,46 +988,21 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredPrivateClusterConfig;
   }
   /**
-   * The desired state of IPv6 connectivity to Google Services.
-   *
-   * Accepted values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED,
-   * PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED, PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE,
-   * PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL
-   *
-   * @param self::DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_* $desiredPrivateIpv6GoogleAccess
+   * @param string
    */
   public function setDesiredPrivateIpv6GoogleAccess($desiredPrivateIpv6GoogleAccess)
   {
     $this->desiredPrivateIpv6GoogleAccess = $desiredPrivateIpv6GoogleAccess;
   }
   /**
-   * @return self::DESIRED_PRIVATE_IPV6_GOOGLE_ACCESS_*
+   * @return string
    */
   public function getDesiredPrivateIpv6GoogleAccess()
   {
     return $this->desiredPrivateIpv6GoogleAccess;
   }
   /**
-   * The desired privileged admission config for the cluster.
-   *
-   * @param PrivilegedAdmissionConfig $desiredPrivilegedAdmissionConfig
-   */
-  public function setDesiredPrivilegedAdmissionConfig(PrivilegedAdmissionConfig $desiredPrivilegedAdmissionConfig)
-  {
-    $this->desiredPrivilegedAdmissionConfig = $desiredPrivilegedAdmissionConfig;
-  }
-  /**
-   * @return PrivilegedAdmissionConfig
-   */
-  public function getDesiredPrivilegedAdmissionConfig()
-  {
-    return $this->desiredPrivilegedAdmissionConfig;
-  }
-  /**
-   * RBACBindingConfig allows user to restrict ClusterRoleBindings an
-   * RoleBindings that can be created.
-   *
-   * @param RBACBindingConfig $desiredRbacBindingConfig
+   * @param RBACBindingConfig
    */
   public function setDesiredRbacBindingConfig(RBACBindingConfig $desiredRbacBindingConfig)
   {
@@ -1365,9 +1016,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredRbacBindingConfig;
   }
   /**
-   * The desired release channel configuration.
-   *
-   * @param ReleaseChannel $desiredReleaseChannel
+   * @param ReleaseChannel
    */
   public function setDesiredReleaseChannel(ReleaseChannel $desiredReleaseChannel)
   {
@@ -1381,9 +1030,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredReleaseChannel;
   }
   /**
-   * The desired configuration for exporting resource usage.
-   *
-   * @param ResourceUsageExportConfig $desiredResourceUsageExportConfig
+   * @param ResourceUsageExportConfig
    */
   public function setDesiredResourceUsageExportConfig(ResourceUsageExportConfig $desiredResourceUsageExportConfig)
   {
@@ -1397,9 +1044,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredResourceUsageExportConfig;
   }
   /**
-   * Enable/Disable Secret Manager Config.
-   *
-   * @param SecretManagerConfig $desiredSecretManagerConfig
+   * @param SecretManagerConfig
    */
   public function setDesiredSecretManagerConfig(SecretManagerConfig $desiredSecretManagerConfig)
   {
@@ -1413,9 +1058,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredSecretManagerConfig;
   }
   /**
-   * Enable/Disable Security Posture API features for the cluster.
-   *
-   * @param SecurityPostureConfig $desiredSecurityPostureConfig
+   * @param SecurityPostureConfig
    */
   public function setDesiredSecurityPostureConfig(SecurityPostureConfig $desiredSecurityPostureConfig)
   {
@@ -1429,10 +1072,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredSecurityPostureConfig;
   }
   /**
-   * ServiceExternalIPsConfig specifies the config for the use of Services with
-   * ExternalIPs field.
-   *
-   * @param ServiceExternalIPsConfig $desiredServiceExternalIpsConfig
+   * @param ServiceExternalIPsConfig
    */
   public function setDesiredServiceExternalIpsConfig(ServiceExternalIPsConfig $desiredServiceExternalIpsConfig)
   {
@@ -1446,9 +1086,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredServiceExternalIpsConfig;
   }
   /**
-   * Configuration for Shielded Nodes.
-   *
-   * @param ShieldedNodes $desiredShieldedNodes
+   * @param ShieldedNodes
    */
   public function setDesiredShieldedNodes(ShieldedNodes $desiredShieldedNodes)
   {
@@ -1462,29 +1100,21 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredShieldedNodes;
   }
   /**
-   * The desired stack type of the cluster. If a stack type is provided and does
-   * not match the current stack type of the cluster, update will attempt to
-   * change the stack type to the new type.
-   *
-   * Accepted values: STACK_TYPE_UNSPECIFIED, IPV4, IPV4_IPV6
-   *
-   * @param self::DESIRED_STACK_TYPE_* $desiredStackType
+   * @param string
    */
   public function setDesiredStackType($desiredStackType)
   {
     $this->desiredStackType = $desiredStackType;
   }
   /**
-   * @return self::DESIRED_STACK_TYPE_*
+   * @return string
    */
   public function getDesiredStackType()
   {
     return $this->desiredStackType;
   }
   /**
-   * The desired user managed keys config for the cluster.
-   *
-   * @param UserManagedKeysConfig $desiredUserManagedKeysConfig
+   * @param UserManagedKeysConfig
    */
   public function setDesiredUserManagedKeysConfig(UserManagedKeysConfig $desiredUserManagedKeysConfig)
   {
@@ -1498,9 +1128,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredUserManagedKeysConfig;
   }
   /**
-   * Cluster-level Vertical Pod Autoscaling configuration.
-   *
-   * @param VerticalPodAutoscaling $desiredVerticalPodAutoscaling
+   * @param VerticalPodAutoscaling
    */
   public function setDesiredVerticalPodAutoscaling(VerticalPodAutoscaling $desiredVerticalPodAutoscaling)
   {
@@ -1514,9 +1142,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredVerticalPodAutoscaling;
   }
   /**
-   * Configuration for Workload Identity.
-   *
-   * @param WorkloadIdentityConfig $desiredWorkloadIdentityConfig
+   * @param WorkloadIdentityConfig
    */
   public function setDesiredWorkloadIdentityConfig(WorkloadIdentityConfig $desiredWorkloadIdentityConfig)
   {
@@ -1530,9 +1156,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredWorkloadIdentityConfig;
   }
   /**
-   * Kubernetes open source beta apis enabled on the cluster. Only beta apis
-   *
-   * @param K8sBetaAPIConfig $enableK8sBetaApis
+   * @param K8sBetaAPIConfig
    */
   public function setEnableK8sBetaApis(K8sBetaAPIConfig $enableK8sBetaApis)
   {
@@ -1546,11 +1170,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->enableK8sBetaApis;
   }
   /**
-   * The current etag of the cluster. If an etag is provided and does not match
-   * the current etag of the cluster, update will be blocked and an ABORTED
-   * error will be returned.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {
@@ -1564,9 +1184,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Configuration for GKE auto upgrade.
-   *
-   * @param GkeAutoUpgradeConfig $gkeAutoUpgradeConfig
+   * @param GkeAutoUpgradeConfig
    */
   public function setGkeAutoUpgradeConfig(GkeAutoUpgradeConfig $gkeAutoUpgradeConfig)
   {
@@ -1580,11 +1198,7 @@ class ClusterUpdate extends \Google\Collection
     return $this->gkeAutoUpgradeConfig;
   }
   /**
-   * The additional pod ranges that are to be removed from the cluster. The pod
-   * ranges specified here must have been specified earlier in the
-   * 'additional_pod_ranges_config' argument.
-   *
-   * @param AdditionalPodRangesConfig $removedAdditionalPodRangesConfig
+   * @param AdditionalPodRangesConfig
    */
   public function setRemovedAdditionalPodRangesConfig(AdditionalPodRangesConfig $removedAdditionalPodRangesConfig)
   {
@@ -1598,18 +1212,13 @@ class ClusterUpdate extends \Google\Collection
     return $this->removedAdditionalPodRangesConfig;
   }
   /**
-   * The Custom keys configuration for the cluster. This field is deprecated.
-   * Use ClusterUpdate.desired_user_managed_keys_config instead.
-   *
-   * @deprecated
-   * @param UserManagedKeysConfig $userManagedKeysConfig
+   * @param UserManagedKeysConfig
    */
   public function setUserManagedKeysConfig(UserManagedKeysConfig $userManagedKeysConfig)
   {
     $this->userManagedKeysConfig = $userManagedKeysConfig;
   }
   /**
-   * @deprecated
    * @return UserManagedKeysConfig
    */
   public function getUserManagedKeysConfig()

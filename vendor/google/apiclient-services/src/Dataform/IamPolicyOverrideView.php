@@ -22,16 +22,12 @@ class IamPolicyOverrideView extends \Google\Model
   protected $iamPolicyNameType = PolicyName::class;
   protected $iamPolicyNameDataType = '';
   /**
-   * Whether the IAM policy encoded in this view is active.
-   *
    * @var bool
    */
   public $isActive;
 
   /**
-   * The IAM policy name for the resource.
-   *
-   * @param PolicyName $iamPolicyName
+   * @param PolicyName
    */
   public function setIamPolicyName(PolicyName $iamPolicyName)
   {
@@ -45,9 +41,7 @@ class IamPolicyOverrideView extends \Google\Model
     return $this->iamPolicyName;
   }
   /**
-   * Whether the IAM policy encoded in this view is active.
-   *
-   * @param bool $isActive
+   * @param bool
    */
   public function setIsActive($isActive)
   {

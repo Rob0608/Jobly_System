@@ -20,44 +20,30 @@ namespace Google\Service\SecureSourceManager;
 class Code extends \Google\Model
 {
   /**
-   * Required. The comment body.
-   *
    * @var string
    */
   public $body;
   /**
-   * Output only. The effective commit sha this code comment is pointing to.
-   *
    * @var string
    */
   public $effectiveCommitSha;
   /**
-   * Output only. The root comment of the conversation, derived from the reply
-   * field.
-   *
    * @var string
    */
   public $effectiveRootComment;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**
-   * Optional. Input only. The PullRequestComment resource name that this
-   * comment is replying to.
-   *
    * @var string
    */
   public $reply;
   /**
-   * Output only. Boolean indicator if the comment is resolved.
-   *
    * @var bool
    */
   public $resolved;
 
   /**
-   * Required. The comment body.
-   *
-   * @param string $body
+   * @param string
    */
   public function setBody($body)
   {
@@ -71,9 +57,7 @@ class Code extends \Google\Model
     return $this->body;
   }
   /**
-   * Output only. The effective commit sha this code comment is pointing to.
-   *
-   * @param string $effectiveCommitSha
+   * @param string
    */
   public function setEffectiveCommitSha($effectiveCommitSha)
   {
@@ -87,10 +71,7 @@ class Code extends \Google\Model
     return $this->effectiveCommitSha;
   }
   /**
-   * Output only. The root comment of the conversation, derived from the reply
-   * field.
-   *
-   * @param string $effectiveRootComment
+   * @param string
    */
   public function setEffectiveRootComment($effectiveRootComment)
   {
@@ -104,9 +85,7 @@ class Code extends \Google\Model
     return $this->effectiveRootComment;
   }
   /**
-   * Optional. The position of the comment.
-   *
-   * @param Position $position
+   * @param Position
    */
   public function setPosition(Position $position)
   {
@@ -120,10 +99,7 @@ class Code extends \Google\Model
     return $this->position;
   }
   /**
-   * Optional. Input only. The PullRequestComment resource name that this
-   * comment is replying to.
-   *
-   * @param string $reply
+   * @param string
    */
   public function setReply($reply)
   {
@@ -137,9 +113,7 @@ class Code extends \Google\Model
     return $this->reply;
   }
   /**
-   * Output only. Boolean indicator if the comment is resolved.
-   *
-   * @param bool $resolved
+   * @param bool
    */
   public function setResolved($resolved)
   {

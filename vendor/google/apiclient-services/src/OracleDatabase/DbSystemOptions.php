@@ -20,37 +20,19 @@ namespace Google\Service\OracleDatabase;
 class DbSystemOptions extends \Google\Model
 {
   /**
-   * The storage management is unspecified.
-   */
-  public const STORAGE_MANAGEMENT_STORAGE_MANAGEMENT_UNSPECIFIED = 'STORAGE_MANAGEMENT_UNSPECIFIED';
-  /**
-   * Automatic storage management.
-   */
-  public const STORAGE_MANAGEMENT_ASM = 'ASM';
-  /**
-   * Logical Volume management.
-   */
-  public const STORAGE_MANAGEMENT_LVM = 'LVM';
-  /**
-   * Optional. The storage option used in DB system.
-   *
    * @var string
    */
   public $storageManagement;
 
   /**
-   * Optional. The storage option used in DB system.
-   *
-   * Accepted values: STORAGE_MANAGEMENT_UNSPECIFIED, ASM, LVM
-   *
-   * @param self::STORAGE_MANAGEMENT_* $storageManagement
+   * @param string
    */
   public function setStorageManagement($storageManagement)
   {
     $this->storageManagement = $storageManagement;
   }
   /**
-   * @return self::STORAGE_MANAGEMENT_*
+   * @return string
    */
   public function getStorageManagement()
   {

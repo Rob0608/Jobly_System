@@ -21,16 +21,12 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy extends \Google\Collec
 {
   protected $collection_key = 'regions';
   /**
-   * Required. List of the regions where the application sends traffic.
-   *
    * @var string[]
    */
   public $regions;
 
   /**
-   * Required. List of the regions where the application sends traffic.
-   *
-   * @param string[] $regions
+   * @param string[]
    */
   public function setRegions($regions)
   {

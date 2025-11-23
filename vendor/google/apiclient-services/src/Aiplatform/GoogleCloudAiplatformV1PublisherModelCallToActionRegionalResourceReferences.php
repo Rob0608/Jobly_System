@@ -20,50 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences extends \Google\Model
 {
   /**
-   * Optional. For notebook resource. When set to true, the Colab Enterprise
-   * link will be disabled in the "open notebook" dialog in UI.
-   *
    * @var bool
    */
   public $colabNotebookDisabled;
   protected $referencesType = GoogleCloudAiplatformV1PublisherModelResourceReference::class;
   protected $referencesDataType = 'map';
   /**
-   * Optional. Description of the resource.
-   *
    * @var string
    */
   public $resourceDescription;
   /**
-   * Optional. Title of the resource.
-   *
    * @var string
    */
   public $resourceTitle;
   /**
-   * Optional. Use case (CUJ) of the resource.
-   *
    * @var string
    */
   public $resourceUseCase;
   /**
-   * Optional. For notebook resource, whether the notebook supports Workbench.
-   *
    * @var bool
    */
   public $supportsWorkbench;
   /**
-   * Required.
-   *
    * @var string
    */
   public $title;
 
   /**
-   * Optional. For notebook resource. When set to true, the Colab Enterprise
-   * link will be disabled in the "open notebook" dialog in UI.
-   *
-   * @param bool $colabNotebookDisabled
+   * @param bool
    */
   public function setColabNotebookDisabled($colabNotebookDisabled)
   {
@@ -77,9 +61,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->colabNotebookDisabled;
   }
   /**
-   * Required.
-   *
-   * @param GoogleCloudAiplatformV1PublisherModelResourceReference[] $references
+   * @param GoogleCloudAiplatformV1PublisherModelResourceReference[]
    */
   public function setReferences($references)
   {
@@ -93,9 +75,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->references;
   }
   /**
-   * Optional. Description of the resource.
-   *
-   * @param string $resourceDescription
+   * @param string
    */
   public function setResourceDescription($resourceDescription)
   {
@@ -109,9 +89,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->resourceDescription;
   }
   /**
-   * Optional. Title of the resource.
-   *
-   * @param string $resourceTitle
+   * @param string
    */
   public function setResourceTitle($resourceTitle)
   {
@@ -125,9 +103,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->resourceTitle;
   }
   /**
-   * Optional. Use case (CUJ) of the resource.
-   *
-   * @param string $resourceUseCase
+   * @param string
    */
   public function setResourceUseCase($resourceUseCase)
   {
@@ -141,9 +117,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->resourceUseCase;
   }
   /**
-   * Optional. For notebook resource, whether the notebook supports Workbench.
-   *
-   * @param bool $supportsWorkbench
+   * @param bool
    */
   public function setSupportsWorkbench($supportsWorkbench)
   {
@@ -157,9 +131,7 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
     return $this->supportsWorkbench;
   }
   /**
-   * Required.
-   *
-   * @param string $title
+   * @param string
    */
   public function setTitle($title)
   {

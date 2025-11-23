@@ -20,8 +20,6 @@ namespace Google\Service\Container;
 class Autopilot extends \Google\Model
 {
   /**
-   * Enable Autopilot
-   *
    * @var bool
    */
   public $enabled;
@@ -31,9 +29,7 @@ class Autopilot extends \Google\Model
   protected $workloadPolicyConfigDataType = '';
 
   /**
-   * Enable Autopilot
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {
@@ -47,10 +43,7 @@ class Autopilot extends \Google\Model
     return $this->enabled;
   }
   /**
-   * PrivilegedAdmissionConfig is the configuration related to privileged
-   * admission control.
-   *
-   * @param PrivilegedAdmissionConfig $privilegedAdmissionConfig
+   * @param PrivilegedAdmissionConfig
    */
   public function setPrivilegedAdmissionConfig(PrivilegedAdmissionConfig $privilegedAdmissionConfig)
   {
@@ -64,9 +57,7 @@ class Autopilot extends \Google\Model
     return $this->privilegedAdmissionConfig;
   }
   /**
-   * WorkloadPolicyConfig is the configuration related to GCW workload policy
-   *
-   * @param WorkloadPolicyConfig $workloadPolicyConfig
+   * @param WorkloadPolicyConfig
    */
   public function setWorkloadPolicyConfig(WorkloadPolicyConfig $workloadPolicyConfig)
   {

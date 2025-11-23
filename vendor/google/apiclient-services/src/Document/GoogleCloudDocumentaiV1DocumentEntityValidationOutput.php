@@ -21,9 +21,6 @@ class GoogleCloudDocumentaiV1DocumentEntityValidationOutput extends \Google\Coll
 {
   protected $collection_key = 'validationResults';
   /**
-   * The overall result of the validation, true if all applicable rules are
-   * valid.
-   *
    * @var bool
    */
   public $passAllRules;
@@ -31,10 +28,7 @@ class GoogleCloudDocumentaiV1DocumentEntityValidationOutput extends \Google\Coll
   protected $validationResultsDataType = 'array';
 
   /**
-   * The overall result of the validation, true if all applicable rules are
-   * valid.
-   *
-   * @param bool $passAllRules
+   * @param bool
    */
   public function setPassAllRules($passAllRules)
   {
@@ -48,9 +42,7 @@ class GoogleCloudDocumentaiV1DocumentEntityValidationOutput extends \Google\Coll
     return $this->passAllRules;
   }
   /**
-   * The result of each validation rule.
-   *
-   * @param GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult[] $validationResults
+   * @param GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult[]
    */
   public function setValidationResults($validationResults)
   {

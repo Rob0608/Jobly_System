@@ -20,20 +20,12 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class BackupDrBackupSource extends \Google\Model
 {
   /**
-   * Required. The name of the backup resource with the format: * projects/{proj
-   * ect}/locations/{location}/backupVaults/{backupvault_id}/dataSources/{dataso
-   * urce_id}/backups/{backup_id}
-   *
    * @var string
    */
   public $backup;
 
   /**
-   * Required. The name of the backup resource with the format: * projects/{proj
-   * ect}/locations/{location}/backupVaults/{backupvault_id}/dataSources/{dataso
-   * urce_id}/backups/{backup_id}
-   *
-   * @param string $backup
+   * @param string
    */
   public function setBackup($backup)
   {

@@ -20,39 +20,24 @@ namespace Google\Service\Container;
 class DNSEndpointConfig extends \Google\Model
 {
   /**
-   * Controls whether user traffic is allowed over this endpoint. Note that
-   * Google-managed services may still use the endpoint even if this is false.
-   *
    * @var bool
    */
   public $allowExternalTraffic;
   /**
-   * Controls whether the k8s certs auth is allowed via DNS.
-   *
    * @var bool
    */
   public $enableK8sCertsViaDns;
   /**
-   * Controls whether the k8s token auth is allowed via DNS.
-   *
    * @var bool
    */
   public $enableK8sTokensViaDns;
   /**
-   * Output only. The cluster's DNS endpoint configuration. A DNS format
-   * address. This is accessible from the public internet. Ex: uid.us-
-   * central1.gke.goog. Always present, but the behavior may change according to
-   * the value of DNSEndpointConfig.allow_external_traffic.
-   *
    * @var string
    */
   public $endpoint;
 
   /**
-   * Controls whether user traffic is allowed over this endpoint. Note that
-   * Google-managed services may still use the endpoint even if this is false.
-   *
-   * @param bool $allowExternalTraffic
+   * @param bool
    */
   public function setAllowExternalTraffic($allowExternalTraffic)
   {
@@ -66,9 +51,7 @@ class DNSEndpointConfig extends \Google\Model
     return $this->allowExternalTraffic;
   }
   /**
-   * Controls whether the k8s certs auth is allowed via DNS.
-   *
-   * @param bool $enableK8sCertsViaDns
+   * @param bool
    */
   public function setEnableK8sCertsViaDns($enableK8sCertsViaDns)
   {
@@ -82,9 +65,7 @@ class DNSEndpointConfig extends \Google\Model
     return $this->enableK8sCertsViaDns;
   }
   /**
-   * Controls whether the k8s token auth is allowed via DNS.
-   *
-   * @param bool $enableK8sTokensViaDns
+   * @param bool
    */
   public function setEnableK8sTokensViaDns($enableK8sTokensViaDns)
   {
@@ -98,12 +79,7 @@ class DNSEndpointConfig extends \Google\Model
     return $this->enableK8sTokensViaDns;
   }
   /**
-   * Output only. The cluster's DNS endpoint configuration. A DNS format
-   * address. This is accessible from the public internet. Ex: uid.us-
-   * central1.gke.goog. Always present, but the behavior may change according to
-   * the value of DNSEndpointConfig.allow_external_traffic.
-   *
-   * @param string $endpoint
+   * @param string
    */
   public function setEndpoint($endpoint)
   {

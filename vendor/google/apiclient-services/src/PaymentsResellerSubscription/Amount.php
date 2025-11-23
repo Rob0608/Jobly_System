@@ -20,23 +20,16 @@ namespace Google\Service\PaymentsResellerSubscription;
 class Amount extends \Google\Model
 {
   /**
-   * Required. Amount in micros (1_000_000 micros = 1 currency unit)
-   *
    * @var string
    */
   public $amountMicros;
   /**
-   * Required. Currency codes in accordance with [ISO-4217 Currency Codes]
-   * (https://en.wikipedia.org/wiki/ISO_4217). For example, USD.
-   *
    * @var string
    */
   public $currencyCode;
 
   /**
-   * Required. Amount in micros (1_000_000 micros = 1 currency unit)
-   *
-   * @param string $amountMicros
+   * @param string
    */
   public function setAmountMicros($amountMicros)
   {
@@ -50,10 +43,7 @@ class Amount extends \Google\Model
     return $this->amountMicros;
   }
   /**
-   * Required. Currency codes in accordance with [ISO-4217 Currency Codes]
-   * (https://en.wikipedia.org/wiki/ISO_4217). For example, USD.
-   *
-   * @param string $currencyCode
+   * @param string
    */
   public function setCurrencyCode($currencyCode)
   {

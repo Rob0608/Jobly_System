@@ -20,53 +20,30 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
 {
   /**
-   * Optional. Whether the user accepts the End User License Agreement (EULA)
-   * for the model.
-   *
    * @var bool
    */
   public $acceptEula;
   protected $containerSpecType = GoogleCloudAiplatformV1ModelContainerSpec::class;
   protected $containerSpecDataType = '';
   /**
-   * Optional. The Hugging Face read access token used to access the model
-   * artifacts of gated models.
-   *
    * @var string
    */
   public $huggingFaceAccessToken;
   /**
-   * Optional. If true, the model will deploy with a cached version instead of
-   * directly downloading the model artifacts from Hugging Face. This is
-   * suitable for VPC-SC users with limited internet access.
-   *
    * @var bool
    */
   public $huggingFaceCacheEnabled;
   /**
-   * Optional. The user-specified display name of the uploaded model. If not
-   * set, a default name will be used.
-   *
    * @var string
    */
   public $modelDisplayName;
   /**
-   * Optional. The ID to use for the uploaded Model, which will become the final
-   * component of the model resource name. When not provided, Vertex AI will
-   * generate a value for this ID. When Model Registry model is provided, this
-   * field will be ignored. This value may be up to 63 characters, and valid
-   * characters are `[a-z0-9_-]`. The first character cannot be a number or
-   * hyphen.
-   *
    * @var string
    */
   public $modelUserId;
 
   /**
-   * Optional. Whether the user accepts the End User License Agreement (EULA)
-   * for the model.
-   *
-   * @param bool $acceptEula
+   * @param bool
    */
   public function setAcceptEula($acceptEula)
   {
@@ -80,10 +57,7 @@ class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
     return $this->acceptEula;
   }
   /**
-   * Optional. The specification of the container that is to be used when
-   * deploying. If not set, the default container spec will be used.
-   *
-   * @param GoogleCloudAiplatformV1ModelContainerSpec $containerSpec
+   * @param GoogleCloudAiplatformV1ModelContainerSpec
    */
   public function setContainerSpec(GoogleCloudAiplatformV1ModelContainerSpec $containerSpec)
   {
@@ -97,10 +71,7 @@ class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
     return $this->containerSpec;
   }
   /**
-   * Optional. The Hugging Face read access token used to access the model
-   * artifacts of gated models.
-   *
-   * @param string $huggingFaceAccessToken
+   * @param string
    */
   public function setHuggingFaceAccessToken($huggingFaceAccessToken)
   {
@@ -114,11 +85,7 @@ class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
     return $this->huggingFaceAccessToken;
   }
   /**
-   * Optional. If true, the model will deploy with a cached version instead of
-   * directly downloading the model artifacts from Hugging Face. This is
-   * suitable for VPC-SC users with limited internet access.
-   *
-   * @param bool $huggingFaceCacheEnabled
+   * @param bool
    */
   public function setHuggingFaceCacheEnabled($huggingFaceCacheEnabled)
   {
@@ -132,10 +99,7 @@ class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
     return $this->huggingFaceCacheEnabled;
   }
   /**
-   * Optional. The user-specified display name of the uploaded model. If not
-   * set, a default name will be used.
-   *
-   * @param string $modelDisplayName
+   * @param string
    */
   public function setModelDisplayName($modelDisplayName)
   {
@@ -149,14 +113,7 @@ class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
     return $this->modelDisplayName;
   }
   /**
-   * Optional. The ID to use for the uploaded Model, which will become the final
-   * component of the model resource name. When not provided, Vertex AI will
-   * generate a value for this ID. When Model Registry model is provided, this
-   * field will be ignored. This value may be up to 63 characters, and valid
-   * characters are `[a-z0-9_-]`. The first character cannot be a number or
-   * hyphen.
-   *
-   * @param string $modelUserId
+   * @param string
    */
   public function setModelUserId($modelUserId)
   {

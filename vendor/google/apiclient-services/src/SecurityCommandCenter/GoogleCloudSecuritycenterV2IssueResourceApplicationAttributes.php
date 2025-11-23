@@ -32,9 +32,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes extends \Goo
   protected $operatorOwnersDataType = 'array';
 
   /**
-   * Business team that ensures user needs are met and value is delivered
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[] $businessOwners
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[]
    */
   public function setBusinessOwners($businessOwners)
   {
@@ -48,9 +46,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes extends \Goo
     return $this->businessOwners;
   }
   /**
-   * User-defined criticality information.
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesCriticality $criticality
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesCriticality
    */
   public function setCriticality(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesCriticality $criticality)
   {
@@ -64,9 +60,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes extends \Goo
     return $this->criticality;
   }
   /**
-   * Developer team that owns development and coding.
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[] $developerOwners
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[]
    */
   public function setDeveloperOwners($developerOwners)
   {
@@ -80,9 +74,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes extends \Goo
     return $this->developerOwners;
   }
   /**
-   * User-defined environment information.
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesEnvironment $environment
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesEnvironment
    */
   public function setEnvironment(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesEnvironment $environment)
   {
@@ -96,9 +88,7 @@ class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes extends \Goo
     return $this->environment;
   }
   /**
-   * Operator team that ensures runtime and operations.
-   *
-   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[] $operatorOwners
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo[]
    */
   public function setOperatorOwners($operatorOwners)
   {

@@ -23,9 +23,7 @@ class GenerateUserSessionRequest extends \Google\Model
   protected $intentPayloadDataType = '';
 
   /**
-   * The user intent to generate the user session.
-   *
-   * @param IntentPayload $intentPayload
+   * @param IntentPayload
    */
   public function setIntentPayload(IntentPayload $intentPayload)
   {

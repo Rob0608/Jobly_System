@@ -20,28 +20,20 @@ namespace Google\Service\FirebaseDataConnect;
 class Workaround extends \Google\Model
 {
   /**
-   * Description of this workaround.
-   *
    * @var string
    */
   public $description;
   /**
-   * Why would this workaround address the error and warning.
-   *
    * @var string
    */
   public $reason;
   /**
-   * A suggested code snippet to fix the error and warning.
-   *
    * @var string
    */
   public $replace;
 
   /**
-   * Description of this workaround.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -55,9 +47,7 @@ class Workaround extends \Google\Model
     return $this->description;
   }
   /**
-   * Why would this workaround address the error and warning.
-   *
-   * @param string $reason
+   * @param string
    */
   public function setReason($reason)
   {
@@ -71,9 +61,7 @@ class Workaround extends \Google\Model
     return $this->reason;
   }
   /**
-   * A suggested code snippet to fix the error and warning.
-   *
-   * @param string $replace
+   * @param string
    */
   public function setReplace($replace)
   {

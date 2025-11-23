@@ -20,8 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
 {
   /**
-   * Optional. The language code (ISO 639-1) for the speech synthesis.
-   *
    * @var string
    */
   public $languageCode;
@@ -31,9 +29,7 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
   protected $voiceConfigDataType = '';
 
   /**
-   * Optional. The language code (ISO 639-1) for the speech synthesis.
-   *
-   * @param string $languageCode
+   * @param string
    */
   public function setLanguageCode($languageCode)
   {
@@ -47,10 +43,7 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * The configuration for a multi-speaker text-to-speech request. This field is
-   * mutually exclusive with `voice_config`.
-   *
-   * @param GoogleCloudAiplatformV1MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig
+   * @param GoogleCloudAiplatformV1MultiSpeakerVoiceConfig
    */
   public function setMultiSpeakerVoiceConfig(GoogleCloudAiplatformV1MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig)
   {
@@ -64,9 +57,7 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
     return $this->multiSpeakerVoiceConfig;
   }
   /**
-   * The configuration for the voice to use.
-   *
-   * @param GoogleCloudAiplatformV1VoiceConfig $voiceConfig
+   * @param GoogleCloudAiplatformV1VoiceConfig
    */
   public function setVoiceConfig(GoogleCloudAiplatformV1VoiceConfig $voiceConfig)
   {

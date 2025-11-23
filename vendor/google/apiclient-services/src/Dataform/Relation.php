@@ -19,111 +19,60 @@ namespace Google\Service\Dataform;
 
 class Relation extends \Google\Collection
 {
-  /**
-   * Default value. This value is unused.
-   */
-  public const RELATION_TYPE_RELATION_TYPE_UNSPECIFIED = 'RELATION_TYPE_UNSPECIFIED';
-  /**
-   * The relation is a table.
-   */
-  public const RELATION_TYPE_TABLE = 'TABLE';
-  /**
-   * The relation is a view.
-   */
-  public const RELATION_TYPE_VIEW = 'VIEW';
-  /**
-   * The relation is an incrementalized table.
-   */
-  public const RELATION_TYPE_INCREMENTAL_TABLE = 'INCREMENTAL_TABLE';
-  /**
-   * The relation is a materialized view.
-   */
-  public const RELATION_TYPE_MATERIALIZED_VIEW = 'MATERIALIZED_VIEW';
   protected $collection_key = 'tags';
   /**
-   * Additional options that will be provided as key/value pairs into the
-   * options clause of a create table/view statement. See
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * definition-language for more information on which options are supported.
-   *
    * @var string[]
    */
   public $additionalOptions;
   /**
-   * A list of columns or SQL expressions used to cluster the table.
-   *
    * @var string[]
    */
   public $clusterExpressions;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
-   * Whether this action is disabled (i.e. should not be run).
-   *
    * @var bool
    */
   public $disabled;
   protected $incrementalTableConfigType = IncrementalTableConfig::class;
   protected $incrementalTableConfigDataType = '';
   /**
-   * Sets the partition expiration in days.
-   *
    * @var int
    */
   public $partitionExpirationDays;
   /**
-   * The SQL expression used to partition the relation.
-   *
    * @var string
    */
   public $partitionExpression;
   /**
-   * SQL statements to be executed after creating the relation.
-   *
    * @var string[]
    */
   public $postOperations;
   /**
-   * SQL statements to be executed before creating the relation.
-   *
    * @var string[]
    */
   public $preOperations;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   /**
-   * The type of this relation.
-   *
    * @var string
    */
   public $relationType;
   /**
-   * Specifies whether queries on this table must include a predicate filter
-   * that filters on the partitioning column.
-   *
    * @var bool
    */
   public $requirePartitionFilter;
   /**
-   * The SELECT query which returns rows which this relation should contain.
-   *
    * @var string
    */
   public $selectQuery;
   /**
-   * Arbitrary, user-defined tags on this action.
-   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * Additional options that will be provided as key/value pairs into the
-   * options clause of a create table/view statement. See
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * definition-language for more information on which options are supported.
-   *
-   * @param string[] $additionalOptions
+   * @param string[]
    */
   public function setAdditionalOptions($additionalOptions)
   {
@@ -137,9 +86,7 @@ class Relation extends \Google\Collection
     return $this->additionalOptions;
   }
   /**
-   * A list of columns or SQL expressions used to cluster the table.
-   *
-   * @param string[] $clusterExpressions
+   * @param string[]
    */
   public function setClusterExpressions($clusterExpressions)
   {
@@ -153,9 +100,7 @@ class Relation extends \Google\Collection
     return $this->clusterExpressions;
   }
   /**
-   * A list of actions that this action depends on.
-   *
-   * @param Target[] $dependencyTargets
+   * @param Target[]
    */
   public function setDependencyTargets($dependencyTargets)
   {
@@ -169,9 +114,7 @@ class Relation extends \Google\Collection
     return $this->dependencyTargets;
   }
   /**
-   * Whether this action is disabled (i.e. should not be run).
-   *
-   * @param bool $disabled
+   * @param bool
    */
   public function setDisabled($disabled)
   {
@@ -185,10 +128,7 @@ class Relation extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * Configures `INCREMENTAL_TABLE` settings for this relation. Only set if
-   * `relation_type` is `INCREMENTAL_TABLE`.
-   *
-   * @param IncrementalTableConfig $incrementalTableConfig
+   * @param IncrementalTableConfig
    */
   public function setIncrementalTableConfig(IncrementalTableConfig $incrementalTableConfig)
   {
@@ -202,9 +142,7 @@ class Relation extends \Google\Collection
     return $this->incrementalTableConfig;
   }
   /**
-   * Sets the partition expiration in days.
-   *
-   * @param int $partitionExpirationDays
+   * @param int
    */
   public function setPartitionExpirationDays($partitionExpirationDays)
   {
@@ -218,9 +156,7 @@ class Relation extends \Google\Collection
     return $this->partitionExpirationDays;
   }
   /**
-   * The SQL expression used to partition the relation.
-   *
-   * @param string $partitionExpression
+   * @param string
    */
   public function setPartitionExpression($partitionExpression)
   {
@@ -234,9 +170,7 @@ class Relation extends \Google\Collection
     return $this->partitionExpression;
   }
   /**
-   * SQL statements to be executed after creating the relation.
-   *
-   * @param string[] $postOperations
+   * @param string[]
    */
   public function setPostOperations($postOperations)
   {
@@ -250,9 +184,7 @@ class Relation extends \Google\Collection
     return $this->postOperations;
   }
   /**
-   * SQL statements to be executed before creating the relation.
-   *
-   * @param string[] $preOperations
+   * @param string[]
    */
   public function setPreOperations($preOperations)
   {
@@ -266,9 +198,7 @@ class Relation extends \Google\Collection
     return $this->preOperations;
   }
   /**
-   * Descriptor for the relation and its columns.
-   *
-   * @param RelationDescriptor $relationDescriptor
+   * @param RelationDescriptor
    */
   public function setRelationDescriptor(RelationDescriptor $relationDescriptor)
   {
@@ -282,29 +212,21 @@ class Relation extends \Google\Collection
     return $this->relationDescriptor;
   }
   /**
-   * The type of this relation.
-   *
-   * Accepted values: RELATION_TYPE_UNSPECIFIED, TABLE, VIEW, INCREMENTAL_TABLE,
-   * MATERIALIZED_VIEW
-   *
-   * @param self::RELATION_TYPE_* $relationType
+   * @param string
    */
   public function setRelationType($relationType)
   {
     $this->relationType = $relationType;
   }
   /**
-   * @return self::RELATION_TYPE_*
+   * @return string
    */
   public function getRelationType()
   {
     return $this->relationType;
   }
   /**
-   * Specifies whether queries on this table must include a predicate filter
-   * that filters on the partitioning column.
-   *
-   * @param bool $requirePartitionFilter
+   * @param bool
    */
   public function setRequirePartitionFilter($requirePartitionFilter)
   {
@@ -318,9 +240,7 @@ class Relation extends \Google\Collection
     return $this->requirePartitionFilter;
   }
   /**
-   * The SELECT query which returns rows which this relation should contain.
-   *
-   * @param string $selectQuery
+   * @param string
    */
   public function setSelectQuery($selectQuery)
   {
@@ -334,9 +254,7 @@ class Relation extends \Google\Collection
     return $this->selectQuery;
   }
   /**
-   * Arbitrary, user-defined tags on this action.
-   *
-   * @param string[] $tags
+   * @param string[]
    */
   public function setTags($tags)
   {

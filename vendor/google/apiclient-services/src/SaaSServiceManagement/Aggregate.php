@@ -20,22 +20,16 @@ namespace Google\Service\SaaSServiceManagement;
 class Aggregate extends \Google\Model
 {
   /**
-   * Required. Number of records in the group.
-   *
    * @var int
    */
   public $count;
   /**
-   * Required. Group by which to aggregate.
-   *
    * @var string
    */
   public $group;
 
   /**
-   * Required. Number of records in the group.
-   *
-   * @param int $count
+   * @param int
    */
   public function setCount($count)
   {
@@ -49,9 +43,7 @@ class Aggregate extends \Google\Model
     return $this->count;
   }
   /**
-   * Required. Group by which to aggregate.
-   *
-   * @param string $group
+   * @param string
    */
   public function setGroup($group)
   {

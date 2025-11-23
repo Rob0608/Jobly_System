@@ -21,110 +21,66 @@ class BranchRule extends \Google\Collection
 {
   protected $collection_key = 'requiredStatusChecks';
   /**
-   * Optional. Determines if allow stale reviews or approvals before merging to
-   * the branch.
-   *
    * @var bool
    */
   public $allowStaleReviews;
   /**
-   * Optional. User annotations. These attributes can only be set and used by
-   * the user. See https://google.aip.dev/128#annotations for more details such
-   * as format and size limitations.
-   *
    * @var string[]
    */
   public $annotations;
   /**
-   * Output only. Create timestamp.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. Determines if the branch rule is disabled or not.
-   *
    * @var bool
    */
   public $disabled;
   /**
-   * Optional. This checksum is computed by the server based on the value of
-   * other fields, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
-   *
    * @var string
    */
   public $etag;
   /**
-   * Optional. The pattern of the branch that can match to this BranchRule.
-   * Specified as regex. .* for all branches. Examples: main, (main|release.*).
-   * Current MVP phase only support `.*` for wildcard.
-   *
    * @var string
    */
   public $includePattern;
   /**
-   * Optional. The minimum number of approvals required for the branch rule to
-   * be matched.
-   *
    * @var int
    */
   public $minimumApprovalsCount;
   /**
-   * Optional. The minimum number of reviews required for the branch rule to be
-   * matched.
-   *
    * @var int
    */
   public $minimumReviewsCount;
   /**
-   * Optional. A unique identifier for a BranchRule. The name should be of the
-   * format: `projects/{project}/locations/{location}/repositories/{repository}/
-   * branchRules/{branch_rule}`
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. Determines if require comments resolved before merging to the
-   * branch.
-   *
    * @var bool
    */
   public $requireCommentsResolved;
   /**
-   * Optional. Determines if require linear history before merging to the
-   * branch.
-   *
    * @var bool
    */
   public $requireLinearHistory;
   /**
-   * Optional. Determines if the branch rule requires a pull request or not.
-   *
    * @var bool
    */
   public $requirePullRequest;
   protected $requiredStatusChecksType = Check::class;
   protected $requiredStatusChecksDataType = 'array';
   /**
-   * Output only. Unique identifier of the repository.
-   *
    * @var string
    */
   public $uid;
   /**
-   * Output only. Update timestamp.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Optional. Determines if allow stale reviews or approvals before merging to
-   * the branch.
-   *
-   * @param bool $allowStaleReviews
+   * @param bool
    */
   public function setAllowStaleReviews($allowStaleReviews)
   {
@@ -138,11 +94,7 @@ class BranchRule extends \Google\Collection
     return $this->allowStaleReviews;
   }
   /**
-   * Optional. User annotations. These attributes can only be set and used by
-   * the user. See https://google.aip.dev/128#annotations for more details such
-   * as format and size limitations.
-   *
-   * @param string[] $annotations
+   * @param string[]
    */
   public function setAnnotations($annotations)
   {
@@ -156,9 +108,7 @@ class BranchRule extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Output only. Create timestamp.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -172,9 +122,7 @@ class BranchRule extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. Determines if the branch rule is disabled or not.
-   *
-   * @param bool $disabled
+   * @param bool
    */
   public function setDisabled($disabled)
   {
@@ -188,11 +136,7 @@ class BranchRule extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * Optional. This checksum is computed by the server based on the value of
-   * other fields, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {
@@ -206,11 +150,7 @@ class BranchRule extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Optional. The pattern of the branch that can match to this BranchRule.
-   * Specified as regex. .* for all branches. Examples: main, (main|release.*).
-   * Current MVP phase only support `.*` for wildcard.
-   *
-   * @param string $includePattern
+   * @param string
    */
   public function setIncludePattern($includePattern)
   {
@@ -224,10 +164,7 @@ class BranchRule extends \Google\Collection
     return $this->includePattern;
   }
   /**
-   * Optional. The minimum number of approvals required for the branch rule to
-   * be matched.
-   *
-   * @param int $minimumApprovalsCount
+   * @param int
    */
   public function setMinimumApprovalsCount($minimumApprovalsCount)
   {
@@ -241,10 +178,7 @@ class BranchRule extends \Google\Collection
     return $this->minimumApprovalsCount;
   }
   /**
-   * Optional. The minimum number of reviews required for the branch rule to be
-   * matched.
-   *
-   * @param int $minimumReviewsCount
+   * @param int
    */
   public function setMinimumReviewsCount($minimumReviewsCount)
   {
@@ -258,11 +192,7 @@ class BranchRule extends \Google\Collection
     return $this->minimumReviewsCount;
   }
   /**
-   * Optional. A unique identifier for a BranchRule. The name should be of the
-   * format: `projects/{project}/locations/{location}/repositories/{repository}/
-   * branchRules/{branch_rule}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -276,10 +206,7 @@ class BranchRule extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. Determines if require comments resolved before merging to the
-   * branch.
-   *
-   * @param bool $requireCommentsResolved
+   * @param bool
    */
   public function setRequireCommentsResolved($requireCommentsResolved)
   {
@@ -293,10 +220,7 @@ class BranchRule extends \Google\Collection
     return $this->requireCommentsResolved;
   }
   /**
-   * Optional. Determines if require linear history before merging to the
-   * branch.
-   *
-   * @param bool $requireLinearHistory
+   * @param bool
    */
   public function setRequireLinearHistory($requireLinearHistory)
   {
@@ -310,9 +234,7 @@ class BranchRule extends \Google\Collection
     return $this->requireLinearHistory;
   }
   /**
-   * Optional. Determines if the branch rule requires a pull request or not.
-   *
-   * @param bool $requirePullRequest
+   * @param bool
    */
   public function setRequirePullRequest($requirePullRequest)
   {
@@ -326,9 +248,7 @@ class BranchRule extends \Google\Collection
     return $this->requirePullRequest;
   }
   /**
-   * Optional. List of required status checks before merging to the branch.
-   *
-   * @param Check[] $requiredStatusChecks
+   * @param Check[]
    */
   public function setRequiredStatusChecks($requiredStatusChecks)
   {
@@ -342,9 +262,7 @@ class BranchRule extends \Google\Collection
     return $this->requiredStatusChecks;
   }
   /**
-   * Output only. Unique identifier of the repository.
-   *
-   * @param string $uid
+   * @param string
    */
   public function setUid($uid)
   {
@@ -358,9 +276,7 @@ class BranchRule extends \Google\Collection
     return $this->uid;
   }
   /**
-   * Output only. Update timestamp.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

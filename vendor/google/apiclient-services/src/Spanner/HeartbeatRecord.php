@@ -20,22 +20,12 @@ namespace Google\Service\Spanner;
 class HeartbeatRecord extends \Google\Model
 {
   /**
-   * Indicates the timestamp at which the query has returned all the records in
-   * the change stream partition with timestamp <= heartbeat timestamp. The
-   * heartbeat timestamp will not be the same as the timestamps of other record
-   * types in the same partition.
-   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * Indicates the timestamp at which the query has returned all the records in
-   * the change stream partition with timestamp <= heartbeat timestamp. The
-   * heartbeat timestamp will not be the same as the timestamps of other record
-   * types in the same partition.
-   *
-   * @param string $timestamp
+   * @param string
    */
   public function setTimestamp($timestamp)
   {

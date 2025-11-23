@@ -23,16 +23,12 @@ class ListDbVersionsResponse extends \Google\Collection
   protected $dbVersionsType = DbVersion::class;
   protected $dbVersionsDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of DbVersions.
-   *
-   * @param DbVersion[] $dbVersions
+   * @param DbVersion[]
    */
   public function setDbVersions($dbVersions)
   {
@@ -46,9 +42,7 @@ class ListDbVersionsResponse extends \Google\Collection
     return $this->dbVersions;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

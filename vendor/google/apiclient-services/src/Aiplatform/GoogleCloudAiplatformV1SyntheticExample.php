@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1SyntheticExample extends \Google\Collection
   protected $fieldsDataType = 'array';
 
   /**
-   * Required. A list of fields that constitute an example.
-   *
-   * @param GoogleCloudAiplatformV1SyntheticField[] $fields
+   * @param GoogleCloudAiplatformV1SyntheticField[]
    */
   public function setFields($fields)
   {

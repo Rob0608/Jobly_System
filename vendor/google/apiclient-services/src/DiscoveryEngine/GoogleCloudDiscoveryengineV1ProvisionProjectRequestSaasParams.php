@@ -20,25 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams extends \Google\Model
 {
   /**
-   * Optional. Set to `true` to specify that caller has read and would like to
-   * give consent to the [Terms for Agent Space quality of service].
-   *
    * @var bool
    */
   public $acceptBizQos;
   /**
-   * Optional. Indicates if the current request is for Biz edition (= true) or
-   * not (= false).
-   *
    * @var bool
    */
   public $isBiz;
 
   /**
-   * Optional. Set to `true` to specify that caller has read and would like to
-   * give consent to the [Terms for Agent Space quality of service].
-   *
-   * @param bool $acceptBizQos
+   * @param bool
    */
   public function setAcceptBizQos($acceptBizQos)
   {
@@ -52,10 +43,7 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams extends \Goo
     return $this->acceptBizQos;
   }
   /**
-   * Optional. Indicates if the current request is for Biz edition (= true) or
-   * not (= false).
-   *
-   * @param bool $isBiz
+   * @param bool
    */
   public function setIsBiz($isBiz)
   {

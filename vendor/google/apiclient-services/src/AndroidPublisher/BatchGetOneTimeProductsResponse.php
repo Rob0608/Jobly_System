@@ -24,9 +24,7 @@ class BatchGetOneTimeProductsResponse extends \Google\Collection
   protected $oneTimeProductsDataType = 'array';
 
   /**
-   * The list of requested one-time products, in the same order as the request.
-   *
-   * @param OneTimeProduct[] $oneTimeProducts
+   * @param OneTimeProduct[]
    */
   public function setOneTimeProducts($oneTimeProducts)
   {

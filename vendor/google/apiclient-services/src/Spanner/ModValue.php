@@ -20,24 +20,16 @@ namespace Google\Service\Spanner;
 class ModValue extends \Google\Model
 {
   /**
-   * Index within the repeated column_metadata field, to obtain the column
-   * metadata for the column that was modified.
-   *
    * @var int
    */
   public $columnMetadataIndex;
   /**
-   * The value of the column.
-   *
    * @var array
    */
   public $value;
 
   /**
-   * Index within the repeated column_metadata field, to obtain the column
-   * metadata for the column that was modified.
-   *
-   * @param int $columnMetadataIndex
+   * @param int
    */
   public function setColumnMetadataIndex($columnMetadataIndex)
   {
@@ -51,9 +43,7 @@ class ModValue extends \Google\Model
     return $this->columnMetadataIndex;
   }
   /**
-   * The value of the column.
-   *
-   * @param array $value
+   * @param array
    */
   public function setValue($value)
   {

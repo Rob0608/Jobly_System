@@ -20,26 +20,18 @@ namespace Google\Service\Dfareporting;
 class DynamicProfileFeedSettings extends \Google\Model
 {
   /**
-   * Optional. Dynamic feed ID associated with dynamic profile version.
-   *
    * @var string
    */
   public $dynamicFeedId;
   protected $dynamicRulesType = DynamicRules::class;
   protected $dynamicRulesDataType = '';
   /**
-   * Optional. The number of this dynamic feed rows needed by the dynamic
-   * profile, default value is 1. Acceptable values are between 1 to 99,
-   * inclusive.
-   *
    * @var int
    */
   public $quantity;
 
   /**
-   * Optional. Dynamic feed ID associated with dynamic profile version.
-   *
-   * @param string $dynamicFeedId
+   * @param string
    */
   public function setDynamicFeedId($dynamicFeedId)
   {
@@ -53,10 +45,7 @@ class DynamicProfileFeedSettings extends \Google\Model
     return $this->dynamicFeedId;
   }
   /**
-   * Optional. Dynamic rules for row selection for the given dynamic feed in the
-   * given dynamic profile.
-   *
-   * @param DynamicRules $dynamicRules
+   * @param DynamicRules
    */
   public function setDynamicRules(DynamicRules $dynamicRules)
   {
@@ -70,11 +59,7 @@ class DynamicProfileFeedSettings extends \Google\Model
     return $this->dynamicRules;
   }
   /**
-   * Optional. The number of this dynamic feed rows needed by the dynamic
-   * profile, default value is 1. Acceptable values are between 1 to 99,
-   * inclusive.
-   *
-   * @param int $quantity
+   * @param int
    */
   public function setQuantity($quantity)
   {

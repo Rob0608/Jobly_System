@@ -20,31 +20,20 @@ namespace Google\Service\SaaSServiceManagement;
 class Blueprint extends \Google\Model
 {
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g.
-   * terraform, helm etc.
-   *
    * @var string
    */
   public $engine;
   /**
-   * Optional. Immutable. URI to a blueprint used by the Unit (required unless
-   * unitKind or release is set).
-   *
    * @var string
    */
   public $package;
   /**
-   * Output only. Version metadata if present on the blueprint.
-   *
    * @var string
    */
   public $version;
 
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g.
-   * terraform, helm etc.
-   *
-   * @param string $engine
+   * @param string
    */
   public function setEngine($engine)
   {
@@ -58,10 +47,7 @@ class Blueprint extends \Google\Model
     return $this->engine;
   }
   /**
-   * Optional. Immutable. URI to a blueprint used by the Unit (required unless
-   * unitKind or release is set).
-   *
-   * @param string $package
+   * @param string
    */
   public function setPackage($package)
   {
@@ -75,9 +61,7 @@ class Blueprint extends \Google\Model
     return $this->package;
   }
   /**
-   * Output only. Version metadata if present on the blueprint.
-   *
-   * @param string $version
+   * @param string
    */
   public function setVersion($version)
   {

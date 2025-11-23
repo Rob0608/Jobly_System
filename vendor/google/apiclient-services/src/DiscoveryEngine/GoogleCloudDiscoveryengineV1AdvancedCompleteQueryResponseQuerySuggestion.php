@@ -21,38 +21,21 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseQuerySuggestion e
 {
   protected $collection_key = 'dataStore';
   /**
-   * The unique document field paths that serve as the source of this suggestion
-   * if it was generated from completable fields. This field is only populated
-   * for the document-completable model.
-   *
    * @var string[]
    */
   public $completableFieldPaths;
   /**
-   * The name of the dataStore that this suggestion belongs to.
-   *
    * @var string[]
    */
   public $dataStore;
-  /**
-   * The score of each suggestion. The score is in the range of [0, 1].
-   *
-   * @var 
-   */
   public $score;
   /**
-   * The suggestion for the query.
-   *
    * @var string
    */
   public $suggestion;
 
   /**
-   * The unique document field paths that serve as the source of this suggestion
-   * if it was generated from completable fields. This field is only populated
-   * for the document-completable model.
-   *
-   * @param string[] $completableFieldPaths
+   * @param string[]
    */
   public function setCompletableFieldPaths($completableFieldPaths)
   {
@@ -66,9 +49,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseQuerySuggestion e
     return $this->completableFieldPaths;
   }
   /**
-   * The name of the dataStore that this suggestion belongs to.
-   *
-   * @param string[] $dataStore
+   * @param string[]
    */
   public function setDataStore($dataStore)
   {
@@ -90,9 +71,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseQuerySuggestion e
     return $this->score;
   }
   /**
-   * The suggestion for the query.
-   *
-   * @param string $suggestion
+   * @param string
    */
   public function setSuggestion($suggestion)
   {

@@ -23,9 +23,7 @@ class RemovePolicyApplicationsResponse extends \Google\Model
   protected $policyDataType = '';
 
   /**
-   * The updated policy after ApplicationPolicy objects have been removed.
-   *
-   * @param Policy $policy
+   * @param Policy
    */
   public function setPolicy(Policy $policy)
   {

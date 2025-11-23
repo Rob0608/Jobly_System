@@ -21,32 +21,20 @@ class RequestValue extends \Google\Collection
 {
   protected $collection_key = 'userAttributeIds';
   /**
-   * Optional. User attribute IDs in the request that should be excluded. Used
-   * only when the field type is REMARKETING_VALUE or USER_ATTRIBUTE_ID.
-   *
    * @var string[]
    */
   public $excludeFromUserAttributeIds;
   /**
-   * Optional. Custom key in the request. Used only when the field type is
-   * CUSTOM_VALUE.
-   *
    * @var string
    */
   public $key;
   /**
-   * Optional. User attribute IDs in the request. Used only when the field type
-   * is REMARKETING_VALUE or USER_ATTRIBUTE_ID.
-   *
    * @var string[]
    */
   public $userAttributeIds;
 
   /**
-   * Optional. User attribute IDs in the request that should be excluded. Used
-   * only when the field type is REMARKETING_VALUE or USER_ATTRIBUTE_ID.
-   *
-   * @param string[] $excludeFromUserAttributeIds
+   * @param string[]
    */
   public function setExcludeFromUserAttributeIds($excludeFromUserAttributeIds)
   {
@@ -60,10 +48,7 @@ class RequestValue extends \Google\Collection
     return $this->excludeFromUserAttributeIds;
   }
   /**
-   * Optional. Custom key in the request. Used only when the field type is
-   * CUSTOM_VALUE.
-   *
-   * @param string $key
+   * @param string
    */
   public function setKey($key)
   {
@@ -77,10 +62,7 @@ class RequestValue extends \Google\Collection
     return $this->key;
   }
   /**
-   * Optional. User attribute IDs in the request. Used only when the field type
-   * is REMARKETING_VALUE or USER_ATTRIBUTE_ID.
-   *
-   * @param string[] $userAttributeIds
+   * @param string[]
    */
   public function setUserAttributeIds($userAttributeIds)
   {

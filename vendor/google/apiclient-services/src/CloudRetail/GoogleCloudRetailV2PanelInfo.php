@@ -21,44 +21,30 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
 {
   protected $collection_key = 'productDetails';
   /**
-   * Optional. The attribution token of the panel.
-   *
    * @var string
    */
   public $attributionToken;
   /**
-   * Optional. The display name of the panel.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Required. The panel ID.
-   *
    * @var string
    */
   public $panelId;
   /**
-   * Optional. The ordered position of the panel, if shown to the user with
-   * other panels. If set, then total_panels must also be set.
-   *
    * @var int
    */
   public $panelPosition;
   protected $productDetailsType = GoogleCloudRetailV2ProductDetail::class;
   protected $productDetailsDataType = 'array';
   /**
-   * Optional. The total number of panels, including this one, shown to the
-   * user. Must be set if panel_position is set.
-   *
    * @var int
    */
   public $totalPanels;
 
   /**
-   * Optional. The attribution token of the panel.
-   *
-   * @param string $attributionToken
+   * @param string
    */
   public function setAttributionToken($attributionToken)
   {
@@ -72,9 +58,7 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
     return $this->attributionToken;
   }
   /**
-   * Optional. The display name of the panel.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -88,9 +72,7 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Required. The panel ID.
-   *
-   * @param string $panelId
+   * @param string
    */
   public function setPanelId($panelId)
   {
@@ -104,10 +86,7 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
     return $this->panelId;
   }
   /**
-   * Optional. The ordered position of the panel, if shown to the user with
-   * other panels. If set, then total_panels must also be set.
-   *
-   * @param int $panelPosition
+   * @param int
    */
   public function setPanelPosition($panelPosition)
   {
@@ -121,9 +100,7 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
     return $this->panelPosition;
   }
   /**
-   * Optional. The product details associated with the panel.
-   *
-   * @param GoogleCloudRetailV2ProductDetail[] $productDetails
+   * @param GoogleCloudRetailV2ProductDetail[]
    */
   public function setProductDetails($productDetails)
   {
@@ -137,10 +114,7 @@ class GoogleCloudRetailV2PanelInfo extends \Google\Collection
     return $this->productDetails;
   }
   /**
-   * Optional. The total number of panels, including this one, shown to the
-   * user. Must be set if panel_position is set.
-   *
-   * @param int $totalPanels
+   * @param int
    */
   public function setTotalPanels($totalPanels)
   {

@@ -469,7 +469,7 @@ $employerApproved = isset($company['status']) && $company['status'] === 'approve
             <td><?php echo display_name($p); ?></td>
             <td><?php echo h($p['job_title'] ?? ($p['position'] ?? '')); ?></td>
             <td class="actions">
-              <a href="#">View</a>
+              <a href="#"></a>
               &nbsp;|&nbsp;
               <?php $resumePath = $p['resume'] ?? ''; $resumeUrl = (strpos($resumePath,'uploads/')===0 ? base_url().$resumePath : $resumePath); ?>
               <a href="<?php echo h($resumeUrl ?: '#'); ?>" target="_blank">Resume</a>
@@ -483,7 +483,7 @@ $employerApproved = isset($company['status']) && $company['status'] === 'approve
                 <select name="status" class="status-select">
                   <option value="pending" <?php if(($p['status'] ?? '')==='pending') echo 'selected'; ?>>Pending</option>
                   <option value="interview">Interview</option>
-                  <option value="reject">Reject</option>
+                  <option value="rejected">Reject</option>
                 </select>
                 <input type="datetime-local" name="schedule_date" class="schedule-date" style="display:none;margin-left:8px" required>
                 <button type="submit">Update</button>
@@ -518,7 +518,7 @@ $employerApproved = isset($company['status']) && $company['status'] === 'approve
                 <select name="status" class="interview-result-select">
                   <option value="interview" <?php if(($i['status'] ?? '')==='interview') echo 'selected'; ?>>Interview</option>
                   <option value="passed">Passed</option>
-                  <option value="reject">Rejected</option>
+                  <option value="rejected">Rejected</option>
                 </select>
                 <button type="submit">Update</button>
               </form>
@@ -922,7 +922,7 @@ document.querySelectorAll('.confirm-delete').forEach(function(f){
 document.querySelectorAll('.interview-result-form').forEach(function(f){
   f.addEventListener('submit', function(e){
     const status = f.querySelector('[name="status"]').value;
-    const confirmMsg = status === 'passed' ? 'Mark as Passed?' : (status === 'reject' ? 'Mark as Rejected?' : 'Update status?');
+    const confirmMsg = status === 'passed' ? 'Mark as Passed?' : (status === 'rejected' ? 'Mark as Rejected?' : 'Update status?');
     if(!confirm(confirmMsg)) {
       e.preventDefault();
     }

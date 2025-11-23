@@ -19,29 +19,11 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders extends \Google\Model
 {
-  /**
-   * The unspecified output type.
-   */
-  public const OUTPUT_TYPE_OUTPUT_TYPE_UNSPECIFIED = 'OUTPUT_TYPE_UNSPECIFIED';
-  /**
-   * Protobuf output type.
-   */
-  public const OUTPUT_TYPE_PROTOBUF = 'PROTOBUF';
-  /**
-   * JSON output type.
-   */
-  public const OUTPUT_TYPE_JSON = 'JSON';
-  /**
-   * Explicitly disable header output.
-   */
-  public const OUTPUT_TYPE_NONE = 'NONE';
   protected $deviceInfoType = GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo::class;
   protected $deviceInfoDataType = '';
   protected $groupInfoType = GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedGroupInfo::class;
   protected $groupInfoDataType = '';
   /**
-   * Optional. Default output type for all enabled headers.
-   *
    * @var string
    */
   public $outputType;
@@ -49,9 +31,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders extends \Google\M
   protected $userInfoDataType = '';
 
   /**
-   * Optional. The device information configuration.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo $deviceInfo
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo
    */
   public function setDeviceInfo(GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo $deviceInfo)
   {
@@ -65,9 +45,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders extends \Google\M
     return $this->deviceInfo;
   }
   /**
-   * Optional. Group details.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedGroupInfo $groupInfo
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedGroupInfo
    */
   public function setGroupInfo(GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedGroupInfo $groupInfo)
   {
@@ -81,27 +59,21 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders extends \Google\M
     return $this->groupInfo;
   }
   /**
-   * Optional. Default output type for all enabled headers.
-   *
-   * Accepted values: OUTPUT_TYPE_UNSPECIFIED, PROTOBUF, JSON, NONE
-   *
-   * @param self::OUTPUT_TYPE_* $outputType
+   * @param string
    */
   public function setOutputType($outputType)
   {
     $this->outputType = $outputType;
   }
   /**
-   * @return self::OUTPUT_TYPE_*
+   * @return string
    */
   public function getOutputType()
   {
     return $this->outputType;
   }
   /**
-   * Optional. User details.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedUserInfo $userInfo
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedUserInfo
    */
   public function setUserInfo(GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedUserInfo $userInfo)
   {

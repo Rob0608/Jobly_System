@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require_once 'app/third_party/PHPMailer/src/Exception.php';
 require_once 'app/third_party/PHPMailer/src/PHPMailer.php';
 require_once 'app/third_party/PHPMailer/src/SMTP.php';
-require_once __DIR__ . '/../helpers/phpmailer_helper.php';
+require_once 'app/helpers/phpmailer_helper.php';
 
 class ApplicantController extends Controller
 {
@@ -125,23 +125,22 @@ public function applications()
     // ✅ Send verification email (using PHPMailer)
     private function sendVerificationMail(array $data)
     {
-        $subject = 'Your Applicant Verification Code';
-        $body = "
-            <h3>Hello, {$data['first_name']}!</h3>
-            <p>Thank you for registering as an applicant.</p>
-            <p>Here is your 4-digit verification code:</p>
-            <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
-            <p>Enter this code on the verification page to activate your account.</p>
-        ";
+        $body = '<h3>Hello, ' . htmlspecialchars($data['first_name'] ?? '') . '!</h3>'
+            . '<p>Thank you for registering as an applicant.</p>'
+            . '<p>Here is your 4-digit verification code:</p>'
+            . '<h2 style="letter-spacing:5px;">' . htmlspecialchars((string)($data['verification_code'] ?? '')) . '</h2>'
+            . '<p>Enter this code on the verification page to activate your account.</p>';
 
-        $res = phpmailer_send([
-            'to' => [$data['email'] => ($data['first_name'] . ' ' . $data['last_name'])],
-            'subject' => $subject,
+        $result = phpmailer_send([
+            'to' => $data['email'],
+            'to_name' => trim(($data['first_name'] ?? '') . ' ' . ($data['last_name'] ?? '')),
+            'subject' => 'Your Applicant Verification Code',
             'body' => $body,
-            'from_name' => 'Applicant Verification'
+            'is_html' => true,
         ]);
-        if (!$res['success']) {
-            error_log('Applicant verification email failed: ' . ($res['error'] ?? json_encode($res)));
+
+        if (!$result['success']) {
+            error_log('Verification email failed: ' . ($result['error'] ?? 'unknown'));
         }
     }
 
@@ -546,27 +545,28 @@ public function applications()
                 } catch (Exception $e) { $company = []; }
             }
 
-            // Email the employer with the resume attached (centralized helper)
+            // Email the employer with the resume attached
             $sent = false;
-            $toEmail = $company['email'] ?? '';
-            if (!empty($toEmail)) {
-                $subject = 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId;
-                $body = "<p>You have a new application.</p>"
-                      . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
-                      . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
+            try {
+                $toEmail = $company['email'] ?? '';
+                if ($toEmail) {
+                    $body = "<p>You have a new application.</p>"
+                          . "<p><strong>Applicant:</strong> " . htmlspecialchars(($applicant['first_name'] ?? '') . ' ' . ($applicant['last_name'] ?? '')) . " (" . htmlspecialchars($applicant['email'] ?? '') . ")</p>"
+                          . "<p><strong>Position ID:</strong> " . (int)$positionId . "</p>";
 
-                $res = phpmailer_send([
-                    'to' => [$toEmail => ($company['company_name'] ?? 'Employer')],
-                    'subject' => $subject,
-                    'body' => $body,
-                    'attachments' => [[$targetDirFs . $fileName, 'Resume.pdf']],
-                    'from_name' => 'JOBLY Applications'
-                ]);
-                if (!empty($res['success'])) {
-                    $sent = true;
-                } else {
-                    error_log('Employer email failed: ' . ($res['error'] ?? json_encode($res)));
+                    $res = phpmailer_send([
+                        'to' => $toEmail,
+                        'to_name' => $company['company_name'] ?? 'Employer',
+                        'subject' => 'New Application: ' . ($applicant['first_name'] ?? 'Applicant') . ' - Position #' . $positionId,
+                        'body' => $body,
+                        'is_html' => true,
+                        'attachments' => [['path' => $targetDirFs . $fileName, 'name' => 'Resume.pdf']],
+                    ]);
+                    if ($res['success']) { $sent = true; }
                 }
+            } catch (Exception $e) {
+                // keep going; we'll still record application locally
+                error_log('Application email send exception: ' . $e->getMessage());
             }
 
             // Insert application record in company_applications table

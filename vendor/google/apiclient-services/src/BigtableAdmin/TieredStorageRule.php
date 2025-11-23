@@ -20,18 +20,12 @@ namespace Google\Service\BigtableAdmin;
 class TieredStorageRule extends \Google\Model
 {
   /**
-   * Include cells older than the given age. For the infrequent access tier,
-   * this value must be at least 30 days.
-   *
    * @var string
    */
   public $includeIfOlderThan;
 
   /**
-   * Include cells older than the given age. For the infrequent access tier,
-   * this value must be at least 30 days.
-   *
-   * @param string $includeIfOlderThan
+   * @param string
    */
   public function setIncludeIfOlderThan($includeIfOlderThan)
   {

@@ -23,9 +23,7 @@ class EntitleSubscriptionResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * The subscription that has user linked to it.
-   *
-   * @param Subscription $subscription
+   * @param Subscription
    */
   public function setSubscription(Subscription $subscription)
   {

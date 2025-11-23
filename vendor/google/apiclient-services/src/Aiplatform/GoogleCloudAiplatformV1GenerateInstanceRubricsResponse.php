@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsResponse extends \Google\Col
   protected $generatedRubricsDataType = 'array';
 
   /**
-   * Output only. A list of generated rubrics.
-   *
-   * @param GoogleCloudAiplatformV1Rubric[] $generatedRubrics
+   * @param GoogleCloudAiplatformV1Rubric[]
    */
   public function setGeneratedRubrics($generatedRubrics)
   {

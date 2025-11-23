@@ -20,37 +20,19 @@ namespace Google\Service\Docs;
 class DocumentFormat extends \Google\Model
 {
   /**
-   * The document mode is unspecified.
-   */
-  public const DOCUMENT_MODE_DOCUMENT_MODE_UNSPECIFIED = 'DOCUMENT_MODE_UNSPECIFIED';
-  /**
-   * The document has pages.
-   */
-  public const DOCUMENT_MODE_PAGES = 'PAGES';
-  /**
-   * The document is pageless.
-   */
-  public const DOCUMENT_MODE_PAGELESS = 'PAGELESS';
-  /**
-   * Whether the document has pages or is pageless.
-   *
    * @var string
    */
   public $documentMode;
 
   /**
-   * Whether the document has pages or is pageless.
-   *
-   * Accepted values: DOCUMENT_MODE_UNSPECIFIED, PAGES, PAGELESS
-   *
-   * @param self::DOCUMENT_MODE_* $documentMode
+   * @param string
    */
   public function setDocumentMode($documentMode)
   {
     $this->documentMode = $documentMode;
   }
   /**
-   * @return self::DOCUMENT_MODE_*
+   * @return string
    */
   public function getDocumentMode()
   {

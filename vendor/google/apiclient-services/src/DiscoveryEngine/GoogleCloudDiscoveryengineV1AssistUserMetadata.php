@@ -20,26 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistUserMetadata extends \Google\Model
 {
   /**
-   * Optional. Preferred language to be used for answering if language detection
-   * fails. Also used as the language of error messages created by actions,
-   * regardless of language detection results.
-   *
    * @var string
    */
   public $preferredLanguageCode;
   /**
-   * Optional. IANA time zone, e.g. Europe/Budapest.
-   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * Optional. Preferred language to be used for answering if language detection
-   * fails. Also used as the language of error messages created by actions,
-   * regardless of language detection results.
-   *
-   * @param string $preferredLanguageCode
+   * @param string
    */
   public function setPreferredLanguageCode($preferredLanguageCode)
   {
@@ -53,9 +43,7 @@ class GoogleCloudDiscoveryengineV1AssistUserMetadata extends \Google\Model
     return $this->preferredLanguageCode;
   }
   /**
-   * Optional. IANA time zone, e.g. Europe/Budapest.
-   *
-   * @param string $timeZone
+   * @param string
    */
   public function setTimeZone($timeZone)
   {

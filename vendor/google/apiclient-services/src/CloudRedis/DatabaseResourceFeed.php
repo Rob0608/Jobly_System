@@ -19,35 +19,6 @@ namespace Google\Service\CloudRedis;
 
 class DatabaseResourceFeed extends \Google\Model
 {
-  public const FEED_TYPE_FEEDTYPE_UNSPECIFIED = 'FEEDTYPE_UNSPECIFIED';
-  /**
-   * Database resource metadata feed from control plane
-   */
-  public const FEED_TYPE_RESOURCE_METADATA = 'RESOURCE_METADATA';
-  /**
-   * Database resource monitoring data
-   */
-  public const FEED_TYPE_OBSERVABILITY_DATA = 'OBSERVABILITY_DATA';
-  /**
-   * Database resource security health signal data
-   */
-  public const FEED_TYPE_SECURITY_FINDING_DATA = 'SECURITY_FINDING_DATA';
-  /**
-   * Database resource recommendation signal data
-   */
-  public const FEED_TYPE_RECOMMENDATION_SIGNAL_DATA = 'RECOMMENDATION_SIGNAL_DATA';
-  /**
-   * Database config based signal data
-   */
-  public const FEED_TYPE_CONFIG_BASED_SIGNAL_DATA = 'CONFIG_BASED_SIGNAL_DATA';
-  /**
-   * Database resource metadata from BackupDR
-   */
-  public const FEED_TYPE_BACKUPDR_METADATA = 'BACKUPDR_METADATA';
-  /**
-   * Database resource signal data
-   */
-  public const FEED_TYPE_DATABASE_RESOURCE_SIGNAL_DATA = 'DATABASE_RESOURCE_SIGNAL_DATA';
   protected $backupdrMetadataType = BackupDRMetadata::class;
   protected $backupdrMetadataDataType = '';
   protected $configBasedSignalDataType = ConfigBasedSignalData::class;
@@ -55,14 +26,10 @@ class DatabaseResourceFeed extends \Google\Model
   protected $databaseResourceSignalDataType = DatabaseResourceSignalData::class;
   protected $databaseResourceSignalDataDataType = '';
   /**
-   * Required. Timestamp when feed is generated.
-   *
    * @var string
    */
   public $feedTimestamp;
   /**
-   * Required. Type feed to be ingested into condor
-   *
    * @var string
    */
   public $feedType;
@@ -77,20 +44,12 @@ class DatabaseResourceFeed extends \Google\Model
   protected $resourceMetadataType = DatabaseResourceMetadata::class;
   protected $resourceMetadataDataType = '';
   /**
-   * Optional. If true, the feed won't be ingested by DB Center. This indicates
-   * that the feed is intentionally skipped. For example, BackupDR feeds are
-   * only needed for resources integrated with DB Center (e.g., CloudSQL,
-   * AlloyDB). Feeds for non-integrated resources (e.g., Compute Engine,
-   * Persistent Disk) can be skipped.
-   *
    * @var bool
    */
   public $skipIngestion;
 
   /**
-   * BackupDR metadata is used to ingest metadata from BackupDR.
-   *
-   * @param BackupDRMetadata $backupdrMetadata
+   * @param BackupDRMetadata
    */
   public function setBackupdrMetadata(BackupDRMetadata $backupdrMetadata)
   {
@@ -104,10 +63,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->backupdrMetadata;
   }
   /**
-   * Config based signal data is used to ingest signals that are generated based
-   * on the configuration of the database resource.
-   *
-   * @param ConfigBasedSignalData $configBasedSignalData
+   * @param ConfigBasedSignalData
    */
   public function setConfigBasedSignalData(ConfigBasedSignalData $configBasedSignalData)
   {
@@ -121,10 +77,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->configBasedSignalData;
   }
   /**
-   * Database resource signal data is used to ingest signals from database
-   * resource signal feeds.
-   *
-   * @param DatabaseResourceSignalData $databaseResourceSignalData
+   * @param DatabaseResourceSignalData
    */
   public function setDatabaseResourceSignalData(DatabaseResourceSignalData $databaseResourceSignalData)
   {
@@ -138,9 +91,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->databaseResourceSignalData;
   }
   /**
-   * Required. Timestamp when feed is generated.
-   *
-   * @param string $feedTimestamp
+   * @param string
    */
   public function setFeedTimestamp($feedTimestamp)
   {
@@ -154,27 +105,21 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->feedTimestamp;
   }
   /**
-   * Required. Type feed to be ingested into condor
-   *
-   * Accepted values: FEEDTYPE_UNSPECIFIED, RESOURCE_METADATA,
-   * OBSERVABILITY_DATA, SECURITY_FINDING_DATA, RECOMMENDATION_SIGNAL_DATA,
-   * CONFIG_BASED_SIGNAL_DATA, BACKUPDR_METADATA, DATABASE_RESOURCE_SIGNAL_DATA
-   *
-   * @param self::FEED_TYPE_* $feedType
+   * @param string
    */
   public function setFeedType($feedType)
   {
     $this->feedType = $feedType;
   }
   /**
-   * @return self::FEED_TYPE_*
+   * @return string
    */
   public function getFeedType()
   {
     return $this->feedType;
   }
   /**
-   * @param ObservabilityMetricData $observabilityMetricData
+   * @param ObservabilityMetricData
    */
   public function setObservabilityMetricData(ObservabilityMetricData $observabilityMetricData)
   {
@@ -188,7 +133,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->observabilityMetricData;
   }
   /**
-   * @param DatabaseResourceRecommendationSignalData $recommendationSignalData
+   * @param DatabaseResourceRecommendationSignalData
    */
   public function setRecommendationSignalData(DatabaseResourceRecommendationSignalData $recommendationSignalData)
   {
@@ -202,7 +147,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->recommendationSignalData;
   }
   /**
-   * @param DatabaseResourceHealthSignalData $resourceHealthSignalData
+   * @param DatabaseResourceHealthSignalData
    */
   public function setResourceHealthSignalData(DatabaseResourceHealthSignalData $resourceHealthSignalData)
   {
@@ -216,18 +161,13 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->resourceHealthSignalData;
   }
   /**
-   * Primary key associated with the Resource. resource_id is available in
-   * individual feed level as well.
-   *
-   * @deprecated
-   * @param DatabaseResourceId $resourceId
+   * @param DatabaseResourceId
    */
   public function setResourceId(DatabaseResourceId $resourceId)
   {
     $this->resourceId = $resourceId;
   }
   /**
-   * @deprecated
    * @return DatabaseResourceId
    */
   public function getResourceId()
@@ -235,7 +175,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param DatabaseResourceMetadata $resourceMetadata
+   * @param DatabaseResourceMetadata
    */
   public function setResourceMetadata(DatabaseResourceMetadata $resourceMetadata)
   {
@@ -249,13 +189,7 @@ class DatabaseResourceFeed extends \Google\Model
     return $this->resourceMetadata;
   }
   /**
-   * Optional. If true, the feed won't be ingested by DB Center. This indicates
-   * that the feed is intentionally skipped. For example, BackupDR feeds are
-   * only needed for resources integrated with DB Center (e.g., CloudSQL,
-   * AlloyDB). Feeds for non-integrated resources (e.g., Compute Engine,
-   * Persistent Disk) can be skipped.
-   *
-   * @param bool $skipIngestion
+   * @param bool
    */
   public function setSkipIngestion($skipIngestion)
   {

@@ -21,10 +21,6 @@ class ListTraceScopesResponse extends \Google\Collection
 {
   protected $collection_key = 'traceScopes';
   /**
-   * Optional. If there might be more results than appear in this response, then
-   * `next_page_token` is included. To get the next set of results, call the
-   * same method again using the value of `next_page_token` as `page_token`.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -32,11 +28,7 @@ class ListTraceScopesResponse extends \Google\Collection
   protected $traceScopesDataType = 'array';
 
   /**
-   * Optional. If there might be more results than appear in this response, then
-   * `next_page_token` is included. To get the next set of results, call the
-   * same method again using the value of `next_page_token` as `page_token`.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -50,9 +42,7 @@ class ListTraceScopesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Optional. A list of trace scopes.
-   *
-   * @param TraceScope[] $traceScopes
+   * @param TraceScope[]
    */
   public function setTraceScopes($traceScopes)
   {

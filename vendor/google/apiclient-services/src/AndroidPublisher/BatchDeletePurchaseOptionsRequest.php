@@ -24,10 +24,7 @@ class BatchDeletePurchaseOptionsRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * Required. A list of delete requests of up to 100 elements. All requests
-   * must delete purchase options from different one-time products.
-   *
-   * @param DeletePurchaseOptionRequest[] $requests
+   * @param DeletePurchaseOptionRequest[]
    */
   public function setRequests($requests)
   {

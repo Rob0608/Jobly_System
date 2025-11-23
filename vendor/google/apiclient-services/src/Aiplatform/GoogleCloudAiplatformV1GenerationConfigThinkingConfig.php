@@ -20,32 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends \Google\Model
 {
   /**
-   * Optional. If true, the model will include its thoughts in the response.
-   * "Thoughts" are the intermediate steps the model takes to arrive at the
-   * final response. They can provide insights into the model's reasoning
-   * process and help with debugging. If this is true, thoughts are returned
-   * only when available.
-   *
    * @var bool
    */
   public $includeThoughts;
   /**
-   * Optional. The token budget for the model's thinking process. The model will
-   * make a best effort to stay within this budget. This can be used to control
-   * the trade-off between response quality and latency.
-   *
    * @var int
    */
   public $thinkingBudget;
 
   /**
-   * Optional. If true, the model will include its thoughts in the response.
-   * "Thoughts" are the intermediate steps the model takes to arrive at the
-   * final response. They can provide insights into the model's reasoning
-   * process and help with debugging. If this is true, thoughts are returned
-   * only when available.
-   *
-   * @param bool $includeThoughts
+   * @param bool
    */
   public function setIncludeThoughts($includeThoughts)
   {
@@ -59,11 +43,7 @@ class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends \Google\Mode
     return $this->includeThoughts;
   }
   /**
-   * Optional. The token budget for the model's thinking process. The model will
-   * make a best effort to stay within this budget. This can be used to control
-   * the trade-off between response quality and latency.
-   *
-   * @param int $thinkingBudget
+   * @param int
    */
   public function setThinkingBudget($thinkingBudget)
   {

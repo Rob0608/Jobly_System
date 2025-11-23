@@ -20,33 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class UpdateOneTimeProductOfferRequest extends \Google\Model
 {
   /**
-   * Defaults to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED';
-  /**
-   * The update will propagate to clients within several minutes on average and
-   * up to a few hours in rare cases. Throughput is limited to 7,200 updates per
-   * app per hour.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE';
-  /**
-   * The update will propagate to clients within 24 hours. Supports high
-   * throughput of up to 720,000 updates per app per hour using batch
-   * modification methods.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT';
-  /**
-   * Optional. If set to true, and the offer with the given package_name,
-   * product_id, purchase_option_id and offer_id doesn't exist, an offer will be
-   * created. If a new offer is created, the update_mask is ignored.
-   *
    * @var bool
    */
   public $allowMissing;
   /**
-   * Optional. The latency tolerance for the propagation of this offer update.
-   * Defaults to latency-sensitive.
-   *
    * @var string
    */
   public $latencyTolerance;
@@ -55,18 +32,12 @@ class UpdateOneTimeProductOfferRequest extends \Google\Model
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
   /**
-   * Required. The list of fields to be updated.
-   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * Optional. If set to true, and the offer with the given package_name,
-   * product_id, purchase_option_id and offer_id doesn't exist, an offer will be
-   * created. If a new offer is created, the update_mask is ignored.
-   *
-   * @param bool $allowMissing
+   * @param bool
    */
   public function setAllowMissing($allowMissing)
   {
@@ -80,30 +51,21 @@ class UpdateOneTimeProductOfferRequest extends \Google\Model
     return $this->allowMissing;
   }
   /**
-   * Optional. The latency tolerance for the propagation of this offer update.
-   * Defaults to latency-sensitive.
-   *
-   * Accepted values: PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED,
-   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE,
-   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT
-   *
-   * @param self::LATENCY_TOLERANCE_* $latencyTolerance
+   * @param string
    */
   public function setLatencyTolerance($latencyTolerance)
   {
     $this->latencyTolerance = $latencyTolerance;
   }
   /**
-   * @return self::LATENCY_TOLERANCE_*
+   * @return string
    */
   public function getLatencyTolerance()
   {
     return $this->latencyTolerance;
   }
   /**
-   * Required. The one-time product offer to update.
-   *
-   * @param OneTimeProductOffer $oneTimeProductOffer
+   * @param OneTimeProductOffer
    */
   public function setOneTimeProductOffer(OneTimeProductOffer $oneTimeProductOffer)
   {
@@ -117,9 +79,7 @@ class UpdateOneTimeProductOfferRequest extends \Google\Model
     return $this->oneTimeProductOffer;
   }
   /**
-   * Required. The version of the available regions being used for the offer.
-   *
-   * @param RegionsVersion $regionsVersion
+   * @param RegionsVersion
    */
   public function setRegionsVersion(RegionsVersion $regionsVersion)
   {
@@ -133,9 +93,7 @@ class UpdateOneTimeProductOfferRequest extends \Google\Model
     return $this->regionsVersion;
   }
   /**
-   * Required. The list of fields to be updated.
-   *
-   * @param string $updateMask
+   * @param string
    */
   public function setUpdateMask($updateMask)
   {

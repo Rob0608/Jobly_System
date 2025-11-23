@@ -19,31 +19,11 @@ namespace Google\Service\DataManager;
 
 class EncryptionInfo extends \Google\Model
 {
-  protected $awsWrappedKeyInfoType = AwsWrappedKeyInfo::class;
-  protected $awsWrappedKeyInfoDataType = '';
   protected $gcpWrappedKeyInfoType = GcpWrappedKeyInfo::class;
   protected $gcpWrappedKeyInfoDataType = '';
 
   /**
-   * Amazon Web Services wrapped key information.
-   *
-   * @param AwsWrappedKeyInfo $awsWrappedKeyInfo
-   */
-  public function setAwsWrappedKeyInfo(AwsWrappedKeyInfo $awsWrappedKeyInfo)
-  {
-    $this->awsWrappedKeyInfo = $awsWrappedKeyInfo;
-  }
-  /**
-   * @return AwsWrappedKeyInfo
-   */
-  public function getAwsWrappedKeyInfo()
-  {
-    return $this->awsWrappedKeyInfo;
-  }
-  /**
-   * Google Cloud Platform wrapped key information.
-   *
-   * @param GcpWrappedKeyInfo $gcpWrappedKeyInfo
+   * @param GcpWrappedKeyInfo
    */
   public function setGcpWrappedKeyInfo(GcpWrappedKeyInfo $gcpWrappedKeyInfo)
   {

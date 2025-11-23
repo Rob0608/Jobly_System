@@ -28,9 +28,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildA
   protected $parentFieldDataType = '';
 
   /**
-   * The alignment rule to apply to the child fields.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule $alignmentRule
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule
    */
   public function setAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule $alignmentRule)
   {
@@ -44,9 +42,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildA
     return $this->alignmentRule;
   }
   /**
-   * The child fields to be aligned within the parent field.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField[] $childFields
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField[]
    */
   public function setChildFields($childFields)
   {
@@ -60,9 +56,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildA
     return $this->childFields;
   }
   /**
-   * The full path of the parent field.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $parentField
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField
    */
   public function setParentField(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $parentField)
   {

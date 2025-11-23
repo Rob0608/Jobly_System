@@ -23,14 +23,7 @@ class CycleOptions extends \Google\Model
   protected $initialCycleDurationDataType = '';
 
   /**
-   * Optional. The duration of the initial cycle. Only `DAY` is supported. If
-   * set, Google will start the subscription with this initial cycle duration
-   * starting at the request time (see available methods below). A prorated
-   * charge will be applied. This option is available to the following methods:
-   * - partners.subscriptions.provision - partners.subscriptions.resume -
-   * partners.userSessions.generate
-   *
-   * @param Duration $initialCycleDuration
+   * @param Duration
    */
   public function setInitialCycleDuration(Duration $initialCycleDuration)
   {

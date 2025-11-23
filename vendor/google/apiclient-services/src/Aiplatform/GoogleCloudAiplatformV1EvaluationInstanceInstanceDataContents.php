@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1EvaluationInstanceInstanceDataContents extends \Goo
   protected $contentsDataType = 'array';
 
   /**
-   * Optional. Repeated contents.
-   *
-   * @param GoogleCloudAiplatformV1Content[] $contents
+   * @param GoogleCloudAiplatformV1Content[]
    */
   public function setContents($contents)
   {

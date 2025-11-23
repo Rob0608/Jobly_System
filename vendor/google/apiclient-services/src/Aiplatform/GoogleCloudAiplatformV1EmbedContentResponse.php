@@ -22,8 +22,6 @@ class GoogleCloudAiplatformV1EmbedContentResponse extends \Google\Model
   protected $embeddingType = GoogleCloudAiplatformV1EmbedContentResponseEmbedding::class;
   protected $embeddingDataType = '';
   /**
-   * Whether the input content was truncated before generating the embedding.
-   *
    * @var bool
    */
   public $truncated;
@@ -31,9 +29,7 @@ class GoogleCloudAiplatformV1EmbedContentResponse extends \Google\Model
   protected $usageMetadataDataType = '';
 
   /**
-   * The embedding generated from the input content.
-   *
-   * @param GoogleCloudAiplatformV1EmbedContentResponseEmbedding $embedding
+   * @param GoogleCloudAiplatformV1EmbedContentResponseEmbedding
    */
   public function setEmbedding(GoogleCloudAiplatformV1EmbedContentResponseEmbedding $embedding)
   {
@@ -47,9 +43,7 @@ class GoogleCloudAiplatformV1EmbedContentResponse extends \Google\Model
     return $this->embedding;
   }
   /**
-   * Whether the input content was truncated before generating the embedding.
-   *
-   * @param bool $truncated
+   * @param bool
    */
   public function setTruncated($truncated)
   {
@@ -63,9 +57,7 @@ class GoogleCloudAiplatformV1EmbedContentResponse extends \Google\Model
     return $this->truncated;
   }
   /**
-   * Metadata about the response(s).
-   *
-   * @param GoogleCloudAiplatformV1UsageMetadata $usageMetadata
+   * @param GoogleCloudAiplatformV1UsageMetadata
    */
   public function setUsageMetadata(GoogleCloudAiplatformV1UsageMetadata $usageMetadata)
   {

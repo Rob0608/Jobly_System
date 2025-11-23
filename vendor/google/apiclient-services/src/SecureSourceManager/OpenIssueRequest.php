@@ -20,20 +20,12 @@ namespace Google\Service\SecureSourceManager;
 class OpenIssueRequest extends \Google\Model
 {
   /**
-   * Optional. The current etag of the issue. If the etag is provided and does
-   * not match the current etag of the issue, opening will be blocked and an
-   * ABORTED error will be returned.
-   *
    * @var string
    */
   public $etag;
 
   /**
-   * Optional. The current etag of the issue. If the etag is provided and does
-   * not match the current etag of the issue, opening will be blocked and an
-   * ABORTED error will be returned.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {

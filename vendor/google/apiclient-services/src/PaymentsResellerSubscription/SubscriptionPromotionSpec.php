@@ -19,41 +19,21 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class SubscriptionPromotionSpec extends \Google\Model
 {
-  /**
-   * The promotion type is unspecified.
-   */
-  public const TYPE_PROMOTION_TYPE_UNSPECIFIED = 'PROMOTION_TYPE_UNSPECIFIED';
-  /**
-   * The promotion is a free trial.
-   */
-  public const TYPE_PROMOTION_TYPE_FREE_TRIAL = 'PROMOTION_TYPE_FREE_TRIAL';
-  /**
-   * The promotion is a reduced introductory pricing.
-   */
-  public const TYPE_PROMOTION_TYPE_INTRODUCTORY_PRICING = 'PROMOTION_TYPE_INTRODUCTORY_PRICING';
   protected $freeTrialDurationType = Duration::class;
   protected $freeTrialDurationDataType = '';
   protected $introductoryPricingDetailsType = PromotionIntroductoryPricingDetails::class;
   protected $introductoryPricingDetailsDataType = '';
   /**
-   * Required. Promotion resource name that identifies a promotion. The format
-   * is 'partners/{partner_id}/promotions/{promotion_id}'.
-   *
    * @var string
    */
   public $promotion;
   /**
-   * Output only. The type of the promotion for the spec.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Output only. The duration of the free trial if the promotion is of type
-   * FREE_TRIAL.
-   *
-   * @param Duration $freeTrialDuration
+   * @param Duration
    */
   public function setFreeTrialDuration(Duration $freeTrialDuration)
   {
@@ -67,10 +47,7 @@ class SubscriptionPromotionSpec extends \Google\Model
     return $this->freeTrialDuration;
   }
   /**
-   * Output only. The details of the introductory pricing spec if the promotion
-   * is of type INTRODUCTORY_PRICING.
-   *
-   * @param PromotionIntroductoryPricingDetails $introductoryPricingDetails
+   * @param PromotionIntroductoryPricingDetails
    */
   public function setIntroductoryPricingDetails(PromotionIntroductoryPricingDetails $introductoryPricingDetails)
   {
@@ -84,10 +61,7 @@ class SubscriptionPromotionSpec extends \Google\Model
     return $this->introductoryPricingDetails;
   }
   /**
-   * Required. Promotion resource name that identifies a promotion. The format
-   * is 'partners/{partner_id}/promotions/{promotion_id}'.
-   *
-   * @param string $promotion
+   * @param string
    */
   public function setPromotion($promotion)
   {
@@ -101,19 +75,14 @@ class SubscriptionPromotionSpec extends \Google\Model
     return $this->promotion;
   }
   /**
-   * Output only. The type of the promotion for the spec.
-   *
-   * Accepted values: PROMOTION_TYPE_UNSPECIFIED, PROMOTION_TYPE_FREE_TRIAL,
-   * PROMOTION_TYPE_INTRODUCTORY_PRICING
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {

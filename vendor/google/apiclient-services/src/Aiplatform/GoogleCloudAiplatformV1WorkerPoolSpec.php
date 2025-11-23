@@ -33,16 +33,12 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
   protected $pythonPackageSpecType = GoogleCloudAiplatformV1PythonPackageSpec::class;
   protected $pythonPackageSpecDataType = '';
   /**
-   * Optional. The number of worker replicas to use for this worker pool.
-   *
    * @var string
    */
   public $replicaCount;
 
   /**
-   * The custom container task.
-   *
-   * @param GoogleCloudAiplatformV1ContainerSpec $containerSpec
+   * @param GoogleCloudAiplatformV1ContainerSpec
    */
   public function setContainerSpec(GoogleCloudAiplatformV1ContainerSpec $containerSpec)
   {
@@ -56,9 +52,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->containerSpec;
   }
   /**
-   * Disk spec.
-   *
-   * @param GoogleCloudAiplatformV1DiskSpec $diskSpec
+   * @param GoogleCloudAiplatformV1DiskSpec
    */
   public function setDiskSpec(GoogleCloudAiplatformV1DiskSpec $diskSpec)
   {
@@ -72,9 +66,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->diskSpec;
   }
   /**
-   * Optional. List of Lustre mounts.
-   *
-   * @param GoogleCloudAiplatformV1LustreMount[] $lustreMounts
+   * @param GoogleCloudAiplatformV1LustreMount[]
    */
   public function setLustreMounts($lustreMounts)
   {
@@ -88,9 +80,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->lustreMounts;
   }
   /**
-   * Optional. Immutable. The specification of a single machine.
-   *
-   * @param GoogleCloudAiplatformV1MachineSpec $machineSpec
+   * @param GoogleCloudAiplatformV1MachineSpec
    */
   public function setMachineSpec(GoogleCloudAiplatformV1MachineSpec $machineSpec)
   {
@@ -104,9 +94,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->machineSpec;
   }
   /**
-   * Optional. List of NFS mount spec.
-   *
-   * @param GoogleCloudAiplatformV1NfsMount[] $nfsMounts
+   * @param GoogleCloudAiplatformV1NfsMount[]
    */
   public function setNfsMounts($nfsMounts)
   {
@@ -120,9 +108,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->nfsMounts;
   }
   /**
-   * The Python packaged task.
-   *
-   * @param GoogleCloudAiplatformV1PythonPackageSpec $pythonPackageSpec
+   * @param GoogleCloudAiplatformV1PythonPackageSpec
    */
   public function setPythonPackageSpec(GoogleCloudAiplatformV1PythonPackageSpec $pythonPackageSpec)
   {
@@ -136,9 +122,7 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
     return $this->pythonPackageSpec;
   }
   /**
-   * Optional. The number of worker replicas to use for this worker pool.
-   *
-   * @param string $replicaCount
+   * @param string
    */
   public function setReplicaCount($replicaCount)
   {

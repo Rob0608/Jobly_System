@@ -24,9 +24,7 @@ class PromotionIntroductoryPricingDetails extends \Google\Collection
   protected $introductoryPricingSpecsDataType = 'array';
 
   /**
-   * Output only. Specifies the introductory pricing periods.
-   *
-   * @param PromotionIntroductoryPricingDetailsIntroductoryPricingSpec[] $introductoryPricingSpecs
+   * @param PromotionIntroductoryPricingDetailsIntroductoryPricingSpec[]
    */
   public function setIntroductoryPricingSpecs($introductoryPricingSpecs)
   {

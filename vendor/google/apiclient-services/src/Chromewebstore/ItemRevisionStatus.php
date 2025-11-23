@@ -19,48 +19,16 @@ namespace Google\Service\Chromewebstore;
 
 class ItemRevisionStatus extends \Google\Collection
 {
-  /**
-   * Default value. This value is unused.
-   */
-  public const STATE_ITEM_STATE_UNSPECIFIED = 'ITEM_STATE_UNSPECIFIED';
-  /**
-   * The item is pending review.
-   */
-  public const STATE_PENDING_REVIEW = 'PENDING_REVIEW';
-  /**
-   * The item has been approved and is ready to be published.
-   */
-  public const STATE_STAGED = 'STAGED';
-  /**
-   * The item is published publicly.
-   */
-  public const STATE_PUBLISHED = 'PUBLISHED';
-  /**
-   * The item is published to trusted testers.
-   */
-  public const STATE_PUBLISHED_TO_TESTERS = 'PUBLISHED_TO_TESTERS';
-  /**
-   * The item has been rejected for publishing.
-   */
-  public const STATE_REJECTED = 'REJECTED';
-  /**
-   * The item submission has been cancelled.
-   */
-  public const STATE_CANCELLED = 'CANCELLED';
   protected $collection_key = 'distributionChannels';
   protected $distributionChannelsType = DistributionChannel::class;
   protected $distributionChannelsDataType = 'array';
   /**
-   * Output only. Current state of the item
-   *
    * @var string
    */
   public $state;
 
   /**
-   * Details on the package of the item
-   *
-   * @param DistributionChannel[] $distributionChannels
+   * @param DistributionChannel[]
    */
   public function setDistributionChannels($distributionChannels)
   {
@@ -74,19 +42,14 @@ class ItemRevisionStatus extends \Google\Collection
     return $this->distributionChannels;
   }
   /**
-   * Output only. Current state of the item
-   *
-   * Accepted values: ITEM_STATE_UNSPECIFIED, PENDING_REVIEW, STAGED, PUBLISHED,
-   * PUBLISHED_TO_TESTERS, REJECTED, CANCELLED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {

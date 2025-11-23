@@ -20,16 +20,12 @@ namespace Google\Service\SQLAdmin;
 class Metadata extends \Google\Model
 {
   /**
-   * The time taken to execute the SQL statements.
-   *
    * @var string
    */
   public $sqlStatementExecutionTime;
 
   /**
-   * The time taken to execute the SQL statements.
-   *
-   * @param string $sqlStatementExecutionTime
+   * @param string
    */
   public function setSqlStatementExecutionTime($sqlStatementExecutionTime)
   {

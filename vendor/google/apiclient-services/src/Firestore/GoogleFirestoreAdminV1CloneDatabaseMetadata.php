@@ -20,54 +20,14 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
 {
   /**
-   * Unspecified.
-   */
-  public const OPERATION_STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
-  /**
-   * Request is being prepared for processing.
-   */
-  public const OPERATION_STATE_INITIALIZING = 'INITIALIZING';
-  /**
-   * Request is actively being processed.
-   */
-  public const OPERATION_STATE_PROCESSING = 'PROCESSING';
-  /**
-   * Request is in the process of being cancelled after user called
-   * google.longrunning.Operations.CancelOperation on the operation.
-   */
-  public const OPERATION_STATE_CANCELLING = 'CANCELLING';
-  /**
-   * Request has been processed and is in its finalization stage.
-   */
-  public const OPERATION_STATE_FINALIZING = 'FINALIZING';
-  /**
-   * Request has completed successfully.
-   */
-  public const OPERATION_STATE_SUCCESSFUL = 'SUCCESSFUL';
-  /**
-   * Request has finished being processed, but encountered an error.
-   */
-  public const OPERATION_STATE_FAILED = 'FAILED';
-  /**
-   * Request has finished being cancelled after user called
-   * google.longrunning.Operations.CancelOperation.
-   */
-  public const OPERATION_STATE_CANCELLED = 'CANCELLED';
-  /**
-   * The name of the database being cloned to.
-   *
    * @var string
    */
   public $database;
   /**
-   * The time the clone finished, unset for ongoing clones.
-   *
    * @var string
    */
   public $endTime;
   /**
-   * The operation state of the clone.
-   *
    * @var string
    */
   public $operationState;
@@ -76,16 +36,12 @@ class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
   protected $progressPercentageType = GoogleFirestoreAdminV1Progress::class;
   protected $progressPercentageDataType = '';
   /**
-   * The time the clone was started.
-   *
    * @var string
    */
   public $startTime;
 
   /**
-   * The name of the database being cloned to.
-   *
-   * @param string $database
+   * @param string
    */
   public function setDatabase($database)
   {
@@ -99,9 +55,7 @@ class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
     return $this->database;
   }
   /**
-   * The time the clone finished, unset for ongoing clones.
-   *
-   * @param string $endTime
+   * @param string
    */
   public function setEndTime($endTime)
   {
@@ -115,28 +69,21 @@ class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * The operation state of the clone.
-   *
-   * Accepted values: OPERATION_STATE_UNSPECIFIED, INITIALIZING, PROCESSING,
-   * CANCELLING, FINALIZING, SUCCESSFUL, FAILED, CANCELLED
-   *
-   * @param self::OPERATION_STATE_* $operationState
+   * @param string
    */
   public function setOperationState($operationState)
   {
     $this->operationState = $operationState;
   }
   /**
-   * @return self::OPERATION_STATE_*
+   * @return string
    */
   public function getOperationState()
   {
     return $this->operationState;
   }
   /**
-   * The snapshot from which this database was cloned.
-   *
-   * @param GoogleFirestoreAdminV1PitrSnapshot $pitrSnapshot
+   * @param GoogleFirestoreAdminV1PitrSnapshot
    */
   public function setPitrSnapshot(GoogleFirestoreAdminV1PitrSnapshot $pitrSnapshot)
   {
@@ -150,9 +97,7 @@ class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
     return $this->pitrSnapshot;
   }
   /**
-   * How far along the clone is as an estimated percentage of remaining time.
-   *
-   * @param GoogleFirestoreAdminV1Progress $progressPercentage
+   * @param GoogleFirestoreAdminV1Progress
    */
   public function setProgressPercentage(GoogleFirestoreAdminV1Progress $progressPercentage)
   {
@@ -166,9 +111,7 @@ class GoogleFirestoreAdminV1CloneDatabaseMetadata extends \Google\Model
     return $this->progressPercentage;
   }
   /**
-   * The time the clone was started.
-   *
-   * @param string $startTime
+   * @param string
    */
   public function setStartTime($startTime)
   {

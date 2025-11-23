@@ -20,40 +20,28 @@ namespace Google\Service\Dfareporting;
 class IngestionStatus extends \Google\Model
 {
   /**
-   * Output only. The number of active rows in the feed.
-   *
    * @var string
    */
   public $numActiveRows;
   /**
-   * Output only. The number of rows processed in the feed.
-   *
    * @var string
    */
   public $numRowsProcessed;
   /**
-   * Output only. The total number of rows in the feed.
-   *
    * @var string
    */
   public $numRowsTotal;
   /**
-   * Output only. The number of rows with errors in the feed.
-   *
    * @var string
    */
   public $numRowsWithErrors;
   /**
-   * Output only. The total number of warnings in the feed.
-   *
    * @var string
    */
   public $numWarningsTotal;
 
   /**
-   * Output only. The number of active rows in the feed.
-   *
-   * @param string $numActiveRows
+   * @param string
    */
   public function setNumActiveRows($numActiveRows)
   {
@@ -67,9 +55,7 @@ class IngestionStatus extends \Google\Model
     return $this->numActiveRows;
   }
   /**
-   * Output only. The number of rows processed in the feed.
-   *
-   * @param string $numRowsProcessed
+   * @param string
    */
   public function setNumRowsProcessed($numRowsProcessed)
   {
@@ -83,9 +69,7 @@ class IngestionStatus extends \Google\Model
     return $this->numRowsProcessed;
   }
   /**
-   * Output only. The total number of rows in the feed.
-   *
-   * @param string $numRowsTotal
+   * @param string
    */
   public function setNumRowsTotal($numRowsTotal)
   {
@@ -99,9 +83,7 @@ class IngestionStatus extends \Google\Model
     return $this->numRowsTotal;
   }
   /**
-   * Output only. The number of rows with errors in the feed.
-   *
-   * @param string $numRowsWithErrors
+   * @param string
    */
   public function setNumRowsWithErrors($numRowsWithErrors)
   {
@@ -115,9 +97,7 @@ class IngestionStatus extends \Google\Model
     return $this->numRowsWithErrors;
   }
   /**
-   * Output only. The total number of warnings in the feed.
-   *
-   * @param string $numWarningsTotal
+   * @param string
    */
   public function setNumWarningsTotal($numWarningsTotal)
   {

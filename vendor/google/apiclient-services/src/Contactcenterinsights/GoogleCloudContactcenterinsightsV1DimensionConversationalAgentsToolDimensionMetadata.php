@@ -20,22 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The dialogflow tool display name.
-   *
    * @var string
    */
   public $toolDisplayName;
   /**
-   * Optional. The dialogflow tool ID.
-   *
    * @var string
    */
   public $toolId;
 
   /**
-   * Optional. The dialogflow tool display name.
-   *
-   * @param string $toolDisplayName
+   * @param string
    */
   public function setToolDisplayName($toolDisplayName)
   {
@@ -49,9 +43,7 @@ class GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensi
     return $this->toolDisplayName;
   }
   /**
-   * Optional. The dialogflow tool ID.
-   *
-   * @param string $toolId
+   * @param string
    */
   public function setToolId($toolId)
   {

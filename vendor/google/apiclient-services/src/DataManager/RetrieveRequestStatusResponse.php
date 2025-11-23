@@ -24,10 +24,7 @@ class RetrieveRequestStatusResponse extends \Google\Collection
   protected $requestStatusPerDestinationDataType = 'array';
 
   /**
-   * A list of request statuses per destination. The order of the statuses
-   * matches the order of the destinations in the original request.
-   *
-   * @param RequestStatusPerDestination[] $requestStatusPerDestination
+   * @param RequestStatusPerDestination[]
    */
   public function setRequestStatusPerDestination($requestStatusPerDestination)
   {

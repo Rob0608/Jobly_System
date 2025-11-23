@@ -25,7 +25,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleConsta
   public $floatValue;
 
   /**
-   * @param float $floatValue
+   * @param float
    */
   public function setFloatValue($floatValue)
   {

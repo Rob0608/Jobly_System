@@ -22,22 +22,16 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
   protected $promptTemplateDataType = GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData::class;
   protected $promptTemplateDataDataType = '';
   /**
-   * Text prompt.
-   *
    * @var string
    */
   public $text;
   /**
-   * Fields and values that can be used to populate the prompt template.
-   *
    * @var array
    */
   public $value;
 
   /**
-   * Prompt template data.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData $promptTemplateData
+   * @param GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData
    */
   public function setPromptTemplateData(GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData $promptTemplateData)
   {
@@ -51,9 +45,7 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
     return $this->promptTemplateData;
   }
   /**
-   * Text prompt.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -67,9 +59,7 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
     return $this->text;
   }
   /**
-   * Fields and values that can be used to populate the prompt template.
-   *
-   * @param array $value
+   * @param array
    */
   public function setValue($value)
   {

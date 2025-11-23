@@ -20,18 +20,12 @@ namespace Google\Service\DisplayVideo;
 class YoutubeVideoAsset extends \Google\Model
 {
   /**
-   * Required. The YouTube video id of the asset. This is the 11 char string
-   * value used in the YouTube video URL.
-   *
    * @var string
    */
   public $youtubeVideoId;
 
   /**
-   * Required. The YouTube video id of the asset. This is the 11 char string
-   * value used in the YouTube video URL.
-   *
-   * @param string $youtubeVideoId
+   * @param string
    */
   public function setYoutubeVideoId($youtubeVideoId)
   {

@@ -24,9 +24,7 @@ class StateTimeline extends \Google\Collection
   protected $statesDataType = 'array';
 
   /**
-   * Output only. The state and activation time details of the resource state.
-   *
-   * @param StateMetadata[] $states
+   * @param StateMetadata[]
    */
   public function setStates($states)
   {

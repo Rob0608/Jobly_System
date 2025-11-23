@@ -22,18 +22,12 @@ class GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest extends \Google\
   protected $customerConfigType = GoogleCloudIntegrationsV1alphaCustomerConfig::class;
   protected $customerConfigDataType = '';
   /**
-   * Required. Field mask specifying the fields in the customer config that have
-   * been modified and must be updated. If absent or empty, no fields are
-   * updated.
-   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * Optional. The customer configuration to be updated.
-   *
-   * @param GoogleCloudIntegrationsV1alphaCustomerConfig $customerConfig
+   * @param GoogleCloudIntegrationsV1alphaCustomerConfig
    */
   public function setCustomerConfig(GoogleCloudIntegrationsV1alphaCustomerConfig $customerConfig)
   {
@@ -47,11 +41,7 @@ class GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest extends \Google\
     return $this->customerConfig;
   }
   /**
-   * Required. Field mask specifying the fields in the customer config that have
-   * been modified and must be updated. If absent or empty, no fields are
-   * updated.
-   *
-   * @param string $updateMask
+   * @param string
    */
   public function setUpdateMask($updateMask)
   {

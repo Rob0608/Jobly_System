@@ -20,34 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
 {
   /**
-   * The default value. This value is unused.
-   */
-  public const EVALUATION_ITEM_TYPE_EVALUATION_ITEM_TYPE_UNSPECIFIED = 'EVALUATION_ITEM_TYPE_UNSPECIFIED';
-  /**
-   * The EvaluationItem is a request to evaluate.
-   */
-  public const EVALUATION_ITEM_TYPE_REQUEST = 'REQUEST';
-  /**
-   * The EvaluationItem is the result of evaluation.
-   */
-  public const EVALUATION_ITEM_TYPE_RESULT = 'RESULT';
-  /**
-   * Output only. Timestamp when this item was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Required. The display name of the EvaluationItem.
-   *
    * @var string
    */
   public $displayName;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
-   * Required. The type of the EvaluationItem.
-   *
    * @var string
    */
   public $evaluationItemType;
@@ -56,35 +38,24 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
   protected $evaluationResponseType = GoogleCloudAiplatformV1EvaluationResult::class;
   protected $evaluationResponseDataType = '';
   /**
-   * The Cloud Storage object where the request or response is stored.
-   *
    * @var string
    */
   public $gcsUri;
   /**
-   * Optional. Labels for the EvaluationItem.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Optional. Metadata for the EvaluationItem.
-   *
    * @var array
    */
   public $metadata;
   /**
-   * Identifier. The resource name of the EvaluationItem. Format:
-   * `projects/{project}/locations/{location}/evaluationItems/{evaluation_item}`
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Output only. Timestamp when this item was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -98,9 +69,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The display name of the EvaluationItem.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -114,9 +83,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Output only. Error for the evaluation item.
-   *
-   * @param GoogleRpcStatus $error
+   * @param GoogleRpcStatus
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -130,27 +97,21 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->error;
   }
   /**
-   * Required. The type of the EvaluationItem.
-   *
-   * Accepted values: EVALUATION_ITEM_TYPE_UNSPECIFIED, REQUEST, RESULT
-   *
-   * @param self::EVALUATION_ITEM_TYPE_* $evaluationItemType
+   * @param string
    */
   public function setEvaluationItemType($evaluationItemType)
   {
     $this->evaluationItemType = $evaluationItemType;
   }
   /**
-   * @return self::EVALUATION_ITEM_TYPE_*
+   * @return string
    */
   public function getEvaluationItemType()
   {
     return $this->evaluationItemType;
   }
   /**
-   * The request to evaluate.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRequest $evaluationRequest
+   * @param GoogleCloudAiplatformV1EvaluationRequest
    */
   public function setEvaluationRequest(GoogleCloudAiplatformV1EvaluationRequest $evaluationRequest)
   {
@@ -164,9 +125,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->evaluationRequest;
   }
   /**
-   * Output only. The response from evaluation.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationResult $evaluationResponse
+   * @param GoogleCloudAiplatformV1EvaluationResult
    */
   public function setEvaluationResponse(GoogleCloudAiplatformV1EvaluationResult $evaluationResponse)
   {
@@ -180,9 +139,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->evaluationResponse;
   }
   /**
-   * The Cloud Storage object where the request or response is stored.
-   *
-   * @param string $gcsUri
+   * @param string
    */
   public function setGcsUri($gcsUri)
   {
@@ -196,9 +153,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->gcsUri;
   }
   /**
-   * Optional. Labels for the EvaluationItem.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -212,9 +167,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->labels;
   }
   /**
-   * Optional. Metadata for the EvaluationItem.
-   *
-   * @param array $metadata
+   * @param array
    */
   public function setMetadata($metadata)
   {
@@ -228,10 +181,7 @@ class GoogleCloudAiplatformV1EvaluationItem extends \Google\Model
     return $this->metadata;
   }
   /**
-   * Identifier. The resource name of the EvaluationItem. Format:
-   * `projects/{project}/locations/{location}/evaluationItems/{evaluation_item}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

@@ -19,50 +19,16 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1DiscountComponent extends \Google\Model
 {
-  /**
-   * Not used.
-   */
-  public const DISCOUNT_TYPE_DISCOUNT_TYPE_UNSPECIFIED = 'DISCOUNT_TYPE_UNSPECIFIED';
-  /**
-   * Regional discount.
-   */
-  public const DISCOUNT_TYPE_REGIONAL_DISCOUNT = 'REGIONAL_DISCOUNT';
-  /**
-   * Promotional discount.
-   */
-  public const DISCOUNT_TYPE_PROMOTIONAL_DISCOUNT = 'PROMOTIONAL_DISCOUNT';
-  /**
-   * Sales-provided discount.
-   */
-  public const DISCOUNT_TYPE_SALES_DISCOUNT = 'SALES_DISCOUNT';
-  /**
-   * Reseller margin.
-   */
-  public const DISCOUNT_TYPE_RESELLER_MARGIN = 'RESELLER_MARGIN';
-  /**
-   * Deal code discount.
-   */
-  public const DISCOUNT_TYPE_DEAL_CODE = 'DEAL_CODE';
   protected $discountAbsoluteType = GoogleTypeMoney::class;
   protected $discountAbsoluteDataType = '';
-  /**
-   * Discount percentage, represented as decimal. For example, a 20% discount
-   * will be represented as 0.2.
-   *
-   * @var 
-   */
   public $discountPercentage;
   /**
-   * Type of the discount.
-   *
    * @var string
    */
   public $discountType;
 
   /**
-   * Fixed value discount.
-   *
-   * @param GoogleTypeMoney $discountAbsolute
+   * @param GoogleTypeMoney
    */
   public function setDiscountAbsolute(GoogleTypeMoney $discountAbsolute)
   {
@@ -84,19 +50,14 @@ class GoogleCloudChannelV1DiscountComponent extends \Google\Model
     return $this->discountPercentage;
   }
   /**
-   * Type of the discount.
-   *
-   * Accepted values: DISCOUNT_TYPE_UNSPECIFIED, REGIONAL_DISCOUNT,
-   * PROMOTIONAL_DISCOUNT, SALES_DISCOUNT, RESELLER_MARGIN, DEAL_CODE
-   *
-   * @param self::DISCOUNT_TYPE_* $discountType
+   * @param string
    */
   public function setDiscountType($discountType)
   {
     $this->discountType = $discountType;
   }
   /**
-   * @return self::DISCOUNT_TYPE_*
+   * @return string
    */
   public function getDiscountType()
   {

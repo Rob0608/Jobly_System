@@ -22,9 +22,6 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
   protected $answerType = GoogleCloudDiscoveryengineV1AssistAnswer::class;
   protected $answerDataType = '';
   /**
-   * A global unique ID that identifies the current pair of request and stream
-   * of responses. Used for feedback and support.
-   *
    * @var string
    */
   public $assistToken;
@@ -32,17 +29,7 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
   protected $sessionInfoDataType = '';
 
   /**
-   * Assist answer resource object containing parts of the assistant's final
-   * answer for the user's query. Not present if the current response doesn't
-   * add anything to previously sent AssistAnswer.replies. Observe
-   * AssistAnswer.state to see if more parts are to be expected. While the state
-   * is `IN_PROGRESS`, the AssistAnswer.replies field in each response will
-   * contain replies (reply fragments) to be appended to the ones received in
-   * previous responses. AssistAnswer.name won't be filled. If the state is
-   * `SUCCEEDED`, `FAILED` or `SKIPPED`, the response is the last response and
-   * AssistAnswer.name will have a value.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistAnswer $answer
+   * @param GoogleCloudDiscoveryengineV1AssistAnswer
    */
   public function setAnswer(GoogleCloudDiscoveryengineV1AssistAnswer $answer)
   {
@@ -56,10 +43,7 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
     return $this->answer;
   }
   /**
-   * A global unique ID that identifies the current pair of request and stream
-   * of responses. Used for feedback and support.
-   *
-   * @param string $assistToken
+   * @param string
    */
   public function setAssistToken($assistToken)
   {
@@ -73,10 +57,7 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
     return $this->assistToken;
   }
   /**
-   * Session information. Only included in the final StreamAssistResponse of the
-   * response stream.
-   *
-   * @param GoogleCloudDiscoveryengineV1StreamAssistResponseSessionInfo $sessionInfo
+   * @param GoogleCloudDiscoveryengineV1StreamAssistResponseSessionInfo
    */
   public function setSessionInfo(GoogleCloudDiscoveryengineV1StreamAssistResponseSessionInfo $sessionInfo)
   {

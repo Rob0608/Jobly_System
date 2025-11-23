@@ -21,9 +21,6 @@ class GoogleCloudRunV2ListServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
-   * A token indicating there are more items than page_size. Use it in the next
-   * ListServices request to continue.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -31,10 +28,7 @@ class GoogleCloudRunV2ListServicesResponse extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * A token indicating there are more items than page_size. Use it in the next
-   * ListServices request to continue.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -48,9 +42,7 @@ class GoogleCloudRunV2ListServicesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The resulting list of Services.
-   *
-   * @param GoogleCloudRunV2Service[] $services
+   * @param GoogleCloudRunV2Service[]
    */
   public function setServices($services)
   {

@@ -24,9 +24,7 @@ class InvalidRulesWrapper extends \Google\Collection
   protected $invalidRulesDataType = 'array';
 
   /**
-   * The invalid rules that failed to be validated.
-   *
-   * @param InvalidRule[] $invalidRules
+   * @param InvalidRule[]
    */
   public function setInvalidRules($invalidRules)
   {

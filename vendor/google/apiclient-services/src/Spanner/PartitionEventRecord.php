@@ -21,12 +21,6 @@ class PartitionEventRecord extends \Google\Collection
 {
   protected $collection_key = 'moveOutEvents';
   /**
-   * Indicates the commit timestamp at which the key range change occurred.
-   * DataChangeRecord.commit_timestamps, PartitionStartRecord.start_timestamps,
-   * PartitionEventRecord.commit_timestamps, and
-   * PartitionEndRecord.end_timestamps can have the same value in the same
-   * partition.
-   *
    * @var string
    */
   public $commitTimestamp;
@@ -35,32 +29,16 @@ class PartitionEventRecord extends \Google\Collection
   protected $moveOutEventsType = MoveOutEvent::class;
   protected $moveOutEventsDataType = 'array';
   /**
-   * Unique partition identifier describing the partition this event occurred
-   * on. partition_token is equal to the partition token of the change stream
-   * partition currently queried to return this PartitionEventRecord.
-   *
    * @var string
    */
   public $partitionToken;
   /**
-   * Record sequence numbers are unique and monotonically increasing (but not
-   * necessarily contiguous) for a specific timestamp across record types in the
-   * same partition. To guarantee ordered processing, the reader should process
-   * records (of potentially different types) in record_sequence order for a
-   * specific timestamp in the same partition.
-   *
    * @var string
    */
   public $recordSequence;
 
   /**
-   * Indicates the commit timestamp at which the key range change occurred.
-   * DataChangeRecord.commit_timestamps, PartitionStartRecord.start_timestamps,
-   * PartitionEventRecord.commit_timestamps, and
-   * PartitionEndRecord.end_timestamps can have the same value in the same
-   * partition.
-   *
-   * @param string $commitTimestamp
+   * @param string
    */
   public function setCommitTimestamp($commitTimestamp)
   {
@@ -74,21 +52,7 @@ class PartitionEventRecord extends \Google\Collection
     return $this->commitTimestamp;
   }
   /**
-   * Set when one or more key ranges are moved into the change stream partition
-   * identified by partition_token. Example: Two key ranges are moved into
-   * partition (P1) from partition (P2) and partition (P3) in a single
-   * transaction at timestamp T. The PartitionEventRecord returned in P1 will
-   * reflect the move as: PartitionEventRecord { commit_timestamp: T
-   * partition_token: "P1" move_in_events { source_partition_token: "P2" }
-   * move_in_events { source_partition_token: "P3" } } The PartitionEventRecord
-   * returned in P2 will reflect the move as: PartitionEventRecord {
-   * commit_timestamp: T partition_token: "P2" move_out_events {
-   * destination_partition_token: "P1" } } The PartitionEventRecord returned in
-   * P3 will reflect the move as: PartitionEventRecord { commit_timestamp: T
-   * partition_token: "P3" move_out_events { destination_partition_token: "P1" }
-   * }
-   *
-   * @param MoveInEvent[] $moveInEvents
+   * @param MoveInEvent[]
    */
   public function setMoveInEvents($moveInEvents)
   {
@@ -102,21 +66,7 @@ class PartitionEventRecord extends \Google\Collection
     return $this->moveInEvents;
   }
   /**
-   * Set when one or more key ranges are moved out of the change stream
-   * partition identified by partition_token. Example: Two key ranges are moved
-   * out of partition (P1) to partition (P2) and partition (P3) in a single
-   * transaction at timestamp T. The PartitionEventRecord returned in P1 will
-   * reflect the move as: PartitionEventRecord { commit_timestamp: T
-   * partition_token: "P1" move_out_events { destination_partition_token: "P2" }
-   * move_out_events { destination_partition_token: "P3" } } The
-   * PartitionEventRecord returned in P2 will reflect the move as:
-   * PartitionEventRecord { commit_timestamp: T partition_token: "P2"
-   * move_in_events { source_partition_token: "P1" } } The PartitionEventRecord
-   * returned in P3 will reflect the move as: PartitionEventRecord {
-   * commit_timestamp: T partition_token: "P3" move_in_events {
-   * source_partition_token: "P1" } }
-   *
-   * @param MoveOutEvent[] $moveOutEvents
+   * @param MoveOutEvent[]
    */
   public function setMoveOutEvents($moveOutEvents)
   {
@@ -130,11 +80,7 @@ class PartitionEventRecord extends \Google\Collection
     return $this->moveOutEvents;
   }
   /**
-   * Unique partition identifier describing the partition this event occurred
-   * on. partition_token is equal to the partition token of the change stream
-   * partition currently queried to return this PartitionEventRecord.
-   *
-   * @param string $partitionToken
+   * @param string
    */
   public function setPartitionToken($partitionToken)
   {
@@ -148,13 +94,7 @@ class PartitionEventRecord extends \Google\Collection
     return $this->partitionToken;
   }
   /**
-   * Record sequence numbers are unique and monotonically increasing (but not
-   * necessarily contiguous) for a specific timestamp across record types in the
-   * same partition. To guarantee ordered processing, the reader should process
-   * records (of potentially different types) in record_sequence order for a
-   * specific timestamp in the same partition.
-   *
-   * @param string $recordSequence
+   * @param string
    */
   public function setRecordSequence($recordSequence)
   {

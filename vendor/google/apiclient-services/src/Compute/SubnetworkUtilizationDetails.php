@@ -30,9 +30,7 @@ class SubnetworkUtilizationDetails extends \Google\Collection
   protected $ipv4UtilizationsDataType = 'array';
 
   /**
-   * Utilizations of external IPV6 IP range.
-   *
-   * @param SubnetworkUtilizationDetailsIPV6Utilization $externalIpv6InstanceUtilization
+   * @param SubnetworkUtilizationDetailsIPV6Utilization
    */
   public function setExternalIpv6InstanceUtilization(SubnetworkUtilizationDetailsIPV6Utilization $externalIpv6InstanceUtilization)
   {
@@ -46,9 +44,7 @@ class SubnetworkUtilizationDetails extends \Google\Collection
     return $this->externalIpv6InstanceUtilization;
   }
   /**
-   * Utilizations of external IPV6 IP range for NetLB.
-   *
-   * @param SubnetworkUtilizationDetailsIPV6Utilization $externalIpv6LbUtilization
+   * @param SubnetworkUtilizationDetailsIPV6Utilization
    */
   public function setExternalIpv6LbUtilization(SubnetworkUtilizationDetailsIPV6Utilization $externalIpv6LbUtilization)
   {
@@ -62,9 +58,7 @@ class SubnetworkUtilizationDetails extends \Google\Collection
     return $this->externalIpv6LbUtilization;
   }
   /**
-   * Utilizations of internal IPV6 IP range.
-   *
-   * @param SubnetworkUtilizationDetailsIPV6Utilization $internalIpv6Utilization
+   * @param SubnetworkUtilizationDetailsIPV6Utilization
    */
   public function setInternalIpv6Utilization(SubnetworkUtilizationDetailsIPV6Utilization $internalIpv6Utilization)
   {
@@ -78,10 +72,7 @@ class SubnetworkUtilizationDetails extends \Google\Collection
     return $this->internalIpv6Utilization;
   }
   /**
-   * Utilizations of all IPV4 IP ranges. For primary ranges, the range name will
-   * be empty.
-   *
-   * @param SubnetworkUtilizationDetailsIPV4Utilization[] $ipv4Utilizations
+   * @param SubnetworkUtilizationDetailsIPV4Utilization[]
    */
   public function setIpv4Utilizations($ipv4Utilizations)
   {

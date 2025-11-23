@@ -20,16 +20,12 @@ namespace Google\Service\Connectors;
 class ExecuteToolRequest extends \Google\Model
 {
   /**
-   * Input parameters for the tool.
-   *
    * @var array[]
    */
   public $parameters;
 
   /**
-   * Input parameters for the tool.
-   *
-   * @param array[] $parameters
+   * @param array[]
    */
   public function setParameters($parameters)
   {

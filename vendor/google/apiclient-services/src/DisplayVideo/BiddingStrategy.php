@@ -29,9 +29,7 @@ class BiddingStrategy extends \Google\Model
   protected $youtubeAndPartnersBidDataType = '';
 
   /**
-   * A strategy that uses a fixed bid price.
-   *
-   * @param FixedBidStrategy $fixedBid
+   * @param FixedBidStrategy
    */
   public function setFixedBid(FixedBidStrategy $fixedBid)
   {
@@ -45,22 +43,7 @@ class BiddingStrategy extends \Google\Model
     return $this->fixedBid;
   }
   /**
-   * A strategy that automatically adjusts the bid to optimize to your
-   * performance goal while spending the full budget. At insertion order level,
-   * the markup_type of line items cannot be set to
-   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`. In addition, when
-   * performance_goal_type is one of: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` , the line_item_type of
-   * the insertion order line items must be either: *
-   * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` * `LINE_ITEM_TYPE_VIDEO_DEFAULT` , and
-   * when performance_goal_type is either: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` the line_item_type of the
-   * insertion order line items must be `LINE_ITEM_TYPE_VIDEO_DEFAULT`.
-   *
-   * @param MaximizeSpendBidStrategy $maximizeSpendAutoBid
+   * @param MaximizeSpendBidStrategy
    */
   public function setMaximizeSpendAutoBid(MaximizeSpendBidStrategy $maximizeSpendAutoBid)
   {
@@ -74,10 +57,7 @@ class BiddingStrategy extends \Google\Model
     return $this->maximizeSpendAutoBid;
   }
   /**
-   * A strategy that automatically adjusts the bid to meet or beat a specified
-   * performance goal. It is to be used only for a line item entity.
-   *
-   * @param PerformanceGoalBidStrategy $performanceGoalAutoBid
+   * @param PerformanceGoalBidStrategy
    */
   public function setPerformanceGoalAutoBid(PerformanceGoalBidStrategy $performanceGoalAutoBid)
   {
@@ -91,10 +71,7 @@ class BiddingStrategy extends \Google\Model
     return $this->performanceGoalAutoBid;
   }
   /**
-   * A bid strategy used by YouTube and Partners resources. It can only be used
-   * for a YouTube and Partners line item or ad group entity.
-   *
-   * @param YoutubeAndPartnersBiddingStrategy $youtubeAndPartnersBid
+   * @param YoutubeAndPartnersBiddingStrategy
    */
   public function setYoutubeAndPartnersBid(YoutubeAndPartnersBiddingStrategy $youtubeAndPartnersBid)
   {

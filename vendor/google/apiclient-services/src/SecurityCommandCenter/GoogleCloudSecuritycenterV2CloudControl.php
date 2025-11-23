@@ -20,46 +20,24 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2CloudControl extends \Google\Model
 {
   /**
-   * Unspecified.
-   */
-  public const TYPE_CLOUD_CONTROL_TYPE_UNSPECIFIED = 'CLOUD_CONTROL_TYPE_UNSPECIFIED';
-  /**
-   * Built in Cloud Control.
-   */
-  public const TYPE_BUILT_IN = 'BUILT_IN';
-  /**
-   * Custom Cloud Control.
-   */
-  public const TYPE_CUSTOM = 'CUSTOM';
-  /**
-   * Name of the CloudControl associated with the finding.
-   *
    * @var string
    */
   public $cloudControlName;
   /**
-   * Policy type of the CloudControl
-   *
    * @var string
    */
   public $policyType;
   /**
-   * Type of cloud control.
-   *
    * @var string
    */
   public $type;
   /**
-   * Version of the Cloud Control
-   *
    * @var int
    */
   public $version;
 
   /**
-   * Name of the CloudControl associated with the finding.
-   *
-   * @param string $cloudControlName
+   * @param string
    */
   public function setCloudControlName($cloudControlName)
   {
@@ -73,9 +51,7 @@ class GoogleCloudSecuritycenterV2CloudControl extends \Google\Model
     return $this->cloudControlName;
   }
   /**
-   * Policy type of the CloudControl
-   *
-   * @param string $policyType
+   * @param string
    */
   public function setPolicyType($policyType)
   {
@@ -89,27 +65,21 @@ class GoogleCloudSecuritycenterV2CloudControl extends \Google\Model
     return $this->policyType;
   }
   /**
-   * Type of cloud control.
-   *
-   * Accepted values: CLOUD_CONTROL_TYPE_UNSPECIFIED, BUILT_IN, CUSTOM
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * Version of the Cloud Control
-   *
-   * @param int $version
+   * @param int
    */
   public function setVersion($version)
   {

@@ -20,46 +20,32 @@ namespace Google\Service\BigtableAdmin;
 class CreateLogicalViewMetadata extends \Google\Model
 {
   /**
-   * DEPRECATED: Use finish_time instead.
-   *
-   * @deprecated
    * @var string
    */
   public $endTime;
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
    * @var string
    */
   public $finishTime;
   protected $originalRequestType = CreateLogicalViewRequest::class;
   protected $originalRequestDataType = '';
   /**
-   * The time at which the original request was received.
-   *
    * @var string
    */
   public $requestTime;
   /**
-   * DEPRECATED: Use request_time instead.
-   *
-   * @deprecated
    * @var string
    */
   public $startTime;
 
   /**
-   * DEPRECATED: Use finish_time instead.
-   *
-   * @deprecated
-   * @param string $endTime
+   * @param string
    */
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getEndTime()
@@ -67,9 +53,7 @@ class CreateLogicalViewMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
-   * @param string $finishTime
+   * @param string
    */
   public function setFinishTime($finishTime)
   {
@@ -83,10 +67,7 @@ class CreateLogicalViewMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * The request that prompted the initiation of this CreateLogicalView
-   * operation.
-   *
-   * @param CreateLogicalViewRequest $originalRequest
+   * @param CreateLogicalViewRequest
    */
   public function setOriginalRequest(CreateLogicalViewRequest $originalRequest)
   {
@@ -100,9 +81,7 @@ class CreateLogicalViewMetadata extends \Google\Model
     return $this->originalRequest;
   }
   /**
-   * The time at which the original request was received.
-   *
-   * @param string $requestTime
+   * @param string
    */
   public function setRequestTime($requestTime)
   {
@@ -116,17 +95,13 @@ class CreateLogicalViewMetadata extends \Google\Model
     return $this->requestTime;
   }
   /**
-   * DEPRECATED: Use request_time instead.
-   *
-   * @deprecated
-   * @param string $startTime
+   * @param string
    */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getStartTime()

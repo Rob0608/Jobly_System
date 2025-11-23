@@ -20,28 +20,20 @@ namespace Google\Service\Storage;
 class ObjectCustomContextPayload extends \Google\Model
 {
   /**
-   * The time at which the object context was created in RFC 3339 format.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * The time at which the object context was last updated in RFC 3339 format.
-   *
    * @var string
    */
   public $updateTime;
   /**
-   * The value of the object context.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * The time at which the object context was created in RFC 3339 format.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -55,9 +47,7 @@ class ObjectCustomContextPayload extends \Google\Model
     return $this->createTime;
   }
   /**
-   * The time at which the object context was last updated in RFC 3339 format.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {
@@ -71,9 +61,7 @@ class ObjectCustomContextPayload extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * The value of the object context.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

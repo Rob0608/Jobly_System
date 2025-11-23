@@ -20,77 +20,36 @@ namespace Google\Service\OracleDatabase;
 class OdbNetwork extends \Google\Model
 {
   /**
-   * Default unspecified value.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * Indicates that the resource is in provisioning state.
-   */
-  public const STATE_PROVISIONING = 'PROVISIONING';
-  /**
-   * Indicates that the resource is in available state.
-   */
-  public const STATE_AVAILABLE = 'AVAILABLE';
-  /**
-   * Indicates that the resource is in terminating state.
-   */
-  public const STATE_TERMINATING = 'TERMINATING';
-  /**
-   * Indicates that the resource is in failed state.
-   */
-  public const STATE_FAILED = 'FAILED';
-  /**
-   * Output only. The date and time that the OdbNetwork was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * OdbNetwork.
-   *
    * @var string
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
-   *
    * @var string
    */
   public $gcpOracleZone;
   /**
-   * Optional. Labels or tags associated with the resource.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The name of the OdbNetwork resource in the following format:
-   * projects/{project}/locations/{region}/odbNetworks/{odb_network}
-   *
    * @var string
    */
   public $name;
   /**
-   * Required. The name of the VPC network in the following format:
-   * projects/{project}/global/networks/{network}
-   *
    * @var string
    */
   public $network;
   /**
-   * Output only. State of the ODB Network.
-   *
    * @var string
    */
   public $state;
 
   /**
-   * Output only. The date and time that the OdbNetwork was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -104,10 +63,7 @@ class OdbNetwork extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * OdbNetwork.
-   *
-   * @param string $entitlementId
+   * @param string
    */
   public function setEntitlementId($entitlementId)
   {
@@ -121,11 +77,7 @@ class OdbNetwork extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
-   *
-   * @param string $gcpOracleZone
+   * @param string
    */
   public function setGcpOracleZone($gcpOracleZone)
   {
@@ -139,9 +91,7 @@ class OdbNetwork extends \Google\Model
     return $this->gcpOracleZone;
   }
   /**
-   * Optional. Labels or tags associated with the resource.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -155,10 +105,7 @@ class OdbNetwork extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. The name of the OdbNetwork resource in the following format:
-   * projects/{project}/locations/{region}/odbNetworks/{odb_network}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -172,10 +119,7 @@ class OdbNetwork extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The name of the VPC network in the following format:
-   * projects/{project}/global/networks/{network}
-   *
-   * @param string $network
+   * @param string
    */
   public function setNetwork($network)
   {
@@ -189,19 +133,14 @@ class OdbNetwork extends \Google\Model
     return $this->network;
   }
   /**
-   * Output only. State of the ODB Network.
-   *
-   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, AVAILABLE, TERMINATING,
-   * FAILED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {

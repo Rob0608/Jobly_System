@@ -20,31 +20,20 @@ namespace Google\Service\SaaSServiceManagement;
 class ToMapping extends \Google\Model
 {
   /**
-   * Required. Alias of the dependency that the inputVariable will pass its
-   * value to
-   *
    * @var string
    */
   public $dependency;
   /**
-   * Optional. Tells SaaS Runtime if this mapping should be used during lookup
-   * or not
-   *
    * @var bool
    */
   public $ignoreForLookup;
   /**
-   * Required. Name of the inputVariable on the dependency
-   *
    * @var string
    */
   public $inputVariable;
 
   /**
-   * Required. Alias of the dependency that the inputVariable will pass its
-   * value to
-   *
-   * @param string $dependency
+   * @param string
    */
   public function setDependency($dependency)
   {
@@ -58,10 +47,7 @@ class ToMapping extends \Google\Model
     return $this->dependency;
   }
   /**
-   * Optional. Tells SaaS Runtime if this mapping should be used during lookup
-   * or not
-   *
-   * @param bool $ignoreForLookup
+   * @param bool
    */
   public function setIgnoreForLookup($ignoreForLookup)
   {
@@ -75,9 +61,7 @@ class ToMapping extends \Google\Model
     return $this->ignoreForLookup;
   }
   /**
-   * Required. Name of the inputVariable on the dependency
-   *
-   * @param string $inputVariable
+   * @param string
    */
   public function setInputVariable($inputVariable)
   {

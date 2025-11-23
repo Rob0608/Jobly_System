@@ -20,20 +20,12 @@ namespace Google\Service\AndroidManagement;
 class ApplicationSigningKeyCert extends \Google\Model
 {
   /**
-   * Required. The SHA-256 hash value of the signing key certificate of the app.
-   * This must be a valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the
-   * policy is rejected.
-   *
    * @var string
    */
   public $signingKeyCertFingerprintSha256;
 
   /**
-   * Required. The SHA-256 hash value of the signing key certificate of the app.
-   * This must be a valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the
-   * policy is rejected.
-   *
-   * @param string $signingKeyCertFingerprintSha256
+   * @param string
    */
   public function setSigningKeyCertFingerprintSha256($signingKeyCertFingerprintSha256)
   {

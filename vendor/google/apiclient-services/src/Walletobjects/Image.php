@@ -22,18 +22,10 @@ class Image extends \Google\Model
   protected $contentDescriptionType = LocalizedString::class;
   protected $contentDescriptionDataType = '';
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * `"walletobjects#image"`.
-   *
-   * @deprecated
    * @var string
    */
   public $kind;
   /**
-   * An ID for an already uploaded private image. Either this or source_uri
-   * should be set. Requests setting both or neither will be rejected. Please
-   * contact support to use private images.
-   *
    * @var string
    */
   public $privateImageId;
@@ -41,9 +33,7 @@ class Image extends \Google\Model
   protected $sourceUriDataType = '';
 
   /**
-   * Description of the image used for accessibility.
-   *
-   * @param LocalizedString $contentDescription
+   * @param LocalizedString
    */
   public function setContentDescription(LocalizedString $contentDescription)
   {
@@ -57,18 +47,13 @@ class Image extends \Google\Model
     return $this->contentDescription;
   }
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * `"walletobjects#image"`.
-   *
-   * @deprecated
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getKind()
@@ -76,11 +61,7 @@ class Image extends \Google\Model
     return $this->kind;
   }
   /**
-   * An ID for an already uploaded private image. Either this or source_uri
-   * should be set. Requests setting both or neither will be rejected. Please
-   * contact support to use private images.
-   *
-   * @param string $privateImageId
+   * @param string
    */
   public function setPrivateImageId($privateImageId)
   {
@@ -94,10 +75,7 @@ class Image extends \Google\Model
     return $this->privateImageId;
   }
   /**
-   * A URI for the image. Either this or private_image_id should be set.
-   * Requests setting both or neither will be rejected.
-   *
-   * @param ImageUri $sourceUri
+   * @param ImageUri
    */
   public function setSourceUri(ImageUri $sourceUri)
   {

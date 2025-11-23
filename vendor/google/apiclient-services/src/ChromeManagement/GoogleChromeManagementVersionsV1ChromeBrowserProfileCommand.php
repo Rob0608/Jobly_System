@@ -19,69 +19,35 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Google\Model
 {
-  /**
-   * Represents an unspecified command state.
-   */
-  public const COMMAND_STATE_COMMAND_STATE_UNSPECIFIED = 'COMMAND_STATE_UNSPECIFIED';
-  /**
-   * Represents a command in a pending state.
-   */
-  public const COMMAND_STATE_PENDING = 'PENDING';
-  /**
-   * Represents a command that has expired.
-   */
-  public const COMMAND_STATE_EXPIRED = 'EXPIRED';
-  /**
-   * Represents a command that has been executed by the client.
-   */
-  public const COMMAND_STATE_EXECUTED_BY_CLIENT = 'EXECUTED_BY_CLIENT';
   protected $commandResultType = GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult::class;
   protected $commandResultDataType = '';
   /**
-   * Output only. State of the remote command.
-   *
    * @var string
    */
   public $commandState;
   /**
-   * Required. Type of the remote command. The only supported command_type is
-   * "clearBrowsingData".
-   *
    * @var string
    */
   public $commandType;
   /**
-   * Output only. Timestamp of the issurance of the remote command.
-   *
    * @var string
    */
   public $issueTime;
   /**
-   * Identifier. Format: customers/{customer_id}/profiles/{profile_permanent_id}
-   * /commands/{command_id}
-   *
    * @var string
    */
   public $name;
   /**
-   * Required. Payload of the remote command. The payload for
-   * "clearBrowsingData" command supports: - fields "clearCache" and
-   * "clearCookies" - values of boolean type.
-   *
    * @var array[]
    */
   public $payload;
   /**
-   * Output only. Valid duration of the remote command.
-   *
    * @var string
    */
   public $validDuration;
 
   /**
-   * Output only. Result of the remote command.
-   *
-   * @param GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult $commandResult
+   * @param GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult
    */
   public function setCommandResult(GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult $commandResult)
   {
@@ -95,29 +61,21 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Googl
     return $this->commandResult;
   }
   /**
-   * Output only. State of the remote command.
-   *
-   * Accepted values: COMMAND_STATE_UNSPECIFIED, PENDING, EXPIRED,
-   * EXECUTED_BY_CLIENT
-   *
-   * @param self::COMMAND_STATE_* $commandState
+   * @param string
    */
   public function setCommandState($commandState)
   {
     $this->commandState = $commandState;
   }
   /**
-   * @return self::COMMAND_STATE_*
+   * @return string
    */
   public function getCommandState()
   {
     return $this->commandState;
   }
   /**
-   * Required. Type of the remote command. The only supported command_type is
-   * "clearBrowsingData".
-   *
-   * @param string $commandType
+   * @param string
    */
   public function setCommandType($commandType)
   {
@@ -131,9 +89,7 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Googl
     return $this->commandType;
   }
   /**
-   * Output only. Timestamp of the issurance of the remote command.
-   *
-   * @param string $issueTime
+   * @param string
    */
   public function setIssueTime($issueTime)
   {
@@ -147,10 +103,7 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Googl
     return $this->issueTime;
   }
   /**
-   * Identifier. Format: customers/{customer_id}/profiles/{profile_permanent_id}
-   * /commands/{command_id}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -164,11 +117,7 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Googl
     return $this->name;
   }
   /**
-   * Required. Payload of the remote command. The payload for
-   * "clearBrowsingData" command supports: - fields "clearCache" and
-   * "clearCookies" - values of boolean type.
-   *
-   * @param array[] $payload
+   * @param array[]
    */
   public function setPayload($payload)
   {
@@ -182,9 +131,7 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand extends \Googl
     return $this->payload;
   }
   /**
-   * Output only. Valid duration of the remote command.
-   *
-   * @param string $validDuration
+   * @param string
    */
   public function setValidDuration($validDuration)
   {

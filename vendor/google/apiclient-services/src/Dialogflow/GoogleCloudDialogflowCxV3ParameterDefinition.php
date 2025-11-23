@@ -20,49 +20,14 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ParameterDefinition extends \Google\Model
 {
   /**
-   * Not specified. No validation will be performed.
-   */
-  public const TYPE_PARAMETER_TYPE_UNSPECIFIED = 'PARAMETER_TYPE_UNSPECIFIED';
-  /**
-   * Represents any string value.
-   */
-  public const TYPE_STRING = 'STRING';
-  /**
-   * Represents any number value.
-   */
-  public const TYPE_NUMBER = 'NUMBER';
-  /**
-   * Represents a boolean value.
-   */
-  public const TYPE_BOOLEAN = 'BOOLEAN';
-  /**
-   * Represents a null value.
-   */
-  public const TYPE_NULL = 'NULL';
-  /**
-   * Represents any object value.
-   */
-  public const TYPE_OBJECT = 'OBJECT';
-  /**
-   * Represents a repeated value.
-   */
-  public const TYPE_LIST = 'LIST';
-  /**
-   * Human-readable description of the parameter. Limited to 300 characters.
-   *
    * @var string
    */
   public $description;
   /**
-   * Required. Name of parameter.
-   *
    * @var string
    */
   public $name;
   /**
-   * Type of parameter.
-   *
-   * @deprecated
    * @var string
    */
   public $type;
@@ -70,9 +35,7 @@ class GoogleCloudDialogflowCxV3ParameterDefinition extends \Google\Model
   protected $typeSchemaDataType = '';
 
   /**
-   * Human-readable description of the parameter. Limited to 300 characters.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -86,9 +49,7 @@ class GoogleCloudDialogflowCxV3ParameterDefinition extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. Name of parameter.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -102,30 +63,21 @@ class GoogleCloudDialogflowCxV3ParameterDefinition extends \Google\Model
     return $this->name;
   }
   /**
-   * Type of parameter.
-   *
-   * Accepted values: PARAMETER_TYPE_UNSPECIFIED, STRING, NUMBER, BOOLEAN, NULL,
-   * OBJECT, LIST
-   *
-   * @deprecated
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @deprecated
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * Optional. Type schema of parameter.
-   *
-   * @param GoogleCloudDialogflowCxV3TypeSchema $typeSchema
+   * @param GoogleCloudDialogflowCxV3TypeSchema
    */
   public function setTypeSchema(GoogleCloudDialogflowCxV3TypeSchema $typeSchema)
   {

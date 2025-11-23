@@ -21,29 +21,20 @@ class OidcRpConfig extends \Google\Collection
 {
   protected $collection_key = 'redirectUris';
   /**
-   * OAuth2 client ID for OIDC.
-   *
    * @var string
    */
   public $clientId;
   /**
-   * Input only. OAuth2 client secret for OIDC.
-   *
    * @var string
    */
   public $clientSecret;
   /**
-   * Output only. The URL(s) that this client may use in authentication
-   * requests.
-   *
    * @var string[]
    */
   public $redirectUris;
 
   /**
-   * OAuth2 client ID for OIDC.
-   *
-   * @param string $clientId
+   * @param string
    */
   public function setClientId($clientId)
   {
@@ -57,9 +48,7 @@ class OidcRpConfig extends \Google\Collection
     return $this->clientId;
   }
   /**
-   * Input only. OAuth2 client secret for OIDC.
-   *
-   * @param string $clientSecret
+   * @param string
    */
   public function setClientSecret($clientSecret)
   {
@@ -73,10 +62,7 @@ class OidcRpConfig extends \Google\Collection
     return $this->clientSecret;
   }
   /**
-   * Output only. The URL(s) that this client may use in authentication
-   * requests.
-   *
-   * @param string[] $redirectUris
+   * @param string[]
    */
   public function setRedirectUris($redirectUris)
   {

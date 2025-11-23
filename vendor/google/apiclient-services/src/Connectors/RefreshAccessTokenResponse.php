@@ -22,14 +22,12 @@ class RefreshAccessTokenResponse extends \Google\Model
   protected $accessCredentialsType = AccessCredentials::class;
   protected $accessCredentialsDataType = '';
   /**
-   * Metadata like service latency, etc.
-   *
    * @var array[]
    */
   public $metadata;
 
   /**
-   * @param AccessCredentials $accessCredentials
+   * @param AccessCredentials
    */
   public function setAccessCredentials(AccessCredentials $accessCredentials)
   {
@@ -43,9 +41,7 @@ class RefreshAccessTokenResponse extends \Google\Model
     return $this->accessCredentials;
   }
   /**
-   * Metadata like service latency, etc.
-   *
-   * @param array[] $metadata
+   * @param array[]
    */
   public function setMetadata($metadata)
   {

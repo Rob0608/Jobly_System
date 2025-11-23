@@ -22,19 +22,12 @@ class ApplicationPolicyChange extends \Google\Model
   protected $applicationType = ApplicationPolicy::class;
   protected $applicationDataType = '';
   /**
-   * The field mask indicating the fields to update. If omitted, all modifiable
-   * fields are updated.
-   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * If ApplicationPolicy.packageName matches an existing ApplicationPolicy
-   * object within the Policy being modified, then that object will be updated.
-   * Otherwise, it will be added to the end of the Policy.applications.
-   *
-   * @param ApplicationPolicy $application
+   * @param ApplicationPolicy
    */
   public function setApplication(ApplicationPolicy $application)
   {
@@ -48,10 +41,7 @@ class ApplicationPolicyChange extends \Google\Model
     return $this->application;
   }
   /**
-   * The field mask indicating the fields to update. If omitted, all modifiable
-   * fields are updated.
-   *
-   * @param string $updateMask
+   * @param string
    */
   public function setUpdateMask($updateMask)
   {

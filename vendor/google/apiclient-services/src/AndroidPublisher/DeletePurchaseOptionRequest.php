@@ -20,64 +20,28 @@ namespace Google\Service\AndroidPublisher;
 class DeletePurchaseOptionRequest extends \Google\Model
 {
   /**
-   * Defaults to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED';
-  /**
-   * The update will propagate to clients within several minutes on average and
-   * up to a few hours in rare cases. Throughput is limited to 7,200 updates per
-   * app per hour.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE';
-  /**
-   * The update will propagate to clients within 24 hours. Supports high
-   * throughput of up to 720,000 updates per app per hour using batch
-   * modification methods.
-   */
-  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT';
-  /**
-   * Optional. This field has no effect for purchase options with no offers
-   * under them. For purchase options with associated offers: * If `force` is
-   * set to false (default), an error will be returned. * If `force` is set to
-   * true, any associated offers under the purchase option will be deleted.
-   *
    * @var bool
    */
   public $force;
   /**
-   * Optional. The latency tolerance for the propagation of this product update.
-   * Defaults to latency-sensitive.
-   *
    * @var string
    */
   public $latencyTolerance;
   /**
-   * Required. The parent app (package name) of the purchase option to delete.
-   *
    * @var string
    */
   public $packageName;
   /**
-   * Required. The parent one-time product (ID) of the purchase option to
-   * delete.
-   *
    * @var string
    */
   public $productId;
   /**
-   * Required. The purchase option ID of the purchase option to delete.
-   *
    * @var string
    */
   public $purchaseOptionId;
 
   /**
-   * Optional. This field has no effect for purchase options with no offers
-   * under them. For purchase options with associated offers: * If `force` is
-   * set to false (default), an error will be returned. * If `force` is set to
-   * true, any associated offers under the purchase option will be deleted.
-   *
-   * @param bool $force
+   * @param bool
    */
   public function setForce($force)
   {
@@ -91,30 +55,21 @@ class DeletePurchaseOptionRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * Optional. The latency tolerance for the propagation of this product update.
-   * Defaults to latency-sensitive.
-   *
-   * Accepted values: PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED,
-   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE,
-   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT
-   *
-   * @param self::LATENCY_TOLERANCE_* $latencyTolerance
+   * @param string
    */
   public function setLatencyTolerance($latencyTolerance)
   {
     $this->latencyTolerance = $latencyTolerance;
   }
   /**
-   * @return self::LATENCY_TOLERANCE_*
+   * @return string
    */
   public function getLatencyTolerance()
   {
     return $this->latencyTolerance;
   }
   /**
-   * Required. The parent app (package name) of the purchase option to delete.
-   *
-   * @param string $packageName
+   * @param string
    */
   public function setPackageName($packageName)
   {
@@ -128,10 +83,7 @@ class DeletePurchaseOptionRequest extends \Google\Model
     return $this->packageName;
   }
   /**
-   * Required. The parent one-time product (ID) of the purchase option to
-   * delete.
-   *
-   * @param string $productId
+   * @param string
    */
   public function setProductId($productId)
   {
@@ -145,9 +97,7 @@ class DeletePurchaseOptionRequest extends \Google\Model
     return $this->productId;
   }
   /**
-   * Required. The purchase option ID of the purchase option to delete.
-   *
-   * @param string $purchaseOptionId
+   * @param string
    */
   public function setPurchaseOptionId($purchaseOptionId)
   {

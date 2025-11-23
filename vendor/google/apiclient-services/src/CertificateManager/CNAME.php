@@ -21,34 +21,20 @@ class CNAME extends \Google\Collection
 {
   protected $collection_key = 'resolvedData';
   /**
-   * Output only. The expected value of the CNAME record for the domain, equals
-   * to `dns_resource_record.data` in the corresponding `DnsAuthorization`.
-   *
    * @var string
    */
   public $expectedData;
   /**
-   * Output only. The name of the CNAME record for the domain, equals to
-   * `dns_resource_record.name` in the corresponding `DnsAuthorization`.
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. The resolved CNAME chain. Empty list if the CNAME record for
-   * `CNAME.name` is not found. Otherwise the first item is the value of the
-   * CNAME record for `CNAME.name`. If the CNAME chain is longer, the second
-   * item is the value of the CNAME record for the first item, and so on.
-   *
    * @var string[]
    */
   public $resolvedData;
 
   /**
-   * Output only. The expected value of the CNAME record for the domain, equals
-   * to `dns_resource_record.data` in the corresponding `DnsAuthorization`.
-   *
-   * @param string $expectedData
+   * @param string
    */
   public function setExpectedData($expectedData)
   {
@@ -62,10 +48,7 @@ class CNAME extends \Google\Collection
     return $this->expectedData;
   }
   /**
-   * Output only. The name of the CNAME record for the domain, equals to
-   * `dns_resource_record.name` in the corresponding `DnsAuthorization`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -79,12 +62,7 @@ class CNAME extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. The resolved CNAME chain. Empty list if the CNAME record for
-   * `CNAME.name` is not found. Otherwise the first item is the value of the
-   * CNAME record for `CNAME.name`. If the CNAME chain is longer, the second
-   * item is the value of the CNAME record for the first item, and so on.
-   *
-   * @param string[] $resolvedData
+   * @param string[]
    */
   public function setResolvedData($resolvedData)
   {

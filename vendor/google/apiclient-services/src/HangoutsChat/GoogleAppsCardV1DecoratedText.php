@@ -20,24 +20,6 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1DecoratedText extends \Google\Model
 {
   /**
-   * Unspecified type. Do not use.
-   */
-  public const START_ICON_VERTICAL_ALIGNMENT_VERTICAL_ALIGNMENT_UNSPECIFIED = 'VERTICAL_ALIGNMENT_UNSPECIFIED';
-  /**
-   * Alignment to the top position.
-   */
-  public const START_ICON_VERTICAL_ALIGNMENT_TOP = 'TOP';
-  /**
-   * Alignment to the middle position.
-   */
-  public const START_ICON_VERTICAL_ALIGNMENT_MIDDLE = 'MIDDLE';
-  /**
-   * Alignment to the bottom position.
-   */
-  public const START_ICON_VERTICAL_ALIGNMENT_BOTTOM = 'BOTTOM';
-  /**
-   * The text that appears below `text`. Always wraps.
-   *
    * @var string
    */
   public $bottomLabel;
@@ -56,47 +38,28 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
   protected $startIconType = GoogleAppsCardV1Icon::class;
   protected $startIconDataType = '';
   /**
-   * Optional. Vertical alignment of the start icon. If not set, the icon will
-   * be vertically centered. [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
-   *
    * @var string
    */
   public $startIconVerticalAlignment;
   protected $switchControlType = GoogleAppsCardV1SwitchControl::class;
   protected $switchControlDataType = '';
   /**
-   * Required. The primary text. Supports simple formatting. For more
-   * information about formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/workspace/chat/format-messages#card-
-   * formatting) and [Formatting text in Google Workspace add-
-   * ons](https://developers.google.com/apps-script/add-
-   * ons/concepts/widgets#text_formatting).
-   *
    * @var string
    */
   public $text;
   /**
-   * The text that appears above `text`. Always truncates.
-   *
    * @var string
    */
   public $topLabel;
   protected $topLabelTextType = GoogleAppsCardV1TextParagraph::class;
   protected $topLabelTextDataType = '';
   /**
-   * The wrap text setting. If `true`, the text wraps and displays on multiple
-   * lines. Otherwise, the text is truncated. Only applies to `text`, not
-   * `topLabel` and `bottomLabel`.
-   *
    * @var bool
    */
   public $wrapText;
 
   /**
-   * The text that appears below `text`. Always wraps.
-   *
-   * @param string $bottomLabel
+   * @param string
    */
   public function setBottomLabel($bottomLabel)
   {
@@ -110,11 +73,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->bottomLabel;
   }
   /**
-   * `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for more
-   * complex formatting than `bottom_label`. [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
-   *
-   * @param GoogleAppsCardV1TextParagraph $bottomLabelText
+   * @param GoogleAppsCardV1TextParagraph
    */
   public function setBottomLabelText(GoogleAppsCardV1TextParagraph $bottomLabelText)
   {
@@ -128,9 +87,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->bottomLabelText;
   }
   /**
-   * A button that a user can click to trigger an action.
-   *
-   * @param GoogleAppsCardV1Button $button
+   * @param GoogleAppsCardV1Button
    */
   public function setButton(GoogleAppsCardV1Button $button)
   {
@@ -144,11 +101,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->button;
   }
   /**
-   * `TextParagraph` equivalent of `text`. Allows for more complex formatting
-   * than `text`. [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
-   *
-   * @param GoogleAppsCardV1TextParagraph $contentText
+   * @param GoogleAppsCardV1TextParagraph
    */
   public function setContentText(GoogleAppsCardV1TextParagraph $contentText)
   {
@@ -162,13 +115,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->contentText;
   }
   /**
-   * An icon displayed after the text. Supports [built-
-   * in](https://developers.google.com/workspace/chat/format-
-   * messages#builtinicons) and
-   * [custom](https://developers.google.com/workspace/chat/format-
-   * messages#customicons) icons.
-   *
-   * @param GoogleAppsCardV1Icon $endIcon
+   * @param GoogleAppsCardV1Icon
    */
   public function setEndIcon(GoogleAppsCardV1Icon $endIcon)
   {
@@ -182,17 +129,13 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->endIcon;
   }
   /**
-   * Deprecated in favor of `startIcon`.
-   *
-   * @deprecated
-   * @param GoogleAppsCardV1Icon $icon
+   * @param GoogleAppsCardV1Icon
    */
   public function setIcon(GoogleAppsCardV1Icon $icon)
   {
     $this->icon = $icon;
   }
   /**
-   * @deprecated
    * @return GoogleAppsCardV1Icon
    */
   public function getIcon()
@@ -200,9 +143,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->icon;
   }
   /**
-   * This action is triggered when users click `topLabel` or `bottomLabel`.
-   *
-   * @param GoogleAppsCardV1OnClick $onClick
+   * @param GoogleAppsCardV1OnClick
    */
   public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
@@ -216,9 +157,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->onClick;
   }
   /**
-   * The icon displayed in front of the text.
-   *
-   * @param GoogleAppsCardV1Icon $startIcon
+   * @param GoogleAppsCardV1Icon
    */
   public function setStartIcon(GoogleAppsCardV1Icon $startIcon)
   {
@@ -232,30 +171,21 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->startIcon;
   }
   /**
-   * Optional. Vertical alignment of the start icon. If not set, the icon will
-   * be vertically centered. [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
-   *
-   * Accepted values: VERTICAL_ALIGNMENT_UNSPECIFIED, TOP, MIDDLE, BOTTOM
-   *
-   * @param self::START_ICON_VERTICAL_ALIGNMENT_* $startIconVerticalAlignment
+   * @param string
    */
   public function setStartIconVerticalAlignment($startIconVerticalAlignment)
   {
     $this->startIconVerticalAlignment = $startIconVerticalAlignment;
   }
   /**
-   * @return self::START_ICON_VERTICAL_ALIGNMENT_*
+   * @return string
    */
   public function getStartIconVerticalAlignment()
   {
     return $this->startIconVerticalAlignment;
   }
   /**
-   * A switch widget that a user can click to change its state and trigger an
-   * action.
-   *
-   * @param GoogleAppsCardV1SwitchControl $switchControl
+   * @param GoogleAppsCardV1SwitchControl
    */
   public function setSwitchControl(GoogleAppsCardV1SwitchControl $switchControl)
   {
@@ -269,14 +199,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->switchControl;
   }
   /**
-   * Required. The primary text. Supports simple formatting. For more
-   * information about formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/workspace/chat/format-messages#card-
-   * formatting) and [Formatting text in Google Workspace add-
-   * ons](https://developers.google.com/apps-script/add-
-   * ons/concepts/widgets#text_formatting).
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -290,9 +213,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->text;
   }
   /**
-   * The text that appears above `text`. Always truncates.
-   *
-   * @param string $topLabel
+   * @param string
    */
   public function setTopLabel($topLabel)
   {
@@ -306,11 +227,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->topLabel;
   }
   /**
-   * `TextParagraph` equivalent of `top_label`. Always truncates. Allows for
-   * more complex formatting than `top_label`. [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
-   *
-   * @param GoogleAppsCardV1TextParagraph $topLabelText
+   * @param GoogleAppsCardV1TextParagraph
    */
   public function setTopLabelText(GoogleAppsCardV1TextParagraph $topLabelText)
   {
@@ -324,11 +241,7 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->topLabelText;
   }
   /**
-   * The wrap text setting. If `true`, the text wraps and displays on multiple
-   * lines. Otherwise, the text is truncated. Only applies to `text`, not
-   * `topLabel` and `bottomLabel`.
-   *
-   * @param bool $wrapText
+   * @param bool
    */
   public function setWrapText($wrapText)
   {

@@ -20,18 +20,12 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantGenerationConfigSystemInstruction extends \Google\Model
 {
   /**
-   * Optional. Additional system instruction that will be added to the default
-   * system instruction.
-   *
    * @var string
    */
   public $additionalSystemInstruction;
 
   /**
-   * Optional. Additional system instruction that will be added to the default
-   * system instruction.
-   *
-   * @param string $additionalSystemInstruction
+   * @param string
    */
   public function setAdditionalSystemInstruction($additionalSystemInstruction)
   {

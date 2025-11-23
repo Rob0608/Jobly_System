@@ -24,9 +24,7 @@ class BulkCreateAdAssetsResponse extends \Google\Collection
   protected $adAssetsDataType = 'array';
 
   /**
-   * The created ad assets.
-   *
-   * @param AdAsset[] $adAssets
+   * @param AdAsset[]
    */
   public function setAdAssets($adAssets)
   {

@@ -20,40 +20,20 @@ namespace Google\Service\Compute;
 class AllocationResourceStatusHealthInfo extends \Google\Model
 {
   /**
-   * The reservation is degraded.
-   */
-  public const HEALTH_STATUS_DEGRADED = 'DEGRADED';
-  /**
-   * The reservation is healthy.
-   */
-  public const HEALTH_STATUS_HEALTHY = 'HEALTHY';
-  /**
-   * The health status of the reservation is unspecified.
-   */
-  public const HEALTH_STATUS_HEALTH_STATUS_UNSPECIFIED = 'HEALTH_STATUS_UNSPECIFIED';
-  /**
-   * The number of reservation blocks that are degraded.
-   *
    * @var int
    */
   public $degradedBlockCount;
   /**
-   * The health status of the reservation.
-   *
    * @var string
    */
   public $healthStatus;
   /**
-   * The number of reservation blocks that are healthy.
-   *
    * @var int
    */
   public $healthyBlockCount;
 
   /**
-   * The number of reservation blocks that are degraded.
-   *
-   * @param int $degradedBlockCount
+   * @param int
    */
   public function setDegradedBlockCount($degradedBlockCount)
   {
@@ -67,27 +47,21 @@ class AllocationResourceStatusHealthInfo extends \Google\Model
     return $this->degradedBlockCount;
   }
   /**
-   * The health status of the reservation.
-   *
-   * Accepted values: DEGRADED, HEALTHY, HEALTH_STATUS_UNSPECIFIED
-   *
-   * @param self::HEALTH_STATUS_* $healthStatus
+   * @param string
    */
   public function setHealthStatus($healthStatus)
   {
     $this->healthStatus = $healthStatus;
   }
   /**
-   * @return self::HEALTH_STATUS_*
+   * @return string
    */
   public function getHealthStatus()
   {
     return $this->healthStatus;
   }
   /**
-   * The number of reservation blocks that are healthy.
-   *
-   * @param int $healthyBlockCount
+   * @param int
    */
   public function setHealthyBlockCount($healthyBlockCount)
   {

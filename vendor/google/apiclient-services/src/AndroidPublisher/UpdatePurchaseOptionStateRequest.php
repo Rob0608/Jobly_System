@@ -25,10 +25,7 @@ class UpdatePurchaseOptionStateRequest extends \Google\Model
   protected $deactivatePurchaseOptionRequestDataType = '';
 
   /**
-   * Activates a purchase option. Once activated, the purchase option will be
-   * available.
-   *
-   * @param ActivatePurchaseOptionRequest $activatePurchaseOptionRequest
+   * @param ActivatePurchaseOptionRequest
    */
   public function setActivatePurchaseOptionRequest(ActivatePurchaseOptionRequest $activatePurchaseOptionRequest)
   {
@@ -42,10 +39,7 @@ class UpdatePurchaseOptionStateRequest extends \Google\Model
     return $this->activatePurchaseOptionRequest;
   }
   /**
-   * Deactivates a purchase option. Once deactivated, the purchase option will
-   * become unavailable.
-   *
-   * @param DeactivatePurchaseOptionRequest $deactivatePurchaseOptionRequest
+   * @param DeactivatePurchaseOptionRequest
    */
   public function setDeactivatePurchaseOptionRequest(DeactivatePurchaseOptionRequest $deactivatePurchaseOptionRequest)
   {

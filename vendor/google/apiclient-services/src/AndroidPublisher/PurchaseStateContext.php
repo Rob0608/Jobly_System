@@ -20,43 +20,19 @@ namespace Google\Service\AndroidPublisher;
 class PurchaseStateContext extends \Google\Model
 {
   /**
-   * Purchase state unspecified. This value should never be set.
-   */
-  public const PURCHASE_STATE_PURCHASE_STATE_UNSPECIFIED = 'PURCHASE_STATE_UNSPECIFIED';
-  /**
-   * Purchased successfully.
-   */
-  public const PURCHASE_STATE_PURCHASED = 'PURCHASED';
-  /**
-   * Purchase canceled.
-   */
-  public const PURCHASE_STATE_CANCELLED = 'CANCELLED';
-  /**
-   * The purchase is in a pending state and has not yet been completed. For more
-   * information on handling pending purchases, see
-   * https://developer.android.com/google/play/billing/integrate#pending.
-   */
-  public const PURCHASE_STATE_PENDING = 'PENDING';
-  /**
-   * Output only. The purchase state of the purchase.
-   *
    * @var string
    */
   public $purchaseState;
 
   /**
-   * Output only. The purchase state of the purchase.
-   *
-   * Accepted values: PURCHASE_STATE_UNSPECIFIED, PURCHASED, CANCELLED, PENDING
-   *
-   * @param self::PURCHASE_STATE_* $purchaseState
+   * @param string
    */
   public function setPurchaseState($purchaseState)
   {
     $this->purchaseState = $purchaseState;
   }
   /**
-   * @return self::PURCHASE_STATE_*
+   * @return string
    */
   public function getPurchaseState()
   {

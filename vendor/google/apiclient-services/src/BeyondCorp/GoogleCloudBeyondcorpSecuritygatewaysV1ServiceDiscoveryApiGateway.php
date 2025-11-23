@@ -23,10 +23,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway extends 
   protected $resourceOverrideDataType = '';
 
   /**
-   * Required. Enables fetching resource model updates to alter service behavior
-   * per Chrome profile.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor $resourceOverride
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor
    */
   public function setResourceOverride(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor $resourceOverride)
   {

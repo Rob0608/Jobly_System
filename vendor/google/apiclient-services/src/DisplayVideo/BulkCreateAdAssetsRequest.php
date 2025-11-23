@@ -24,10 +24,7 @@ class BulkCreateAdAssetsRequest extends \Google\Collection
   protected $adAssetsDataType = 'array';
 
   /**
-   * Required. Ad assets to create. Only supports assets of AdAssetType
-   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
-   *
-   * @param AdAsset[] $adAssets
+   * @param AdAsset[]
    */
   public function setAdAssets($adAssets)
   {

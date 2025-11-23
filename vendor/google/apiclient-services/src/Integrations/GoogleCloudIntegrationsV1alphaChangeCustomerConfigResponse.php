@@ -23,9 +23,7 @@ class GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse extends \Google
   protected $customerConfigDataType = '';
 
   /**
-   * Required. The updated customer configuration.
-   *
-   * @param GoogleCloudIntegrationsV1alphaCustomerConfig $customerConfig
+   * @param GoogleCloudIntegrationsV1alphaCustomerConfig
    */
   public function setCustomerConfig(GoogleCloudIntegrationsV1alphaCustomerConfig $customerConfig)
   {

@@ -30,9 +30,7 @@ class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
   protected $toolCallInfoDataType = 'array';
 
   /**
-   * Optional. Suggestion to coach the agent.
-   *
-   * @param GoogleCloudDialogflowV2AgentCoachingSuggestion $agentCoachingSuggestion
+   * @param GoogleCloudDialogflowV2AgentCoachingSuggestion
    */
   public function setAgentCoachingSuggestion(GoogleCloudDialogflowV2AgentCoachingSuggestion $agentCoachingSuggestion)
   {
@@ -46,9 +44,7 @@ class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
     return $this->agentCoachingSuggestion;
   }
   /**
-   * Optional. Free form suggestion.
-   *
-   * @param GoogleCloudDialogflowV2FreeFormSuggestion $freeFormSuggestion
+   * @param GoogleCloudDialogflowV2FreeFormSuggestion
    */
   public function setFreeFormSuggestion(GoogleCloudDialogflowV2FreeFormSuggestion $freeFormSuggestion)
   {
@@ -62,9 +58,7 @@ class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
     return $this->freeFormSuggestion;
   }
   /**
-   * Optional. Suggested summary.
-   *
-   * @param GoogleCloudDialogflowV2SummarySuggestion $summarySuggestion
+   * @param GoogleCloudDialogflowV2SummarySuggestion
    */
   public function setSummarySuggestion(GoogleCloudDialogflowV2SummarySuggestion $summarySuggestion)
   {
@@ -78,9 +72,7 @@ class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
     return $this->summarySuggestion;
   }
   /**
-   * Optional. List of request and response for tool calls executed.
-   *
-   * @param GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo[] $toolCallInfo
+   * @param GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo[]
    */
   public function setToolCallInfo($toolCallInfo)
   {

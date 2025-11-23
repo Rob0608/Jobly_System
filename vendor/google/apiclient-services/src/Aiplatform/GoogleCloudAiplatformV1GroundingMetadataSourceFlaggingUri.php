@@ -20,22 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri extends \Google\Model
 {
   /**
-   * The URI that can be used to flag the content.
-   *
    * @var string
    */
   public $flagContentUri;
   /**
-   * The ID of the place or review.
-   *
    * @var string
    */
   public $sourceId;
 
   /**
-   * The URI that can be used to flag the content.
-   *
-   * @param string $flagContentUri
+   * @param string
    */
   public function setFlagContentUri($flagContentUri)
   {
@@ -49,9 +43,7 @@ class GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri extends \Google\
     return $this->flagContentUri;
   }
   /**
-   * The ID of the place or review.
-   *
-   * @param string $sourceId
+   * @param string
    */
   public function setSourceId($sourceId)
   {

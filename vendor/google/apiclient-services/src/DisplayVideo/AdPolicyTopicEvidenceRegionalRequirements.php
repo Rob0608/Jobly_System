@@ -24,9 +24,7 @@ class AdPolicyTopicEvidenceRegionalRequirements extends \Google\Collection
   protected $regionalRequirementsEntriesDataType = 'array';
 
   /**
-   * List of regional requirements.
-   *
-   * @param AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry[] $regionalRequirementsEntries
+   * @param AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry[]
    */
   public function setRegionalRequirementsEntries($regionalRequirementsEntries)
   {

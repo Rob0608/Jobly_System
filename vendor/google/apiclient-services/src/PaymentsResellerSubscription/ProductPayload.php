@@ -27,9 +27,7 @@ class ProductPayload extends \Google\Model
   protected $youtubePayloadDataType = '';
 
   /**
-   * Payload specific to Google Home products.
-   *
-   * @param GoogleHomePayload $googleHomePayload
+   * @param GoogleHomePayload
    */
   public function setGoogleHomePayload(GoogleHomePayload $googleHomePayload)
   {
@@ -43,9 +41,7 @@ class ProductPayload extends \Google\Model
     return $this->googleHomePayload;
   }
   /**
-   * Product-specific payloads. Payload specific to Google One products.
-   *
-   * @param GoogleOnePayload $googleOnePayload
+   * @param GoogleOnePayload
    */
   public function setGoogleOnePayload(GoogleOnePayload $googleOnePayload)
   {
@@ -59,9 +55,7 @@ class ProductPayload extends \Google\Model
     return $this->googleOnePayload;
   }
   /**
-   * Payload specific to Youtube products.
-   *
-   * @param YoutubePayload $youtubePayload
+   * @param YoutubePayload
    */
   public function setYoutubePayload(YoutubePayload $youtubePayload)
   {

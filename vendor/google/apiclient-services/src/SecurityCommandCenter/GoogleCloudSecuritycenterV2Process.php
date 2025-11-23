@@ -21,14 +21,10 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
 {
   protected $collection_key = 'libraries';
   /**
-   * Process arguments as JSON encoded strings.
-   *
    * @var string[]
    */
   public $args;
   /**
-   * True if `args` is incomplete.
-   *
    * @var bool
    */
   public $argumentsTruncated;
@@ -37,47 +33,32 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
   protected $envVariablesType = GoogleCloudSecuritycenterV2EnvironmentVariable::class;
   protected $envVariablesDataType = 'array';
   /**
-   * True if `env_variables` is incomplete.
-   *
    * @var bool
    */
   public $envVariablesTruncated;
   protected $librariesType = GoogleCloudSecuritycenterV2File::class;
   protected $librariesDataType = 'array';
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name
-   * can be accessed through `/proc/[pid]/comm` and changed with
-   * `prctl(PR_SET_NAME)`.
-   *
    * @var string
    */
   public $name;
   /**
-   * The parent process ID.
-   *
    * @var string
    */
   public $parentPid;
   /**
-   * The process ID.
-   *
    * @var string
    */
   public $pid;
   protected $scriptType = GoogleCloudSecuritycenterV2File::class;
   protected $scriptDataType = '';
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user
-   * this will always be 0.
-   *
    * @var string
    */
   public $userId;
 
   /**
-   * Process arguments as JSON encoded strings.
-   *
-   * @param string[] $args
+   * @param string[]
    */
   public function setArgs($args)
   {
@@ -91,9 +72,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->args;
   }
   /**
-   * True if `args` is incomplete.
-   *
-   * @param bool $argumentsTruncated
+   * @param bool
    */
   public function setArgumentsTruncated($argumentsTruncated)
   {
@@ -107,9 +86,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->argumentsTruncated;
   }
   /**
-   * File information for the process executable.
-   *
-   * @param GoogleCloudSecuritycenterV2File $binary
+   * @param GoogleCloudSecuritycenterV2File
    */
   public function setBinary(GoogleCloudSecuritycenterV2File $binary)
   {
@@ -123,9 +100,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->binary;
   }
   /**
-   * Process environment variables.
-   *
-   * @param GoogleCloudSecuritycenterV2EnvironmentVariable[] $envVariables
+   * @param GoogleCloudSecuritycenterV2EnvironmentVariable[]
    */
   public function setEnvVariables($envVariables)
   {
@@ -139,9 +114,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->envVariables;
   }
   /**
-   * True if `env_variables` is incomplete.
-   *
-   * @param bool $envVariablesTruncated
+   * @param bool
    */
   public function setEnvVariablesTruncated($envVariablesTruncated)
   {
@@ -155,9 +128,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->envVariablesTruncated;
   }
   /**
-   * File information for libraries loaded by the process.
-   *
-   * @param GoogleCloudSecuritycenterV2File[] $libraries
+   * @param GoogleCloudSecuritycenterV2File[]
    */
   public function setLibraries($libraries)
   {
@@ -171,11 +142,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->libraries;
   }
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name
-   * can be accessed through `/proc/[pid]/comm` and changed with
-   * `prctl(PR_SET_NAME)`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -189,9 +156,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->name;
   }
   /**
-   * The parent process ID.
-   *
-   * @param string $parentPid
+   * @param string
    */
   public function setParentPid($parentPid)
   {
@@ -205,9 +170,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->parentPid;
   }
   /**
-   * The process ID.
-   *
-   * @param string $pid
+   * @param string
    */
   public function setPid($pid)
   {
@@ -221,11 +184,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->pid;
   }
   /**
-   * When the process represents the invocation of a script, `binary` provides
-   * information about the interpreter, while `script` provides information
-   * about the script file provided to the interpreter.
-   *
-   * @param GoogleCloudSecuritycenterV2File $script
+   * @param GoogleCloudSecuritycenterV2File
    */
   public function setScript(GoogleCloudSecuritycenterV2File $script)
   {
@@ -239,10 +198,7 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
     return $this->script;
   }
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user
-   * this will always be 0.
-   *
-   * @param string $userId
+   * @param string
    */
   public function setUserId($userId)
   {

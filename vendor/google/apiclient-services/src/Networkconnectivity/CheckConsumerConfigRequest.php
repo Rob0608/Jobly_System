@@ -20,49 +20,24 @@ namespace Google\Service\Networkconnectivity;
 class CheckConsumerConfigRequest extends \Google\Model
 {
   /**
-   * Default value. We will use IPv4 or IPv6 depending on the IP version of
-   * first available subnetwork.
-   */
-  public const REQUESTED_IP_VERSION_IP_VERSION_UNSPECIFIED = 'IP_VERSION_UNSPECIFIED';
-  /**
-   * Will use IPv4 only.
-   */
-  public const REQUESTED_IP_VERSION_IPV4 = 'IPV4';
-  /**
-   * Will use IPv6 only.
-   */
-  public const REQUESTED_IP_VERSION_IPV6 = 'IPV6';
-  /**
-   * Required. Full resource name of the consumer network. Example: -
-   * projects/{project}/global/networks/{network}.
-   *
    * @var string
    */
   public $consumerNetwork;
   /**
-   * The project number or ID where the PSC endpoint is to be created.
-   *
    * @var string
    */
   public $endpointProject;
   /**
-   * The requested IP Version
-   *
    * @var string
    */
   public $requestedIpVersion;
   /**
-   * Required. The service class identifier of the producer.
-   *
    * @var string
    */
   public $serviceClass;
 
   /**
-   * Required. Full resource name of the consumer network. Example: -
-   * projects/{project}/global/networks/{network}.
-   *
-   * @param string $consumerNetwork
+   * @param string
    */
   public function setConsumerNetwork($consumerNetwork)
   {
@@ -76,9 +51,7 @@ class CheckConsumerConfigRequest extends \Google\Model
     return $this->consumerNetwork;
   }
   /**
-   * The project number or ID where the PSC endpoint is to be created.
-   *
-   * @param string $endpointProject
+   * @param string
    */
   public function setEndpointProject($endpointProject)
   {
@@ -92,27 +65,21 @@ class CheckConsumerConfigRequest extends \Google\Model
     return $this->endpointProject;
   }
   /**
-   * The requested IP Version
-   *
-   * Accepted values: IP_VERSION_UNSPECIFIED, IPV4, IPV6
-   *
-   * @param self::REQUESTED_IP_VERSION_* $requestedIpVersion
+   * @param string
    */
   public function setRequestedIpVersion($requestedIpVersion)
   {
     $this->requestedIpVersion = $requestedIpVersion;
   }
   /**
-   * @return self::REQUESTED_IP_VERSION_*
+   * @return string
    */
   public function getRequestedIpVersion()
   {
     return $this->requestedIpVersion;
   }
   /**
-   * Required. The service class identifier of the producer.
-   *
-   * @param string $serviceClass
+   * @param string
    */
   public function setServiceClass($serviceClass)
   {

@@ -20,22 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AdPolicyCriterionRestriction extends \Google\Model
 {
   /**
-   * The country criterion id.
-   *
    * @var string
    */
   public $countryCriterionId;
   /**
-   * Localized name for the country. May be empty.
-   *
    * @var string
    */
   public $countryLabel;
 
   /**
-   * The country criterion id.
-   *
-   * @param string $countryCriterionId
+   * @param string
    */
   public function setCountryCriterionId($countryCriterionId)
   {
@@ -49,9 +43,7 @@ class AdPolicyCriterionRestriction extends \Google\Model
     return $this->countryCriterionId;
   }
   /**
-   * Localized name for the country. May be empty.
-   *
-   * @param string $countryLabel
+   * @param string
    */
   public function setCountryLabel($countryLabel)
   {

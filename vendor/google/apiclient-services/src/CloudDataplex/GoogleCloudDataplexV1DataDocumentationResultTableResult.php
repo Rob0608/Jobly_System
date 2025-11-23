@@ -21,16 +21,10 @@ class GoogleCloudDataplexV1DataDocumentationResultTableResult extends \Google\Co
 {
   protected $collection_key = 'queries';
   /**
-   * Output only. The service-qualified full resource name of the cloud
-   * resource. Ex: //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASE
-   * T_ID/tables/TABLE_ID
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. Generated description of the table.
-   *
    * @var string
    */
   public $overview;
@@ -40,11 +34,7 @@ class GoogleCloudDataplexV1DataDocumentationResultTableResult extends \Google\Co
   protected $schemaDataType = '';
 
   /**
-   * Output only. The service-qualified full resource name of the cloud
-   * resource. Ex: //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASE
-   * T_ID/tables/TABLE_ID
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -58,9 +48,7 @@ class GoogleCloudDataplexV1DataDocumentationResultTableResult extends \Google\Co
     return $this->name;
   }
   /**
-   * Output only. Generated description of the table.
-   *
-   * @param string $overview
+   * @param string
    */
   public function setOverview($overview)
   {
@@ -74,9 +62,7 @@ class GoogleCloudDataplexV1DataDocumentationResultTableResult extends \Google\Co
     return $this->overview;
   }
   /**
-   * Output only. Sample SQL queries for the table.
-   *
-   * @param GoogleCloudDataplexV1DataDocumentationResultQuery[] $queries
+   * @param GoogleCloudDataplexV1DataDocumentationResultQuery[]
    */
   public function setQueries($queries)
   {
@@ -90,10 +76,7 @@ class GoogleCloudDataplexV1DataDocumentationResultTableResult extends \Google\Co
     return $this->queries;
   }
   /**
-   * Output only. Schema of the table with generated metadata of the columns in
-   * the schema.
-   *
-   * @param GoogleCloudDataplexV1DataDocumentationResultSchema $schema
+   * @param GoogleCloudDataplexV1DataDocumentationResultSchema
    */
   public function setSchema(GoogleCloudDataplexV1DataDocumentationResultSchema $schema)
   {

@@ -20,25 +20,16 @@ namespace Google\Service\Texttospeech;
 class MultispeakerPrebuiltVoice extends \Google\Model
 {
   /**
-   * Required. The speaker alias of the voice. This is the user-chosen speaker
-   * name that is used in the multispeaker text input, such as "Speaker1".
-   *
    * @var string
    */
   public $speakerAlias;
   /**
-   * Required. The speaker ID of the voice. See https://cloud.google.com/text-
-   * to-speech/docs/gemini-tts#voice_options for available values.
-   *
    * @var string
    */
   public $speakerId;
 
   /**
-   * Required. The speaker alias of the voice. This is the user-chosen speaker
-   * name that is used in the multispeaker text input, such as "Speaker1".
-   *
-   * @param string $speakerAlias
+   * @param string
    */
   public function setSpeakerAlias($speakerAlias)
   {
@@ -52,10 +43,7 @@ class MultispeakerPrebuiltVoice extends \Google\Model
     return $this->speakerAlias;
   }
   /**
-   * Required. The speaker ID of the voice. See https://cloud.google.com/text-
-   * to-speech/docs/gemini-tts#voice_options for available values.
-   *
-   * @param string $speakerId
+   * @param string
    */
   public function setSpeakerId($speakerId)
   {

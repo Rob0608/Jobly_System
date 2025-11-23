@@ -20,22 +20,16 @@ namespace Google\Service\DataManager;
 class ExperimentalField extends \Google\Model
 {
   /**
-   * Optional. The name of the field to use.
-   *
    * @var string
    */
   public $field;
   /**
-   * Optional. The value the field to set.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * Optional. The name of the field to use.
-   *
-   * @param string $field
+   * @param string
    */
   public function setField($field)
   {
@@ -49,9 +43,7 @@ class ExperimentalField extends \Google\Model
     return $this->field;
   }
   /**
-   * Optional. The value the field to set.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

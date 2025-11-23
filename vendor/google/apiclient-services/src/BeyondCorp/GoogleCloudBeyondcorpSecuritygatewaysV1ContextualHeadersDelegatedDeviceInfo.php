@@ -20,41 +20,19 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo extends \Google\Model
 {
   /**
-   * The unspecified output type.
-   */
-  public const OUTPUT_TYPE_OUTPUT_TYPE_UNSPECIFIED = 'OUTPUT_TYPE_UNSPECIFIED';
-  /**
-   * Protobuf output type.
-   */
-  public const OUTPUT_TYPE_PROTOBUF = 'PROTOBUF';
-  /**
-   * JSON output type.
-   */
-  public const OUTPUT_TYPE_JSON = 'JSON';
-  /**
-   * Explicitly disable header output.
-   */
-  public const OUTPUT_TYPE_NONE = 'NONE';
-  /**
-   * Optional. The output type details for the delegated device.
-   *
    * @var string
    */
   public $outputType;
 
   /**
-   * Optional. The output type details for the delegated device.
-   *
-   * Accepted values: OUTPUT_TYPE_UNSPECIFIED, PROTOBUF, JSON, NONE
-   *
-   * @param self::OUTPUT_TYPE_* $outputType
+   * @param string
    */
   public function setOutputType($outputType)
   {
     $this->outputType = $outputType;
   }
   /**
-   * @return self::OUTPUT_TYPE_*
+   * @return string
    */
   public function getOutputType()
   {

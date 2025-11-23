@@ -20,34 +20,24 @@ namespace Google\Service\WorkloadManager;
 class InvalidRule extends \Google\Model
 {
   /**
-   * display name of the invalid rule
-   *
    * @var string
    */
   public $displayName;
   /**
-   * cloud storage destination of the invalid rule
-   *
    * @var string
    */
   public $gcsUri;
   /**
-   * name of the invalid rule
-   *
    * @var string
    */
   public $name;
   /**
-   * The error message of valdating rule formats.
-   *
    * @var string
    */
   public $valiadtionError;
 
   /**
-   * display name of the invalid rule
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -61,9 +51,7 @@ class InvalidRule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * cloud storage destination of the invalid rule
-   *
-   * @param string $gcsUri
+   * @param string
    */
   public function setGcsUri($gcsUri)
   {
@@ -77,9 +65,7 @@ class InvalidRule extends \Google\Model
     return $this->gcsUri;
   }
   /**
-   * name of the invalid rule
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -93,9 +79,7 @@ class InvalidRule extends \Google\Model
     return $this->name;
   }
   /**
-   * The error message of valdating rule formats.
-   *
-   * @param string $valiadtionError
+   * @param string
    */
   public function setValiadtionError($valiadtionError)
   {

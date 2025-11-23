@@ -23,10 +23,7 @@ class InstancesPreCheckMajorVersionUpgradeRequest extends \Google\Model
   protected $preCheckMajorVersionUpgradeContextDataType = '';
 
   /**
-   * Required. Contains details about the pre-check major version upgrade
-   * operation.
-   *
-   * @param PreCheckMajorVersionUpgradeContext $preCheckMajorVersionUpgradeContext
+   * @param PreCheckMajorVersionUpgradeContext
    */
   public function setPreCheckMajorVersionUpgradeContext(PreCheckMajorVersionUpgradeContext $preCheckMajorVersionUpgradeContext)
   {

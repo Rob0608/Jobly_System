@@ -20,24 +20,16 @@ namespace Google\Service\PaymentsResellerSubscription;
 class UserSession extends \Google\Model
 {
   /**
-   * Output only. The time at which the user session expires.
-   *
    * @var string
    */
   public $expireTime;
   /**
-   * Output only. The encrypted token of the user session, including the
-   * information of the user's intent and request. This token should be provided
-   * when redirecting the user to Google.
-   *
    * @var string
    */
   public $token;
 
   /**
-   * Output only. The time at which the user session expires.
-   *
-   * @param string $expireTime
+   * @param string
    */
   public function setExpireTime($expireTime)
   {
@@ -51,11 +43,7 @@ class UserSession extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * Output only. The encrypted token of the user session, including the
-   * information of the user's intent and request. This token should be provided
-   * when redirecting the user to Google.
-   *
-   * @param string $token
+   * @param string
    */
   public function setToken($token)
   {

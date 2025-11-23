@@ -23,11 +23,7 @@ class WireGroupEndpoint extends \Google\Model
   protected $interconnectsDataType = 'map';
 
   /**
-   * A map that contains the redundant Interconnect connections. Specify key-
-   * value pairs for the map as follows:        - Key: an RFC1035 user-specified
-   * label.    - Value: an Interconnect object.
-   *
-   * @param WireGroupEndpointInterconnect[] $interconnects
+   * @param WireGroupEndpointInterconnect[]
    */
   public function setInterconnects($interconnects)
   {

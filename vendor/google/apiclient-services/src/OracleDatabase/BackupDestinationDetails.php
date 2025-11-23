@@ -20,50 +20,19 @@ namespace Google\Service\OracleDatabase;
 class BackupDestinationDetails extends \Google\Model
 {
   /**
-   * Default unspecified value.
-   */
-  public const TYPE_BACKUP_DESTINATION_TYPE_UNSPECIFIED = 'BACKUP_DESTINATION_TYPE_UNSPECIFIED';
-  /**
-   * Backup destination type is NFS.
-   */
-  public const TYPE_NFS = 'NFS';
-  /**
-   * Backup destination type is Recovery Appliance.
-   */
-  public const TYPE_RECOVERY_APPLIANCE = 'RECOVERY_APPLIANCE';
-  /**
-   * Backup destination type is Object Store.
-   */
-  public const TYPE_OBJECT_STORE = 'OBJECT_STORE';
-  /**
-   * Backup destination type is Local.
-   */
-  public const TYPE_LOCAL = 'LOCAL';
-  /**
-   * Backup destination type is DBRS.
-   */
-  public const TYPE_DBRS = 'DBRS';
-  /**
-   * Optional. The type of the database backup destination.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Optional. The type of the database backup destination.
-   *
-   * Accepted values: BACKUP_DESTINATION_TYPE_UNSPECIFIED, NFS,
-   * RECOVERY_APPLIANCE, OBJECT_STORE, LOCAL, DBRS
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {

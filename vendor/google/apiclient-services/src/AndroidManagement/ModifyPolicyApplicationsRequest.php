@@ -24,10 +24,7 @@ class ModifyPolicyApplicationsRequest extends \Google\Collection
   protected $changesDataType = 'array';
 
   /**
-   * Required. The changes to be made to the ApplicationPolicy objects. There
-   * must be at least one ApplicationPolicyChange.
-   *
-   * @param ApplicationPolicyChange[] $changes
+   * @param ApplicationPolicyChange[]
    */
   public function setChanges($changes)
   {

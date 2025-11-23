@@ -20,8 +20,6 @@ namespace Google\Service\Container;
 class SecretManagerConfig extends \Google\Model
 {
   /**
-   * Enable/Disable Secret Manager Config.
-   *
    * @var bool
    */
   public $enabled;
@@ -29,9 +27,7 @@ class SecretManagerConfig extends \Google\Model
   protected $rotationConfigDataType = '';
 
   /**
-   * Enable/Disable Secret Manager Config.
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {
@@ -45,9 +41,7 @@ class SecretManagerConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Rotation config for secret manager.
-   *
-   * @param RotationConfig $rotationConfig
+   * @param RotationConfig
    */
   public function setRotationConfig(RotationConfig $rotationConfig)
   {

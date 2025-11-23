@@ -23,15 +23,10 @@ class QueryResult extends \Google\Collection
   protected $columnsType = Column::class;
   protected $columnsDataType = 'array';
   /**
-   * Message related to the SQL execution result.
-   *
    * @var string
    */
   public $message;
   /**
-   * Set to true if the SQL execution's result is truncated due to size limits
-   * or an error retrieving results.
-   *
    * @var bool
    */
   public $partialResult;
@@ -41,10 +36,7 @@ class QueryResult extends \Google\Collection
   protected $statusDataType = '';
 
   /**
-   * List of columns included in the result. This also includes the data type of
-   * the column.
-   *
-   * @param Column[] $columns
+   * @param Column[]
    */
   public function setColumns($columns)
   {
@@ -58,9 +50,7 @@ class QueryResult extends \Google\Collection
     return $this->columns;
   }
   /**
-   * Message related to the SQL execution result.
-   *
-   * @param string $message
+   * @param string
    */
   public function setMessage($message)
   {
@@ -74,10 +64,7 @@ class QueryResult extends \Google\Collection
     return $this->message;
   }
   /**
-   * Set to true if the SQL execution's result is truncated due to size limits
-   * or an error retrieving results.
-   *
-   * @param bool $partialResult
+   * @param bool
    */
   public function setPartialResult($partialResult)
   {
@@ -91,9 +78,7 @@ class QueryResult extends \Google\Collection
     return $this->partialResult;
   }
   /**
-   * Rows returned by the SQL statement.
-   *
-   * @param Row[] $rows
+   * @param Row[]
    */
   public function setRows($rows)
   {
@@ -107,9 +92,7 @@ class QueryResult extends \Google\Collection
     return $this->rows;
   }
   /**
-   * If results were truncated due to an error, details of that error.
-   *
-   * @param Status $status
+   * @param Status
    */
   public function setStatus(Status $status)
   {

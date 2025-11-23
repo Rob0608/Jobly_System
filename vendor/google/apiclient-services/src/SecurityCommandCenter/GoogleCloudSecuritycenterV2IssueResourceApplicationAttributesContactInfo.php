@@ -20,16 +20,12 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesContactInfo extends \Google\Model
 {
   /**
-   * Email address of the contacts.
-   *
    * @var string
    */
   public $email;
 
   /**
-   * Email address of the contacts.
-   *
-   * @param string $email
+   * @param string
    */
   public function setEmail($email)
   {

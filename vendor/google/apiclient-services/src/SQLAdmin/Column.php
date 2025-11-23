@@ -20,22 +20,16 @@ namespace Google\Service\SQLAdmin;
 class Column extends \Google\Model
 {
   /**
-   * Name of the column.
-   *
    * @var string
    */
   public $name;
   /**
-   * Datatype of the column.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Name of the column.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -49,9 +43,7 @@ class Column extends \Google\Model
     return $this->name;
   }
   /**
-   * Datatype of the column.
-   *
-   * @param string $type
+   * @param string
    */
   public function setType($type)
   {

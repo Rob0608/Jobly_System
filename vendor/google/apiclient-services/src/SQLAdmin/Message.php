@@ -20,27 +20,16 @@ namespace Google\Service\SQLAdmin;
 class Message extends \Google\Model
 {
   /**
-   * The full message string. For PostgreSQL, this is a formatted string that
-   * may include severity, code, and the notice/warning message. For MySQL, this
-   * contains the warning message.
-   *
    * @var string
    */
   public $message;
   /**
-   * The severity of the message (e.g., "NOTICE" for PostgreSQL, "WARNING" for
-   * MySQL).
-   *
    * @var string
    */
   public $severity;
 
   /**
-   * The full message string. For PostgreSQL, this is a formatted string that
-   * may include severity, code, and the notice/warning message. For MySQL, this
-   * contains the warning message.
-   *
-   * @param string $message
+   * @param string
    */
   public function setMessage($message)
   {
@@ -54,10 +43,7 @@ class Message extends \Google\Model
     return $this->message;
   }
   /**
-   * The severity of the message (e.g., "NOTICE" for PostgreSQL, "WARNING" for
-   * MySQL).
-   *
-   * @param string $severity
+   * @param string
    */
   public function setSeverity($severity)
   {

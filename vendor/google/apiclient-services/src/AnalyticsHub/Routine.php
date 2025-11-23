@@ -20,30 +20,16 @@ namespace Google\Service\AnalyticsHub;
 class Routine extends \Google\Model
 {
   /**
-   * Default value.
-   */
-  public const ROUTINE_TYPE_ROUTINE_TYPE_UNSPECIFIED = 'ROUTINE_TYPE_UNSPECIFIED';
-  /**
-   * Non-built-in persistent TVF.
-   */
-  public const ROUTINE_TYPE_TABLE_VALUED_FUNCTION = 'TABLE_VALUED_FUNCTION';
-  /**
-   * Optional. The definition body of the routine.
-   *
    * @var string
    */
   public $definitionBody;
   /**
-   * Required. The type of routine.
-   *
    * @var string
    */
   public $routineType;
 
   /**
-   * Optional. The definition body of the routine.
-   *
-   * @param string $definitionBody
+   * @param string
    */
   public function setDefinitionBody($definitionBody)
   {
@@ -57,18 +43,14 @@ class Routine extends \Google\Model
     return $this->definitionBody;
   }
   /**
-   * Required. The type of routine.
-   *
-   * Accepted values: ROUTINE_TYPE_UNSPECIFIED, TABLE_VALUED_FUNCTION
-   *
-   * @param self::ROUTINE_TYPE_* $routineType
+   * @param string
    */
   public function setRoutineType($routineType)
   {
     $this->routineType = $routineType;
   }
   /**
-   * @return self::ROUTINE_TYPE_*
+   * @return string
    */
   public function getRoutineType()
   {

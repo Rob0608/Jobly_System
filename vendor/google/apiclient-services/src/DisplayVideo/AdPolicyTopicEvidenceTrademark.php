@@ -23,22 +23,16 @@ class AdPolicyTopicEvidenceTrademark extends \Google\Collection
   protected $countryRestrictionsType = AdPolicyCriterionRestriction::class;
   protected $countryRestrictionsDataType = 'array';
   /**
-   * The trademark content owner.
-   *
    * @var string
    */
   public $owner;
   /**
-   * The trademark term.
-   *
    * @var string
    */
   public $term;
 
   /**
-   * Countries where the policy violation is relevant.
-   *
-   * @param AdPolicyCriterionRestriction[] $countryRestrictions
+   * @param AdPolicyCriterionRestriction[]
    */
   public function setCountryRestrictions($countryRestrictions)
   {
@@ -52,9 +46,7 @@ class AdPolicyTopicEvidenceTrademark extends \Google\Collection
     return $this->countryRestrictions;
   }
   /**
-   * The trademark content owner.
-   *
-   * @param string $owner
+   * @param string
    */
   public function setOwner($owner)
   {
@@ -68,9 +60,7 @@ class AdPolicyTopicEvidenceTrademark extends \Google\Collection
     return $this->owner;
   }
   /**
-   * The trademark term.
-   *
-   * @param string $term
+   * @param string
    */
   public function setTerm($term)
   {

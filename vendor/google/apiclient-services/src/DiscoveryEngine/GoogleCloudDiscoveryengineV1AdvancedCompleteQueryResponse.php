@@ -29,19 +29,12 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponse extends \Google\
   protected $recentSearchSuggestionsType = GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseRecentSearchSuggestion::class;
   protected $recentSearchSuggestionsDataType = 'array';
   /**
-   * True if the returned suggestions are all tail suggestions. For tail
-   * matching to be triggered, include_tail_suggestions in the request must be
-   * true and there must be no suggestions that match the full query.
-   *
    * @var bool
    */
   public $tailMatchTriggered;
 
   /**
-   * Results of the matched content suggestions. The result list is ordered and
-   * the first result is the top suggestion.
-   *
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseContentSuggestion[] $contentSuggestions
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseContentSuggestion[]
    */
   public function setContentSuggestions($contentSuggestions)
   {
@@ -55,10 +48,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponse extends \Google\
     return $this->contentSuggestions;
   }
   /**
-   * Results of the matched people suggestions. The result list is ordered and
-   * the first result is the top suggestion.
-   *
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion[] $peopleSuggestions
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion[]
    */
   public function setPeopleSuggestions($peopleSuggestions)
   {
@@ -72,10 +62,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponse extends \Google\
     return $this->peopleSuggestions;
   }
   /**
-   * Results of the matched query suggestions. The result list is ordered and
-   * the first result is a top suggestion.
-   *
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseQuerySuggestion[] $querySuggestions
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseQuerySuggestion[]
    */
   public function setQuerySuggestions($querySuggestions)
   {
@@ -89,10 +76,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponse extends \Google\
     return $this->querySuggestions;
   }
   /**
-   * Results of the matched "recent search" suggestions. The result list is
-   * ordered and the first result is the top suggestion.
-   *
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseRecentSearchSuggestion[] $recentSearchSuggestions
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponseRecentSearchSuggestion[]
    */
   public function setRecentSearchSuggestions($recentSearchSuggestions)
   {
@@ -106,11 +90,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponse extends \Google\
     return $this->recentSearchSuggestions;
   }
   /**
-   * True if the returned suggestions are all tail suggestions. For tail
-   * matching to be triggered, include_tail_suggestions in the request must be
-   * true and there must be no suggestions that match the full query.
-   *
-   * @param bool $tailMatchTriggered
+   * @param bool
    */
   public function setTailMatchTriggered($tailMatchTriggered)
   {

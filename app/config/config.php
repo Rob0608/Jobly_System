@@ -53,27 +53,15 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |   Set these via environment or directly for development.
 |   Redirect URI must match in Google Console.
 */
-$config['google_client_id'] = getenv('GOOGLE_CLIENT_ID');
-$config['google_client_secret'] = getenv('GOOGLE_CLIENT_SECRET');
-$config['google_redirect_uri'] = getenv('GOOGLE_REDIRECT_URI');
-
-// Fail-fast in production if Google OAuth config is missing
-// Determine environment: prefer explicit getenv, fall back to configured value, otherwise default to 'development'
-$env_mode = getenv('ENVIRONMENT') ?: (isset($config['ENVIRONMENT']) ? $config['ENVIRONMENT'] : 'development');
-if (empty($config['google_client_id']) || empty($config['google_client_secret']) || empty($config['google_redirect_uri'])) {
-	if (strtolower($env_mode) === 'production') {
-		// In production, throw so misconfiguration is addressed immediately
-		throw new RuntimeException('Google OAuth configuration missing. Set GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET and GOOGLE_REDIRECT_URI in environment.');
-	}
-	// In development, warn to error log so it is visible but non-fatal
-	error_log('Warning: Google OAuth env vars not set (GOOGLE_CLIENT_ID/GOOGLE_CLIENT_SECRET/GOOGLE_REDIRECT_URI).');
-}
+$config['google_client_id'] = '1064821785950-f68i3up7vmq0m73ondq0v0r7n3q9rk8b.apps.googleusercontent.com';
+$config['google_client_secret'] = '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';
+$config['google_redirect_uri'] = 'https://jobly-system.onrender.com/index.php/auth/google/callback';
 /*
 | Optional CA bundle path to fix cURL error 60 on Windows/WAMP.
 | Download from https://curl.se/ca/cacert.pem and set absolute path below.
 | Example: C:/wamp64/bin/php/php8.3.14/extras/ssl/cacert.pem
 */
-//$config['ca_bundle_path'] = 'C:/wamp64/bin/php/php8.3.14/extras/ssl/cacert.pem';
+$config['ca_bundle_path'] = 'C:/wamp64/bin/php/php8.3.14/extras/ssl/cacert.pem';
 /*
 */
 
@@ -238,7 +226,7 @@ $config['language'] 				= 'en-US';
 $config['sess_driver']             = 'file';
 $config['sess_cookie_name']        = 'LLSession';
 $config['sess_expiration']         = 7200;
-$config['sess_save_path']          = '/tmp';
+$config['sess_save_path']          = __DIR__ . '/../../runtime/sessions';
 $config['sess_match_ip']           = TRUE;
 $config['sess_match_fingerprint']  = TRUE;
 $config['sess_time_to_update']     = 300;

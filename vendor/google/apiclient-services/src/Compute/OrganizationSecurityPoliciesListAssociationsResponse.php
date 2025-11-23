@@ -23,18 +23,12 @@ class OrganizationSecurityPoliciesListAssociationsResponse extends \Google\Colle
   protected $associationsType = SecurityPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
-   * [Output Only] Type of securityPolicy associations.
-   * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of
-   * securityPolicy associations.
-   *
    * @var string
    */
   public $kind;
 
   /**
-   * A list of associations.
-   *
-   * @param SecurityPolicyAssociation[] $associations
+   * @param SecurityPolicyAssociation[]
    */
   public function setAssociations($associations)
   {
@@ -48,11 +42,7 @@ class OrganizationSecurityPoliciesListAssociationsResponse extends \Google\Colle
     return $this->associations;
   }
   /**
-   * [Output Only] Type of securityPolicy associations.
-   * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of
-   * securityPolicy associations.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {

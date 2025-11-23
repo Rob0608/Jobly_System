@@ -20,24 +20,16 @@ namespace Google\Service\BigtableAdmin;
 class GoogleBigtableAdminV2TypeProto extends \Google\Model
 {
   /**
-   * The fully qualified name of the protobuf message, including package. In the
-   * format of "foo.bar.Message".
-   *
    * @var string
    */
   public $messageName;
   /**
-   * The ID of the schema bundle that this proto is defined in.
-   *
    * @var string
    */
   public $schemaBundleId;
 
   /**
-   * The fully qualified name of the protobuf message, including package. In the
-   * format of "foo.bar.Message".
-   *
-   * @param string $messageName
+   * @param string
    */
   public function setMessageName($messageName)
   {
@@ -51,9 +43,7 @@ class GoogleBigtableAdminV2TypeProto extends \Google\Model
     return $this->messageName;
   }
   /**
-   * The ID of the schema bundle that this proto is defined in.
-   *
-   * @param string $schemaBundleId
+   * @param string
    */
   public function setSchemaBundleId($schemaBundleId)
   {

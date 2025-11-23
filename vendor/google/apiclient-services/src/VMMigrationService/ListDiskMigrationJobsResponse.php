@@ -23,24 +23,16 @@ class ListDiskMigrationJobsResponse extends \Google\Collection
   protected $diskMigrationJobsType = DiskMigrationJob::class;
   protected $diskMigrationJobsDataType = 'array';
   /**
-   * Optional. Output only. A token, which can be sent as `page_token` to
-   * retrieve the next page. If this field is omitted, there are no subsequent
-   * pages.
-   *
    * @var string
    */
   public $nextPageToken;
   /**
-   * Output only. Locations that could not be reached.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * Output only. The list of the disk migration jobs.
-   *
-   * @param DiskMigrationJob[] $diskMigrationJobs
+   * @param DiskMigrationJob[]
    */
   public function setDiskMigrationJobs($diskMigrationJobs)
   {
@@ -54,11 +46,7 @@ class ListDiskMigrationJobsResponse extends \Google\Collection
     return $this->diskMigrationJobs;
   }
   /**
-   * Optional. Output only. A token, which can be sent as `page_token` to
-   * retrieve the next page. If this field is omitted, there are no subsequent
-   * pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -72,9 +60,7 @@ class ListDiskMigrationJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Output only. Locations that could not be reached.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

@@ -28,9 +28,7 @@ class Mod extends \Google\Collection
   protected $oldValuesDataType = 'array';
 
   /**
-   * Returns the value of the primary key of the modified row.
-   *
-   * @param ModValue[] $keys
+   * @param ModValue[]
    */
   public function setKeys($keys)
   {
@@ -44,10 +42,7 @@ class Mod extends \Google\Collection
     return $this->keys;
   }
   /**
-   * Returns the new values after the change for the modified columns. Always
-   * empty for DELETE.
-   *
-   * @param ModValue[] $newValues
+   * @param ModValue[]
    */
   public function setNewValues($newValues)
   {
@@ -61,11 +56,7 @@ class Mod extends \Google\Collection
     return $this->newValues;
   }
   /**
-   * Returns the old values before the change for the modified columns. Always
-   * empty for INSERT, or if old values are not being captured specified by
-   * value_capture_type.
-   *
-   * @param ModValue[] $oldValues
+   * @param ModValue[]
    */
   public function setOldValues($oldValues)
   {

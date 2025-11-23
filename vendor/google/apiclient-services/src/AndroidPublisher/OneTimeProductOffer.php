@@ -19,62 +19,26 @@ namespace Google\Service\AndroidPublisher;
 
 class OneTimeProductOffer extends \Google\Collection
 {
-  /**
-   * Default value, should never be used.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * The offer is not and has never been available to users.
-   */
-  public const STATE_DRAFT = 'DRAFT';
-  /**
-   * The offer is available to users, as long as its conditions are met.
-   */
-  public const STATE_ACTIVE = 'ACTIVE';
-  /**
-   * This state is specific to pre-orders. The offer is cancelled and not
-   * available to users. All pending orders related to this offer were
-   * cancelled.
-   */
-  public const STATE_CANCELLED = 'CANCELLED';
-  /**
-   * This state is specific to discounted offers. The offer is no longer
-   * available to users.
-   */
-  public const STATE_INACTIVE = 'INACTIVE';
   protected $collection_key = 'regionalPricingAndAvailabilityConfigs';
   protected $discountedOfferType = OneTimeProductDiscountedOffer::class;
   protected $discountedOfferDataType = '';
   /**
-   * Required. Immutable. The ID of this product offer. Must be unique within
-   * the purchase option. It must start with a number or lower-case letter, and
-   * can only contain lower-case letters (a-z), numbers (0-9), and hyphens (-).
-   * The maximum length is 63 characters.
-   *
    * @var string
    */
   public $offerId;
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
   /**
-   * Required. Immutable. The package name of the app the parent product belongs
-   * to.
-   *
    * @var string
    */
   public $packageName;
   protected $preOrderOfferType = OneTimeProductPreOrderOffer::class;
   protected $preOrderOfferDataType = '';
   /**
-   * Required. Immutable. The ID of the parent product this offer belongs to.
-   *
    * @var string
    */
   public $productId;
   /**
-   * Required. Immutable. The ID of the purchase option to which this offer is
-   * an extension.
-   *
    * @var string
    */
   public $purchaseOptionId;
@@ -83,17 +47,12 @@ class OneTimeProductOffer extends \Google\Collection
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
   /**
-   * Output only. The current state of this offer. This field cannot be changed
-   * by updating the resource. Use the dedicated endpoints instead.
-   *
    * @var string
    */
   public $state;
 
   /**
-   * A discounted offer.
-   *
-   * @param OneTimeProductDiscountedOffer $discountedOffer
+   * @param OneTimeProductDiscountedOffer
    */
   public function setDiscountedOffer(OneTimeProductDiscountedOffer $discountedOffer)
   {
@@ -107,12 +66,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->discountedOffer;
   }
   /**
-   * Required. Immutable. The ID of this product offer. Must be unique within
-   * the purchase option. It must start with a number or lower-case letter, and
-   * can only contain lower-case letters (a-z), numbers (0-9), and hyphens (-).
-   * The maximum length is 63 characters.
-   *
-   * @param string $offerId
+   * @param string
    */
   public function setOfferId($offerId)
   {
@@ -126,10 +80,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->offerId;
   }
   /**
-   * Optional. List of up to 20 custom tags specified for this offer, and
-   * returned to the app through the billing library.
-   *
-   * @param OfferTag[] $offerTags
+   * @param OfferTag[]
    */
   public function setOfferTags($offerTags)
   {
@@ -143,10 +94,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->offerTags;
   }
   /**
-   * Required. Immutable. The package name of the app the parent product belongs
-   * to.
-   *
-   * @param string $packageName
+   * @param string
    */
   public function setPackageName($packageName)
   {
@@ -160,9 +108,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->packageName;
   }
   /**
-   * A pre-order offer.
-   *
-   * @param OneTimeProductPreOrderOffer $preOrderOffer
+   * @param OneTimeProductPreOrderOffer
    */
   public function setPreOrderOffer(OneTimeProductPreOrderOffer $preOrderOffer)
   {
@@ -176,9 +122,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->preOrderOffer;
   }
   /**
-   * Required. Immutable. The ID of the parent product this offer belongs to.
-   *
-   * @param string $productId
+   * @param string
    */
   public function setProductId($productId)
   {
@@ -192,10 +136,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->productId;
   }
   /**
-   * Required. Immutable. The ID of the purchase option to which this offer is
-   * an extension.
-   *
-   * @param string $purchaseOptionId
+   * @param string
    */
   public function setPurchaseOptionId($purchaseOptionId)
   {
@@ -209,10 +150,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->purchaseOptionId;
   }
   /**
-   * Set of regional pricing and availability information for this offer. Must
-   * not have duplicate entries with the same region_code.
-   *
-   * @param OneTimeProductOfferRegionalPricingAndAvailabilityConfig[] $regionalPricingAndAvailabilityConfigs
+   * @param OneTimeProductOfferRegionalPricingAndAvailabilityConfig[]
    */
   public function setRegionalPricingAndAvailabilityConfigs($regionalPricingAndAvailabilityConfigs)
   {
@@ -226,10 +164,7 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->regionalPricingAndAvailabilityConfigs;
   }
   /**
-   * Output only. The version of the regions configuration that was used to
-   * generate the one-time product offer.
-   *
-   * @param RegionsVersion $regionsVersion
+   * @param RegionsVersion
    */
   public function setRegionsVersion(RegionsVersion $regionsVersion)
   {
@@ -243,19 +178,14 @@ class OneTimeProductOffer extends \Google\Collection
     return $this->regionsVersion;
   }
   /**
-   * Output only. The current state of this offer. This field cannot be changed
-   * by updating the resource. Use the dedicated endpoints instead.
-   *
-   * Accepted values: STATE_UNSPECIFIED, DRAFT, ACTIVE, CANCELLED, INACTIVE
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {

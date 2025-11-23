@@ -24,11 +24,6 @@ class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest extends 
   protected $comparisonQueryIntervalType = GoogleCloudContactcenterinsightsV1QueryInterval::class;
   protected $comparisonQueryIntervalDataType = '';
   /**
-   * Optional. Filter to select a subset of conversations to compute the
-   * performance overview. Supports the same filters as the filter field in
-   * QueryMetricsRequest. The source and query interval/comparison query
-   * interval should not be included here.
-   *
    * @var string
    */
   public $filter;
@@ -36,9 +31,7 @@ class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest extends 
   protected $queryIntervalDataType = '';
 
   /**
-   * Conversations are from a single agent.
-   *
-   * @param GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequestAgentSource $agentPerformanceSource
+   * @param GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequestAgentSource
    */
   public function setAgentPerformanceSource(GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequestAgentSource $agentPerformanceSource)
   {
@@ -52,9 +45,7 @@ class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest extends 
     return $this->agentPerformanceSource;
   }
   /**
-   * The time window of the conversations to compare the performance to.
-   *
-   * @param GoogleCloudContactcenterinsightsV1QueryInterval $comparisonQueryInterval
+   * @param GoogleCloudContactcenterinsightsV1QueryInterval
    */
   public function setComparisonQueryInterval(GoogleCloudContactcenterinsightsV1QueryInterval $comparisonQueryInterval)
   {
@@ -68,12 +59,7 @@ class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest extends 
     return $this->comparisonQueryInterval;
   }
   /**
-   * Optional. Filter to select a subset of conversations to compute the
-   * performance overview. Supports the same filters as the filter field in
-   * QueryMetricsRequest. The source and query interval/comparison query
-   * interval should not be included here.
-   *
-   * @param string $filter
+   * @param string
    */
   public function setFilter($filter)
   {
@@ -87,10 +73,7 @@ class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest extends 
     return $this->filter;
   }
   /**
-   * Required. The time window of the conversations to derive performance stats
-   * from.
-   *
-   * @param GoogleCloudContactcenterinsightsV1QueryInterval $queryInterval
+   * @param GoogleCloudContactcenterinsightsV1QueryInterval
    */
   public function setQueryInterval(GoogleCloudContactcenterinsightsV1QueryInterval $queryInterval)
   {

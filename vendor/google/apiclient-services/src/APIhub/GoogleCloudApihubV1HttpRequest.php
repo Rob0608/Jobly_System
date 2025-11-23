@@ -23,9 +23,7 @@ class GoogleCloudApihubV1HttpRequest extends \Google\Model
   protected $headersDataType = 'map';
 
   /**
-   * Optional. Unordered map from header name to header metadata
-   *
-   * @param GoogleCloudApihubV1Header[] $headers
+   * @param GoogleCloudApihubV1Header[]
    */
   public function setHeaders($headers)
   {

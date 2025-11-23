@@ -26,14 +26,10 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
   protected $backupdrConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration::class;
   protected $backupdrConfigurationDataType = '';
   /**
-   * Required. Full resource name of this instance.
-   *
    * @var string
    */
   public $fullResourceName;
   /**
-   * Required. Last time backup configuration was refreshed.
-   *
    * @var string
    */
   public $lastRefreshTime;
@@ -41,9 +37,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
   protected $resourceIdDataType = '';
 
   /**
-   * Backup configuration for this instance.
-   *
-   * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration
+   * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration
    */
   public function setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration)
   {
@@ -57,9 +51,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupConfiguration;
   }
   /**
-   * Latest backup run information for this instance.
-   *
-   * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
+   * @param StorageDatabasecenterPartnerapiV1mainBackupRun
    */
   public function setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun)
   {
@@ -73,9 +65,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupRun;
   }
   /**
-   * BackupDR configuration for this instance.
-   *
-   * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration
+   * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration
    */
   public function setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration)
   {
@@ -89,9 +79,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupdrConfiguration;
   }
   /**
-   * Required. Full resource name of this instance.
-   *
-   * @param string $fullResourceName
+   * @param string
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -105,9 +93,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->fullResourceName;
   }
   /**
-   * Required. Last time backup configuration was refreshed.
-   *
-   * @param string $lastRefreshTime
+   * @param string
    */
   public function setLastRefreshTime($lastRefreshTime)
   {
@@ -121,9 +107,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->lastRefreshTime;
   }
   /**
-   * Required. Database resource id.
-   *
-   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
    */
   public function setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId)
   {

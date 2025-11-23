@@ -19,42 +19,12 @@ namespace Google\Service\Config;
 
 class ResourceChange extends \Google\Collection
 {
-  /**
-   * The default value.
-   */
-  public const INTENT_INTENT_UNSPECIFIED = 'INTENT_UNSPECIFIED';
-  /**
-   * The resource will be created.
-   */
-  public const INTENT_CREATE = 'CREATE';
-  /**
-   * The resource will be updated.
-   */
-  public const INTENT_UPDATE = 'UPDATE';
-  /**
-   * The resource will be deleted.
-   */
-  public const INTENT_DELETE = 'DELETE';
-  /**
-   * The resource will be recreated.
-   */
-  public const INTENT_RECREATE = 'RECREATE';
-  /**
-   * The resource will be untouched.
-   */
-  public const INTENT_UNCHANGED = 'UNCHANGED';
   protected $collection_key = 'propertyChanges';
   /**
-   * Output only. The intent of the resource change.
-   *
    * @var string
    */
   public $intent;
   /**
-   * Identifier. The name of the resource change. Format: 'projects/{project_id}
-   * /locations/{location}/previews/{preview}/resourceChanges/{resource_change}'
-   * .
-   *
    * @var string
    */
   public $name;
@@ -64,30 +34,21 @@ class ResourceChange extends \Google\Collection
   protected $terraformInfoDataType = '';
 
   /**
-   * Output only. The intent of the resource change.
-   *
-   * Accepted values: INTENT_UNSPECIFIED, CREATE, UPDATE, DELETE, RECREATE,
-   * UNCHANGED
-   *
-   * @param self::INTENT_* $intent
+   * @param string
    */
   public function setIntent($intent)
   {
     $this->intent = $intent;
   }
   /**
-   * @return self::INTENT_*
+   * @return string
    */
   public function getIntent()
   {
     return $this->intent;
   }
   /**
-   * Identifier. The name of the resource change. Format: 'projects/{project_id}
-   * /locations/{location}/previews/{preview}/resourceChanges/{resource_change}'
-   * .
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -101,9 +62,7 @@ class ResourceChange extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. The property changes of the resource change.
-   *
-   * @param PropertyChange[] $propertyChanges
+   * @param PropertyChange[]
    */
   public function setPropertyChanges($propertyChanges)
   {
@@ -117,9 +76,7 @@ class ResourceChange extends \Google\Collection
     return $this->propertyChanges;
   }
   /**
-   * Output only. Terraform info of the resource change.
-   *
-   * @param ResourceChangeTerraformInfo $terraformInfo
+   * @param ResourceChangeTerraformInfo
    */
   public function setTerraformInfo(ResourceChangeTerraformInfo $terraformInfo)
   {

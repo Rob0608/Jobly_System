@@ -21,37 +21,20 @@ class PartitionStartRecord extends \Google\Collection
 {
   protected $collection_key = 'partitionTokens';
   /**
-   * Unique partition identifiers to be used in queries.
-   *
    * @var string[]
    */
   public $partitionTokens;
   /**
-   * Record sequence numbers are unique and monotonically increasing (but not
-   * necessarily contiguous) for a specific timestamp across record types in the
-   * same partition. To guarantee ordered processing, the reader should process
-   * records (of potentially different types) in record_sequence order for a
-   * specific timestamp in the same partition.
-   *
    * @var string
    */
   public $recordSequence;
   /**
-   * Start timestamp at which the partitions should be queried to return change
-   * stream records with timestamps >= start_timestamp.
-   * DataChangeRecord.commit_timestamps, PartitionStartRecord.start_timestamps,
-   * PartitionEventRecord.commit_timestamps, and
-   * PartitionEndRecord.end_timestamps can have the same value in the same
-   * partition.
-   *
    * @var string
    */
   public $startTimestamp;
 
   /**
-   * Unique partition identifiers to be used in queries.
-   *
-   * @param string[] $partitionTokens
+   * @param string[]
    */
   public function setPartitionTokens($partitionTokens)
   {
@@ -65,13 +48,7 @@ class PartitionStartRecord extends \Google\Collection
     return $this->partitionTokens;
   }
   /**
-   * Record sequence numbers are unique and monotonically increasing (but not
-   * necessarily contiguous) for a specific timestamp across record types in the
-   * same partition. To guarantee ordered processing, the reader should process
-   * records (of potentially different types) in record_sequence order for a
-   * specific timestamp in the same partition.
-   *
-   * @param string $recordSequence
+   * @param string
    */
   public function setRecordSequence($recordSequence)
   {
@@ -85,14 +62,7 @@ class PartitionStartRecord extends \Google\Collection
     return $this->recordSequence;
   }
   /**
-   * Start timestamp at which the partitions should be queried to return change
-   * stream records with timestamps >= start_timestamp.
-   * DataChangeRecord.commit_timestamps, PartitionStartRecord.start_timestamps,
-   * PartitionEventRecord.commit_timestamps, and
-   * PartitionEndRecord.end_timestamps can have the same value in the same
-   * partition.
-   *
-   * @param string $startTimestamp
+   * @param string
    */
   public function setStartTimestamp($startTimestamp)
   {

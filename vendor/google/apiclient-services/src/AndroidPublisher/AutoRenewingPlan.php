@@ -20,9 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class AutoRenewingPlan extends \Google\Model
 {
   /**
-   * If the subscription is currently set to auto-renew, e.g. the user has not
-   * canceled the subscription
-   *
    * @var bool
    */
   public $autoRenewEnabled;
@@ -36,10 +33,7 @@ class AutoRenewingPlan extends \Google\Model
   protected $recurringPriceDataType = '';
 
   /**
-   * If the subscription is currently set to auto-renew, e.g. the user has not
-   * canceled the subscription
-   *
-   * @param bool $autoRenewEnabled
+   * @param bool
    */
   public function setAutoRenewEnabled($autoRenewEnabled)
   {
@@ -53,10 +47,7 @@ class AutoRenewingPlan extends \Google\Model
     return $this->autoRenewEnabled;
   }
   /**
-   * The installment plan commitment and state related info for the auto
-   * renewing plan.
-   *
-   * @param InstallmentPlan $installmentDetails
+   * @param InstallmentPlan
    */
   public function setInstallmentDetails(InstallmentPlan $installmentDetails)
   {
@@ -70,10 +61,7 @@ class AutoRenewingPlan extends \Google\Model
     return $this->installmentDetails;
   }
   /**
-   * The information of the last price change for the item since subscription
-   * signup.
-   *
-   * @param SubscriptionItemPriceChangeDetails $priceChangeDetails
+   * @param SubscriptionItemPriceChangeDetails
    */
   public function setPriceChangeDetails(SubscriptionItemPriceChangeDetails $priceChangeDetails)
   {
@@ -87,9 +75,7 @@ class AutoRenewingPlan extends \Google\Model
     return $this->priceChangeDetails;
   }
   /**
-   * The information of the latest price step-up consent.
-   *
-   * @param PriceStepUpConsentDetails $priceStepUpConsentDetails
+   * @param PriceStepUpConsentDetails
    */
   public function setPriceStepUpConsentDetails(PriceStepUpConsentDetails $priceStepUpConsentDetails)
   {
@@ -103,12 +89,7 @@ class AutoRenewingPlan extends \Google\Model
     return $this->priceStepUpConsentDetails;
   }
   /**
-   * The current recurring price of the auto renewing plan. Note that the price
-   * does not take into account discounts and does not include taxes for tax-
-   * exclusive pricing, please call orders.get API instead if transaction
-   * details are needed.
-   *
-   * @param Money $recurringPrice
+   * @param Money
    */
   public function setRecurringPrice(Money $recurringPrice)
   {

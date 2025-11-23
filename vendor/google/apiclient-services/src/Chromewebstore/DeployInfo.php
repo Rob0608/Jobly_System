@@ -20,18 +20,12 @@ namespace Google\Service\Chromewebstore;
 class DeployInfo extends \Google\Model
 {
   /**
-   * Required. The current deploy percentage for the release channel
-   * (nonnegative number between 0 and 100).
-   *
    * @var int
    */
   public $deployPercentage;
 
   /**
-   * Required. The current deploy percentage for the release channel
-   * (nonnegative number between 0 and 100).
-   *
-   * @param int $deployPercentage
+   * @param int
    */
   public function setDeployPercentage($deployPercentage)
   {

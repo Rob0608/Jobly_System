@@ -24,7 +24,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInput extends \Google\Col
   protected $validationRulesDataType = 'array';
 
   /**
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule[] $validationRules
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule[]
    */
   public function setValidationRules($validationRules)
   {

@@ -21,43 +21,30 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
 {
   protected $collection_key = 'rubricVerdicts';
   /**
-   * Optional. Additional results for the metric.
-   *
    * @var array
    */
   public $additionalResults;
   /**
-   * Required. The candidate that is being evaluated. The value is the same as
-   * the candidate name in the EvaluationRequest.
-   *
    * @var string
    */
   public $candidate;
   /**
-   * Optional. The explanation for the metric.
-   *
    * @var string
    */
   public $explanation;
   /**
-   * Required. The metric that was evaluated.
-   *
    * @var string
    */
   public $metric;
   protected $rubricVerdictsType = GoogleCloudAiplatformV1RubricVerdict::class;
   protected $rubricVerdictsDataType = 'array';
   /**
-   * Optional. The score for the metric.
-   *
    * @var float
    */
   public $score;
 
   /**
-   * Optional. Additional results for the metric.
-   *
-   * @param array $additionalResults
+   * @param array
    */
   public function setAdditionalResults($additionalResults)
   {
@@ -71,10 +58,7 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
     return $this->additionalResults;
   }
   /**
-   * Required. The candidate that is being evaluated. The value is the same as
-   * the candidate name in the EvaluationRequest.
-   *
-   * @param string $candidate
+   * @param string
    */
   public function setCandidate($candidate)
   {
@@ -88,9 +72,7 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
     return $this->candidate;
   }
   /**
-   * Optional. The explanation for the metric.
-   *
-   * @param string $explanation
+   * @param string
    */
   public function setExplanation($explanation)
   {
@@ -104,9 +86,7 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
     return $this->explanation;
   }
   /**
-   * Required. The metric that was evaluated.
-   *
-   * @param string $metric
+   * @param string
    */
   public function setMetric($metric)
   {
@@ -120,9 +100,7 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
     return $this->metric;
   }
   /**
-   * Optional. The rubric verdicts for the metric.
-   *
-   * @param GoogleCloudAiplatformV1RubricVerdict[] $rubricVerdicts
+   * @param GoogleCloudAiplatformV1RubricVerdict[]
    */
   public function setRubricVerdicts($rubricVerdicts)
   {
@@ -136,9 +114,7 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
     return $this->rubricVerdicts;
   }
   /**
-   * Optional. The score for the metric.
-   *
-   * @param float $score
+   * @param float
    */
   public function setScore($score)
   {

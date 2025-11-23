@@ -20,46 +20,24 @@ namespace Google\Service\DataManager;
 class GcpWrappedKeyInfo extends \Google\Model
 {
   /**
-   * Unspecified key type. Should never be used.
-   */
-  public const KEY_TYPE_KEY_TYPE_UNSPECIFIED = 'KEY_TYPE_UNSPECIFIED';
-  /**
-   * Algorithm XChaCha20-Poly1305
-   */
-  public const KEY_TYPE_XCHACHA20_POLY1305 = 'XCHACHA20_POLY1305';
-  /**
-   * Required. The base64 encoded encrypted data encryption key.
-   *
    * @var string
    */
   public $encryptedDek;
   /**
-   * Required. Google Cloud Platform [Cloud Key Management Service resource
-   * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the
-   * format of "projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
-   * toKeys/{key}".
-   *
    * @var string
    */
   public $kekUri;
   /**
-   * Required. The type of algorithm used to encrypt the data.
-   *
    * @var string
    */
   public $keyType;
   /**
-   * Required. The [Workload Identity](//cloud.google.com/iam/docs/workload-
-   * identity-federation) pool provider required to use KEK.
-   *
    * @var string
    */
   public $wipProvider;
 
   /**
-   * Required. The base64 encoded encrypted data encryption key.
-   *
-   * @param string $encryptedDek
+   * @param string
    */
   public function setEncryptedDek($encryptedDek)
   {
@@ -73,12 +51,7 @@ class GcpWrappedKeyInfo extends \Google\Model
     return $this->encryptedDek;
   }
   /**
-   * Required. Google Cloud Platform [Cloud Key Management Service resource
-   * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the
-   * format of "projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
-   * toKeys/{key}".
-   *
-   * @param string $kekUri
+   * @param string
    */
   public function setKekUri($kekUri)
   {
@@ -92,28 +65,21 @@ class GcpWrappedKeyInfo extends \Google\Model
     return $this->kekUri;
   }
   /**
-   * Required. The type of algorithm used to encrypt the data.
-   *
-   * Accepted values: KEY_TYPE_UNSPECIFIED, XCHACHA20_POLY1305
-   *
-   * @param self::KEY_TYPE_* $keyType
+   * @param string
    */
   public function setKeyType($keyType)
   {
     $this->keyType = $keyType;
   }
   /**
-   * @return self::KEY_TYPE_*
+   * @return string
    */
   public function getKeyType()
   {
     return $this->keyType;
   }
   /**
-   * Required. The [Workload Identity](//cloud.google.com/iam/docs/workload-
-   * identity-federation) pool provider required to use KEK.
-   *
-   * @param string $wipProvider
+   * @param string
    */
   public function setWipProvider($wipProvider)
   {

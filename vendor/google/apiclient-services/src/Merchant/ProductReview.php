@@ -23,24 +23,16 @@ class ProductReview extends \Google\Collection
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'array';
   /**
-   * Output only. The primary data source of the product review.
-   *
    * @var string
    */
   public $dataSource;
   /**
-   * Identifier. The name of the product review. Format:
-   * `"{productreview.name=accounts/{account}/productReviews/{productReview}}"`
-   *
    * @var string
    */
   public $name;
   protected $productReviewAttributesType = ProductReviewAttributes::class;
   protected $productReviewAttributesDataType = '';
   /**
-   * Required. The permanent, unique identifier for the product review in the
-   * publisher’s system.
-   *
    * @var string
    */
   public $productReviewId;
@@ -48,9 +40,7 @@ class ProductReview extends \Google\Collection
   protected $productReviewStatusDataType = '';
 
   /**
-   * Optional. A list of custom (merchant-provided) attributes.
-   *
-   * @param CustomAttribute[] $customAttributes
+   * @param CustomAttribute[]
    */
   public function setCustomAttributes($customAttributes)
   {
@@ -64,9 +54,7 @@ class ProductReview extends \Google\Collection
     return $this->customAttributes;
   }
   /**
-   * Output only. The primary data source of the product review.
-   *
-   * @param string $dataSource
+   * @param string
    */
   public function setDataSource($dataSource)
   {
@@ -80,10 +68,7 @@ class ProductReview extends \Google\Collection
     return $this->dataSource;
   }
   /**
-   * Identifier. The name of the product review. Format:
-   * `"{productreview.name=accounts/{account}/productReviews/{productReview}}"`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -97,9 +82,7 @@ class ProductReview extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. A list of product review attributes.
-   *
-   * @param ProductReviewAttributes $productReviewAttributes
+   * @param ProductReviewAttributes
    */
   public function setProductReviewAttributes(ProductReviewAttributes $productReviewAttributes)
   {
@@ -113,10 +96,7 @@ class ProductReview extends \Google\Collection
     return $this->productReviewAttributes;
   }
   /**
-   * Required. The permanent, unique identifier for the product review in the
-   * publisher’s system.
-   *
-   * @param string $productReviewId
+   * @param string
    */
   public function setProductReviewId($productReviewId)
   {
@@ -130,10 +110,7 @@ class ProductReview extends \Google\Collection
     return $this->productReviewId;
   }
   /**
-   * Output only. The status of a product review, data validation issues, that
-   * is, information about a product review computed asynchronously.
-   *
-   * @param ProductReviewStatus $productReviewStatus
+   * @param ProductReviewStatus
    */
   public function setProductReviewStatus(ProductReviewStatus $productReviewStatus)
   {

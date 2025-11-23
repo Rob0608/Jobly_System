@@ -23,22 +23,16 @@ class GoogleChromeManagementVersionsV1ListChromeBrowserProfileCommandsResponse e
   protected $chromeBrowserProfileCommandsType = GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand::class;
   protected $chromeBrowserProfileCommandsDataType = 'array';
   /**
-   * The pagination token that can be used to list the next page.
-   *
    * @var string
    */
   public $nextPageToken;
   /**
-   * Total size represents an estimated number of resources returned.
-   *
    * @var string
    */
   public $totalSize;
 
   /**
-   * The list of commands returned.
-   *
-   * @param GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand[] $chromeBrowserProfileCommands
+   * @param GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand[]
    */
   public function setChromeBrowserProfileCommands($chromeBrowserProfileCommands)
   {
@@ -52,9 +46,7 @@ class GoogleChromeManagementVersionsV1ListChromeBrowserProfileCommandsResponse e
     return $this->chromeBrowserProfileCommands;
   }
   /**
-   * The pagination token that can be used to list the next page.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -68,9 +60,7 @@ class GoogleChromeManagementVersionsV1ListChromeBrowserProfileCommandsResponse e
     return $this->nextPageToken;
   }
   /**
-   * Total size represents an estimated number of resources returned.
-   *
-   * @param string $totalSize
+   * @param string
    */
   public function setTotalSize($totalSize)
   {

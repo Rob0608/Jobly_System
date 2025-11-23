@@ -20,36 +20,19 @@ namespace Google\Service\Compute;
 class ReservationAdvancedDeploymentControl extends \Google\Model
 {
   /**
-   * Google Cloud does not manage the failure of machines, but provides
-   * additional capacity, which is not guaranteed to be available.
-   */
-  public const RESERVATION_OPERATIONAL_MODE_ALL_CAPACITY = 'ALL_CAPACITY';
-  /**
-   * Google Cloud manages the failure of machines to provide high availability.
-   */
-  public const RESERVATION_OPERATIONAL_MODE_HIGHLY_AVAILABLE_CAPACITY = 'HIGHLY_AVAILABLE_CAPACITY';
-  public const RESERVATION_OPERATIONAL_MODE_RESERVATION_OPERATIONAL_MODE_UNSPECIFIED = 'RESERVATION_OPERATIONAL_MODE_UNSPECIFIED';
-  /**
-   * Indicates chosen reservation operational mode for the reservation.
-   *
    * @var string
    */
   public $reservationOperationalMode;
 
   /**
-   * Indicates chosen reservation operational mode for the reservation.
-   *
-   * Accepted values: ALL_CAPACITY, HIGHLY_AVAILABLE_CAPACITY,
-   * RESERVATION_OPERATIONAL_MODE_UNSPECIFIED
-   *
-   * @param self::RESERVATION_OPERATIONAL_MODE_* $reservationOperationalMode
+   * @param string
    */
   public function setReservationOperationalMode($reservationOperationalMode)
   {
     $this->reservationOperationalMode = $reservationOperationalMode;
   }
   /**
-   * @return self::RESERVATION_OPERATIONAL_MODE_*
+   * @return string
    */
   public function getReservationOperationalMode()
   {

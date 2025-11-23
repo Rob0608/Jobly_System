@@ -22,28 +22,20 @@ class IndexPruningStats extends \Google\Model
   protected $baseTableType = TableReference::class;
   protected $baseTableDataType = '';
   /**
-   * The index id.
-   *
    * @var string
    */
   public $indexId;
   /**
-   * The number of parallel inputs after index pruning.
-   *
    * @var string
    */
   public $postIndexPruningParallelInputCount;
   /**
-   * The number of parallel inputs before index pruning.
-   *
    * @var string
    */
   public $preIndexPruningParallelInputCount;
 
   /**
-   * The base table reference.
-   *
-   * @param TableReference $baseTable
+   * @param TableReference
    */
   public function setBaseTable(TableReference $baseTable)
   {
@@ -57,9 +49,7 @@ class IndexPruningStats extends \Google\Model
     return $this->baseTable;
   }
   /**
-   * The index id.
-   *
-   * @param string $indexId
+   * @param string
    */
   public function setIndexId($indexId)
   {
@@ -73,9 +63,7 @@ class IndexPruningStats extends \Google\Model
     return $this->indexId;
   }
   /**
-   * The number of parallel inputs after index pruning.
-   *
-   * @param string $postIndexPruningParallelInputCount
+   * @param string
    */
   public function setPostIndexPruningParallelInputCount($postIndexPruningParallelInputCount)
   {
@@ -89,9 +77,7 @@ class IndexPruningStats extends \Google\Model
     return $this->postIndexPruningParallelInputCount;
   }
   /**
-   * The number of parallel inputs before index pruning.
-   *
-   * @param string $preIndexPruningParallelInputCount
+   * @param string
    */
   public function setPreIndexPruningParallelInputCount($preIndexPruningParallelInputCount)
   {

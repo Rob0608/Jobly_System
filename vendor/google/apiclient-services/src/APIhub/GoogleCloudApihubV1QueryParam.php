@@ -20,54 +20,20 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1QueryParam extends \Google\Model
 {
   /**
-   * Unspecified data type
-   */
-  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
-  /**
-   * Boolean data type
-   */
-  public const DATA_TYPE_BOOL = 'BOOL';
-  /**
-   * Integer data type
-   */
-  public const DATA_TYPE_INTEGER = 'INTEGER';
-  /**
-   * Float data type
-   */
-  public const DATA_TYPE_FLOAT = 'FLOAT';
-  /**
-   * String data type
-   */
-  public const DATA_TYPE_STRING = 'STRING';
-  /**
-   * UUID data type
-   */
-  public const DATA_TYPE_UUID = 'UUID';
-  /**
-   * Optional. The number of occurrences of this query parameter across
-   * transactions.
-   *
    * @var string
    */
   public $count;
   /**
-   * Optional. Data type of path param
-   *
    * @var string
    */
   public $dataType;
   /**
-   * Required. Name of query param
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Optional. The number of occurrences of this query parameter across
-   * transactions.
-   *
-   * @param string $count
+   * @param string
    */
   public function setCount($count)
   {
@@ -81,27 +47,21 @@ class GoogleCloudApihubV1QueryParam extends \Google\Model
     return $this->count;
   }
   /**
-   * Optional. Data type of path param
-   *
-   * Accepted values: DATA_TYPE_UNSPECIFIED, BOOL, INTEGER, FLOAT, STRING, UUID
-   *
-   * @param self::DATA_TYPE_* $dataType
+   * @param string
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return self::DATA_TYPE_*
+   * @return string
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * Required. Name of query param
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

@@ -24,9 +24,7 @@ class GoogleAppsDriveLabelsV2LabelEnabledAppSettings extends \Google\Collection
   protected $enabledAppsDataType = 'array';
 
   /**
-   * Optional. The list of apps where the label can be used.
-   *
-   * @param GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp[] $enabledApps
+   * @param GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp[]
    */
   public function setEnabledApps($enabledApps)
   {

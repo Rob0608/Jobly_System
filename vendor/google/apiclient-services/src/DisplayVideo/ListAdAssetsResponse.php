@@ -23,19 +23,12 @@ class ListAdAssetsResponse extends \Google\Collection
   protected $adAssetsType = AdAsset::class;
   protected $adAssetsDataType = 'array';
   /**
-   * A token to retrieve the next page of results. Pass this value in the
-   * page_token field in the subsequent call to `ListAdAssets` method to
-   * retrieve the next page of results.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of ad assets. The list will only contain assets of AdAssetType
-   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. This list will be absent if empty.
-   *
-   * @param AdAsset[] $adAssets
+   * @param AdAsset[]
    */
   public function setAdAssets($adAssets)
   {
@@ -49,11 +42,7 @@ class ListAdAssetsResponse extends \Google\Collection
     return $this->adAssets;
   }
   /**
-   * A token to retrieve the next page of results. Pass this value in the
-   * page_token field in the subsequent call to `ListAdAssets` method to
-   * retrieve the next page of results.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

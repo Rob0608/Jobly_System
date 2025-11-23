@@ -20,26 +20,16 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class BackupDrPitrSource extends \Google\Model
 {
   /**
-   * Required. The name of the backup resource with the format: * projects/{proj
-   * ect}/locations/{location}/backupVaults/{backupvault_id}/dataSources/{dataso
-   * urce_id}
-   *
    * @var string
    */
   public $dataSource;
   /**
-   * Required. The point in time to restore to.
-   *
    * @var string
    */
   public $pointInTime;
 
   /**
-   * Required. The name of the backup resource with the format: * projects/{proj
-   * ect}/locations/{location}/backupVaults/{backupvault_id}/dataSources/{dataso
-   * urce_id}
-   *
-   * @param string $dataSource
+   * @param string
    */
   public function setDataSource($dataSource)
   {
@@ -53,9 +43,7 @@ class BackupDrPitrSource extends \Google\Model
     return $this->dataSource;
   }
   /**
-   * Required. The point in time to restore to.
-   *
-   * @param string $pointInTime
+   * @param string
    */
   public function setPointInTime($pointInTime)
   {

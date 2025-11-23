@@ -21,25 +21,18 @@ class ListOdbNetworksResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
   protected $odbNetworksType = OdbNetwork::class;
   protected $odbNetworksDataType = 'array';
   /**
-   * Unreachable locations when listing resources across all locations using
-   * wildcard location '-'.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -53,9 +46,7 @@ class ListOdbNetworksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of ODB Networks.
-   *
-   * @param OdbNetwork[] $odbNetworks
+   * @param OdbNetwork[]
    */
   public function setOdbNetworks($odbNetworks)
   {
@@ -69,10 +60,7 @@ class ListOdbNetworksResponse extends \Google\Collection
     return $this->odbNetworks;
   }
   /**
-   * Unreachable locations when listing resources across all locations using
-   * wildcard location '-'.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

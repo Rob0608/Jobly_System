@@ -20,91 +20,56 @@ namespace Google\Service\SQLAdmin;
 class PasswordValidationPolicy extends \Google\Model
 {
   /**
-   * Complexity check is not specified.
-   */
-  public const COMPLEXITY_COMPLEXITY_UNSPECIFIED = 'COMPLEXITY_UNSPECIFIED';
-  /**
-   * A combination of lowercase, uppercase, numeric, and non-alphanumeric
-   * characters.
-   */
-  public const COMPLEXITY_COMPLEXITY_DEFAULT = 'COMPLEXITY_DEFAULT';
-  /**
-   * The complexity of the password.
-   *
    * @var string
    */
   public $complexity;
   /**
-   * This field is deprecated and will be removed in a future version of the
-   * API.
-   *
-   * @deprecated
    * @var bool
    */
   public $disallowCompromisedCredentials;
   /**
-   * Disallow username as a part of the password.
-   *
    * @var bool
    */
   public $disallowUsernameSubstring;
   /**
-   * Whether the password policy is enabled or not.
-   *
    * @var bool
    */
   public $enablePasswordPolicy;
   /**
-   * Minimum number of characters allowed.
-   *
    * @var int
    */
   public $minLength;
   /**
-   * Minimum interval after which the password can be changed. This flag is only
-   * supported for PostgreSQL.
-   *
    * @var string
    */
   public $passwordChangeInterval;
   /**
-   * Number of previous passwords that cannot be reused.
-   *
    * @var int
    */
   public $reuseInterval;
 
   /**
-   * The complexity of the password.
-   *
-   * Accepted values: COMPLEXITY_UNSPECIFIED, COMPLEXITY_DEFAULT
-   *
-   * @param self::COMPLEXITY_* $complexity
+   * @param string
    */
   public function setComplexity($complexity)
   {
     $this->complexity = $complexity;
   }
   /**
-   * @return self::COMPLEXITY_*
+   * @return string
    */
   public function getComplexity()
   {
     return $this->complexity;
   }
   /**
-   * This field is deprecated and will be removed in a future version of the
-   * API.
-   *
-   * @deprecated
-   * @param bool $disallowCompromisedCredentials
+   * @param bool
    */
   public function setDisallowCompromisedCredentials($disallowCompromisedCredentials)
   {
     $this->disallowCompromisedCredentials = $disallowCompromisedCredentials;
   }
   /**
-   * @deprecated
    * @return bool
    */
   public function getDisallowCompromisedCredentials()
@@ -112,9 +77,7 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->disallowCompromisedCredentials;
   }
   /**
-   * Disallow username as a part of the password.
-   *
-   * @param bool $disallowUsernameSubstring
+   * @param bool
    */
   public function setDisallowUsernameSubstring($disallowUsernameSubstring)
   {
@@ -128,9 +91,7 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->disallowUsernameSubstring;
   }
   /**
-   * Whether the password policy is enabled or not.
-   *
-   * @param bool $enablePasswordPolicy
+   * @param bool
    */
   public function setEnablePasswordPolicy($enablePasswordPolicy)
   {
@@ -144,9 +105,7 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->enablePasswordPolicy;
   }
   /**
-   * Minimum number of characters allowed.
-   *
-   * @param int $minLength
+   * @param int
    */
   public function setMinLength($minLength)
   {
@@ -160,10 +119,7 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->minLength;
   }
   /**
-   * Minimum interval after which the password can be changed. This flag is only
-   * supported for PostgreSQL.
-   *
-   * @param string $passwordChangeInterval
+   * @param string
    */
   public function setPasswordChangeInterval($passwordChangeInterval)
   {
@@ -177,9 +133,7 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->passwordChangeInterval;
   }
   /**
-   * Number of previous passwords that cannot be reused.
-   *
-   * @param int $reuseInterval
+   * @param int
    */
   public function setReuseInterval($reuseInterval)
   {

@@ -20,29 +20,16 @@ namespace Google\Service\VMwareEngine;
 class AcceleratePrivateCloudDeletionRequest extends \Google\Model
 {
   /**
-   * Optional. Checksum used to ensure that the user-provided value is up to
-   * date before the server processes the request. The server compares provided
-   * checksum with the current checksum of the resource. If the user-provided
-   * value is out of date, this request returns an `ABORTED` error.
-   *
    * @var string
    */
   public $etag;
   /**
-   * Optional. The request ID must be a valid UUID with the exception that zero
-   * UUID is not supported (00000000-0000-0000-0000-000000000000).
-   *
    * @var string
    */
   public $requestId;
 
   /**
-   * Optional. Checksum used to ensure that the user-provided value is up to
-   * date before the server processes the request. The server compares provided
-   * checksum with the current checksum of the resource. If the user-provided
-   * value is out of date, this request returns an `ABORTED` error.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {
@@ -56,10 +43,7 @@ class AcceleratePrivateCloudDeletionRequest extends \Google\Model
     return $this->etag;
   }
   /**
-   * Optional. The request ID must be a valid UUID with the exception that zero
-   * UUID is not supported (00000000-0000-0000-0000-000000000000).
-   *
-   * @param string $requestId
+   * @param string
    */
   public function setRequestId($requestId)
   {

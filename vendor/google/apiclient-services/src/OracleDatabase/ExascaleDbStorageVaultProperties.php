@@ -19,104 +19,50 @@ namespace Google\Service\OracleDatabase;
 
 class ExascaleDbStorageVaultProperties extends \Google\Collection
 {
-  /**
-   * The state of the ExascaleDbStorageVault is unspecified.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * The ExascaleDbStorageVault is being provisioned.
-   */
-  public const STATE_PROVISIONING = 'PROVISIONING';
-  /**
-   * The ExascaleDbStorageVault is available.
-   */
-  public const STATE_AVAILABLE = 'AVAILABLE';
-  /**
-   * The ExascaleDbStorageVault is being updated.
-   */
-  public const STATE_UPDATING = 'UPDATING';
-  /**
-   * The ExascaleDbStorageVault is being deleted.
-   */
-  public const STATE_TERMINATING = 'TERMINATING';
-  /**
-   * The ExascaleDbStorageVault has been deleted.
-   */
-  public const STATE_TERMINATED = 'TERMINATED';
-  /**
-   * The ExascaleDbStorageVault has failed.
-   */
-  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'vmClusterIds';
   /**
-   * Optional. The size of additional flash cache in percentage of high capacity
-   * database storage.
-   *
    * @var int
    */
   public $additionalFlashCachePercent;
   /**
-   * Output only. The shape attributes of the VM clusters attached to the
-   * ExascaleDbStorageVault.
-   *
    * @var string[]
    */
   public $attachedShapeAttributes;
   /**
-   * Output only. The shape attributes available for the VM clusters to be
-   * attached to the ExascaleDbStorageVault.
-   *
    * @var string[]
    */
   public $availableShapeAttributes;
   /**
-   * Optional. The description of the ExascaleDbStorageVault.
-   *
    * @var string
    */
   public $description;
   protected $exascaleDbStorageDetailsType = ExascaleDbStorageDetails::class;
   protected $exascaleDbStorageDetailsDataType = '';
   /**
-   * Output only. Deep link to the OCI console to view this resource.
-   *
    * @var string
    */
   public $ociUri;
   /**
-   * Output only. The OCID for the ExascaleDbStorageVault.
-   *
    * @var string
    */
   public $ocid;
   /**
-   * Output only. The state of the ExascaleDbStorageVault.
-   *
    * @var string
    */
   public $state;
   protected $timeZoneType = TimeZone::class;
   protected $timeZoneDataType = '';
   /**
-   * Output only. The number of VM clusters associated with the
-   * ExascaleDbStorageVault.
-   *
    * @var int
    */
   public $vmClusterCount;
   /**
-   * Output only. The list of VM cluster OCIDs associated with the
-   * ExascaleDbStorageVault.
-   *
    * @var string[]
    */
   public $vmClusterIds;
 
   /**
-   * Optional. The size of additional flash cache in percentage of high capacity
-   * database storage.
-   *
-   * @param int $additionalFlashCachePercent
+   * @param int
    */
   public function setAdditionalFlashCachePercent($additionalFlashCachePercent)
   {
@@ -130,10 +76,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->additionalFlashCachePercent;
   }
   /**
-   * Output only. The shape attributes of the VM clusters attached to the
-   * ExascaleDbStorageVault.
-   *
-   * @param string[] $attachedShapeAttributes
+   * @param string[]
    */
   public function setAttachedShapeAttributes($attachedShapeAttributes)
   {
@@ -147,10 +90,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->attachedShapeAttributes;
   }
   /**
-   * Output only. The shape attributes available for the VM clusters to be
-   * attached to the ExascaleDbStorageVault.
-   *
-   * @param string[] $availableShapeAttributes
+   * @param string[]
    */
   public function setAvailableShapeAttributes($availableShapeAttributes)
   {
@@ -164,9 +104,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->availableShapeAttributes;
   }
   /**
-   * Optional. The description of the ExascaleDbStorageVault.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -180,9 +118,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->description;
   }
   /**
-   * Required. The storage details of the ExascaleDbStorageVault.
-   *
-   * @param ExascaleDbStorageDetails $exascaleDbStorageDetails
+   * @param ExascaleDbStorageDetails
    */
   public function setExascaleDbStorageDetails(ExascaleDbStorageDetails $exascaleDbStorageDetails)
   {
@@ -196,9 +132,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->exascaleDbStorageDetails;
   }
   /**
-   * Output only. Deep link to the OCI console to view this resource.
-   *
-   * @param string $ociUri
+   * @param string
    */
   public function setOciUri($ociUri)
   {
@@ -212,9 +146,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->ociUri;
   }
   /**
-   * Output only. The OCID for the ExascaleDbStorageVault.
-   *
-   * @param string $ocid
+   * @param string
    */
   public function setOcid($ocid)
   {
@@ -228,28 +160,21 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->ocid;
   }
   /**
-   * Output only. The state of the ExascaleDbStorageVault.
-   *
-   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, AVAILABLE, UPDATING,
-   * TERMINATING, TERMINATED, FAILED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * Output only. The time zone of the ExascaleDbStorageVault.
-   *
-   * @param TimeZone $timeZone
+   * @param TimeZone
    */
   public function setTimeZone(TimeZone $timeZone)
   {
@@ -263,10 +188,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->timeZone;
   }
   /**
-   * Output only. The number of VM clusters associated with the
-   * ExascaleDbStorageVault.
-   *
-   * @param int $vmClusterCount
+   * @param int
    */
   public function setVmClusterCount($vmClusterCount)
   {
@@ -280,10 +202,7 @@ class ExascaleDbStorageVaultProperties extends \Google\Collection
     return $this->vmClusterCount;
   }
   /**
-   * Output only. The list of VM cluster OCIDs associated with the
-   * ExascaleDbStorageVault.
-   *
-   * @param string[] $vmClusterIds
+   * @param string[]
    */
   public function setVmClusterIds($vmClusterIds)
   {

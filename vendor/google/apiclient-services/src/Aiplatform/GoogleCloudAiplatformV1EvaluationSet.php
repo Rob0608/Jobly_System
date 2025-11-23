@@ -21,47 +21,32 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
 {
   protected $collection_key = 'evaluationItems';
   /**
-   * Output only. Timestamp when this item was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Required. The display name of the EvaluationSet.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Required. The EvaluationItems that are part of this dataset.
-   *
    * @var string[]
    */
   public $evaluationItems;
   /**
-   * Optional. Metadata for the EvaluationSet.
-   *
    * @var array
    */
   public $metadata;
   /**
-   * Identifier. The resource name of the EvaluationSet. Format:
-   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}`
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. Timestamp when this item was last updated.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. Timestamp when this item was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -75,9 +60,7 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. The display name of the EvaluationSet.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -91,9 +74,7 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Required. The EvaluationItems that are part of this dataset.
-   *
-   * @param string[] $evaluationItems
+   * @param string[]
    */
   public function setEvaluationItems($evaluationItems)
   {
@@ -107,9 +88,7 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
     return $this->evaluationItems;
   }
   /**
-   * Optional. Metadata for the EvaluationSet.
-   *
-   * @param array $metadata
+   * @param array
    */
   public function setMetadata($metadata)
   {
@@ -123,10 +102,7 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * Identifier. The resource name of the EvaluationSet. Format:
-   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -140,9 +116,7 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. Timestamp when this item was last updated.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

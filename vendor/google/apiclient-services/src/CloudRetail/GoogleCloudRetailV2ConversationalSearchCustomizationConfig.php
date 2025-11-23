@@ -20,27 +20,18 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ConversationalSearchCustomizationConfig extends \Google\Model
 {
   /**
-   * Required. Resource name of the catalog. Format:
-   * projects/{project}/locations/{location}/catalogs/{catalog}
-   *
    * @var string
    */
   public $catalog;
   protected $intentClassificationConfigType = GoogleCloudRetailV2IntentClassificationConfig::class;
   protected $intentClassificationConfigDataType = '';
   /**
-   * Optional. The retailer's display name that could be used in our LLM
-   * answers. Example - "Google"
-   *
    * @var string
    */
   public $retailerDisplayName;
 
   /**
-   * Required. Resource name of the catalog. Format:
-   * projects/{project}/locations/{location}/catalogs/{catalog}
-   *
-   * @param string $catalog
+   * @param string
    */
   public function setCatalog($catalog)
   {
@@ -54,9 +45,7 @@ class GoogleCloudRetailV2ConversationalSearchCustomizationConfig extends \Google
     return $this->catalog;
   }
   /**
-   * Optional. The configs for intent classification.
-   *
-   * @param GoogleCloudRetailV2IntentClassificationConfig $intentClassificationConfig
+   * @param GoogleCloudRetailV2IntentClassificationConfig
    */
   public function setIntentClassificationConfig(GoogleCloudRetailV2IntentClassificationConfig $intentClassificationConfig)
   {
@@ -70,10 +59,7 @@ class GoogleCloudRetailV2ConversationalSearchCustomizationConfig extends \Google
     return $this->intentClassificationConfig;
   }
   /**
-   * Optional. The retailer's display name that could be used in our LLM
-   * answers. Example - "Google"
-   *
-   * @param string $retailerDisplayName
+   * @param string
    */
   public function setRetailerDisplayName($retailerDisplayName)
   {

@@ -19,29 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class OneTimeProductPurchaseOption extends \Google\Collection
 {
-  /**
-   * Default value, should never be used.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * The purchase option is not and has never been available to users.
-   */
-  public const STATE_DRAFT = 'DRAFT';
-  /**
-   * The purchase option is available to users.
-   */
-  public const STATE_ACTIVE = 'ACTIVE';
-  /**
-   * The purchase option is not available to users anymore.
-   */
-  public const STATE_INACTIVE = 'INACTIVE';
-  /**
-   * The purchase option is not available for purchase anymore, but we continue
-   * to expose its offer via the Play Billing Library for backwards
-   * compatibility. Only automatically migrated purchase options can be in this
-   * state.
-   */
-  public const STATE_INACTIVE_PUBLISHED = 'INACTIVE_PUBLISHED';
   protected $collection_key = 'regionalPricingAndAvailabilityConfigs';
   protected $buyOptionType = OneTimeProductBuyPurchaseOption::class;
   protected $buyOptionDataType = '';
@@ -50,11 +27,6 @@ class OneTimeProductPurchaseOption extends \Google\Collection
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
   /**
-   * Required. Immutable. The unique identifier of this purchase option. Must be
-   * unique within the one-time product. It must start with a number or lower-
-   * case letter, and can only contain lower-case letters (a-z), numbers (0-9),
-   * and hyphens (-). The maximum length is 63 characters.
-   *
    * @var string
    */
   public $purchaseOptionId;
@@ -63,10 +35,6 @@ class OneTimeProductPurchaseOption extends \Google\Collection
   protected $rentOptionType = OneTimeProductRentPurchaseOption::class;
   protected $rentOptionDataType = '';
   /**
-   * Output only. The state of the purchase option, i.e., whether it's active.
-   * This field cannot be changed by updating the resource. Use the dedicated
-   * endpoints instead.
-   *
    * @var string
    */
   public $state;
@@ -74,9 +42,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
   protected $taxAndComplianceSettingsDataType = '';
 
   /**
-   * A purchase option that can be bought.
-   *
-   * @param OneTimeProductBuyPurchaseOption $buyOption
+   * @param OneTimeProductBuyPurchaseOption
    */
   public function setBuyOption(OneTimeProductBuyPurchaseOption $buyOption)
   {
@@ -90,11 +56,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->buyOption;
   }
   /**
-   * Pricing information for any new locations Play may launch in the future. If
-   * omitted, the purchase option will not be automatically available in any new
-   * locations Play may launch in the future.
-   *
-   * @param OneTimeProductPurchaseOptionNewRegionsConfig $newRegionsConfig
+   * @param OneTimeProductPurchaseOptionNewRegionsConfig
    */
   public function setNewRegionsConfig(OneTimeProductPurchaseOptionNewRegionsConfig $newRegionsConfig)
   {
@@ -108,11 +70,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->newRegionsConfig;
   }
   /**
-   * Optional. List of up to 20 custom tags specified for this purchase option,
-   * and returned to the app through the billing library. Offers for this
-   * purchase option will also receive these tags in the billing library.
-   *
-   * @param OfferTag[] $offerTags
+   * @param OfferTag[]
    */
   public function setOfferTags($offerTags)
   {
@@ -126,12 +84,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->offerTags;
   }
   /**
-   * Required. Immutable. The unique identifier of this purchase option. Must be
-   * unique within the one-time product. It must start with a number or lower-
-   * case letter, and can only contain lower-case letters (a-z), numbers (0-9),
-   * and hyphens (-). The maximum length is 63 characters.
-   *
-   * @param string $purchaseOptionId
+   * @param string
    */
   public function setPurchaseOptionId($purchaseOptionId)
   {
@@ -145,9 +98,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->purchaseOptionId;
   }
   /**
-   * Regional pricing and availability information for this purchase option.
-   *
-   * @param OneTimeProductPurchaseOptionRegionalPricingAndAvailabilityConfig[] $regionalPricingAndAvailabilityConfigs
+   * @param OneTimeProductPurchaseOptionRegionalPricingAndAvailabilityConfig[]
    */
   public function setRegionalPricingAndAvailabilityConfigs($regionalPricingAndAvailabilityConfigs)
   {
@@ -161,9 +112,7 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->regionalPricingAndAvailabilityConfigs;
   }
   /**
-   * A purchase option that can be rented.
-   *
-   * @param OneTimeProductRentPurchaseOption $rentOption
+   * @param OneTimeProductRentPurchaseOption
    */
   public function setRentOption(OneTimeProductRentPurchaseOption $rentOption)
   {
@@ -177,30 +126,21 @@ class OneTimeProductPurchaseOption extends \Google\Collection
     return $this->rentOption;
   }
   /**
-   * Output only. The state of the purchase option, i.e., whether it's active.
-   * This field cannot be changed by updating the resource. Use the dedicated
-   * endpoints instead.
-   *
-   * Accepted values: STATE_UNSPECIFIED, DRAFT, ACTIVE, INACTIVE,
-   * INACTIVE_PUBLISHED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * Optional. Details about taxes and legal compliance.
-   *
-   * @param PurchaseOptionTaxAndComplianceSettings $taxAndComplianceSettings
+   * @param PurchaseOptionTaxAndComplianceSettings
    */
   public function setTaxAndComplianceSettings(PurchaseOptionTaxAndComplianceSettings $taxAndComplianceSettings)
   {

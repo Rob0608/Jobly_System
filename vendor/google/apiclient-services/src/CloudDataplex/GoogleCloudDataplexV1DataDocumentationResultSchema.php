@@ -24,9 +24,7 @@ class GoogleCloudDataplexV1DataDocumentationResultSchema extends \Google\Collect
   protected $fieldsDataType = 'array';
 
   /**
-   * Output only. The list of columns.
-   *
-   * @param GoogleCloudDataplexV1DataDocumentationResultField[] $fields
+   * @param GoogleCloudDataplexV1DataDocumentationResultField[]
    */
   public function setFields($fields)
   {

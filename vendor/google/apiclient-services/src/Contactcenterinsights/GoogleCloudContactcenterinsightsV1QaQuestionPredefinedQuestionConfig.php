@@ -20,41 +20,19 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig extends \Google\Model
 {
   /**
-   * The type of the predefined question is unspecified.
-   */
-  public const TYPE_PREDEFINED_QUESTION_TYPE_UNSPECIFIED = 'PREDEFINED_QUESTION_TYPE_UNSPECIFIED';
-  /**
-   * A prebuilt classifier classfying the outcome of the conversation. For
-   * example, if the customer issue mentioned in a conversation has been
-   * resolved or not.
-   */
-  public const TYPE_CONVERSATION_OUTCOME = 'CONVERSATION_OUTCOME';
-  /**
-   * A prebuilt classifier classfying the initiator of the conversation
-   * escalation. For example, if it was initiated by the customer or the agent.
-   */
-  public const TYPE_CONVERSATION_OUTCOME_ESCALATION_INITIATOR_ROLE = 'CONVERSATION_OUTCOME_ESCALATION_INITIATOR_ROLE';
-  /**
-   * The type of the predefined question.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * The type of the predefined question.
-   *
-   * Accepted values: PREDEFINED_QUESTION_TYPE_UNSPECIFIED,
-   * CONVERSATION_OUTCOME, CONVERSATION_OUTCOME_ESCALATION_INITIATOR_ROLE
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {

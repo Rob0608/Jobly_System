@@ -20,123 +20,62 @@ namespace Google\Service\OracleDatabase;
 class Database extends \Google\Model
 {
   /**
-   * Default unspecified value.
-   */
-  public const OPS_INSIGHTS_STATUS_OPERATIONS_INSIGHTS_STATUS_UNSPECIFIED = 'OPERATIONS_INSIGHTS_STATUS_UNSPECIFIED';
-  /**
-   * Indicates that the operations insights are being enabled.
-   */
-  public const OPS_INSIGHTS_STATUS_ENABLING = 'ENABLING';
-  /**
-   * Indicates that the operations insights are enabled.
-   */
-  public const OPS_INSIGHTS_STATUS_ENABLED = 'ENABLED';
-  /**
-   * Indicates that the operations insights are being disabled.
-   */
-  public const OPS_INSIGHTS_STATUS_DISABLING = 'DISABLING';
-  /**
-   * Indicates that the operations insights are not enabled.
-   */
-  public const OPS_INSIGHTS_STATUS_NOT_ENABLED = 'NOT_ENABLED';
-  /**
-   * Indicates that the operations insights failed to enable.
-   */
-  public const OPS_INSIGHTS_STATUS_FAILED_ENABLING = 'FAILED_ENABLING';
-  /**
-   * Indicates that the operations insights failed to disable.
-   */
-  public const OPS_INSIGHTS_STATUS_FAILED_DISABLING = 'FAILED_DISABLING';
-  /**
-   * Required. The password for the default ADMIN user.
-   *
    * @var string
    */
   public $adminPassword;
   /**
-   * Optional. The character set for the database. The default is AL32UTF8.
-   *
    * @var string
    */
   public $characterSet;
   /**
-   * Output only. The date and time that the Database was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. The database ID of the Database.
-   *
    * @var string
    */
   public $databaseId;
   /**
-   * Optional. The name of the DbHome resource associated with the Database.
-   *
    * @var string
    */
   public $dbHomeName;
   /**
-   * Optional. The database name. The name must begin with an alphabetic
-   * character and can contain a maximum of eight alphanumeric characters.
-   * Special characters are not permitted.
-   *
    * @var string
    */
   public $dbName;
   /**
-   * Optional. The DB_UNIQUE_NAME of the Oracle Database being backed up.
-   *
    * @var string
    */
   public $dbUniqueName;
   /**
-   * Output only. The GCP Oracle zone where the Database is created.
-   *
    * @var string
    */
   public $gcpOracleZone;
   /**
-   * Identifier. The name of the Database resource in the following format:
-   * projects/{project}/locations/{region}/databases/{database}
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. The national character set for the database. The default is
-   * AL16UTF16.
-   *
    * @var string
    */
   public $ncharacterSet;
   /**
-   * Output only. HTTPS link to OCI resources exposed to Customer via UI
-   * Interface.
-   *
    * @var string
    */
   public $ociUrl;
   /**
-   * Output only. The Status of Operations Insights for this Database.
-   *
    * @var string
    */
   public $opsInsightsStatus;
   protected $propertiesType = DatabaseProperties::class;
   protected $propertiesDataType = '';
   /**
-   * Optional. The TDE wallet password for the database.
-   *
    * @var string
    */
   public $tdeWalletPassword;
 
   /**
-   * Required. The password for the default ADMIN user.
-   *
-   * @param string $adminPassword
+   * @param string
    */
   public function setAdminPassword($adminPassword)
   {
@@ -150,9 +89,7 @@ class Database extends \Google\Model
     return $this->adminPassword;
   }
   /**
-   * Optional. The character set for the database. The default is AL32UTF8.
-   *
-   * @param string $characterSet
+   * @param string
    */
   public function setCharacterSet($characterSet)
   {
@@ -166,9 +103,7 @@ class Database extends \Google\Model
     return $this->characterSet;
   }
   /**
-   * Output only. The date and time that the Database was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -182,9 +117,7 @@ class Database extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. The database ID of the Database.
-   *
-   * @param string $databaseId
+   * @param string
    */
   public function setDatabaseId($databaseId)
   {
@@ -198,9 +131,7 @@ class Database extends \Google\Model
     return $this->databaseId;
   }
   /**
-   * Optional. The name of the DbHome resource associated with the Database.
-   *
-   * @param string $dbHomeName
+   * @param string
    */
   public function setDbHomeName($dbHomeName)
   {
@@ -214,11 +145,7 @@ class Database extends \Google\Model
     return $this->dbHomeName;
   }
   /**
-   * Optional. The database name. The name must begin with an alphabetic
-   * character and can contain a maximum of eight alphanumeric characters.
-   * Special characters are not permitted.
-   *
-   * @param string $dbName
+   * @param string
    */
   public function setDbName($dbName)
   {
@@ -232,9 +159,7 @@ class Database extends \Google\Model
     return $this->dbName;
   }
   /**
-   * Optional. The DB_UNIQUE_NAME of the Oracle Database being backed up.
-   *
-   * @param string $dbUniqueName
+   * @param string
    */
   public function setDbUniqueName($dbUniqueName)
   {
@@ -248,9 +173,7 @@ class Database extends \Google\Model
     return $this->dbUniqueName;
   }
   /**
-   * Output only. The GCP Oracle zone where the Database is created.
-   *
-   * @param string $gcpOracleZone
+   * @param string
    */
   public function setGcpOracleZone($gcpOracleZone)
   {
@@ -264,10 +187,7 @@ class Database extends \Google\Model
     return $this->gcpOracleZone;
   }
   /**
-   * Identifier. The name of the Database resource in the following format:
-   * projects/{project}/locations/{region}/databases/{database}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -281,10 +201,7 @@ class Database extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The national character set for the database. The default is
-   * AL16UTF16.
-   *
-   * @param string $ncharacterSet
+   * @param string
    */
   public function setNcharacterSet($ncharacterSet)
   {
@@ -298,10 +215,7 @@ class Database extends \Google\Model
     return $this->ncharacterSet;
   }
   /**
-   * Output only. HTTPS link to OCI resources exposed to Customer via UI
-   * Interface.
-   *
-   * @param string $ociUrl
+   * @param string
    */
   public function setOciUrl($ociUrl)
   {
@@ -315,28 +229,21 @@ class Database extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * Output only. The Status of Operations Insights for this Database.
-   *
-   * Accepted values: OPERATIONS_INSIGHTS_STATUS_UNSPECIFIED, ENABLING, ENABLED,
-   * DISABLING, NOT_ENABLED, FAILED_ENABLING, FAILED_DISABLING
-   *
-   * @param self::OPS_INSIGHTS_STATUS_* $opsInsightsStatus
+   * @param string
    */
   public function setOpsInsightsStatus($opsInsightsStatus)
   {
     $this->opsInsightsStatus = $opsInsightsStatus;
   }
   /**
-   * @return self::OPS_INSIGHTS_STATUS_*
+   * @return string
    */
   public function getOpsInsightsStatus()
   {
     return $this->opsInsightsStatus;
   }
   /**
-   * Optional. The properties of the Database.
-   *
-   * @param DatabaseProperties $properties
+   * @param DatabaseProperties
    */
   public function setProperties(DatabaseProperties $properties)
   {
@@ -350,9 +257,7 @@ class Database extends \Google\Model
     return $this->properties;
   }
   /**
-   * Optional. The TDE wallet password for the database.
-   *
-   * @param string $tdeWalletPassword
+   * @param string
    */
   public function setTdeWalletPassword($tdeWalletPassword)
   {

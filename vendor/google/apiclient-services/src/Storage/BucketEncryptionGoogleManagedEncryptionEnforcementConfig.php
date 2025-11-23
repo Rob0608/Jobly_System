@@ -20,33 +20,16 @@ namespace Google\Service\Storage;
 class BucketEncryptionGoogleManagedEncryptionEnforcementConfig extends \Google\Model
 {
   /**
-   * Creation of new objects with Google Managed Encryption is not restricted.
-   */
-  public const RESTRICTION_MODE_NotRestricted = 'NotRestricted';
-  /**
-   * Creation of new objects with Google Managed Encryption is fully restricted.
-   */
-  public const RESTRICTION_MODE_FullyRestricted = 'FullyRestricted';
-  /**
-   * Server-determined value that indicates the time from which configuration
-   * was enforced and effective. This value is in RFC 3339 format.
-   *
    * @var string
    */
   public $effectiveTime;
   /**
-   * Restriction mode for Google-Managed Encryption Keys. Defaults to
-   * NotRestricted.
-   *
    * @var string
    */
   public $restrictionMode;
 
   /**
-   * Server-determined value that indicates the time from which configuration
-   * was enforced and effective. This value is in RFC 3339 format.
-   *
-   * @param string $effectiveTime
+   * @param string
    */
   public function setEffectiveTime($effectiveTime)
   {
@@ -60,19 +43,14 @@ class BucketEncryptionGoogleManagedEncryptionEnforcementConfig extends \Google\M
     return $this->effectiveTime;
   }
   /**
-   * Restriction mode for Google-Managed Encryption Keys. Defaults to
-   * NotRestricted.
-   *
-   * Accepted values: NotRestricted, FullyRestricted
-   *
-   * @param self::RESTRICTION_MODE_* $restrictionMode
+   * @param string
    */
   public function setRestrictionMode($restrictionMode)
   {
     $this->restrictionMode = $restrictionMode;
   }
   /**
-   * @return self::RESTRICTION_MODE_*
+   * @return string
    */
   public function getRestrictionMode()
   {

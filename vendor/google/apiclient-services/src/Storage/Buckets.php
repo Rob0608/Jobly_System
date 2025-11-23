@@ -23,31 +23,20 @@ class Buckets extends \Google\Collection
   protected $itemsType = Bucket::class;
   protected $itemsDataType = 'array';
   /**
-   * The kind of item this is. For lists of buckets, this is always
-   * storage#buckets.
-   *
    * @var string
    */
   public $kind;
   /**
-   * The continuation token, used to page through large result sets. Provide
-   * this value in a subsequent request to return the next page of results.
-   *
    * @var string
    */
   public $nextPageToken;
   /**
-   * The list of bucket resource names that could not be reached during the
-   * listing operation.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * The list of items.
-   *
-   * @param Bucket[] $items
+   * @param Bucket[]
    */
   public function setItems($items)
   {
@@ -61,10 +50,7 @@ class Buckets extends \Google\Collection
     return $this->items;
   }
   /**
-   * The kind of item this is. For lists of buckets, this is always
-   * storage#buckets.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -78,10 +64,7 @@ class Buckets extends \Google\Collection
     return $this->kind;
   }
   /**
-   * The continuation token, used to page through large result sets. Provide
-   * this value in a subsequent request to return the next page of results.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -95,10 +78,7 @@ class Buckets extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of bucket resource names that could not be reached during the
-   * listing operation.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

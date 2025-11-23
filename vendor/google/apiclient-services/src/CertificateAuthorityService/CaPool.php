@@ -19,49 +19,27 @@ namespace Google\Service\CertificateAuthorityService;
 
 class CaPool extends \Google\Model
 {
-  /**
-   * Not specified.
-   */
-  public const TIER_TIER_UNSPECIFIED = 'TIER_UNSPECIFIED';
-  /**
-   * Enterprise tier.
-   */
-  public const TIER_ENTERPRISE = 'ENTERPRISE';
-  /**
-   * DevOps tier.
-   */
-  public const TIER_DEVOPS = 'DEVOPS';
   protected $encryptionSpecType = EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   protected $issuancePolicyType = IssuancePolicy::class;
   protected $issuancePolicyDataType = '';
   /**
-   * Optional. Labels with user-defined metadata.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The resource name for this CaPool in the format
-   * `projects/locations/caPools`.
-   *
    * @var string
    */
   public $name;
   protected $publishingOptionsType = PublishingOptions::class;
   protected $publishingOptionsDataType = '';
   /**
-   * Required. Immutable. The Tier of this CaPool.
-   *
    * @var string
    */
   public $tier;
 
   /**
-   * Optional. When EncryptionSpec is provided, the Subject, SubjectAltNames,
-   * and the PEM-encoded certificate fields will be encrypted at rest.
-   *
-   * @param EncryptionSpec $encryptionSpec
+   * @param EncryptionSpec
    */
   public function setEncryptionSpec(EncryptionSpec $encryptionSpec)
   {
@@ -75,10 +53,7 @@ class CaPool extends \Google\Model
     return $this->encryptionSpec;
   }
   /**
-   * Optional. The IssuancePolicy to control how Certificates will be issued
-   * from this CaPool.
-   *
-   * @param IssuancePolicy $issuancePolicy
+   * @param IssuancePolicy
    */
   public function setIssuancePolicy(IssuancePolicy $issuancePolicy)
   {
@@ -92,9 +67,7 @@ class CaPool extends \Google\Model
     return $this->issuancePolicy;
   }
   /**
-   * Optional. Labels with user-defined metadata.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -108,10 +81,7 @@ class CaPool extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. The resource name for this CaPool in the format
-   * `projects/locations/caPools`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -125,10 +95,7 @@ class CaPool extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The PublishingOptions to follow when issuing Certificates from
-   * any CertificateAuthority in this CaPool.
-   *
-   * @param PublishingOptions $publishingOptions
+   * @param PublishingOptions
    */
   public function setPublishingOptions(PublishingOptions $publishingOptions)
   {
@@ -142,18 +109,14 @@ class CaPool extends \Google\Model
     return $this->publishingOptions;
   }
   /**
-   * Required. Immutable. The Tier of this CaPool.
-   *
-   * Accepted values: TIER_UNSPECIFIED, ENTERPRISE, DEVOPS
-   *
-   * @param self::TIER_* $tier
+   * @param string
    */
   public function setTier($tier)
   {
     $this->tier = $tier;
   }
   /**
-   * @return self::TIER_*
+   * @return string
    */
   public function getTier()
   {

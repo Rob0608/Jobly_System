@@ -23,29 +23,20 @@ class GoogleCloudDiscoveryengineV1DestinationConfig extends \Google\Collection
   protected $destinationsType = GoogleCloudDiscoveryengineV1DestinationConfigDestination::class;
   protected $destinationsDataType = 'array';
   /**
-   * Additional parameters for this destination config in json string format.
-   *
    * @var string
    */
   public $jsonParams;
   /**
-   * Optional. Unique destination identifier that is supported by the connector.
-   *
    * @var string
    */
   public $key;
   /**
-   * Optional. Additional parameters for this destination config in structured
-   * json format.
-   *
    * @var array[]
    */
   public $params;
 
   /**
-   * Optional. The destinations for the corresponding key.
-   *
-   * @param GoogleCloudDiscoveryengineV1DestinationConfigDestination[] $destinations
+   * @param GoogleCloudDiscoveryengineV1DestinationConfigDestination[]
    */
   public function setDestinations($destinations)
   {
@@ -59,9 +50,7 @@ class GoogleCloudDiscoveryengineV1DestinationConfig extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * Additional parameters for this destination config in json string format.
-   *
-   * @param string $jsonParams
+   * @param string
    */
   public function setJsonParams($jsonParams)
   {
@@ -75,9 +64,7 @@ class GoogleCloudDiscoveryengineV1DestinationConfig extends \Google\Collection
     return $this->jsonParams;
   }
   /**
-   * Optional. Unique destination identifier that is supported by the connector.
-   *
-   * @param string $key
+   * @param string
    */
   public function setKey($key)
   {
@@ -91,10 +78,7 @@ class GoogleCloudDiscoveryengineV1DestinationConfig extends \Google\Collection
     return $this->key;
   }
   /**
-   * Optional. Additional parameters for this destination config in structured
-   * json format.
-   *
-   * @param array[] $params
+   * @param array[]
    */
   public function setParams($params)
   {

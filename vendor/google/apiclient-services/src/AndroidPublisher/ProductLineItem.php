@@ -20,8 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class ProductLineItem extends \Google\Model
 {
   /**
-   * The purchased product ID (for example, 'monthly001').
-   *
    * @var string
    */
   public $productId;
@@ -29,9 +27,7 @@ class ProductLineItem extends \Google\Model
   protected $productOfferDetailsDataType = '';
 
   /**
-   * The purchased product ID (for example, 'monthly001').
-   *
-   * @param string $productId
+   * @param string
    */
   public function setProductId($productId)
   {
@@ -45,9 +41,7 @@ class ProductLineItem extends \Google\Model
     return $this->productId;
   }
   /**
-   * The offer details for this item.
-   *
-   * @param ProductOfferDetails $productOfferDetails
+   * @param ProductOfferDetails
    */
   public function setProductOfferDetails(ProductOfferDetails $productOfferDetails)
   {

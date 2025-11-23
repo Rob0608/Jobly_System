@@ -23,16 +23,12 @@ class ListHooksResponse extends \Google\Collection
   protected $hooksType = Hook::class;
   protected $hooksDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of hooks.
-   *
-   * @param Hook[] $hooks
+   * @param Hook[]
    */
   public function setHooks($hooks)
   {
@@ -46,9 +42,7 @@ class ListHooksResponse extends \Google\Collection
     return $this->hooks;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,16 +20,12 @@ namespace Google\Service\OracleDatabase;
 class DefinedTagValue extends \Google\Model
 {
   /**
-   * The tags within the namespace.
-   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * The tags within the namespace.
-   *
-   * @param string[] $tags
+   * @param string[]
    */
   public function setTags($tags)
   {

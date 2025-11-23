@@ -20,32 +20,22 @@ namespace Google\Service\Dataform;
 class Workspace extends \Google\Model
 {
   /**
-   * Output only. The timestamp of when the workspace was created.
-   *
    * @var string
    */
   public $createTime;
   protected $dataEncryptionStateType = DataEncryptionState::class;
   protected $dataEncryptionStateDataType = '';
   /**
-   * Output only. All the metadata information that is used internally to serve
-   * the resource. For example: timestamps, flags, status fields, etc. The
-   * format of this field is a JSON string.
-   *
    * @var string
    */
   public $internalMetadata;
   /**
-   * Identifier. The workspace's name.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Output only. The timestamp of when the workspace was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -59,10 +49,7 @@ class Workspace extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. A data encryption state of a Git repository if this Workspace
-   * is protected by a KMS key.
-   *
-   * @param DataEncryptionState $dataEncryptionState
+   * @param DataEncryptionState
    */
   public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
   {
@@ -76,11 +63,7 @@ class Workspace extends \Google\Model
     return $this->dataEncryptionState;
   }
   /**
-   * Output only. All the metadata information that is used internally to serve
-   * the resource. For example: timestamps, flags, status fields, etc. The
-   * format of this field is a JSON string.
-   *
-   * @param string $internalMetadata
+   * @param string
    */
   public function setInternalMetadata($internalMetadata)
   {
@@ -94,9 +77,7 @@ class Workspace extends \Google\Model
     return $this->internalMetadata;
   }
   /**
-   * Identifier. The workspace's name.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

@@ -20,46 +20,19 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesEnvironment extends \Google\Model
 {
   /**
-   * Unspecified type.
-   */
-  public const TYPE_ENVIRONMENT_TYPE_UNSPECIFIED = 'ENVIRONMENT_TYPE_UNSPECIFIED';
-  /**
-   * Production environment.
-   */
-  public const TYPE_PRODUCTION = 'PRODUCTION';
-  /**
-   * Staging environment.
-   */
-  public const TYPE_STAGING = 'STAGING';
-  /**
-   * Test environment.
-   */
-  public const TYPE_TEST = 'TEST';
-  /**
-   * Development environment.
-   */
-  public const TYPE_DEVELOPMENT = 'DEVELOPMENT';
-  /**
-   * Environment Type.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Environment Type.
-   *
-   * Accepted values: ENVIRONMENT_TYPE_UNSPECIFIED, PRODUCTION, STAGING, TEST,
-   * DEVELOPMENT
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {

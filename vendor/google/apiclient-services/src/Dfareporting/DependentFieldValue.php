@@ -20,22 +20,16 @@ namespace Google\Service\Dfareporting;
 class DependentFieldValue extends \Google\Model
 {
   /**
-   * Optional. The ID of the element that value's field will match against.
-   *
    * @var string
    */
   public $elementId;
   /**
-   * Optional. The field id of the dependent field.
-   *
    * @var int
    */
   public $fieldId;
 
   /**
-   * Optional. The ID of the element that value's field will match against.
-   *
-   * @param string $elementId
+   * @param string
    */
   public function setElementId($elementId)
   {
@@ -49,9 +43,7 @@ class DependentFieldValue extends \Google\Model
     return $this->elementId;
   }
   /**
-   * Optional. The field id of the dependent field.
-   *
-   * @param int $fieldId
+   * @param int
    */
   public function setFieldId($fieldId)
   {

@@ -24,10 +24,7 @@ class MultiSpeakerVoiceConfig extends \Google\Collection
   protected $speakerVoiceConfigsDataType = 'array';
 
   /**
-   * Required. A list of configurations for the voices of the speakers. Exactly
-   * two speaker voice configurations must be provided.
-   *
-   * @param MultispeakerPrebuiltVoice[] $speakerVoiceConfigs
+   * @param MultispeakerPrebuiltVoice[]
    */
   public function setSpeakerVoiceConfigs($speakerVoiceConfigs)
   {

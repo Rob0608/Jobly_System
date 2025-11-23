@@ -20,16 +20,12 @@ namespace Google\Service\SecureSourceManager;
 class Comment extends \Google\Model
 {
   /**
-   * Required. The comment body.
-   *
    * @var string
    */
   public $body;
 
   /**
-   * Required. The comment body.
-   *
-   * @param string $body
+   * @param string
    */
   public function setBody($body)
   {

@@ -23,9 +23,7 @@ class StorageObjectContexts extends \Google\Model
   protected $customDataType = 'map';
 
   /**
-   * User-defined object contexts.
-   *
-   * @param ObjectCustomContextPayload[] $custom
+   * @param ObjectCustomContextPayload[]
    */
   public function setCustom($custom)
   {

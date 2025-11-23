@@ -25,17 +25,10 @@ class OneTimeProduct extends \Google\Collection
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
   /**
-   * Required. Immutable. Package name of the parent app.
-   *
    * @var string
    */
   public $packageName;
   /**
-   * Required. Immutable. Unique product ID of the product. Unique within the
-   * parent app. Product IDs must start with a number or lowercase letter, and
-   * can contain numbers (0-9), lowercase letters (a-z), underscores (_), and
-   * periods (.).
-   *
    * @var string
    */
   public $productId;
@@ -49,10 +42,7 @@ class OneTimeProduct extends \Google\Collection
   protected $taxAndComplianceSettingsDataType = '';
 
   /**
-   * Required. Set of localized title and description data. Must not have
-   * duplicate entries with the same language_code.
-   *
-   * @param OneTimeProductListing[] $listings
+   * @param OneTimeProductListing[]
    */
   public function setListings($listings)
   {
@@ -66,12 +56,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->listings;
   }
   /**
-   * Optional. List of up to 20 custom tags specified for this one-time product,
-   * and returned to the app through the billing library. Purchase options and
-   * offers for this product will also receive these tags in the billing
-   * library.
-   *
-   * @param OfferTag[] $offerTags
+   * @param OfferTag[]
    */
   public function setOfferTags($offerTags)
   {
@@ -85,9 +70,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->offerTags;
   }
   /**
-   * Required. Immutable. Package name of the parent app.
-   *
-   * @param string $packageName
+   * @param string
    */
   public function setPackageName($packageName)
   {
@@ -101,12 +84,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->packageName;
   }
   /**
-   * Required. Immutable. Unique product ID of the product. Unique within the
-   * parent app. Product IDs must start with a number or lowercase letter, and
-   * can contain numbers (0-9), lowercase letters (a-z), underscores (_), and
-   * periods (.).
-   *
-   * @param string $productId
+   * @param string
    */
   public function setProductId($productId)
   {
@@ -120,9 +98,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->productId;
   }
   /**
-   * Required. The set of purchase options for this one-time product.
-   *
-   * @param OneTimeProductPurchaseOption[] $purchaseOptions
+   * @param OneTimeProductPurchaseOption[]
    */
   public function setPurchaseOptions($purchaseOptions)
   {
@@ -136,10 +112,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->purchaseOptions;
   }
   /**
-   * Output only. The version of the regions configuration that was used to
-   * generate the one-time product.
-   *
-   * @param RegionsVersion $regionsVersion
+   * @param RegionsVersion
    */
   public function setRegionsVersion(RegionsVersion $regionsVersion)
   {
@@ -153,11 +126,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->regionsVersion;
   }
   /**
-   * Optional. Countries where the purchase of this one-time product is
-   * restricted to payment methods registered in the same country. If empty, no
-   * payment location restrictions are imposed.
-   *
-   * @param RestrictedPaymentCountries $restrictedPaymentCountries
+   * @param RestrictedPaymentCountries
    */
   public function setRestrictedPaymentCountries(RestrictedPaymentCountries $restrictedPaymentCountries)
   {
@@ -171,9 +140,7 @@ class OneTimeProduct extends \Google\Collection
     return $this->restrictedPaymentCountries;
   }
   /**
-   * Details about taxes and legal compliance.
-   *
-   * @param OneTimeProductTaxAndComplianceSettings $taxAndComplianceSettings
+   * @param OneTimeProductTaxAndComplianceSettings
    */
   public function setTaxAndComplianceSettings(OneTimeProductTaxAndComplianceSettings $taxAndComplianceSettings)
   {

@@ -23,8 +23,6 @@ class AudienceMember extends \Google\Collection
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   /**
-   * Optional. Defines which Destination to send the audience member to.
-   *
    * @var string[]
    */
   public $destinationReferences;
@@ -36,9 +34,7 @@ class AudienceMember extends \Google\Collection
   protected $userDataDataType = '';
 
   /**
-   * Optional. The consent setting for the user.
-   *
-   * @param Consent $consent
+   * @param Consent
    */
   public function setConsent(Consent $consent)
   {
@@ -52,9 +48,7 @@ class AudienceMember extends \Google\Collection
     return $this->consent;
   }
   /**
-   * Optional. Defines which Destination to send the audience member to.
-   *
-   * @param string[] $destinationReferences
+   * @param string[]
    */
   public function setDestinationReferences($destinationReferences)
   {
@@ -68,9 +62,7 @@ class AudienceMember extends \Google\Collection
     return $this->destinationReferences;
   }
   /**
-   * Data identifying the user's mobile devices.
-   *
-   * @param MobileData $mobileData
+   * @param MobileData
    */
   public function setMobileData(MobileData $mobileData)
   {
@@ -84,10 +76,7 @@ class AudienceMember extends \Google\Collection
     return $this->mobileData;
   }
   /**
-   * [Publisher Advertiser Identity Reconciliation (PAIR)
-   * IDs](//support.google.com/admanager/answer/15067908).
-   *
-   * @param PairData $pairData
+   * @param PairData
    */
   public function setPairData(PairData $pairData)
   {
@@ -101,9 +90,7 @@ class AudienceMember extends \Google\Collection
     return $this->pairData;
   }
   /**
-   * User-provided data that identifies the user.
-   *
-   * @param UserData $userData
+   * @param UserData
    */
   public function setUserData(UserData $userData)
   {

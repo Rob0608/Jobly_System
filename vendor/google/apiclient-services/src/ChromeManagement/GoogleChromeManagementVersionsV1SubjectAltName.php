@@ -20,63 +20,30 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1SubjectAltName extends \Google\Model
 {
   /**
-   * The subject alternative name type is unspecified.
-   */
-  public const TYPE_SUBJECT_ALT_NAME_TYPE_UNSPECIFIED = 'SUBJECT_ALT_NAME_TYPE_UNSPECIFIED';
-  /**
-   * The subject alternative name type is an email address adhering to RFC822.
-   */
-  public const TYPE_RFC822_NAME = 'RFC822_NAME';
-  /**
-   * The subject alternative name type is a Domain Name System (DNS).
-   */
-  public const TYPE_DNS_NAME = 'DNS_NAME';
-  /**
-   * The subject alternative name type is a User Principal Name (UPN).
-   */
-  public const TYPE_OTHER_NAME_USER_PRINCIPAL_NAME = 'OTHER_NAME_USER_PRINCIPAL_NAME';
-  /**
-   * The subject alternative name type is a Uniform Resource Identifier (URI).
-   */
-  public const TYPE_UNIFORM_RESOURCE_IDENTIFIER = 'UNIFORM_RESOURCE_IDENTIFIER';
-  /**
-   * Output only. The type of the SubjectAltName extension.
-   *
    * @var string
    */
   public $type;
   /**
-   * Output only. The value of the subject alternative name with respect to the
-   * `type`.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * Output only. The type of the SubjectAltName extension.
-   *
-   * Accepted values: SUBJECT_ALT_NAME_TYPE_UNSPECIFIED, RFC822_NAME, DNS_NAME,
-   * OTHER_NAME_USER_PRINCIPAL_NAME, UNIFORM_RESOURCE_IDENTIFIER
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * Output only. The value of the subject alternative name with respect to the
-   * `type`.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

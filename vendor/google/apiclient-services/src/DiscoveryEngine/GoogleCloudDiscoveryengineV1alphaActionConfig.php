@@ -20,45 +20,28 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
 {
   /**
-   * Optional. Action parameters in structured json format.
-   *
    * @var array[]
    */
   public $actionParams;
   /**
-   * Output only. The connector contains the necessary parameters and is
-   * configured to support actions.
-   *
    * @var bool
    */
   public $isActionConfigured;
   /**
-   * Optional. Action parameters in json string format.
-   *
    * @var string
    */
   public $jsonActionParams;
   /**
-   * Optional. The Service Directory resource name
-   * (projects/locations/namespaces/services) representing a VPC network
-   * endpoint used to connect to the data source's `instance_uri`, defined in
-   * DataConnector.params. Required when VPC Service Controls are enabled.
-   *
    * @var string
    */
   public $serviceName;
   /**
-   * Optional. Whether to use static secrets for the connector. If true, the
-   * secrets provided in the action_params will be ignored.
-   *
    * @var bool
    */
   public $useStaticSecrets;
 
   /**
-   * Optional. Action parameters in structured json format.
-   *
-   * @param array[] $actionParams
+   * @param array[]
    */
   public function setActionParams($actionParams)
   {
@@ -72,10 +55,7 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
     return $this->actionParams;
   }
   /**
-   * Output only. The connector contains the necessary parameters and is
-   * configured to support actions.
-   *
-   * @param bool $isActionConfigured
+   * @param bool
    */
   public function setIsActionConfigured($isActionConfigured)
   {
@@ -89,9 +69,7 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
     return $this->isActionConfigured;
   }
   /**
-   * Optional. Action parameters in json string format.
-   *
-   * @param string $jsonActionParams
+   * @param string
    */
   public function setJsonActionParams($jsonActionParams)
   {
@@ -105,12 +83,7 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
     return $this->jsonActionParams;
   }
   /**
-   * Optional. The Service Directory resource name
-   * (projects/locations/namespaces/services) representing a VPC network
-   * endpoint used to connect to the data source's `instance_uri`, defined in
-   * DataConnector.params. Required when VPC Service Controls are enabled.
-   *
-   * @param string $serviceName
+   * @param string
    */
   public function setServiceName($serviceName)
   {
@@ -124,10 +97,7 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
     return $this->serviceName;
   }
   /**
-   * Optional. Whether to use static secrets for the connector. If true, the
-   * secrets provided in the action_params will be ignored.
-   *
-   * @param bool $useStaticSecrets
+   * @param bool
    */
   public function setUseStaticSecrets($useStaticSecrets)
   {

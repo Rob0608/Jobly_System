@@ -21,42 +21,20 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
 {
   protected $collection_key = 'safetySettings';
   /**
-   * Required. The branch resource name, such as
-   * `projects/locations/global/catalogs/default_catalog/branches/0`. Use
-   * "default_branch" as the branch ID or leave this field empty, to search
-   * products under the default branch.
-   *
    * @var string
    */
   public $branch;
   /**
-   * Optional. This field specifies the conversation id, which maintains the
-   * state of the conversation between client side and server side. Use the
-   * value from the previous ConversationalSearchResponse.conversation_id. For
-   * the initial request, this should be empty.
-   *
    * @var string
    */
   public $conversationId;
   protected $conversationalFilteringSpecType = GoogleCloudRetailV2ConversationalSearchRequestConversationalFilteringSpec::class;
   protected $conversationalFilteringSpecDataType = '';
   /**
-   * Optional. The categories associated with a category page. Must be set for
-   * category navigation queries to achieve good search quality. The format
-   * should be the same as UserEvent.page_categories; To represent full path of
-   * category, use '>' sign to separate different hierarchies. If '>' is part of
-   * the category name, replace it with other character(s). Category pages
-   * include special pages such as sales or promotions. For instance, a special
-   * sale page may have the category hierarchy: "pageCategories" : ["Sales >
-   * 2017 Black Friday Deals"].
-   *
    * @var string[]
    */
   public $pageCategories;
   /**
-   * Optional. Raw search query to be searched for. If this field is empty, the
-   * request is considered a category browsing request.
-   *
    * @var string
    */
   public $query;
@@ -67,42 +45,16 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
   protected $userInfoType = GoogleCloudRetailV2UserInfo::class;
   protected $userInfoDataType = '';
   /**
-   * Optional. The user labels applied to a resource must meet the following
-   * requirements: * Each resource can have multiple labels, up to a maximum of
-   * 64. * Each label must be a key-value pair. * Keys have a minimum length of
-   * 1 character and a maximum length of 63 characters and cannot be empty.
-   * Values can be empty and have a maximum length of 63 characters. * Keys and
-   * values can contain only lowercase letters, numeric characters, underscores,
-   * and dashes. All characters must use UTF-8 encoding, and international
-   * characters are allowed. * The key portion of a label must be unique.
-   * However, you can use the same key with multiple resources. * Keys must
-   * start with a lowercase letter or international character. See [Google Cloud
-   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-
-   * labels#requirements) for more details.
-   *
    * @var string[]
    */
   public $userLabels;
   /**
-   * Required. A unique identifier for tracking visitors. For example, this
-   * could be implemented with an HTTP cookie, which should be able to uniquely
-   * identify a visitor on a single device. This unique identifier should not
-   * change if the visitor logs in or out of the website. This should be the
-   * same identifier as UserEvent.visitor_id. The field must be a UTF-8 encoded
-   * string with a length limit of 128 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
-   *
    * @var string
    */
   public $visitorId;
 
   /**
-   * Required. The branch resource name, such as
-   * `projects/locations/global/catalogs/default_catalog/branches/0`. Use
-   * "default_branch" as the branch ID or leave this field empty, to search
-   * products under the default branch.
-   *
-   * @param string $branch
+   * @param string
    */
   public function setBranch($branch)
   {
@@ -116,12 +68,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->branch;
   }
   /**
-   * Optional. This field specifies the conversation id, which maintains the
-   * state of the conversation between client side and server side. Use the
-   * value from the previous ConversationalSearchResponse.conversation_id. For
-   * the initial request, this should be empty.
-   *
-   * @param string $conversationId
+   * @param string
    */
   public function setConversationId($conversationId)
   {
@@ -135,10 +82,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->conversationId;
   }
   /**
-   * Optional. This field specifies all conversational filtering related
-   * parameters.
-   *
-   * @param GoogleCloudRetailV2ConversationalSearchRequestConversationalFilteringSpec $conversationalFilteringSpec
+   * @param GoogleCloudRetailV2ConversationalSearchRequestConversationalFilteringSpec
    */
   public function setConversationalFilteringSpec(GoogleCloudRetailV2ConversationalSearchRequestConversationalFilteringSpec $conversationalFilteringSpec)
   {
@@ -152,16 +96,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->conversationalFilteringSpec;
   }
   /**
-   * Optional. The categories associated with a category page. Must be set for
-   * category navigation queries to achieve good search quality. The format
-   * should be the same as UserEvent.page_categories; To represent full path of
-   * category, use '>' sign to separate different hierarchies. If '>' is part of
-   * the category name, replace it with other character(s). Category pages
-   * include special pages such as sales or promotions. For instance, a special
-   * sale page may have the category hierarchy: "pageCategories" : ["Sales >
-   * 2017 Black Friday Deals"].
-   *
-   * @param string[] $pageCategories
+   * @param string[]
    */
   public function setPageCategories($pageCategories)
   {
@@ -175,10 +110,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->pageCategories;
   }
   /**
-   * Optional. Raw search query to be searched for. If this field is empty, the
-   * request is considered a category browsing request.
-   *
-   * @param string $query
+   * @param string
    */
   public function setQuery($query)
   {
@@ -192,9 +124,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->query;
   }
   /**
-   * Optional. The safety settings to be applied to the generated content.
-   *
-   * @param GoogleCloudRetailV2SafetySetting[] $safetySettings
+   * @param GoogleCloudRetailV2SafetySetting[]
    */
   public function setSafetySettings($safetySettings)
   {
@@ -208,9 +138,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->safetySettings;
   }
   /**
-   * Optional. Search parameters.
-   *
-   * @param GoogleCloudRetailV2ConversationalSearchRequestSearchParams $searchParams
+   * @param GoogleCloudRetailV2ConversationalSearchRequestSearchParams
    */
   public function setSearchParams(GoogleCloudRetailV2ConversationalSearchRequestSearchParams $searchParams)
   {
@@ -224,9 +152,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->searchParams;
   }
   /**
-   * Optional. User information.
-   *
-   * @param GoogleCloudRetailV2UserInfo $userInfo
+   * @param GoogleCloudRetailV2UserInfo
    */
   public function setUserInfo(GoogleCloudRetailV2UserInfo $userInfo)
   {
@@ -240,20 +166,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->userInfo;
   }
   /**
-   * Optional. The user labels applied to a resource must meet the following
-   * requirements: * Each resource can have multiple labels, up to a maximum of
-   * 64. * Each label must be a key-value pair. * Keys have a minimum length of
-   * 1 character and a maximum length of 63 characters and cannot be empty.
-   * Values can be empty and have a maximum length of 63 characters. * Keys and
-   * values can contain only lowercase letters, numeric characters, underscores,
-   * and dashes. All characters must use UTF-8 encoding, and international
-   * characters are allowed. * The key portion of a label must be unique.
-   * However, you can use the same key with multiple resources. * Keys must
-   * start with a lowercase letter or international character. See [Google Cloud
-   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-
-   * labels#requirements) for more details.
-   *
-   * @param string[] $userLabels
+   * @param string[]
    */
   public function setUserLabels($userLabels)
   {
@@ -267,15 +180,7 @@ class GoogleCloudRetailV2ConversationalSearchRequest extends \Google\Collection
     return $this->userLabels;
   }
   /**
-   * Required. A unique identifier for tracking visitors. For example, this
-   * could be implemented with an HTTP cookie, which should be able to uniquely
-   * identify a visitor on a single device. This unique identifier should not
-   * change if the visitor logs in or out of the website. This should be the
-   * same identifier as UserEvent.visitor_id. The field must be a UTF-8 encoded
-   * string with a length limit of 128 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
-   *
-   * @param string $visitorId
+   * @param string
    */
   public function setVisitorId($visitorId)
   {

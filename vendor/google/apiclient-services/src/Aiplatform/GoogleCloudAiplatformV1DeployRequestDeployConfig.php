@@ -22,25 +22,16 @@ class GoogleCloudAiplatformV1DeployRequestDeployConfig extends \Google\Model
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1DedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
   /**
-   * Optional. If true, enable the QMT fast tryout feature for this model if
-   * possible.
-   *
    * @var bool
    */
   public $fastTryoutEnabled;
   /**
-   * Optional. System labels for Model Garden deployments. These labels are
-   * managed by Google and for tracking purposes only.
-   *
    * @var string[]
    */
   public $systemLabels;
 
   /**
-   * Optional. The dedicated resources to use for the endpoint. If not set, the
-   * default resources will be used.
-   *
-   * @param GoogleCloudAiplatformV1DedicatedResources $dedicatedResources
+   * @param GoogleCloudAiplatformV1DedicatedResources
    */
   public function setDedicatedResources(GoogleCloudAiplatformV1DedicatedResources $dedicatedResources)
   {
@@ -54,10 +45,7 @@ class GoogleCloudAiplatformV1DeployRequestDeployConfig extends \Google\Model
     return $this->dedicatedResources;
   }
   /**
-   * Optional. If true, enable the QMT fast tryout feature for this model if
-   * possible.
-   *
-   * @param bool $fastTryoutEnabled
+   * @param bool
    */
   public function setFastTryoutEnabled($fastTryoutEnabled)
   {
@@ -71,10 +59,7 @@ class GoogleCloudAiplatformV1DeployRequestDeployConfig extends \Google\Model
     return $this->fastTryoutEnabled;
   }
   /**
-   * Optional. System labels for Model Garden deployments. These labels are
-   * managed by Google and for tracking purposes only.
-   *
-   * @param string[] $systemLabels
+   * @param string[]
    */
   public function setSystemLabels($systemLabels)
   {

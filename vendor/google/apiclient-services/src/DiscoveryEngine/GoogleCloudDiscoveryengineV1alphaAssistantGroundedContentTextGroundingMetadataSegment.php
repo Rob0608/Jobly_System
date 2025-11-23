@@ -21,42 +21,28 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
 {
   protected $collection_key = 'referenceIndices';
   /**
-   * End of the segment, exclusive.
-   *
    * @var string
    */
   public $endIndex;
   /**
-   * Score for the segment.
-   *
    * @var float
    */
   public $groundingScore;
   /**
-   * References for the segment.
-   *
    * @var int[]
    */
   public $referenceIndices;
   /**
-   * Zero-based index indicating the start of the segment, measured in bytes of
-   * a UTF-8 string (i.e. characters encoded on multiple bytes have a length of
-   * more than one).
-   *
    * @var string
    */
   public $startIndex;
   /**
-   * The text segment itself.
-   *
    * @var string
    */
   public $text;
 
   /**
-   * End of the segment, exclusive.
-   *
-   * @param string $endIndex
+   * @param string
    */
   public function setEndIndex($endIndex)
   {
@@ -70,9 +56,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->endIndex;
   }
   /**
-   * Score for the segment.
-   *
-   * @param float $groundingScore
+   * @param float
    */
   public function setGroundingScore($groundingScore)
   {
@@ -86,9 +70,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->groundingScore;
   }
   /**
-   * References for the segment.
-   *
-   * @param int[] $referenceIndices
+   * @param int[]
    */
   public function setReferenceIndices($referenceIndices)
   {
@@ -102,11 +84,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->referenceIndices;
   }
   /**
-   * Zero-based index indicating the start of the segment, measured in bytes of
-   * a UTF-8 string (i.e. characters encoded on multiple bytes have a length of
-   * more than one).
-   *
-   * @param string $startIndex
+   * @param string
    */
   public function setStartIndex($startIndex)
   {
@@ -120,9 +98,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->startIndex;
   }
   /**
-   * The text segment itself.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {

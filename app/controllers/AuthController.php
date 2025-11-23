@@ -1,6 +1,15 @@
 <?php
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
+// PHPMailer (used for password reset emails here)
+require_once 'app/third_party/PHPMailer/src/Exception.php';
+require_once 'app/third_party/PHPMailer/src/PHPMailer.php';
+require_once 'app/third_party/PHPMailer/src/SMTP.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require_once 'app/helpers/phpmailer_helper.php';
+
 class AuthController extends Controller
 {
     // === ADMIN LOGIN ===
@@ -136,5 +145,186 @@ class AuthController extends Controller
     {
         session_destroy();
         redirect('admin'); // admins go back to admin login
+    }
+
+    // === FORGOT PASSWORD FLOW ===
+    public function forgotForm()
+    {
+        $this->call->view('forgot');
+    }
+
+    // Send reset code by email (only if registered as applicant or employer)
+    public function sendResetCode()
+    {
+        $email = strtolower(trim($_POST['email'] ?? ''));
+        if (empty($email)) {
+            $_SESSION['error'] = 'Please enter your email address.';
+            redirect('forgot');
+            return;
+        }
+
+        // Check if email exists in companies or applicants
+        $this->call->model('CompanyModel');
+        $companyModel = new CompanyModel();
+        $company = $companyModel->getCompanyByEmail($email);
+
+        $this->call->model('ApplicantModel');
+        $appModel = new ApplicantModel();
+        $applicant = $appModel->getApplicantByEmail($email);
+
+        if (!$company && !$applicant) {
+            // For privacy, show generic message but do not send email
+            $_SESSION['success'] = 'If the email is registered, a verification code has been sent.';
+            redirect('forgot');
+            return;
+        }
+
+        // Create code and store
+        $code = rand(1000, 9999);
+        $this->call->model('PasswordResetModel');
+        $pr = new PasswordResetModel();
+        $pr->createCode($email, (string)$code, 30);
+
+        // Send email
+        $this->sendPasswordResetEmail($email, $code, $company ? 'employer' : 'applicant');
+
+        // Redirect directly to verify page with email prefilled for better UX
+        $_SESSION['success'] = 'If the email is registered, a verification code has been sent.';
+        redirect('forgot/verify?email=' . urlencode($email));
+    }
+
+    // Show verify code form (optionally prefill email)
+    public function forgotVerifyForm()
+    {
+        $email = $_GET['email'] ?? '';
+        $this->call->view('forgot_verify', ['email' => $email]);
+    }
+
+    // Verify the code submitted by user and allow reset
+    public function verifyResetCode()
+    {
+        $email = strtolower(trim($_POST['email'] ?? ''));
+        $code = trim($_POST['code'] ?? '');
+
+        if (empty($email) || empty($code)) {
+            $_SESSION['error'] = 'Email and verification code are required.';
+            redirect('forgot/verify');
+            return;
+        }
+
+        $this->call->model('PasswordResetModel');
+        $pr = new PasswordResetModel();
+        $row = $pr->verifyCode($email, $code);
+        if (!$row) {
+            $_SESSION['error'] = 'Invalid or expired verification code.';
+            redirect('forgot/verify?email=' . urlencode($email));
+            return;
+        }
+
+        // Verified - store email in session for reset step
+        if (!isset($_SESSION)) session_start();
+        $_SESSION['password_reset_email'] = $email;
+        $_SESSION['password_reset_code'] = $code;
+        redirect('forgot/reset');
+    }
+
+    // Show reset password form
+    public function forgotResetForm()
+    {
+        if (!isset($_SESSION)) session_start();
+        $email = $_SESSION['password_reset_email'] ?? '';
+        if (empty($email)) {
+            $_SESSION['error'] = 'Please verify your email first.';
+            redirect('forgot');
+            return;
+        }
+        $this->call->view('forgot_reset', ['email' => $email]);
+    }
+
+    // Reset password (applicant or employer)
+    public function resetPassword()
+    {
+        if (!isset($_SESSION)) session_start();
+        $email = $_SESSION['password_reset_email'] ?? '';
+        $code = $_SESSION['password_reset_code'] ?? '';
+
+        if (empty($email) || empty($code)) {
+            $_SESSION['error'] = 'Verification required. Start the forgot-password process again.';
+            redirect('forgot');
+            return;
+        }
+
+        $new = $_POST['new_password'] ?? '';
+        $confirm = $_POST['confirm_password'] ?? '';
+
+        if (empty($new) || strlen($new) < 8) {
+            $_SESSION['error'] = 'New password must be at least 8 characters.';
+            redirect('forgot/reset');
+            return;
+        }
+        if ($new !== $confirm) {
+            $_SESSION['error'] = 'New password and confirm password do not match.';
+            redirect('forgot/reset');
+            return;
+        }
+
+        // Re-verify code to ensure not expired
+        $this->call->model('PasswordResetModel');
+        $pr = new PasswordResetModel();
+        $valid = $pr->verifyCode($email, $code);
+        if (!$valid) {
+            $_SESSION['error'] = 'Invalid or expired verification code.';
+            redirect('forgot');
+            return;
+        }
+
+        // Determine whether this email is employer or applicant
+        $this->call->model('CompanyModel');
+        $companyModel = new CompanyModel();
+        $company = $companyModel->getCompanyByEmail($email);
+
+        $this->call->model('ApplicantModel');
+        $appModel = new ApplicantModel();
+        $applicant = $appModel->getApplicantByEmail($email);
+
+        $hashed = password_hash($new, PASSWORD_BCRYPT);
+        if ($company) {
+            $this->call->database();
+            $this->db->table('companies')->where('email', $email)->update(['password' => $hashed]);
+        } elseif ($applicant) {
+            $this->call->database();
+            $this->db->table('applicants')->where('email', $email)->update(['password' => $hashed]);
+        } else {
+            $_SESSION['error'] = 'Account not found.';
+            redirect('forgot');
+            return;
+        }
+
+        // Consume the reset code and clear session
+        $pr->consumeCode($email, $code);
+        unset($_SESSION['password_reset_email'], $_SESSION['password_reset_code']);
+
+        $_SESSION['success'] = 'Password reset successfully. You may now login.';
+        redirect('login');
+    }
+
+    // Helper: send reset email
+    private function sendPasswordResetEmail($email, $code, $role = 'applicant')
+    {
+        $body = "<p>Hello,</p>"
+              . "<p>We received a request to reset your password. Use the verification code below to reset your password. This code expires in 30 minutes.</p>"
+              . "<h2 style='letter-spacing:6px;'>" . htmlspecialchars($code) . "</h2>"
+              . "<p>If you did not request this, you can safely ignore this email.</p>"
+              . "<p>— Job Portal</p>";
+
+        $res = phpmailer_send([
+            'to' => $email,
+            'subject' => 'Your password reset verification code',
+            'body' => $body,
+            'is_html' => true,
+        ]);
+        if (!$res['success']) {
+            error_log('Failed to send password reset email: ' . ($res['error'] ?? 'unknown'));
+        }
     }
     }

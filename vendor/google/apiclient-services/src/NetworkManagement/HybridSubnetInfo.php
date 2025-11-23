@@ -20,28 +20,20 @@ namespace Google\Service\NetworkManagement;
 class HybridSubnetInfo extends \Google\Model
 {
   /**
-   * Name of a hybrid subnet.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Name of a Google Cloud region where the hybrid subnet is configured.
-   *
    * @var string
    */
   public $region;
   /**
-   * URI of a hybrid subnet.
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * Name of a hybrid subnet.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -55,9 +47,7 @@ class HybridSubnetInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Name of a Google Cloud region where the hybrid subnet is configured.
-   *
-   * @param string $region
+   * @param string
    */
   public function setRegion($region)
   {
@@ -71,9 +61,7 @@ class HybridSubnetInfo extends \Google\Model
     return $this->region;
   }
   /**
-   * URI of a hybrid subnet.
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

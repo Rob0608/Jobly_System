@@ -23,9 +23,7 @@ class GoogleCloudAiplatformV1VoiceConfig extends \Google\Model
   protected $prebuiltVoiceConfigDataType = '';
 
   /**
-   * The configuration for a prebuilt voice.
-   *
-   * @param GoogleCloudAiplatformV1PrebuiltVoiceConfig $prebuiltVoiceConfig
+   * @param GoogleCloudAiplatformV1PrebuiltVoiceConfig
    */
   public function setPrebuiltVoiceConfig(GoogleCloudAiplatformV1PrebuiltVoiceConfig $prebuiltVoiceConfig)
   {

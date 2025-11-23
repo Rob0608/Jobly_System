@@ -20,61 +20,30 @@ namespace Google\Service\Sheets;
 class PersonProperties extends \Google\Model
 {
   /**
-   * Default value, do not use.
-   */
-  public const DISPLAY_FORMAT_DISPLAY_FORMAT_UNSPECIFIED = 'DISPLAY_FORMAT_UNSPECIFIED';
-  /**
-   * Default display format.
-   */
-  public const DISPLAY_FORMAT_DEFAULT = 'DEFAULT';
-  /**
-   * Last name, first name display format.
-   */
-  public const DISPLAY_FORMAT_LAST_NAME_COMMA_FIRST_NAME = 'LAST_NAME_COMMA_FIRST_NAME';
-  /**
-   * Email display format.
-   */
-  public const DISPLAY_FORMAT_EMAIL = 'EMAIL';
-  /**
-   * Optional. The display format of the person chip. If not set, the default
-   * display format is used.
-   *
    * @var string
    */
   public $displayFormat;
   /**
-   * Required. The email address linked to this person. This field is always
-   * present.
-   *
    * @var string
    */
   public $email;
 
   /**
-   * Optional. The display format of the person chip. If not set, the default
-   * display format is used.
-   *
-   * Accepted values: DISPLAY_FORMAT_UNSPECIFIED, DEFAULT,
-   * LAST_NAME_COMMA_FIRST_NAME, EMAIL
-   *
-   * @param self::DISPLAY_FORMAT_* $displayFormat
+   * @param string
    */
   public function setDisplayFormat($displayFormat)
   {
     $this->displayFormat = $displayFormat;
   }
   /**
-   * @return self::DISPLAY_FORMAT_*
+   * @return string
    */
   public function getDisplayFormat()
   {
     return $this->displayFormat;
   }
   /**
-   * Required. The email address linked to this person. This field is always
-   * present.
-   *
-   * @param string $email
+   * @param string
    */
   public function setEmail($email)
   {

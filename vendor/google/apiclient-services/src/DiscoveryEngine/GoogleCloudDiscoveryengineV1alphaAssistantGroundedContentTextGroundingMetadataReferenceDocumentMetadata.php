@@ -20,50 +20,32 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata extends \Google\Model
 {
   /**
-   * Document resource name.
-   *
    * @var string
    */
   public $document;
   /**
-   * Domain name from the document URI. Note that the `uri` field may contain a
-   * URL that redirects to the actual website, in which case this will contain
-   * the domain name of the target site.
-   *
    * @var string
    */
   public $domain;
   /**
-   * The mime type of the document. https://www.iana.org/assignments/media-
-   * types/media-types.xhtml.
-   *
    * @var string
    */
   public $mimeType;
   /**
-   * Page identifier.
-   *
    * @var string
    */
   public $pageIdentifier;
   /**
-   * Title.
-   *
    * @var string
    */
   public $title;
   /**
-   * URI for the document. It may contain a URL that redirects to the actual
-   * website.
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * Document resource name.
-   *
-   * @param string $document
+   * @param string
    */
   public function setDocument($document)
   {
@@ -77,11 +59,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->document;
   }
   /**
-   * Domain name from the document URI. Note that the `uri` field may contain a
-   * URL that redirects to the actual website, in which case this will contain
-   * the domain name of the target site.
-   *
-   * @param string $domain
+   * @param string
    */
   public function setDomain($domain)
   {
@@ -95,10 +73,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->domain;
   }
   /**
-   * The mime type of the document. https://www.iana.org/assignments/media-
-   * types/media-types.xhtml.
-   *
-   * @param string $mimeType
+   * @param string
    */
   public function setMimeType($mimeType)
   {
@@ -112,9 +87,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->mimeType;
   }
   /**
-   * Page identifier.
-   *
-   * @param string $pageIdentifier
+   * @param string
    */
   public function setPageIdentifier($pageIdentifier)
   {
@@ -128,9 +101,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->pageIdentifier;
   }
   /**
-   * Title.
-   *
-   * @param string $title
+   * @param string
    */
   public function setTitle($title)
   {
@@ -144,10 +115,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
     return $this->title;
   }
   /**
-   * URI for the document. It may contain a URL that redirects to the actual
-   * website.
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

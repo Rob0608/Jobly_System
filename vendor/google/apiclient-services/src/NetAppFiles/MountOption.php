@@ -20,56 +20,28 @@ namespace Google\Service\NetAppFiles;
 class MountOption extends \Google\Model
 {
   /**
-   * Unspecified protocol
-   */
-  public const PROTOCOL_PROTOCOLS_UNSPECIFIED = 'PROTOCOLS_UNSPECIFIED';
-  /**
-   * NFS V3 protocol
-   */
-  public const PROTOCOL_NFSV3 = 'NFSV3';
-  /**
-   * NFS V4 protocol
-   */
-  public const PROTOCOL_NFSV4 = 'NFSV4';
-  /**
-   * SMB protocol
-   */
-  public const PROTOCOL_SMB = 'SMB';
-  /**
-   * Export string
-   *
    * @var string
    */
   public $export;
   /**
-   * Full export string
-   *
    * @var string
    */
   public $exportFull;
   /**
-   * Instructions for mounting
-   *
    * @var string
    */
   public $instructions;
   /**
-   * Output only. IP Address.
-   *
    * @var string
    */
   public $ipAddress;
   /**
-   * Protocol to mount with.
-   *
    * @var string
    */
   public $protocol;
 
   /**
-   * Export string
-   *
-   * @param string $export
+   * @param string
    */
   public function setExport($export)
   {
@@ -83,9 +55,7 @@ class MountOption extends \Google\Model
     return $this->export;
   }
   /**
-   * Full export string
-   *
-   * @param string $exportFull
+   * @param string
    */
   public function setExportFull($exportFull)
   {
@@ -99,9 +69,7 @@ class MountOption extends \Google\Model
     return $this->exportFull;
   }
   /**
-   * Instructions for mounting
-   *
-   * @param string $instructions
+   * @param string
    */
   public function setInstructions($instructions)
   {
@@ -115,9 +83,7 @@ class MountOption extends \Google\Model
     return $this->instructions;
   }
   /**
-   * Output only. IP Address.
-   *
-   * @param string $ipAddress
+   * @param string
    */
   public function setIpAddress($ipAddress)
   {
@@ -131,18 +97,14 @@ class MountOption extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * Protocol to mount with.
-   *
-   * Accepted values: PROTOCOLS_UNSPECIFIED, NFSV3, NFSV4, SMB
-   *
-   * @param self::PROTOCOL_* $protocol
+   * @param string
    */
   public function setProtocol($protocol)
   {
     $this->protocol = $protocol;
   }
   /**
-   * @return self::PROTOCOL_*
+   * @return string
    */
   public function getProtocol()
   {

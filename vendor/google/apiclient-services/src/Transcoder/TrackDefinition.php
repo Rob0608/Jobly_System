@@ -21,44 +21,24 @@ class TrackDefinition extends \Google\Collection
 {
   protected $collection_key = 'languages';
   /**
-   * Optional. Whether to automatically detect the languages present in the
-   * track. If true, the system will attempt to identify all the languages
-   * present in the track and populate the languages field.
-   *
    * @var bool
    */
   public $detectLanguages;
   /**
-   * Output only. A list of languages detected in the input asset, represented
-   * by a BCP 47 language code, such as "en-US" or "sr-Latn". For more
-   * information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. This field
-   * is only populated if the detect_languages field is set to true.
-   *
    * @var string[]
    */
   public $detectedLanguages;
   /**
-   * The input track.
-   *
    * @var int
    */
   public $inputTrack;
   /**
-   * Optional. A list of languages spoken in the input asset, represented by a
-   * BCP 47 language code, such as "en-US" or "sr-Latn". For more information,
-   * see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-   *
    * @var string[]
    */
   public $languages;
 
   /**
-   * Optional. Whether to automatically detect the languages present in the
-   * track. If true, the system will attempt to identify all the languages
-   * present in the track and populate the languages field.
-   *
-   * @param bool $detectLanguages
+   * @param bool
    */
   public function setDetectLanguages($detectLanguages)
   {
@@ -72,13 +52,7 @@ class TrackDefinition extends \Google\Collection
     return $this->detectLanguages;
   }
   /**
-   * Output only. A list of languages detected in the input asset, represented
-   * by a BCP 47 language code, such as "en-US" or "sr-Latn". For more
-   * information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. This field
-   * is only populated if the detect_languages field is set to true.
-   *
-   * @param string[] $detectedLanguages
+   * @param string[]
    */
   public function setDetectedLanguages($detectedLanguages)
   {
@@ -92,9 +66,7 @@ class TrackDefinition extends \Google\Collection
     return $this->detectedLanguages;
   }
   /**
-   * The input track.
-   *
-   * @param int $inputTrack
+   * @param int
    */
   public function setInputTrack($inputTrack)
   {
@@ -108,11 +80,7 @@ class TrackDefinition extends \Google\Collection
     return $this->inputTrack;
   }
   /**
-   * Optional. A list of languages spoken in the input asset, represented by a
-   * BCP 47 language code, such as "en-US" or "sr-Latn". For more information,
-   * see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-   *
-   * @param string[] $languages
+   * @param string[]
    */
   public function setLanguages($languages)
   {

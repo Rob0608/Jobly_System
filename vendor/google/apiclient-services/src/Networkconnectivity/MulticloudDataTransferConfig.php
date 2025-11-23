@@ -20,79 +20,46 @@ namespace Google\Service\Networkconnectivity;
 class MulticloudDataTransferConfig extends \Google\Model
 {
   /**
-   * Output only. Time when the `MulticloudDataTransferConfig` resource was
-   * created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. A description of this resource.
-   *
    * @var string
    */
   public $description;
   /**
-   * Output only. The number of `Destination` resources in use with the
-   * `MulticloudDataTransferConfig` resource.
-   *
    * @var int
    */
   public $destinationsActiveCount;
   /**
-   * Output only. The number of `Destination` resources configured for the
-   * `MulticloudDataTransferConfig` resource.
-   *
    * @var int
    */
   public $destinationsCount;
   /**
-   * The etag is computed by the server, and might be sent with update and
-   * delete requests so that the client has an up-to-date value before
-   * proceeding.
-   *
    * @var string
    */
   public $etag;
   /**
-   * Optional. User-defined labels.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The name of the `MulticloudDataTransferConfig` resource.
-   * Format: `projects/{project}/locations/{location}/multicloudDataTransferConf
-   * igs/{multicloud_data_transfer_config}`.
-   *
    * @var string
    */
   public $name;
   protected $servicesType = StateTimeline::class;
   protected $servicesDataType = 'map';
   /**
-   * Output only. The Google-generated unique ID for the
-   * `MulticloudDataTransferConfig` resource. This value is unique across all
-   * `MulticloudDataTransferConfig` resources. If a resource is deleted and
-   * another with the same name is created, the new resource is assigned a
-   * different and unique ID.
-   *
    * @var string
    */
   public $uid;
   /**
-   * Output only. Time when the `MulticloudDataTransferConfig` resource was
-   * updated.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. Time when the `MulticloudDataTransferConfig` resource was
-   * created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -106,9 +73,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. A description of this resource.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -122,10 +87,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->description;
   }
   /**
-   * Output only. The number of `Destination` resources in use with the
-   * `MulticloudDataTransferConfig` resource.
-   *
-   * @param int $destinationsActiveCount
+   * @param int
    */
   public function setDestinationsActiveCount($destinationsActiveCount)
   {
@@ -139,10 +101,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->destinationsActiveCount;
   }
   /**
-   * Output only. The number of `Destination` resources configured for the
-   * `MulticloudDataTransferConfig` resource.
-   *
-   * @param int $destinationsCount
+   * @param int
    */
   public function setDestinationsCount($destinationsCount)
   {
@@ -156,11 +115,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->destinationsCount;
   }
   /**
-   * The etag is computed by the server, and might be sent with update and
-   * delete requests so that the client has an up-to-date value before
-   * proceeding.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {
@@ -174,9 +129,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->etag;
   }
   /**
-   * Optional. User-defined labels.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -190,11 +143,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. The name of the `MulticloudDataTransferConfig` resource.
-   * Format: `projects/{project}/locations/{location}/multicloudDataTransferConf
-   * igs/{multicloud_data_transfer_config}`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -208,14 +157,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. Maps services to their current or planned states. Service names
-   * are keys, and the associated values describe the state of the service. If a
-   * state change is expected, the value is either `ADDING` or `DELETING`,
-   * depending on the actions taken. Sample output: "services": { "big-query": {
-   * "states": [ { "effectiveTime": "2024-12-12T08:00:00Z" "state": "ADDING", },
-   * ] }, "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
-   *
-   * @param StateTimeline[] $services
+   * @param StateTimeline[]
    */
   public function setServices($services)
   {
@@ -229,13 +171,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->services;
   }
   /**
-   * Output only. The Google-generated unique ID for the
-   * `MulticloudDataTransferConfig` resource. This value is unique across all
-   * `MulticloudDataTransferConfig` resources. If a resource is deleted and
-   * another with the same name is created, the new resource is assigned a
-   * different and unique ID.
-   *
-   * @param string $uid
+   * @param string
    */
   public function setUid($uid)
   {
@@ -249,10 +185,7 @@ class MulticloudDataTransferConfig extends \Google\Model
     return $this->uid;
   }
   /**
-   * Output only. Time when the `MulticloudDataTransferConfig` resource was
-   * updated.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

@@ -25,23 +25,16 @@ class GoogleAppsCardV1ExpressionData extends \Google\Collection
   protected $eventActionsType = GoogleAppsCardV1EventAction::class;
   protected $eventActionsDataType = 'array';
   /**
-   * The uncompiled expression.
-   *
    * @var string
    */
   public $expression;
   /**
-   * The unique identifier of the ExpressionData.
-   *
    * @var string
    */
   public $id;
 
   /**
-   * The list of conditions that are determined by the expression evaluation
-   * result.
-   *
-   * @param GoogleAppsCardV1Condition[] $conditions
+   * @param GoogleAppsCardV1Condition[]
    */
   public function setConditions($conditions)
   {
@@ -55,9 +48,7 @@ class GoogleAppsCardV1ExpressionData extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * The list of actions that the ExpressionData can be used.
-   *
-   * @param GoogleAppsCardV1EventAction[] $eventActions
+   * @param GoogleAppsCardV1EventAction[]
    */
   public function setEventActions($eventActions)
   {
@@ -71,9 +62,7 @@ class GoogleAppsCardV1ExpressionData extends \Google\Collection
     return $this->eventActions;
   }
   /**
-   * The uncompiled expression.
-   *
-   * @param string $expression
+   * @param string
    */
   public function setExpression($expression)
   {
@@ -87,9 +76,7 @@ class GoogleAppsCardV1ExpressionData extends \Google\Collection
     return $this->expression;
   }
   /**
-   * The unique identifier of the ExpressionData.
-   *
-   * @param string $id
+   * @param string
    */
   public function setId($id)
   {

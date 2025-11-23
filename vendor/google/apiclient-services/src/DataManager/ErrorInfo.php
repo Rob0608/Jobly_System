@@ -24,10 +24,7 @@ class ErrorInfo extends \Google\Collection
   protected $errorCountsDataType = 'array';
 
   /**
-   * A list of errors and counts per error reason. May not be populated in all
-   * cases.
-   *
-   * @param ErrorCount[] $errorCounts
+   * @param ErrorCount[]
    */
   public function setErrorCounts($errorCounts)
   {

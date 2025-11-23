@@ -20,28 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
 {
   /**
-   * Required. The name of the candidate that produced the response.
-   *
    * @var string
    */
   public $candidate;
   /**
-   * Text response.
-   *
    * @var string
    */
   public $text;
   /**
-   * Fields and values that can be used to populate the response template.
-   *
    * @var array
    */
   public $value;
 
   /**
-   * Required. The name of the candidate that produced the response.
-   *
-   * @param string $candidate
+   * @param string
    */
   public function setCandidate($candidate)
   {
@@ -55,9 +47,7 @@ class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
     return $this->candidate;
   }
   /**
-   * Text response.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -71,9 +61,7 @@ class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
     return $this->text;
   }
   /**
-   * Fields and values that can be used to populate the response template.
-   *
-   * @param array $value
+   * @param array
    */
   public function setValue($value)
   {

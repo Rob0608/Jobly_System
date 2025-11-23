@@ -20,22 +20,12 @@ namespace Google\Service\ManagedKafka;
 class CertificateAuthorityServiceConfig extends \Google\Model
 {
   /**
-   * Required. The name of the CA pool to pull CA certificates from. Structured
-   * like: projects/{project}/locations/{location}/caPools/{ca_pool}. The CA
-   * pool does not need to be in the same project or location as the Kafka
-   * cluster.
-   *
    * @var string
    */
   public $caPool;
 
   /**
-   * Required. The name of the CA pool to pull CA certificates from. Structured
-   * like: projects/{project}/locations/{location}/caPools/{ca_pool}. The CA
-   * pool does not need to be in the same project or location as the Kafka
-   * cluster.
-   *
-   * @param string $caPool
+   * @param string
    */
   public function setCaPool($caPool)
   {

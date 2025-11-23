@@ -24,10 +24,7 @@ class GoogleCloudAiplatformV1MultiSpeakerVoiceConfig extends \Google\Collection
   protected $speakerVoiceConfigsDataType = 'array';
 
   /**
-   * Required. A list of configurations for the voices of the speakers. Exactly
-   * two speaker voice configurations must be provided.
-   *
-   * @param GoogleCloudAiplatformV1SpeakerVoiceConfig[] $speakerVoiceConfigs
+   * @param GoogleCloudAiplatformV1SpeakerVoiceConfig[]
    */
   public function setSpeakerVoiceConfigs($speakerVoiceConfigs)
   {

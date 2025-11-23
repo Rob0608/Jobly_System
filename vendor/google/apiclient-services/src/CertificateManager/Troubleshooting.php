@@ -25,17 +25,12 @@ class Troubleshooting extends \Google\Collection
   protected $ipsType = IPs::class;
   protected $ipsDataType = '';
   /**
-   * Output only. The list of issues discovered during the authorization
-   * attempt.
-   *
    * @var string[]
    */
   public $issues;
 
   /**
-   * Output only. CNAME troubleshooting information.
-   *
-   * @param CNAME $cname
+   * @param CNAME
    */
   public function setCname(CNAME $cname)
   {
@@ -49,9 +44,7 @@ class Troubleshooting extends \Google\Collection
     return $this->cname;
   }
   /**
-   * Output only. IPs troubleshooting information.
-   *
-   * @param IPs $ips
+   * @param IPs
    */
   public function setIps(IPs $ips)
   {
@@ -65,10 +58,7 @@ class Troubleshooting extends \Google\Collection
     return $this->ips;
   }
   /**
-   * Output only. The list of issues discovered during the authorization
-   * attempt.
-   *
-   * @param string[] $issues
+   * @param string[]
    */
   public function setIssues($issues)
   {

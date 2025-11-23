@@ -21,10 +21,6 @@ class SoleTenantConfig extends \Google\Collection
 {
   protected $collection_key = 'nodeAffinities';
   /**
-   * Optional. The minimum number of virtual CPUs this instance will consume
-   * when running on a sole-tenant node. This field can only be set if the node
-   * pool is created in a shared sole-tenant node group.
-   *
    * @var int
    */
   public $minNodeCpus;
@@ -32,11 +28,7 @@ class SoleTenantConfig extends \Google\Collection
   protected $nodeAffinitiesDataType = 'array';
 
   /**
-   * Optional. The minimum number of virtual CPUs this instance will consume
-   * when running on a sole-tenant node. This field can only be set if the node
-   * pool is created in a shared sole-tenant node group.
-   *
-   * @param int $minNodeCpus
+   * @param int
    */
   public function setMinNodeCpus($minNodeCpus)
   {
@@ -50,9 +42,7 @@ class SoleTenantConfig extends \Google\Collection
     return $this->minNodeCpus;
   }
   /**
-   * NodeAffinities used to match to a shared sole tenant node group.
-   *
-   * @param NodeAffinity[] $nodeAffinities
+   * @param NodeAffinity[]
    */
   public function setNodeAffinities($nodeAffinities)
   {

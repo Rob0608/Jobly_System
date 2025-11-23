@@ -24,16 +24,12 @@ class VariableMapping extends \Google\Model
   protected $toType = ToMapping::class;
   protected $toDataType = '';
   /**
-   * Required. name of the variable
-   *
    * @var string
    */
   public $variable;
 
   /**
-   * Optional. Output variables which will get their values from dependencies
-   *
-   * @param FromMapping $from
+   * @param FromMapping
    */
   public function setFrom(FromMapping $from)
   {
@@ -47,9 +43,7 @@ class VariableMapping extends \Google\Model
     return $this->from;
   }
   /**
-   * Optional. Input variables whose values will be passed on to dependencies.
-   *
-   * @param ToMapping $to
+   * @param ToMapping
    */
   public function setTo(ToMapping $to)
   {
@@ -63,9 +57,7 @@ class VariableMapping extends \Google\Model
     return $this->to;
   }
   /**
-   * Required. name of the variable
-   *
-   * @param string $variable
+   * @param string
    */
   public function setVariable($variable)
   {

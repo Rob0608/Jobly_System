@@ -20,23 +20,16 @@ namespace Google\Service\Chromewebstore;
 class DistributionChannel extends \Google\Model
 {
   /**
-   * The extension version provided in the manifest of the uploaded package.
-   *
    * @var string
    */
   public $crxVersion;
   /**
-   * The current deploy percentage for the release channel (nonnegative number
-   * between 0 and 100).
-   *
    * @var int
    */
   public $deployPercentage;
 
   /**
-   * The extension version provided in the manifest of the uploaded package.
-   *
-   * @param string $crxVersion
+   * @param string
    */
   public function setCrxVersion($crxVersion)
   {
@@ -50,10 +43,7 @@ class DistributionChannel extends \Google\Model
     return $this->crxVersion;
   }
   /**
-   * The current deploy percentage for the release channel (nonnegative number
-   * between 0 and 100).
-   *
-   * @param int $deployPercentage
+   * @param int
    */
   public function setDeployPercentage($deployPercentage)
   {

@@ -24,9 +24,7 @@ class Row extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * The values for the row.
-   *
-   * @param Value[] $values
+   * @param Value[]
    */
   public function setValues($values)
   {

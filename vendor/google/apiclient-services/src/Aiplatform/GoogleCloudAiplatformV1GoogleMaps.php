@@ -20,16 +20,12 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
 {
   /**
-   * Optional. If true, include the widget context token in the response.
-   *
    * @var bool
    */
   public $enableWidget;
 
   /**
-   * Optional. If true, include the widget context token in the response.
-   *
-   * @param bool $enableWidget
+   * @param bool
    */
   public function setEnableWidget($enableWidget)
   {

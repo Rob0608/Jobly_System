@@ -20,34 +20,16 @@ namespace Google\Service\MyBusinessVerifications;
 class GenerateInstantVerificationTokenResponse extends \Google\Model
 {
   /**
-   * Default value, will result in errors.
-   */
-  public const RESULT_RESULT_UNSPECIFIED = 'RESULT_UNSPECIFIED';
-  /**
-   * The instant verification token was generated successfully.
-   */
-  public const RESULT_SUCCEEDED = 'SUCCEEDED';
-  /**
-   * The instant verification token was not generated..
-   */
-  public const RESULT_FAILED = 'FAILED';
-  /**
-   * The generated instant verification token.
-   *
    * @var string
    */
   public $instantVerificationToken;
   /**
-   * Output only. The result of the instant verification token generation.
-   *
    * @var string
    */
   public $result;
 
   /**
-   * The generated instant verification token.
-   *
-   * @param string $instantVerificationToken
+   * @param string
    */
   public function setInstantVerificationToken($instantVerificationToken)
   {
@@ -61,18 +43,14 @@ class GenerateInstantVerificationTokenResponse extends \Google\Model
     return $this->instantVerificationToken;
   }
   /**
-   * Output only. The result of the instant verification token generation.
-   *
-   * Accepted values: RESULT_UNSPECIFIED, SUCCEEDED, FAILED
-   *
-   * @param self::RESULT_* $result
+   * @param string
    */
   public function setResult($result)
   {
     $this->result = $result;
   }
   /**
-   * @return self::RESULT_*
+   * @return string
    */
   public function getResult()
   {

@@ -20,22 +20,16 @@ namespace Google\Service\SecureSourceManager;
 class Branch extends \Google\Model
 {
   /**
-   * Required. Name of the branch.
-   *
    * @var string
    */
   public $ref;
   /**
-   * Output only. The commit at the tip of the branch.
-   *
    * @var string
    */
   public $sha;
 
   /**
-   * Required. Name of the branch.
-   *
-   * @param string $ref
+   * @param string
    */
   public function setRef($ref)
   {
@@ -49,9 +43,7 @@ class Branch extends \Google\Model
     return $this->ref;
   }
   /**
-   * Output only. The commit at the tip of the branch.
-   *
-   * @param string $sha
+   * @param string
    */
   public function setSha($sha)
   {

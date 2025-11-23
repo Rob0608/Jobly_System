@@ -23,16 +23,12 @@ class SapInstanceProperties extends \Google\Collection
   protected $agentStatesType = AgentStates::class;
   protected $agentStatesDataType = '';
   /**
-   * Optional. SAP Instance numbers. They are from '00' to '99'.
-   *
    * @var string[]
    */
   public $numbers;
 
   /**
-   * Optional. Sap Instance Agent status.
-   *
-   * @param AgentStates $agentStates
+   * @param AgentStates
    */
   public function setAgentStates(AgentStates $agentStates)
   {
@@ -46,9 +42,7 @@ class SapInstanceProperties extends \Google\Collection
     return $this->agentStates;
   }
   /**
-   * Optional. SAP Instance numbers. They are from '00' to '99'.
-   *
-   * @param string[] $numbers
+   * @param string[]
    */
   public function setNumbers($numbers)
   {

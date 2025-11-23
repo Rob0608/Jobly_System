@@ -21,16 +21,12 @@ class AdPolicyTopicEvidenceTextList extends \Google\Collection
 {
   protected $collection_key = 'texts';
   /**
-   * The fragments of text from the resource that caused the policy finding.
-   *
    * @var string[]
    */
   public $texts;
 
   /**
-   * The fragments of text from the resource that caused the policy finding.
-   *
-   * @param string[] $texts
+   * @param string[]
    */
   public function setTexts($texts)
   {

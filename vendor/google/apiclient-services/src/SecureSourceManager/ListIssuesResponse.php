@@ -23,16 +23,12 @@ class ListIssuesResponse extends \Google\Collection
   protected $issuesType = Issue::class;
   protected $issuesDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of issues.
-   *
-   * @param Issue[] $issues
+   * @param Issue[]
    */
   public function setIssues($issues)
   {
@@ -46,9 +42,7 @@ class ListIssuesResponse extends \Google\Collection
     return $this->issues;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

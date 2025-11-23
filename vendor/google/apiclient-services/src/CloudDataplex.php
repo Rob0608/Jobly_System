@@ -45,6 +45,7 @@ class CloudDataplex extends \Google\Service
   public $projects_locations_changeRequests;
   public $projects_locations_dataAttributeBindings;
   public $projects_locations_dataProducts;
+  public $projects_locations_dataProducts_dataAssets;
   public $projects_locations_dataScans;
   public $projects_locations_dataScans_jobs;
   public $projects_locations_dataTaxonomies;
@@ -700,21 +701,37 @@ class CloudDataplex extends \Google\Service
         'dataProducts',
         [
           'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
+            'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
-            ],'setIamPolicy' => [
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataProducts_dataAssets = new CloudDataplex\Resource\ProjectsLocationsDataProductsDataAssets(
+        $this,
+        $this->serviceName,
+        'dataAssets',
+        [
+          'methods' => [
+            'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [

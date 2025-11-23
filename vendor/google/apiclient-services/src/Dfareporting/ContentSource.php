@@ -20,21 +20,6 @@ namespace Google\Service\Dfareporting;
 class ContentSource extends \Google\Model
 {
   /**
-   * The resource type is unspecified.
-   */
-  public const RESOURCE_TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
-  /**
-   * The resource type is google spreadsheet.
-   */
-  public const RESOURCE_TYPE_RESOURCE_TYPE_GOOGLE_SPREADSHEET = 'RESOURCE_TYPE_GOOGLE_SPREADSHEET';
-  /**
-   * The resource type is remote file.
-   */
-  public const RESOURCE_TYPE_RESOURCE_TYPE_REMOTE_FILE = 'RESOURCE_TYPE_REMOTE_FILE';
-  /**
-   * Optional. The name of the content source. It is defaulted to content source
-   * file name if not provided.
-   *
    * @var string
    */
   public $contentSourceName;
@@ -45,23 +30,16 @@ class ContentSource extends \Google\Model
   protected $metaDataType = ContentSourceMetaData::class;
   protected $metaDataDataType = '';
   /**
-   * Required. The link to the file of the content source.
-   *
    * @var string
    */
   public $resourceLink;
   /**
-   * Required. The resource type of the content source.
-   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * Optional. The name of the content source. It is defaulted to content source
-   * file name if not provided.
-   *
-   * @param string $contentSourceName
+   * @param string
    */
   public function setContentSourceName($contentSourceName)
   {
@@ -75,10 +53,7 @@ class ContentSource extends \Google\Model
     return $this->contentSourceName;
   }
   /**
-   * Output only. The creation timestamp of the content source. This is a read-
-   * only field.
-   *
-   * @param LastModifiedInfo $createInfo
+   * @param LastModifiedInfo
    */
   public function setCreateInfo(LastModifiedInfo $createInfo)
   {
@@ -92,10 +67,7 @@ class ContentSource extends \Google\Model
     return $this->createInfo;
   }
   /**
-   * Output only. The last modified timestamp of the content source. This is a
-   * read-only field.
-   *
-   * @param LastModifiedInfo $lastModifiedInfo
+   * @param LastModifiedInfo
    */
   public function setLastModifiedInfo(LastModifiedInfo $lastModifiedInfo)
   {
@@ -109,10 +81,7 @@ class ContentSource extends \Google\Model
     return $this->lastModifiedInfo;
   }
   /**
-   * Output only. Metadata of the content source. It contains the number of rows
-   * and the column names from resource link. This is a read-only field.
-   *
-   * @param ContentSourceMetaData $metaData
+   * @param ContentSourceMetaData
    */
   public function setMetaData(ContentSourceMetaData $metaData)
   {
@@ -126,9 +95,7 @@ class ContentSource extends \Google\Model
     return $this->metaData;
   }
   /**
-   * Required. The link to the file of the content source.
-   *
-   * @param string $resourceLink
+   * @param string
    */
   public function setResourceLink($resourceLink)
   {
@@ -142,19 +109,14 @@ class ContentSource extends \Google\Model
     return $this->resourceLink;
   }
   /**
-   * Required. The resource type of the content source.
-   *
-   * Accepted values: RESOURCE_TYPE_UNSPECIFIED,
-   * RESOURCE_TYPE_GOOGLE_SPREADSHEET, RESOURCE_TYPE_REMOTE_FILE
-   *
-   * @param self::RESOURCE_TYPE_* $resourceType
+   * @param string
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return self::RESOURCE_TYPE_*
+   * @return string
    */
   public function getResourceType()
   {

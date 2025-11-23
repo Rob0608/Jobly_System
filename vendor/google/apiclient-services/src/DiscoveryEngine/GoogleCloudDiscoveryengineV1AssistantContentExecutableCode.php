@@ -20,16 +20,12 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantContentExecutableCode extends \Google\Model
 {
   /**
-   * Required. The code content. Currently only supports Python.
-   *
    * @var string
    */
   public $code;
 
   /**
-   * Required. The code content. Currently only supports Python.
-   *
-   * @param string $code
+   * @param string
    */
   public function setCode($code)
   {

@@ -20,16 +20,12 @@ namespace Google\Service\CloudOSLogin;
 class SignSshPublicKeyResponse extends \Google\Model
 {
   /**
-   * The signed SSH public key to use in the SSH handshake.
-   *
    * @var string
    */
   public $signedSshPublicKey;
 
   /**
-   * The signed SSH public key to use in the SSH handshake.
-   *
-   * @param string $signedSshPublicKey
+   * @param string
    */
   public function setSignedSshPublicKey($signedSshPublicKey)
   {

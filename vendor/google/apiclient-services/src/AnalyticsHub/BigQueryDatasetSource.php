@@ -21,18 +21,12 @@ class BigQueryDatasetSource extends \Google\Collection
 {
   protected $collection_key = 'selectedResources';
   /**
-   * Optional. Resource name of the dataset source for this listing. e.g.
-   * `projects/myproject/datasets/123`
-   *
    * @var string
    */
   public $dataset;
   protected $effectiveReplicasType = Replica::class;
   protected $effectiveReplicasDataType = 'array';
   /**
-   * Optional. A list of regions where the publisher has created shared dataset
-   * replicas.
-   *
    * @var string[]
    */
   public $replicaLocations;
@@ -42,10 +36,7 @@ class BigQueryDatasetSource extends \Google\Collection
   protected $selectedResourcesDataType = 'array';
 
   /**
-   * Optional. Resource name of the dataset source for this listing. e.g.
-   * `projects/myproject/datasets/123`
-   *
-   * @param string $dataset
+   * @param string
    */
   public function setDataset($dataset)
   {
@@ -59,11 +50,7 @@ class BigQueryDatasetSource extends \Google\Collection
     return $this->dataset;
   }
   /**
-   * Output only. Server-owned effective state of replicas. Contains both
-   * primary and secondary replicas. Each replica includes a system-computed
-   * (output-only) state and primary designation.
-   *
-   * @param Replica[] $effectiveReplicas
+   * @param Replica[]
    */
   public function setEffectiveReplicas($effectiveReplicas)
   {
@@ -77,10 +64,7 @@ class BigQueryDatasetSource extends \Google\Collection
     return $this->effectiveReplicas;
   }
   /**
-   * Optional. A list of regions where the publisher has created shared dataset
-   * replicas.
-   *
-   * @param string[] $replicaLocations
+   * @param string[]
    */
   public function setReplicaLocations($replicaLocations)
   {
@@ -94,10 +78,7 @@ class BigQueryDatasetSource extends \Google\Collection
     return $this->replicaLocations;
   }
   /**
-   * Optional. If set, restricted export policy will be propagated and enforced
-   * on the linked dataset.
-   *
-   * @param RestrictedExportPolicy $restrictedExportPolicy
+   * @param RestrictedExportPolicy
    */
   public function setRestrictedExportPolicy(RestrictedExportPolicy $restrictedExportPolicy)
   {
@@ -111,10 +92,7 @@ class BigQueryDatasetSource extends \Google\Collection
     return $this->restrictedExportPolicy;
   }
   /**
-   * Optional. Resource in this dataset that is selectively shared. This field
-   * is required for data clean room exchanges.
-   *
-   * @param SelectedResource[] $selectedResources
+   * @param SelectedResource[]
    */
   public function setSelectedResources($selectedResources)
   {

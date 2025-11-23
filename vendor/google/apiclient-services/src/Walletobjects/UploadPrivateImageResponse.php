@@ -20,18 +20,12 @@ namespace Google\Service\Walletobjects;
 class UploadPrivateImageResponse extends \Google\Model
 {
   /**
-   * Unique ID of the uploaded image to be referenced later in
-   * Image.private_image_id.
-   *
    * @var string
    */
   public $privateImageId;
 
   /**
-   * Unique ID of the uploaded image to be referenced later in
-   * Image.private_image_id.
-   *
-   * @param string $privateImageId
+   * @param string
    */
   public function setPrivateImageId($privateImageId)
   {

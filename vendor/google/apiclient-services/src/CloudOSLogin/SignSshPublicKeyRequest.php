@@ -20,40 +20,24 @@ namespace Google\Service\CloudOSLogin;
 class SignSshPublicKeyRequest extends \Google\Model
 {
   /**
-   * The App Engine instance to sign the SSH public key for. Expected format:
-   * apps/{app}/services/{service}/versions/{version}/instances/{instance}
-   *
    * @var string
    */
   public $appEngineInstance;
   /**
-   * The Compute instance to sign the SSH public key for. Expected format:
-   * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
-   *
    * @var string
    */
   public $computeInstance;
   /**
-   * Optional. The service account for the instance. If the instance in question
-   * does not have a service account, this field should be left empty. If the
-   * wrong service account is provided, this operation will return a signed
-   * certificate that will not be accepted by the VM.
-   *
    * @var string
    */
   public $serviceAccount;
   /**
-   * Required. The SSH public key to sign.
-   *
    * @var string
    */
   public $sshPublicKey;
 
   /**
-   * The App Engine instance to sign the SSH public key for. Expected format:
-   * apps/{app}/services/{service}/versions/{version}/instances/{instance}
-   *
-   * @param string $appEngineInstance
+   * @param string
    */
   public function setAppEngineInstance($appEngineInstance)
   {
@@ -67,10 +51,7 @@ class SignSshPublicKeyRequest extends \Google\Model
     return $this->appEngineInstance;
   }
   /**
-   * The Compute instance to sign the SSH public key for. Expected format:
-   * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
-   *
-   * @param string $computeInstance
+   * @param string
    */
   public function setComputeInstance($computeInstance)
   {
@@ -84,12 +65,7 @@ class SignSshPublicKeyRequest extends \Google\Model
     return $this->computeInstance;
   }
   /**
-   * Optional. The service account for the instance. If the instance in question
-   * does not have a service account, this field should be left empty. If the
-   * wrong service account is provided, this operation will return a signed
-   * certificate that will not be accepted by the VM.
-   *
-   * @param string $serviceAccount
+   * @param string
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -103,9 +79,7 @@ class SignSshPublicKeyRequest extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * Required. The SSH public key to sign.
-   *
-   * @param string $sshPublicKey
+   * @param string
    */
   public function setSshPublicKey($sshPublicKey)
   {

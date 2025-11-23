@@ -20,22 +20,16 @@ namespace Google\Service\SecureSourceManager;
 class FetchBlobResponse extends \Google\Model
 {
   /**
-   * The content of the blob, encoded as base64.
-   *
    * @var string
    */
   public $content;
   /**
-   * The SHA-1 hash of the blob.
-   *
    * @var string
    */
   public $sha;
 
   /**
-   * The content of the blob, encoded as base64.
-   *
-   * @param string $content
+   * @param string
    */
   public function setContent($content)
   {
@@ -49,9 +43,7 @@ class FetchBlobResponse extends \Google\Model
     return $this->content;
   }
   /**
-   * The SHA-1 hash of the blob.
-   *
-   * @param string $sha
+   * @param string
    */
   public function setSha($sha)
   {

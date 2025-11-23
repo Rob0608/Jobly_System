@@ -19,48 +19,16 @@ namespace Google\Service\AndroidPublisher;
 
 class Order extends \Google\Collection
 {
-  /**
-   * State unspecified. This value is not used.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * Order has been created and is waiting to be processed.
-   */
-  public const STATE_PENDING = 'PENDING';
-  /**
-   * Order has been successfully processed.
-   */
-  public const STATE_PROCESSED = 'PROCESSED';
-  /**
-   * Order was canceled before being processed.
-   */
-  public const STATE_CANCELED = 'CANCELED';
-  /**
-   * Requested refund is waiting to be processed.
-   */
-  public const STATE_PENDING_REFUND = 'PENDING_REFUND';
-  /**
-   * Part of the order amount was refunded.
-   */
-  public const STATE_PARTIALLY_REFUNDED = 'PARTIALLY_REFUNDED';
-  /**
-   * The full order amount was refunded.
-   */
-  public const STATE_REFUNDED = 'REFUNDED';
   protected $collection_key = 'lineItems';
   protected $buyerAddressType = BuyerAddress::class;
   protected $buyerAddressDataType = '';
   /**
-   * The time when the order was created.
-   *
    * @var string
    */
   public $createTime;
   protected $developerRevenueInBuyerCurrencyType = Money::class;
   protected $developerRevenueInBuyerCurrencyDataType = '';
   /**
-   * The time of the last event that occurred on the order.
-   *
    * @var string
    */
   public $lastEventTime;
@@ -71,23 +39,16 @@ class Order extends \Google\Collection
   protected $orderHistoryType = OrderHistory::class;
   protected $orderHistoryDataType = '';
   /**
-   * The order ID.
-   *
    * @var string
    */
   public $orderId;
   protected $pointsDetailsType = PointsDetails::class;
   protected $pointsDetailsDataType = '';
   /**
-   * The token provided to the user's device when the subscription or item was
-   * purchased.
-   *
    * @var string
    */
   public $purchaseToken;
   /**
-   * The state of the order.
-   *
    * @var string
    */
   public $state;
@@ -97,10 +58,7 @@ class Order extends \Google\Collection
   protected $totalDataType = '';
 
   /**
-   * Address information for the customer, for use in tax computation. When
-   * Google is the Merchant of Record for the order, only country is shown.
-   *
-   * @param BuyerAddress $buyerAddress
+   * @param BuyerAddress
    */
   public function setBuyerAddress(BuyerAddress $buyerAddress)
   {
@@ -114,9 +72,7 @@ class Order extends \Google\Collection
     return $this->buyerAddress;
   }
   /**
-   * The time when the order was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -130,11 +86,7 @@ class Order extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Your revenue for this order in the buyer's currency, including deductions
-   * of partial refunds, taxes and fees. Google deducts standard transaction and
-   * third party fees from each sale, including VAT in some regions.
-   *
-   * @param Money $developerRevenueInBuyerCurrency
+   * @param Money
    */
   public function setDeveloperRevenueInBuyerCurrency(Money $developerRevenueInBuyerCurrency)
   {
@@ -148,9 +100,7 @@ class Order extends \Google\Collection
     return $this->developerRevenueInBuyerCurrency;
   }
   /**
-   * The time of the last event that occurred on the order.
-   *
-   * @param string $lastEventTime
+   * @param string
    */
   public function setLastEventTime($lastEventTime)
   {
@@ -164,9 +114,7 @@ class Order extends \Google\Collection
     return $this->lastEventTime;
   }
   /**
-   * The individual line items making up this order.
-   *
-   * @param LineItem[] $lineItems
+   * @param LineItem[]
    */
   public function setLineItems($lineItems)
   {
@@ -180,9 +128,7 @@ class Order extends \Google\Collection
     return $this->lineItems;
   }
   /**
-   * Detailed information about the order at creation time.
-   *
-   * @param OrderDetails $orderDetails
+   * @param OrderDetails
    */
   public function setOrderDetails(OrderDetails $orderDetails)
   {
@@ -196,9 +142,7 @@ class Order extends \Google\Collection
     return $this->orderDetails;
   }
   /**
-   * Details about events which modified the order.
-   *
-   * @param OrderHistory $orderHistory
+   * @param OrderHistory
    */
   public function setOrderHistory(OrderHistory $orderHistory)
   {
@@ -212,9 +156,7 @@ class Order extends \Google\Collection
     return $this->orderHistory;
   }
   /**
-   * The order ID.
-   *
-   * @param string $orderId
+   * @param string
    */
   public function setOrderId($orderId)
   {
@@ -228,10 +170,7 @@ class Order extends \Google\Collection
     return $this->orderId;
   }
   /**
-   * Play points applied to the order, including offer information, discount
-   * rate and point values.
-   *
-   * @param PointsDetails $pointsDetails
+   * @param PointsDetails
    */
   public function setPointsDetails(PointsDetails $pointsDetails)
   {
@@ -245,10 +184,7 @@ class Order extends \Google\Collection
     return $this->pointsDetails;
   }
   /**
-   * The token provided to the user's device when the subscription or item was
-   * purchased.
-   *
-   * @param string $purchaseToken
+   * @param string
    */
   public function setPurchaseToken($purchaseToken)
   {
@@ -262,28 +198,21 @@ class Order extends \Google\Collection
     return $this->purchaseToken;
   }
   /**
-   * The state of the order.
-   *
-   * Accepted values: STATE_UNSPECIFIED, PENDING, PROCESSED, CANCELED,
-   * PENDING_REFUND, PARTIALLY_REFUNDED, REFUNDED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * The total tax paid as a part of this order.
-   *
-   * @param Money $tax
+   * @param Money
    */
   public function setTax(Money $tax)
   {
@@ -297,10 +226,7 @@ class Order extends \Google\Collection
     return $this->tax;
   }
   /**
-   * The final amount paid by the customer, taking into account discounts and
-   * taxes.
-   *
-   * @param Money $total
+   * @param Money
    */
   public function setTotal(Money $total)
   {

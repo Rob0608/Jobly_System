@@ -21,24 +21,18 @@ class GoogleCloudDataplexV1DataDocumentationResultField extends \Google\Collecti
 {
   protected $collection_key = 'fields';
   /**
-   * Output only. Generated description for columns and fields.
-   *
    * @var string
    */
   public $description;
   protected $fieldsType = GoogleCloudDataplexV1DataDocumentationResultField::class;
   protected $fieldsDataType = 'array';
   /**
-   * Output only. The name of the column.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Output only. Generated description for columns and fields.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -52,9 +46,7 @@ class GoogleCloudDataplexV1DataDocumentationResultField extends \Google\Collecti
     return $this->description;
   }
   /**
-   * Output only. Nested fields.
-   *
-   * @param GoogleCloudDataplexV1DataDocumentationResultField[] $fields
+   * @param GoogleCloudDataplexV1DataDocumentationResultField[]
    */
   public function setFields($fields)
   {
@@ -68,9 +60,7 @@ class GoogleCloudDataplexV1DataDocumentationResultField extends \Google\Collecti
     return $this->fields;
   }
   /**
-   * Output only. The name of the column.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

@@ -25,37 +25,24 @@ class GenerateAccessTokenResponse extends \Google\Model
         "tokenType" => "token_type",
   ];
   /**
-   * Short-lived access token string which may be used to access Google APIs.
-   *
    * @var string
    */
   public $accessToken;
   /**
-   * The time in seconds when the access token expires. Typically that's 3600.
-   *
    * @var int
    */
   public $expiresIn;
   /**
-   * Space-separated list of scopes contained in the returned token.
-   * https://cloud.google.com/docs/authentication/token-types#access-contents
-   *
    * @var string
    */
   public $scope;
   /**
-   * Type of the returned access token (e.g. "Bearer"). It specifies how the
-   * token must be used. Bearer tokens may be used by any entity without proof
-   * of identity.
-   *
    * @var string
    */
   public $tokenType;
 
   /**
-   * Short-lived access token string which may be used to access Google APIs.
-   *
-   * @param string $accessToken
+   * @param string
    */
   public function setAccessToken($accessToken)
   {
@@ -69,9 +56,7 @@ class GenerateAccessTokenResponse extends \Google\Model
     return $this->accessToken;
   }
   /**
-   * The time in seconds when the access token expires. Typically that's 3600.
-   *
-   * @param int $expiresIn
+   * @param int
    */
   public function setExpiresIn($expiresIn)
   {
@@ -85,10 +70,7 @@ class GenerateAccessTokenResponse extends \Google\Model
     return $this->expiresIn;
   }
   /**
-   * Space-separated list of scopes contained in the returned token.
-   * https://cloud.google.com/docs/authentication/token-types#access-contents
-   *
-   * @param string $scope
+   * @param string
    */
   public function setScope($scope)
   {
@@ -102,11 +84,7 @@ class GenerateAccessTokenResponse extends \Google\Model
     return $this->scope;
   }
   /**
-   * Type of the returned access token (e.g. "Bearer"). It specifies how the
-   * token must be used. Bearer tokens may be used by any entity without proof
-   * of identity.
-   *
-   * @param string $tokenType
+   * @param string
    */
   public function setTokenType($tokenType)
   {

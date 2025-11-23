@@ -20,16 +20,12 @@ namespace Google\Service\Eventarc;
 class OrganizationSubscription extends \Google\Model
 {
   /**
-   * Required. Enable org level subscription.
-   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * Required. Enable org level subscription.
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {

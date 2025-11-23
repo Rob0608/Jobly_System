@@ -21,8 +21,6 @@ class FetchTreeResponse extends \Google\Collection
 {
   protected $collection_key = 'treeEntries';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -30,9 +28,7 @@ class FetchTreeResponse extends \Google\Collection
   protected $treeEntriesDataType = 'array';
 
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,9 +42,7 @@ class FetchTreeResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of TreeEntry objects.
-   *
-   * @param TreeEntry[] $treeEntries
+   * @param TreeEntry[]
    */
   public function setTreeEntries($treeEntries)
   {

@@ -20,37 +20,20 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ExtendSubscriptionResponse extends \Google\Model
 {
   /**
-   * The time at which the subscription is expected to be extended, in ISO 8061
-   * format. UTC timezone. Example, "cycleEndTime":"2019-08-31T17:28:54.564Z"
-   *
    * @var string
    */
   public $cycleEndTime;
   /**
-   * End of the free trial period, in ISO 8061 format. UTC timezone. Example,
-   * "freeTrialEndTime":"2019-08-31T17:28:54.564Z" This time will be set the
-   * same as initial subscription creation time if no free trial period is
-   * offered to the partner.
-   *
    * @var string
    */
   public $freeTrialEndTime;
   /**
-   * Output only. The time at which the subscription is expected to be renewed
-   * by Google - a new charge will be incurred and the service entitlement will
-   * be renewed. A non-immediate cancellation will take place at this time too,
-   * before which, the service entitlement for the end user will remain valid.
-   * UTC timezone in ISO 8061 format. For example: "2019-08-31T17:28:54.564Z"
-   *
    * @var string
    */
   public $renewalTime;
 
   /**
-   * The time at which the subscription is expected to be extended, in ISO 8061
-   * format. UTC timezone. Example, "cycleEndTime":"2019-08-31T17:28:54.564Z"
-   *
-   * @param string $cycleEndTime
+   * @param string
    */
   public function setCycleEndTime($cycleEndTime)
   {
@@ -64,12 +47,7 @@ class ExtendSubscriptionResponse extends \Google\Model
     return $this->cycleEndTime;
   }
   /**
-   * End of the free trial period, in ISO 8061 format. UTC timezone. Example,
-   * "freeTrialEndTime":"2019-08-31T17:28:54.564Z" This time will be set the
-   * same as initial subscription creation time if no free trial period is
-   * offered to the partner.
-   *
-   * @param string $freeTrialEndTime
+   * @param string
    */
   public function setFreeTrialEndTime($freeTrialEndTime)
   {
@@ -83,13 +61,7 @@ class ExtendSubscriptionResponse extends \Google\Model
     return $this->freeTrialEndTime;
   }
   /**
-   * Output only. The time at which the subscription is expected to be renewed
-   * by Google - a new charge will be incurred and the service entitlement will
-   * be renewed. A non-immediate cancellation will take place at this time too,
-   * before which, the service entitlement for the end user will remain valid.
-   * UTC timezone in ISO 8061 format. For example: "2019-08-31T17:28:54.564Z"
-   *
-   * @param string $renewalTime
+   * @param string
    */
   public function setRenewalTime($renewalTime)
   {

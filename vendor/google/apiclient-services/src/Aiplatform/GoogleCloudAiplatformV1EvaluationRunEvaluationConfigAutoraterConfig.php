@@ -20,33 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extends \Google\Model
 {
   /**
-   * Optional. The fully qualified name of the publisher model or tuned
-   * autorater endpoint to use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Tuned model
-   * endpoint format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
    * @var string
    */
   public $autoraterModel;
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
-   * Optional. Number of samples for each instance in the dataset. If not
-   * specified, the default is 4. Minimum value is 1, maximum value is 32.
-   *
    * @var int
    */
   public $sampleCount;
 
   /**
-   * Optional. The fully qualified name of the publisher model or tuned
-   * autorater endpoint to use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Tuned model
-   * endpoint format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
-   * @param string $autoraterModel
+   * @param string
    */
   public function setAutoraterModel($autoraterModel)
   {
@@ -60,9 +45,7 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extend
     return $this->autoraterModel;
   }
   /**
-   * Optional. Configuration options for model generation and outputs.
-   *
-   * @param GoogleCloudAiplatformV1GenerationConfig $generationConfig
+   * @param GoogleCloudAiplatformV1GenerationConfig
    */
   public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
   {
@@ -76,10 +59,7 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extend
     return $this->generationConfig;
   }
   /**
-   * Optional. Number of samples for each instance in the dataset. If not
-   * specified, the default is 4. Minimum value is 1, maximum value is 32.
-   *
-   * @param int $sampleCount
+   * @param int
    */
   public function setSampleCount($sampleCount)
   {

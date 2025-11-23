@@ -20,16 +20,12 @@ namespace Google\Service\Backupdr;
 class FetchMsComplianceMetadataRequest extends \Google\Model
 {
   /**
-   * Required. The project id of the target project
-   *
    * @var string
    */
   public $projectId;
 
   /**
-   * Required. The project id of the target project
-   *
-   * @param string $projectId
+   * @param string
    */
   public function setProjectId($projectId)
   {

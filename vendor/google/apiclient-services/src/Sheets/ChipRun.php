@@ -22,17 +22,12 @@ class ChipRun extends \Google\Model
   protected $chipType = Chip::class;
   protected $chipDataType = '';
   /**
-   * Required. The zero-based character index where this run starts, in UTF-16
-   * code units.
-   *
    * @var int
    */
   public $startIndex;
 
   /**
-   * Optional. The chip of this run.
-   *
-   * @param Chip $chip
+   * @param Chip
    */
   public function setChip(Chip $chip)
   {
@@ -46,10 +41,7 @@ class ChipRun extends \Google\Model
     return $this->chip;
   }
   /**
-   * Required. The zero-based character index where this run starts, in UTF-16
-   * code units.
-   *
-   * @param int $startIndex
+   * @param int
    */
   public function setStartIndex($startIndex)
   {

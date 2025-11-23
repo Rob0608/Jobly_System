@@ -24,10 +24,7 @@ class EntitleSubscriptionRequest extends \Google\Collection
   protected $lineItemEntitlementDetailsDataType = 'array';
 
   /**
-   * Optional. The line items to be entitled. If unspecified, all line items
-   * will be entitled.
-   *
-   * @param EntitleSubscriptionRequestLineItemEntitlementDetails[] $lineItemEntitlementDetails
+   * @param EntitleSubscriptionRequestLineItemEntitlementDetails[]
    */
   public function setLineItemEntitlementDetails($lineItemEntitlementDetails)
   {

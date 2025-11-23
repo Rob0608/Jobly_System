@@ -25,10 +25,7 @@ class Risk extends \Google\Model
   protected $epssDataType = '';
 
   /**
-   * CISA maintains the authoritative source of vulnerabilities that have been
-   * exploited in the wild.
-   *
-   * @param CISAKnownExploitedVulnerabilities $cisaKev
+   * @param CISAKnownExploitedVulnerabilities
    */
   public function setCisaKev(CISAKnownExploitedVulnerabilities $cisaKev)
   {
@@ -42,10 +39,7 @@ class Risk extends \Google\Model
     return $this->cisaKev;
   }
   /**
-   * The Exploit Prediction Scoring System (EPSS) estimates the likelihood
-   * (probability) that a software vulnerability will be exploited in the wild.
-   *
-   * @param ExploitPredictionScoringSystem $epss
+   * @param ExploitPredictionScoringSystem
    */
   public function setEpss(ExploitPredictionScoringSystem $epss)
   {

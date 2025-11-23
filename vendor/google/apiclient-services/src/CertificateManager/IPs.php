@@ -21,32 +21,20 @@ class IPs extends \Google\Collection
 {
   protected $collection_key = 'servingOnAltPorts';
   /**
-   * Output only. The list of IP addresses resolved from the domain's A/AAAA
-   * records. Can contain both ipv4 and ipv6 addresses.
-   *
    * @var string[]
    */
   public $resolved;
   /**
-   * Output only. The list of IP addresses, where the certificate is attached
-   * and port 443 is open.
-   *
    * @var string[]
    */
   public $serving;
   /**
-   * Output only. The list of IP addresses, where the certificate is attached,
-   * but port 443 is not open.
-   *
    * @var string[]
    */
   public $servingOnAltPorts;
 
   /**
-   * Output only. The list of IP addresses resolved from the domain's A/AAAA
-   * records. Can contain both ipv4 and ipv6 addresses.
-   *
-   * @param string[] $resolved
+   * @param string[]
    */
   public function setResolved($resolved)
   {
@@ -60,10 +48,7 @@ class IPs extends \Google\Collection
     return $this->resolved;
   }
   /**
-   * Output only. The list of IP addresses, where the certificate is attached
-   * and port 443 is open.
-   *
-   * @param string[] $serving
+   * @param string[]
    */
   public function setServing($serving)
   {
@@ -77,10 +62,7 @@ class IPs extends \Google\Collection
     return $this->serving;
   }
   /**
-   * Output only. The list of IP addresses, where the certificate is attached,
-   * but port 443 is not open.
-   *
-   * @param string[] $servingOnAltPorts
+   * @param string[]
    */
   public function setServingOnAltPorts($servingOnAltPorts)
   {

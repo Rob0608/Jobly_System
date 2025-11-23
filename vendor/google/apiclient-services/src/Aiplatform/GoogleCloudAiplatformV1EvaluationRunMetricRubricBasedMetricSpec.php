@@ -24,26 +24,18 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec extends \G
   protected $judgeAutoraterConfigType = GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig::class;
   protected $judgeAutoraterConfigDataType = '';
   /**
-   * Optional. Template for the prompt used by the judge model to evaluate
-   * against rubrics.
-   *
    * @var string
    */
   public $metricPromptTemplate;
   protected $rubricGenerationSpecType = GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec::class;
   protected $rubricGenerationSpecDataType = '';
   /**
-   * Use a pre-defined group of rubrics associated with the input content. This
-   * refers to a key in the `rubric_groups` map of `RubricEnhancedContents`.
-   *
    * @var string
    */
   public $rubricGroupKey;
 
   /**
-   * Use rubrics provided directly in the spec.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpecRepeatedRubrics $inlineRubrics
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpecRepeatedRubrics
    */
   public function setInlineRubrics(GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpecRepeatedRubrics $inlineRubrics)
   {
@@ -57,10 +49,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec extends \G
     return $this->inlineRubrics;
   }
   /**
-   * Optional. Optional configuration for the judge LLM (Autorater). The
-   * definition of AutoraterConfig needs to be provided.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig $judgeAutoraterConfig
+   * @param GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig
    */
   public function setJudgeAutoraterConfig(GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig $judgeAutoraterConfig)
   {
@@ -74,10 +63,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec extends \G
     return $this->judgeAutoraterConfig;
   }
   /**
-   * Optional. Template for the prompt used by the judge model to evaluate
-   * against rubrics.
-   *
-   * @param string $metricPromptTemplate
+   * @param string
    */
   public function setMetricPromptTemplate($metricPromptTemplate)
   {
@@ -91,9 +77,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec extends \G
     return $this->metricPromptTemplate;
   }
   /**
-   * Dynamically generate rubrics for evaluation using this specification.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec $rubricGenerationSpec
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec
    */
   public function setRubricGenerationSpec(GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec $rubricGenerationSpec)
   {
@@ -107,10 +91,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec extends \G
     return $this->rubricGenerationSpec;
   }
   /**
-   * Use a pre-defined group of rubrics associated with the input content. This
-   * refers to a key in the `rubric_groups` map of `RubricEnhancedContents`.
-   *
-   * @param string $rubricGroupKey
+   * @param string
    */
   public function setRubricGroupKey($rubricGroupKey)
   {

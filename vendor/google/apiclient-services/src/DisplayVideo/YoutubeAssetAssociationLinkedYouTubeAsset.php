@@ -27,10 +27,7 @@ class YoutubeAssetAssociationLinkedYouTubeAsset extends \Google\Model
   protected $sitelinkAssetDataType = '';
 
   /**
-   * An affiliate location asset filter. This can be set only when
-   * youtube_asset_type is `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION`.
-   *
-   * @param YoutubeAssetAssociationAffiliateLocationAssetFilter $affiliateLocationAssetFilter
+   * @param YoutubeAssetAssociationAffiliateLocationAssetFilter
    */
   public function setAffiliateLocationAssetFilter(YoutubeAssetAssociationAffiliateLocationAssetFilter $affiliateLocationAssetFilter)
   {
@@ -44,10 +41,7 @@ class YoutubeAssetAssociationLinkedYouTubeAsset extends \Google\Model
     return $this->affiliateLocationAssetFilter;
   }
   /**
-   * A location asset filter. This can be set only when youtube_asset_type is
-   * `YOUTUBE_ASSET_TYPE_LOCATION`.
-   *
-   * @param YoutubeAssetAssociationLocationAssetFilter $locationAssetFilter
+   * @param YoutubeAssetAssociationLocationAssetFilter
    */
   public function setLocationAssetFilter(YoutubeAssetAssociationLocationAssetFilter $locationAssetFilter)
   {
@@ -61,10 +55,7 @@ class YoutubeAssetAssociationLinkedYouTubeAsset extends \Google\Model
     return $this->locationAssetFilter;
   }
   /**
-   * A sitelink asset. This can be set only when youtube_asset_type is
-   * `YOUTUBE_ASSET_TYPE_SITELINK`.
-   *
-   * @param YoutubeAssetAssociationSitelinkAsset $sitelinkAsset
+   * @param YoutubeAssetAssociationSitelinkAsset
    */
   public function setSitelinkAsset(YoutubeAssetAssociationSitelinkAsset $sitelinkAsset)
   {

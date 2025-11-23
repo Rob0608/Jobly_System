@@ -20,39 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig extends \Google\Model
 {
   /**
-   * Unspecified sampling method.
-   */
-  public const SAMPLING_METHOD_SAMPLING_METHOD_UNSPECIFIED = 'SAMPLING_METHOD_UNSPECIFIED';
-  /**
-   * Random sampling.
-   */
-  public const SAMPLING_METHOD_RANDOM = 'RANDOM';
-  /**
-   * Optional. The total number of logged data to import. If available data is
-   * less than the sampling count, all data will be imported. Default is 100.
-   *
    * @var int
    */
   public $samplingCount;
   /**
-   * Optional. How long to wait before sampling data from the BigQuery table. If
-   * not specified, defaults to 0.
-   *
    * @var string
    */
   public $samplingDuration;
   /**
-   * Optional. The sampling method to use.
-   *
    * @var string
    */
   public $samplingMethod;
 
   /**
-   * Optional. The total number of logged data to import. If available data is
-   * less than the sampling count, all data will be imported. Default is 100.
-   *
-   * @param int $samplingCount
+   * @param int
    */
   public function setSamplingCount($samplingCount)
   {
@@ -66,10 +47,7 @@ class GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig extends \Google\Mo
     return $this->samplingCount;
   }
   /**
-   * Optional. How long to wait before sampling data from the BigQuery table. If
-   * not specified, defaults to 0.
-   *
-   * @param string $samplingDuration
+   * @param string
    */
   public function setSamplingDuration($samplingDuration)
   {
@@ -83,18 +61,14 @@ class GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig extends \Google\Mo
     return $this->samplingDuration;
   }
   /**
-   * Optional. The sampling method to use.
-   *
-   * Accepted values: SAMPLING_METHOD_UNSPECIFIED, RANDOM
-   *
-   * @param self::SAMPLING_METHOD_* $samplingMethod
+   * @param string
    */
   public function setSamplingMethod($samplingMethod)
   {
     $this->samplingMethod = $samplingMethod;
   }
   /**
-   * @return self::SAMPLING_METHOD_*
+   * @return string
    */
   public function getSamplingMethod()
   {

@@ -108,6 +108,14 @@ $router->post('/auth/google/complete', 'SocialAuthController::googleCompleteAppl
 // REVIEW SYSTEM ROUTES
 $router->post('/review/submit', 'ReviewController::submit');
 
+// FORGOT / RESET PASSWORD
+$router->get('/forgot', 'AuthController::forgotForm');
+$router->post('/forgot/send', 'AuthController::sendResetCode');
+$router->get('/forgot/verify', 'AuthController::forgotVerifyForm');
+$router->post('/forgot/verify', 'AuthController::verifyResetCode');
+$router->get('/forgot/reset', 'AuthController::forgotResetForm');
+$router->post('/forgot/reset', 'AuthController::resetPassword');
+
 // API ROUTES - REST API for Review System
 $router->get('/api/health', 'ApiController::health');
 $router->get('/api/reviews', 'ApiController::getReviews');

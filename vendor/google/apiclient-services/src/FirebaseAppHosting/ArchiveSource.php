@@ -22,36 +22,24 @@ class ArchiveSource extends \Google\Model
   protected $authorType = SourceUserMetadata::class;
   protected $authorDataType = '';
   /**
-   * Optional. An optional message that describes the uploaded version of the
-   * source code.
-   *
    * @var string
    */
   public $description;
   /**
-   * Signed URL to an archive in a storage bucket.
-   *
    * @var string
    */
   public $externalSignedUri;
   /**
-   * Optional. Relative path in the archive.
-   *
    * @var string
    */
   public $rootDirectory;
   /**
-   * URI to an archive in Cloud Storage. The object must be a zipped (.zip) or
-   * gzipped archive file (.tar.gz) containing source to deploy.
-   *
    * @var string
    */
   public $userStorageUri;
 
   /**
-   * Optional. The author contained in the metadata of a version control change.
-   *
-   * @param SourceUserMetadata $author
+   * @param SourceUserMetadata
    */
   public function setAuthor(SourceUserMetadata $author)
   {
@@ -65,10 +53,7 @@ class ArchiveSource extends \Google\Model
     return $this->author;
   }
   /**
-   * Optional. An optional message that describes the uploaded version of the
-   * source code.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -82,9 +67,7 @@ class ArchiveSource extends \Google\Model
     return $this->description;
   }
   /**
-   * Signed URL to an archive in a storage bucket.
-   *
-   * @param string $externalSignedUri
+   * @param string
    */
   public function setExternalSignedUri($externalSignedUri)
   {
@@ -98,9 +81,7 @@ class ArchiveSource extends \Google\Model
     return $this->externalSignedUri;
   }
   /**
-   * Optional. Relative path in the archive.
-   *
-   * @param string $rootDirectory
+   * @param string
    */
   public function setRootDirectory($rootDirectory)
   {
@@ -114,10 +95,7 @@ class ArchiveSource extends \Google\Model
     return $this->rootDirectory;
   }
   /**
-   * URI to an archive in Cloud Storage. The object must be a zipped (.zip) or
-   * gzipped archive file (.tar.gz) containing source to deploy.
-   *
-   * @param string $userStorageUri
+   * @param string
    */
   public function setUserStorageUri($userStorageUri)
   {

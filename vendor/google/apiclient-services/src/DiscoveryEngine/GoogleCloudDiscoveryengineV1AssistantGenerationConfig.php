@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends \Google\Model
 {
   /**
-   * The default language to use for the generation of the assistant response.
-   * Use an ISO 639-1 language code such as `en`. If not specified, the language
-   * will be automatically detected.
-   *
    * @var string
    */
   public $defaultLanguage;
@@ -31,11 +27,7 @@ class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends \Google\Mode
   protected $systemInstructionDataType = '';
 
   /**
-   * The default language to use for the generation of the assistant response.
-   * Use an ISO 639-1 language code such as `en`. If not specified, the language
-   * will be automatically detected.
-   *
-   * @param string $defaultLanguage
+   * @param string
    */
   public function setDefaultLanguage($defaultLanguage)
   {
@@ -49,11 +41,7 @@ class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends \Google\Mode
     return $this->defaultLanguage;
   }
   /**
-   * System instruction, also known as the prompt preamble for LLM calls. See
-   * also https://cloud.google.com/vertex-ai/generative-
-   * ai/docs/learn/prompts/system-instructions
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistantGenerationConfigSystemInstruction $systemInstruction
+   * @param GoogleCloudDiscoveryengineV1AssistantGenerationConfigSystemInstruction
    */
   public function setSystemInstruction(GoogleCloudDiscoveryengineV1AssistantGenerationConfigSystemInstruction $systemInstruction)
   {

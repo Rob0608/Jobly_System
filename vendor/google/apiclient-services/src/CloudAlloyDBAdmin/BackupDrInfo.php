@@ -26,10 +26,7 @@ class BackupDrInfo extends \Google\Collection
   protected $previousWindowsDataType = 'array';
 
   /**
-   * The current BackupDR configuration for this cluster. If BackupDR protection
-   * is not enabled for this cluster, this field will be empty.
-   *
-   * @param BackupDrEnabledWindow $currentWindow
+   * @param BackupDrEnabledWindow
    */
   public function setCurrentWindow(BackupDrEnabledWindow $currentWindow)
   {
@@ -43,13 +40,7 @@ class BackupDrInfo extends \Google\Collection
     return $this->currentWindow;
   }
   /**
-   * Windows during which BackupDR was enabled for this cluster, along with
-   * associated configuration for that window. These are used to determine
-   * points-in-time for which restores can be performed. The windows are ordered
-   * with the most recent window last. Windows are mutally exclusive. Windows
-   * which closed more than 1 year ago will be removed from this list.
-   *
-   * @param BackupDrEnabledWindow[] $previousWindows
+   * @param BackupDrEnabledWindow[]
    */
   public function setPreviousWindows($previousWindows)
   {

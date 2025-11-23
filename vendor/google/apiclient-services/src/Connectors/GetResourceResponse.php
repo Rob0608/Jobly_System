@@ -20,28 +20,20 @@ namespace Google\Service\Connectors;
 class GetResourceResponse extends \Google\Model
 {
   /**
-   * The content of the resource.
-   *
    * @var string
    */
   public $data;
   /**
-   * Metadata like service latency, etc.
-   *
    * @var array[]
    */
   public $metadata;
   /**
-   * The MIME type of the resource.
-   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * The content of the resource.
-   *
-   * @param string $data
+   * @param string
    */
   public function setData($data)
   {
@@ -55,9 +47,7 @@ class GetResourceResponse extends \Google\Model
     return $this->data;
   }
   /**
-   * Metadata like service latency, etc.
-   *
-   * @param array[] $metadata
+   * @param array[]
    */
   public function setMetadata($metadata)
   {
@@ -71,9 +61,7 @@ class GetResourceResponse extends \Google\Model
     return $this->metadata;
   }
   /**
-   * The MIME type of the resource.
-   *
-   * @param string $mimeType
+   * @param string
    */
   public function setMimeType($mimeType)
   {

@@ -29,9 +29,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
   protected $proxyProtocolDataType = '';
 
   /**
-   * Optional. Routing policy information.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy $egressPolicy
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy
    */
   public function setEgressPolicy(GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy $egressPolicy)
   {
@@ -45,9 +43,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
     return $this->egressPolicy;
   }
   /**
-   * List of the external endpoints to forward traffic to.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal $external
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal
    */
   public function setExternal(GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal $external)
   {
@@ -61,9 +57,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
     return $this->external;
   }
   /**
-   * Network to forward traffic to.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork $network
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork
    */
   public function setNetwork(GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork $network)
   {
@@ -77,9 +71,7 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
     return $this->network;
   }
   /**
-   * Optional. Enables proxy protocol configuration for the upstream.
-   *
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig $proxyProtocol
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig
    */
   public function setProxyProtocol(GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig $proxyProtocol)
   {

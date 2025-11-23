@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteRequest extends \Google\Colle
   protected $dataKeyAndFeatureValuesDataType = 'array';
 
   /**
-   * Required. The data keys and associated feature values.
-   *
-   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValues[] $dataKeyAndFeatureValues
+   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValues[]
    */
   public function setDataKeyAndFeatureValues($dataKeyAndFeatureValues)
   {

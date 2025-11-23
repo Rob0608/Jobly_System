@@ -23,38 +23,28 @@ class StreamObject extends \Google\Collection
   protected $backfillJobType = BackfillJob::class;
   protected $backfillJobDataType = '';
   /**
-   * Output only. The creation time of the object.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Required. Display name.
-   *
    * @var string
    */
   public $displayName;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
-   * Output only. Identifier. The object resource's name.
-   *
    * @var string
    */
   public $name;
   protected $sourceObjectType = SourceObjectIdentifier::class;
   protected $sourceObjectDataType = '';
   /**
-   * Output only. The last update time of the object.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * The latest backfill job that was initiated for the stream object.
-   *
-   * @param BackfillJob $backfillJob
+   * @param BackfillJob
    */
   public function setBackfillJob(BackfillJob $backfillJob)
   {
@@ -68,9 +58,7 @@ class StreamObject extends \Google\Collection
     return $this->backfillJob;
   }
   /**
-   * Output only. The creation time of the object.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -84,9 +72,7 @@ class StreamObject extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. Display name.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -100,9 +86,7 @@ class StreamObject extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Output only. Active errors on the object.
-   *
-   * @param Error[] $errors
+   * @param Error[]
    */
   public function setErrors($errors)
   {
@@ -116,9 +100,7 @@ class StreamObject extends \Google\Collection
     return $this->errors;
   }
   /**
-   * Output only. Identifier. The object resource's name.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -132,9 +114,7 @@ class StreamObject extends \Google\Collection
     return $this->name;
   }
   /**
-   * The object identifier in the data source.
-   *
-   * @param SourceObjectIdentifier $sourceObject
+   * @param SourceObjectIdentifier
    */
   public function setSourceObject(SourceObjectIdentifier $sourceObject)
   {
@@ -148,9 +128,7 @@ class StreamObject extends \Google\Collection
     return $this->sourceObject;
   }
   /**
-   * Output only. The last update time of the object.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

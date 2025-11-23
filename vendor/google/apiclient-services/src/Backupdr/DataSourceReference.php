@@ -20,66 +20,36 @@ namespace Google\Service\Backupdr;
 class DataSourceReference extends \Google\Model
 {
   /**
-   * The possible states of backup configuration. Status not set.
-   */
-  public const DATA_SOURCE_BACKUP_CONFIG_STATE_BACKUP_CONFIG_STATE_UNSPECIFIED = 'BACKUP_CONFIG_STATE_UNSPECIFIED';
-  /**
-   * The data source is actively protected (i.e. there is a
-   * BackupPlanAssociation or Appliance SLA pointing to it)
-   */
-  public const DATA_SOURCE_BACKUP_CONFIG_STATE_ACTIVE = 'ACTIVE';
-  /**
-   * The data source is no longer protected (but may have backups under it)
-   */
-  public const DATA_SOURCE_BACKUP_CONFIG_STATE_PASSIVE = 'PASSIVE';
-  /**
-   * Output only. The time when the DataSourceReference was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. The resource name of the DataSource. Format: projects/{project
-   * }/locations/{location}/backupVaults/{backupVault}/dataSources/{dataSource}
-   *
    * @var string
    */
   public $dataSource;
   protected $dataSourceBackupConfigInfoType = DataSourceBackupConfigInfo::class;
   protected $dataSourceBackupConfigInfoDataType = '';
   /**
-   * Output only. The backup configuration state of the DataSource.
-   *
    * @var string
    */
   public $dataSourceBackupConfigState;
   /**
-   * Output only. Number of backups in the DataSource.
-   *
    * @var string
    */
   public $dataSourceBackupCount;
   protected $dataSourceGcpResourceInfoType = DataSourceGcpResourceInfo::class;
   protected $dataSourceGcpResourceInfoDataType = '';
   /**
-   * Identifier. The resource name of the DataSourceReference. Format: projects/
-   * {project}/locations/{location}/dataSourceReferences/{data_source_reference}
-   *
    * @var string
    */
   public $name;
   /**
-   * Output only. Total size of the storage used by all backup resources for the
-   * referenced datasource.
-   *
    * @var string
    */
   public $totalStoredBytes;
 
   /**
-   * Output only. The time when the DataSourceReference was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -93,10 +63,7 @@ class DataSourceReference extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. The resource name of the DataSource. Format: projects/{project
-   * }/locations/{location}/backupVaults/{backupVault}/dataSources/{dataSource}
-   *
-   * @param string $dataSource
+   * @param string
    */
   public function setDataSource($dataSource)
   {
@@ -110,9 +77,7 @@ class DataSourceReference extends \Google\Model
     return $this->dataSource;
   }
   /**
-   * Output only. Information of backup configuration on the DataSource.
-   *
-   * @param DataSourceBackupConfigInfo $dataSourceBackupConfigInfo
+   * @param DataSourceBackupConfigInfo
    */
   public function setDataSourceBackupConfigInfo(DataSourceBackupConfigInfo $dataSourceBackupConfigInfo)
   {
@@ -126,27 +91,21 @@ class DataSourceReference extends \Google\Model
     return $this->dataSourceBackupConfigInfo;
   }
   /**
-   * Output only. The backup configuration state of the DataSource.
-   *
-   * Accepted values: BACKUP_CONFIG_STATE_UNSPECIFIED, ACTIVE, PASSIVE
-   *
-   * @param self::DATA_SOURCE_BACKUP_CONFIG_STATE_* $dataSourceBackupConfigState
+   * @param string
    */
   public function setDataSourceBackupConfigState($dataSourceBackupConfigState)
   {
     $this->dataSourceBackupConfigState = $dataSourceBackupConfigState;
   }
   /**
-   * @return self::DATA_SOURCE_BACKUP_CONFIG_STATE_*
+   * @return string
    */
   public function getDataSourceBackupConfigState()
   {
     return $this->dataSourceBackupConfigState;
   }
   /**
-   * Output only. Number of backups in the DataSource.
-   *
-   * @param string $dataSourceBackupCount
+   * @param string
    */
   public function setDataSourceBackupCount($dataSourceBackupCount)
   {
@@ -160,9 +119,7 @@ class DataSourceReference extends \Google\Model
     return $this->dataSourceBackupCount;
   }
   /**
-   * Output only. The GCP resource that the DataSource is associated with.
-   *
-   * @param DataSourceGcpResourceInfo $dataSourceGcpResourceInfo
+   * @param DataSourceGcpResourceInfo
    */
   public function setDataSourceGcpResourceInfo(DataSourceGcpResourceInfo $dataSourceGcpResourceInfo)
   {
@@ -176,10 +133,7 @@ class DataSourceReference extends \Google\Model
     return $this->dataSourceGcpResourceInfo;
   }
   /**
-   * Identifier. The resource name of the DataSourceReference. Format: projects/
-   * {project}/locations/{location}/dataSourceReferences/{data_source_reference}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -193,10 +147,7 @@ class DataSourceReference extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. Total size of the storage used by all backup resources for the
-   * referenced datasource.
-   *
-   * @param string $totalStoredBytes
+   * @param string
    */
   public function setTotalStoredBytes($totalStoredBytes)
   {

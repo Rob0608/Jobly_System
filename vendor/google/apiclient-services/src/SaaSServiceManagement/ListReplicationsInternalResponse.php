@@ -21,28 +21,18 @@ class ListReplicationsInternalResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
-   * If present, the next page token can be provided to a subsequent
-   * ListReplicationsInternal call to list the next page. If empty, there are no
-   * more pages.
-   *
    * @var string
    */
   public $nextPageToken;
   protected $replicationsInternalType = ReplicationInternal::class;
   protected $replicationsInternalDataType = 'array';
   /**
-   * Locations that could not be reached.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * If present, the next page token can be provided to a subsequent
-   * ListReplicationsInternal call to list the next page. If empty, there are no
-   * more pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -56,9 +46,7 @@ class ListReplicationsInternalResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The resulting replication internals.
-   *
-   * @param ReplicationInternal[] $replicationsInternal
+   * @param ReplicationInternal[]
    */
   public function setReplicationsInternal($replicationsInternal)
   {
@@ -72,9 +60,7 @@ class ListReplicationsInternalResponse extends \Google\Collection
     return $this->replicationsInternal;
   }
   /**
-   * Locations that could not be reached.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

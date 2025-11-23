@@ -23,9 +23,7 @@ class GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData extends \Google\
   protected $valuesDataType = 'map';
 
   /**
-   * The values for fields in the prompt template.
-   *
-   * @param GoogleCloudAiplatformV1Content[] $values
+   * @param GoogleCloudAiplatformV1Content[]
    */
   public function setValues($values)
   {

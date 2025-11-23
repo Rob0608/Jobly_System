@@ -23,9 +23,7 @@ class UndoCancelSubscriptionResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * The updated subscription resource.
-   *
-   * @param Subscription $subscription
+   * @param Subscription
    */
   public function setSubscription(Subscription $subscription)
   {

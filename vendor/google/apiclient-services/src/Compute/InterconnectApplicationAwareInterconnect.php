@@ -23,9 +23,6 @@ class InterconnectApplicationAwareInterconnect extends \Google\Collection
   protected $bandwidthPercentagePolicyType = InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy::class;
   protected $bandwidthPercentagePolicyDataType = '';
   /**
-   * Description for the application awareness profile on this Cloud
-   * Interconnect.
-   *
    * @var string
    */
   public $profileDescription;
@@ -35,7 +32,7 @@ class InterconnectApplicationAwareInterconnect extends \Google\Collection
   protected $strictPriorityPolicyDataType = '';
 
   /**
-   * @param InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy $bandwidthPercentagePolicy
+   * @param InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy
    */
   public function setBandwidthPercentagePolicy(InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy $bandwidthPercentagePolicy)
   {
@@ -49,10 +46,7 @@ class InterconnectApplicationAwareInterconnect extends \Google\Collection
     return $this->bandwidthPercentagePolicy;
   }
   /**
-   * Description for the application awareness profile on this Cloud
-   * Interconnect.
-   *
-   * @param string $profileDescription
+   * @param string
    */
   public function setProfileDescription($profileDescription)
   {
@@ -66,10 +60,7 @@ class InterconnectApplicationAwareInterconnect extends \Google\Collection
     return $this->profileDescription;
   }
   /**
-   * Optional field to specify a list of shape average percentages to be applied
-   * in conjunction with StrictPriorityPolicy or BandwidthPercentagePolicy.
-   *
-   * @param InterconnectApplicationAwareInterconnectBandwidthPercentage[] $shapeAveragePercentages
+   * @param InterconnectApplicationAwareInterconnectBandwidthPercentage[]
    */
   public function setShapeAveragePercentages($shapeAveragePercentages)
   {
@@ -83,7 +74,7 @@ class InterconnectApplicationAwareInterconnect extends \Google\Collection
     return $this->shapeAveragePercentages;
   }
   /**
-   * @param InterconnectApplicationAwareInterconnectStrictPriorityPolicy $strictPriorityPolicy
+   * @param InterconnectApplicationAwareInterconnectStrictPriorityPolicy
    */
   public function setStrictPriorityPolicy(InterconnectApplicationAwareInterconnectStrictPriorityPolicy $strictPriorityPolicy)
   {

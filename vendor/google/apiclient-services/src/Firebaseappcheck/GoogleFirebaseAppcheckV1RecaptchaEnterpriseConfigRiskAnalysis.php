@@ -20,22 +20,12 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis extends \Google\Model
 {
   /**
-   * Specifies a minimum score required for a reCAPTCHA token to be considered
-   * valid. If its score is greater than or equal to this value, it will be
-   * accepted; otherwise, it will be rejected. The value must be between 0.0 and
-   * 1.0. The default value is 0.5.
-   *
    * @var float
    */
   public $minValidScore;
 
   /**
-   * Specifies a minimum score required for a reCAPTCHA token to be considered
-   * valid. If its score is greater than or equal to this value, it will be
-   * accepted; otherwise, it will be rejected. The value must be between 0.0 and
-   * 1.0. The default value is 0.5.
-   *
-   * @param float $minValidScore
+   * @param float
    */
   public function setMinValidScore($minValidScore)
   {

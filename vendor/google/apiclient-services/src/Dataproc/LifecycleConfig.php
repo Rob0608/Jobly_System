@@ -20,76 +20,36 @@ namespace Google\Service\Dataproc;
 class LifecycleConfig extends \Google\Model
 {
   /**
-   * Optional. The time when cluster will be auto-deleted (see JSON
-   * representation of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $autoDeleteTime;
   /**
-   * Optional. The lifetime duration of cluster. The cluster will be auto-
-   * deleted at the end of this period. Minimum value is 10 minutes; maximum
-   * value is 14 days (see JSON representation of Duration
-   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $autoDeleteTtl;
   /**
-   * Optional. The time when cluster will be auto-stopped (see JSON
-   * representation of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $autoStopTime;
   /**
-   * Optional. The lifetime duration of the cluster. The cluster will be auto-
-   * stopped at the end of this period, calculated from the time of submission
-   * of the create or update cluster request. Minimum value is 10 minutes;
-   * maximum value is 14 days (see JSON representation of Duration
-   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $autoStopTtl;
   /**
-   * Optional. The duration to keep the cluster alive while idling (when no jobs
-   * are running). Passing this threshold will cause the cluster to be deleted.
-   * Minimum value is 5 minutes; maximum value is 14 days (see JSON
-   * representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $idleDeleteTtl;
   /**
-   * Output only. The time when cluster became idle (most recent job finished)
-   * and became eligible for deletion due to idleness (see JSON representation
-   * of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $idleStartTime;
   /**
-   * Optional. The duration to keep the cluster started while idling (when no
-   * jobs are running). Passing this threshold will cause the cluster to be
-   * stopped. Minimum value is 5 minutes; maximum value is 14 days (see JSON
-   * representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
    * @var string
    */
   public $idleStopTtl;
 
   /**
-   * Optional. The time when cluster will be auto-deleted (see JSON
-   * representation of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
-   * @param string $autoDeleteTime
+   * @param string
    */
   public function setAutoDeleteTime($autoDeleteTime)
   {
@@ -103,12 +63,7 @@ class LifecycleConfig extends \Google\Model
     return $this->autoDeleteTime;
   }
   /**
-   * Optional. The lifetime duration of cluster. The cluster will be auto-
-   * deleted at the end of this period. Minimum value is 10 minutes; maximum
-   * value is 14 days (see JSON representation of Duration
-   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-   *
-   * @param string $autoDeleteTtl
+   * @param string
    */
   public function setAutoDeleteTtl($autoDeleteTtl)
   {
@@ -122,11 +77,7 @@ class LifecycleConfig extends \Google\Model
     return $this->autoDeleteTtl;
   }
   /**
-   * Optional. The time when cluster will be auto-stopped (see JSON
-   * representation of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
-   * @param string $autoStopTime
+   * @param string
    */
   public function setAutoStopTime($autoStopTime)
   {
@@ -140,13 +91,7 @@ class LifecycleConfig extends \Google\Model
     return $this->autoStopTime;
   }
   /**
-   * Optional. The lifetime duration of the cluster. The cluster will be auto-
-   * stopped at the end of this period, calculated from the time of submission
-   * of the create or update cluster request. Minimum value is 10 minutes;
-   * maximum value is 14 days (see JSON representation of Duration
-   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-   *
-   * @param string $autoStopTtl
+   * @param string
    */
   public function setAutoStopTtl($autoStopTtl)
   {
@@ -160,13 +105,7 @@ class LifecycleConfig extends \Google\Model
     return $this->autoStopTtl;
   }
   /**
-   * Optional. The duration to keep the cluster alive while idling (when no jobs
-   * are running). Passing this threshold will cause the cluster to be deleted.
-   * Minimum value is 5 minutes; maximum value is 14 days (see JSON
-   * representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
-   * @param string $idleDeleteTtl
+   * @param string
    */
   public function setIdleDeleteTtl($idleDeleteTtl)
   {
@@ -180,12 +119,7 @@ class LifecycleConfig extends \Google\Model
     return $this->idleDeleteTtl;
   }
   /**
-   * Output only. The time when cluster became idle (most recent job finished)
-   * and became eligible for deletion due to idleness (see JSON representation
-   * of Timestamp (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
-   * @param string $idleStartTime
+   * @param string
    */
   public function setIdleStartTime($idleStartTime)
   {
@@ -199,13 +133,7 @@ class LifecycleConfig extends \Google\Model
     return $this->idleStartTime;
   }
   /**
-   * Optional. The duration to keep the cluster started while idling (when no
-   * jobs are running). Passing this threshold will cause the cluster to be
-   * stopped. Minimum value is 5 minutes; maximum value is 14 days (see JSON
-   * representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).
-   *
-   * @param string $idleStopTtl
+   * @param string
    */
   public function setIdleStopTtl($idleStopTtl)
   {

@@ -20,18 +20,12 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings extends \Google\Model
 {
   /**
-   * Required. A challenge is triggered if the end-user score is below that
-   * threshold. Value must be between 0 and 1 (inclusive).
-   *
    * @var float
    */
   public $scoreThreshold;
 
   /**
-   * Required. A challenge is triggered if the end-user score is below that
-   * threshold. Value must be between 0 and 1 (inclusive).
-   *
-   * @param float $scoreThreshold
+   * @param float
    */
   public function setScoreThreshold($scoreThreshold)
   {

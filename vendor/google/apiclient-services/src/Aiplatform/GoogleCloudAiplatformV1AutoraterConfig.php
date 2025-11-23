@@ -20,44 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
 {
   /**
-   * Optional. The fully qualified name of the publisher model or tuned
-   * autorater endpoint to use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Tuned model
-   * endpoint format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
    * @var string
    */
   public $autoraterModel;
   /**
-   * Optional. Default is true. Whether to flip the candidate and baseline
-   * responses. This is only applicable to the pairwise metric. If enabled, also
-   * provide PairwiseMetricSpec.candidate_response_field_name and
-   * PairwiseMetricSpec.baseline_response_field_name. When rendering
-   * PairwiseMetricSpec.metric_prompt_template, the candidate and baseline
-   * fields will be flipped for half of the samples to reduce bias.
-   *
    * @var bool
    */
   public $flipEnabled;
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
-   * Optional. Number of samples for each instance in the dataset. If not
-   * specified, the default is 4. Minimum value is 1, maximum value is 32.
-   *
    * @var int
    */
   public $samplingCount;
 
   /**
-   * Optional. The fully qualified name of the publisher model or tuned
-   * autorater endpoint to use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Tuned model
-   * endpoint format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
-   * @param string $autoraterModel
+   * @param string
    */
   public function setAutoraterModel($autoraterModel)
   {
@@ -71,14 +49,7 @@ class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
     return $this->autoraterModel;
   }
   /**
-   * Optional. Default is true. Whether to flip the candidate and baseline
-   * responses. This is only applicable to the pairwise metric. If enabled, also
-   * provide PairwiseMetricSpec.candidate_response_field_name and
-   * PairwiseMetricSpec.baseline_response_field_name. When rendering
-   * PairwiseMetricSpec.metric_prompt_template, the candidate and baseline
-   * fields will be flipped for half of the samples to reduce bias.
-   *
-   * @param bool $flipEnabled
+   * @param bool
    */
   public function setFlipEnabled($flipEnabled)
   {
@@ -92,9 +63,7 @@ class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
     return $this->flipEnabled;
   }
   /**
-   * Optional. Configuration options for model generation and outputs.
-   *
-   * @param GoogleCloudAiplatformV1GenerationConfig $generationConfig
+   * @param GoogleCloudAiplatformV1GenerationConfig
    */
   public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
   {
@@ -108,10 +77,7 @@ class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
     return $this->generationConfig;
   }
   /**
-   * Optional. Number of samples for each instance in the dataset. If not
-   * specified, the default is 4. Minimum value is 1, maximum value is 32.
-   *
-   * @param int $samplingCount
+   * @param int
    */
   public function setSamplingCount($samplingCount)
   {

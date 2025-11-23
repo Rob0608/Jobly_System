@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpecRepeatedRub
   protected $rubricsDataType = 'array';
 
   /**
-   * The list of rubrics.
-   *
-   * @param GoogleCloudAiplatformV1Rubric[] $rubrics
+   * @param GoogleCloudAiplatformV1Rubric[]
    */
   public function setRubrics($rubrics)
   {

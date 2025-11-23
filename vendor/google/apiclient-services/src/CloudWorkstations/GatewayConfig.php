@@ -20,18 +20,12 @@ namespace Google\Service\CloudWorkstations;
 class GatewayConfig extends \Google\Model
 {
   /**
-   * Optional. Whether HTTP/2 is enabled for this workstation cluster. Defaults
-   * to false.
-   *
    * @var bool
    */
   public $http2Enabled;
 
   /**
-   * Optional. Whether HTTP/2 is enabled for this workstation cluster. Defaults
-   * to false.
-   *
-   * @param bool $http2Enabled
+   * @param bool
    */
   public function setHttp2Enabled($http2Enabled)
   {

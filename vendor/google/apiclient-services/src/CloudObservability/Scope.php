@@ -20,43 +20,24 @@ namespace Google\Service\CloudObservability;
 class Scope extends \Google\Model
 {
   /**
-   * Required. The full resource name of the `LogScope`. For example:
-   * //logging.googleapis.com/projects/myproject/locations/global/logScopes/my-
-   * log-scope
-   *
    * @var string
    */
   public $logScope;
   /**
-   * Identifier. Name of the resource. The format is:
-   * projects/{project}/locations/{location}/scopes/{scope} The `{location}`
-   * field must be set to `global`. The `{scope}` field must be set to
-   * `_Default`.
-   *
    * @var string
    */
   public $name;
   /**
-   * Required. The resource name of the `TraceScope`. For example:
-   * projects/myproject/locations/global/traceScopes/my-trace-scope
-   *
    * @var string
    */
   public $traceScope;
   /**
-   * Output only. Update timestamp. Note: The Update timestamp for the default
-   * scope is initially unset.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Required. The full resource name of the `LogScope`. For example:
-   * //logging.googleapis.com/projects/myproject/locations/global/logScopes/my-
-   * log-scope
-   *
-   * @param string $logScope
+   * @param string
    */
   public function setLogScope($logScope)
   {
@@ -70,12 +51,7 @@ class Scope extends \Google\Model
     return $this->logScope;
   }
   /**
-   * Identifier. Name of the resource. The format is:
-   * projects/{project}/locations/{location}/scopes/{scope} The `{location}`
-   * field must be set to `global`. The `{scope}` field must be set to
-   * `_Default`.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -89,10 +65,7 @@ class Scope extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The resource name of the `TraceScope`. For example:
-   * projects/myproject/locations/global/traceScopes/my-trace-scope
-   *
-   * @param string $traceScope
+   * @param string
    */
   public function setTraceScope($traceScope)
   {
@@ -106,10 +79,7 @@ class Scope extends \Google\Model
     return $this->traceScope;
   }
   /**
-   * Output only. Update timestamp. Note: The Update timestamp for the default
-   * scope is initially unset.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

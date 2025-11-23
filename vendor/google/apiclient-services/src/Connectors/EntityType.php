@@ -29,14 +29,10 @@ class EntityType extends \Google\Collection
   protected $jsonSchemaType = JsonSchema::class;
   protected $jsonSchemaDataType = '';
   /**
-   * Metadata like service latency, etc.
-   *
    * @var array[]
    */
   public $metadata;
   /**
-   * The name of the entity type.
-   *
    * @var string
    */
   public $name;
@@ -46,7 +42,7 @@ class EntityType extends \Google\Collection
   public $operations;
 
   /**
-   * @param string $defaultSortBy
+   * @param string
    */
   public function setDefaultSortBy($defaultSortBy)
   {
@@ -60,9 +56,7 @@ class EntityType extends \Google\Collection
     return $this->defaultSortBy;
   }
   /**
-   * List containing metadata information about each field of the entity type.
-   *
-   * @param Field[] $fields
+   * @param Field[]
    */
   public function setFields($fields)
   {
@@ -76,9 +70,7 @@ class EntityType extends \Google\Collection
     return $this->fields;
   }
   /**
-   * JsonSchema representation of this entity's schema
-   *
-   * @param JsonSchema $jsonSchema
+   * @param JsonSchema
    */
   public function setJsonSchema(JsonSchema $jsonSchema)
   {
@@ -92,9 +84,7 @@ class EntityType extends \Google\Collection
     return $this->jsonSchema;
   }
   /**
-   * Metadata like service latency, etc.
-   *
-   * @param array[] $metadata
+   * @param array[]
    */
   public function setMetadata($metadata)
   {
@@ -108,9 +98,7 @@ class EntityType extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * The name of the entity type.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -124,7 +112,7 @@ class EntityType extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[] $operations
+   * @param string[]
    */
   public function setOperations($operations)
   {

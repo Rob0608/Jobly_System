@@ -23,8 +23,6 @@ class ComposeRequest extends \Google\Collection
   protected $destinationType = StorageObject::class;
   protected $destinationDataType = '';
   /**
-   * The kind of item this is.
-   *
    * @var string
    */
   public $kind;
@@ -32,9 +30,7 @@ class ComposeRequest extends \Google\Collection
   protected $sourceObjectsDataType = 'array';
 
   /**
-   * Properties of the resulting object.
-   *
-   * @param StorageObject $destination
+   * @param StorageObject
    */
   public function setDestination(StorageObject $destination)
   {
@@ -48,9 +44,7 @@ class ComposeRequest extends \Google\Collection
     return $this->destination;
   }
   /**
-   * The kind of item this is.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -64,9 +58,7 @@ class ComposeRequest extends \Google\Collection
     return $this->kind;
   }
   /**
-   * The list of source objects that will be concatenated into a single object.
-   *
-   * @param ComposeRequestSourceObjects[] $sourceObjects
+   * @param ComposeRequestSourceObjects[]
    */
   public function setSourceObjects($sourceObjects)
   {

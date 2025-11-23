@@ -20,16 +20,12 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DimensionConversationProfileDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The conversation profile ID.
-   *
    * @var string
    */
   public $conversationProfileId;
 
   /**
-   * Optional. The conversation profile ID.
-   *
-   * @param string $conversationProfileId
+   * @param string
    */
   public function setConversationProfileId($conversationProfileId)
   {

@@ -20,22 +20,16 @@ namespace Google\Service\SQLAdmin;
 class Value extends \Google\Model
 {
   /**
-   * If cell value is null, then this flag will be set to true.
-   *
    * @var bool
    */
   public $nullValue;
   /**
-   * The cell value in string format.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * If cell value is null, then this flag will be set to true.
-   *
-   * @param bool $nullValue
+   * @param bool
    */
   public function setNullValue($nullValue)
   {
@@ -49,9 +43,7 @@ class Value extends \Google\Model
     return $this->nullValue;
   }
   /**
-   * The cell value in string format.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

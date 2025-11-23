@@ -21,22 +21,16 @@ class StoredProcedureConfig extends \Google\Collection
 {
   protected $collection_key = 'allowedStoredProcedureTypes';
   /**
-   * Output only. Types of stored procedure supported to share.
-   *
    * @var string[]
    */
   public $allowedStoredProcedureTypes;
   /**
-   * Optional. If true, enable sharing of stored procedure.
-   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * Output only. Types of stored procedure supported to share.
-   *
-   * @param string[] $allowedStoredProcedureTypes
+   * @param string[]
    */
   public function setAllowedStoredProcedureTypes($allowedStoredProcedureTypes)
   {
@@ -50,9 +44,7 @@ class StoredProcedureConfig extends \Google\Collection
     return $this->allowedStoredProcedureTypes;
   }
   /**
-   * Optional. If true, enable sharing of stored procedure.
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {

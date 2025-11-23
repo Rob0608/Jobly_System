@@ -21,8 +21,6 @@ class ListQueryTemplatesResponse extends \Google\Collection
 {
   protected $collection_key = 'queryTemplates';
   /**
-   * A token to request the next page of results.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -30,9 +28,7 @@ class ListQueryTemplatesResponse extends \Google\Collection
   protected $queryTemplatesDataType = 'array';
 
   /**
-   * A token to request the next page of results.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,9 +42,7 @@ class ListQueryTemplatesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of QueryTemplates.
-   *
-   * @param QueryTemplate[] $queryTemplates
+   * @param QueryTemplate[]
    */
   public function setQueryTemplates($queryTemplates)
   {

@@ -23,9 +23,7 @@ class GoogleCloudAiplatformV1RubricContent extends \Google\Model
   protected $propertyDataType = '';
 
   /**
-   * Evaluation criteria based on a specific property.
-   *
-   * @param GoogleCloudAiplatformV1RubricContentProperty $property
+   * @param GoogleCloudAiplatformV1RubricContentProperty
    */
   public function setProperty(GoogleCloudAiplatformV1RubricContentProperty $property)
   {

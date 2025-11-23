@@ -20,28 +20,20 @@ namespace Google\Service\SQLAdmin;
 class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
 {
   /**
-   * Timestamp, identifies the earliest recovery time of the source instance.
-   *
    * @var string
    */
   public $earliestRecoveryTime;
   /**
-   * This is always `sql#getLatestRecoveryTime`.
-   *
    * @var string
    */
   public $kind;
   /**
-   * Timestamp, identifies the latest recovery time of the source instance.
-   *
    * @var string
    */
   public $latestRecoveryTime;
 
   /**
-   * Timestamp, identifies the earliest recovery time of the source instance.
-   *
-   * @param string $earliestRecoveryTime
+   * @param string
    */
   public function setEarliestRecoveryTime($earliestRecoveryTime)
   {
@@ -55,9 +47,7 @@ class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
     return $this->earliestRecoveryTime;
   }
   /**
-   * This is always `sql#getLatestRecoveryTime`.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -71,9 +61,7 @@ class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * Timestamp, identifies the latest recovery time of the source instance.
-   *
-   * @param string $latestRecoveryTime
+   * @param string
    */
   public function setLatestRecoveryTime($latestRecoveryTime)
   {

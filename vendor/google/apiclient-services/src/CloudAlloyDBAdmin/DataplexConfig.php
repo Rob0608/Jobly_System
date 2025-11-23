@@ -20,20 +20,12 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class DataplexConfig extends \Google\Model
 {
   /**
-   * Dataplex is enabled by default for resources such as clusters and
-   * instances. This flag controls the integration of AlloyDB PG resources (like
-   * databases, schemas, and tables) with Dataplex."
-   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * Dataplex is enabled by default for resources such as clusters and
-   * instances. This flag controls the integration of AlloyDB PG resources (like
-   * databases, schemas, and tables) with Dataplex."
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {

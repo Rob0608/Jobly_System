@@ -26,9 +26,7 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValue
   protected $featuresDataType = 'array';
 
   /**
-   * The data key.
-   *
-   * @param GoogleCloudAiplatformV1FeatureViewDataKey $dataKey
+   * @param GoogleCloudAiplatformV1FeatureViewDataKey
    */
   public function setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey $dataKey)
   {
@@ -42,9 +40,7 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValue
     return $this->dataKey;
   }
   /**
-   * List of features to write.
-   *
-   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValuesFeature[] $features
+   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValuesFeature[]
    */
   public function setFeatures($features)
   {

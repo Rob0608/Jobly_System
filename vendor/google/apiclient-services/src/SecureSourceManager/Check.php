@@ -20,16 +20,12 @@ namespace Google\Service\SecureSourceManager;
 class Check extends \Google\Model
 {
   /**
-   * Required. The context of the check.
-   *
    * @var string
    */
   public $context;
 
   /**
-   * Required. The context of the check.
-   *
-   * @param string $context
+   * @param string
    */
   public function setContext($context)
   {

@@ -23,9 +23,7 @@ class ResumeSubscriptionResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * The resumed subscription resource.
-   *
-   * @param Subscription $subscription
+   * @param Subscription
    */
   public function setSubscription(Subscription $subscription)
   {

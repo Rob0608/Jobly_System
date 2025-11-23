@@ -20,41 +20,26 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BigQueryRequestSet extends \Google\Model
 {
   /**
-   * Optional. Map of candidate name to candidate response column name. The
-   * column will be in evaluation_item.CandidateResponse format.
-   *
    * @var string[]
    */
   public $candidateResponseColumns;
   /**
-   * Optional. The name of the column that contains the requests to evaluate.
-   * This will be in evaluation_item.EvalPrompt format.
-   *
    * @var string
    */
   public $promptColumn;
   /**
-   * Optional. The name of the column that contains the rubrics. This is in
-   * evaluation_rubric.RubricGroup format.
-   *
    * @var string
    */
   public $rubricsColumn;
   protected $samplingConfigType = GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig::class;
   protected $samplingConfigDataType = '';
   /**
-   * Required. The URI of a BigQuery table. e.g.
-   * bq://projectId.bqDatasetId.bqTableId
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * Optional. Map of candidate name to candidate response column name. The
-   * column will be in evaluation_item.CandidateResponse format.
-   *
-   * @param string[] $candidateResponseColumns
+   * @param string[]
    */
   public function setCandidateResponseColumns($candidateResponseColumns)
   {
@@ -68,10 +53,7 @@ class GoogleCloudAiplatformV1BigQueryRequestSet extends \Google\Model
     return $this->candidateResponseColumns;
   }
   /**
-   * Optional. The name of the column that contains the requests to evaluate.
-   * This will be in evaluation_item.EvalPrompt format.
-   *
-   * @param string $promptColumn
+   * @param string
    */
   public function setPromptColumn($promptColumn)
   {
@@ -85,10 +67,7 @@ class GoogleCloudAiplatformV1BigQueryRequestSet extends \Google\Model
     return $this->promptColumn;
   }
   /**
-   * Optional. The name of the column that contains the rubrics. This is in
-   * evaluation_rubric.RubricGroup format.
-   *
-   * @param string $rubricsColumn
+   * @param string
    */
   public function setRubricsColumn($rubricsColumn)
   {
@@ -102,9 +81,7 @@ class GoogleCloudAiplatformV1BigQueryRequestSet extends \Google\Model
     return $this->rubricsColumn;
   }
   /**
-   * Optional. The sampling config for the bigquery resource.
-   *
-   * @param GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig $samplingConfig
+   * @param GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig
    */
   public function setSamplingConfig(GoogleCloudAiplatformV1BigQueryRequestSetSamplingConfig $samplingConfig)
   {
@@ -118,10 +95,7 @@ class GoogleCloudAiplatformV1BigQueryRequestSet extends \Google\Model
     return $this->samplingConfig;
   }
   /**
-   * Required. The URI of a BigQuery table. e.g.
-   * bq://projectId.bqDatasetId.bqTableId
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

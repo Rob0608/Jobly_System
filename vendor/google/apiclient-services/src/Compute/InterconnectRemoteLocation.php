@@ -19,175 +19,88 @@ namespace Google\Service\Compute;
 
 class InterconnectRemoteLocation extends \Google\Collection
 {
-  public const CONTINENT_AFRICA = 'AFRICA';
-  public const CONTINENT_ASIA_PAC = 'ASIA_PAC';
-  public const CONTINENT_EUROPE = 'EUROPE';
-  public const CONTINENT_NORTH_AMERICA = 'NORTH_AMERICA';
-  public const CONTINENT_SOUTH_AMERICA = 'SOUTH_AMERICA';
-  /**
-   * LACP_SUPPORTED: LACP is supported, and enabled by default on the Cross-
-   * Cloud Interconnect.
-   */
-  public const LACP_LACP_SUPPORTED = 'LACP_SUPPORTED';
-  /**
-   * LACP_UNSUPPORTED: LACP is not supported and is not be enabled on this port.
-   * GetDiagnostics shows bundleAggregationType as "static". GCP does not
-   * support LAGs without LACP, so requestedLinkCount must be 1.
-   */
-  public const LACP_LACP_UNSUPPORTED = 'LACP_UNSUPPORTED';
-  /**
-   * The InterconnectRemoteLocation is available for provisioning new Cross-
-   * Cloud Interconnects.
-   */
-  public const STATUS_AVAILABLE = 'AVAILABLE';
-  /**
-   * The InterconnectRemoteLocation is closed for provisioning new Cross-Cloud
-   * Interconnects.
-   */
-  public const STATUS_CLOSED = 'CLOSED';
   protected $collection_key = 'permittedConnections';
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
-   *
    * @var string
    */
   public $address;
   protected $attachmentConfigurationConstraintsType = InterconnectAttachmentConfigurationConstraints::class;
   protected $attachmentConfigurationConstraintsDataType = '';
   /**
-   * [Output Only] Metropolitan area designator that indicates which city an
-   * interconnect is located. For example: "Chicago, IL", "Amsterdam,
-   * Netherlands".
-   *
    * @var string
    */
   public $city;
   protected $constraintsType = InterconnectRemoteLocationConstraints::class;
   protected $constraintsDataType = '';
   /**
-   * [Output Only] Continent for this location, which can take one of the
-   * following values:        - AFRICA    - ASIA_PAC    - EUROPE    -
-   * NORTH_AMERICA    - SOUTH_AMERICA
-   *
    * @var string
    */
   public $continent;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
-   *
    * @var string
    */
   public $creationTimestamp;
   /**
-   * [Output Only] An optional description of the resource.
-   *
    * @var string
    */
   public $description;
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
-   *
    * @var string
    */
   public $facilityProvider;
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
-   * Ashburn-DC1).
-   *
    * @var string
    */
   public $facilityProviderFacilityId;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
-   *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource.
-   * Alwayscompute#interconnectRemoteLocation for interconnect remote locations.
-   *
    * @var string
    */
   public $kind;
   /**
-   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which
-   * can take one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
-   *
    * @var string
    */
   public $lacp;
   /**
-   * [Output Only] The maximum number of 100 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 100 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_100_gbps.
-   *
    * @var int
    */
   public $maxLagSize100Gbps;
   /**
-   * [Output Only] The maximum number of 10 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 10 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_10_gbps.
-   *
    * @var int
    */
   public $maxLagSize10Gbps;
   /**
-   * [Output Only] The maximum number of 400 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 400 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_400_gbps.
-   *
    * @var int
    */
   public $maxLagSize400Gbps;
   /**
-   * [Output Only] Name of the resource.
-   *
    * @var string
    */
   public $name;
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding
-   * with a netfac type in peeringdb).
-   *
    * @var string
    */
   public $peeringdbFacilityId;
   protected $permittedConnectionsType = InterconnectRemoteLocationPermittedConnections::class;
   protected $permittedConnectionsDataType = 'array';
   /**
-   * [Output Only] Indicates the service provider present at the remote
-   * location. Example values: "Amazon Web Services", "Microsoft Azure".
-   *
    * @var string
    */
   public $remoteService;
   /**
-   * [Output Only] Server-defined URL for the resource.
-   *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] The status of this InterconnectRemoteLocation, which can take
-   * one of the following values:        - CLOSED: The
-   * InterconnectRemoteLocation is closed and is unavailable    for provisioning
-   * new Cross-Cloud Interconnects.     - AVAILABLE: The
-   * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud
-   * Interconnects.
-   *
    * @var string
    */
   public $status;
 
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
-   *
-   * @param string $address
+   * @param string
    */
   public function setAddress($address)
   {
@@ -201,11 +114,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->address;
   }
   /**
-   * [Output Only] Subset of fields from InterconnectAttachment's
-   * |configurationConstraints| field that apply to all attachments for this
-   * remote location.
-   *
-   * @param InterconnectAttachmentConfigurationConstraints $attachmentConfigurationConstraints
+   * @param InterconnectAttachmentConfigurationConstraints
    */
   public function setAttachmentConfigurationConstraints(InterconnectAttachmentConfigurationConstraints $attachmentConfigurationConstraints)
   {
@@ -219,11 +128,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->attachmentConfigurationConstraints;
   }
   /**
-   * [Output Only] Metropolitan area designator that indicates which city an
-   * interconnect is located. For example: "Chicago, IL", "Amsterdam,
-   * Netherlands".
-   *
-   * @param string $city
+   * @param string
    */
   public function setCity($city)
   {
@@ -237,10 +142,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->city;
   }
   /**
-   * [Output Only] Constraints on the parameters for creating Cross-Cloud
-   * Interconnect and associated InterconnectAttachments.
-   *
-   * @param InterconnectRemoteLocationConstraints $constraints
+   * @param InterconnectRemoteLocationConstraints
    */
   public function setConstraints(InterconnectRemoteLocationConstraints $constraints)
   {
@@ -254,29 +156,21 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->constraints;
   }
   /**
-   * [Output Only] Continent for this location, which can take one of the
-   * following values:        - AFRICA    - ASIA_PAC    - EUROPE    -
-   * NORTH_AMERICA    - SOUTH_AMERICA
-   *
-   * Accepted values: AFRICA, ASIA_PAC, EUROPE, NORTH_AMERICA, SOUTH_AMERICA
-   *
-   * @param self::CONTINENT_* $continent
+   * @param string
    */
   public function setContinent($continent)
   {
     $this->continent = $continent;
   }
   /**
-   * @return self::CONTINENT_*
+   * @return string
    */
   public function getContinent()
   {
     return $this->continent;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
-   *
-   * @param string $creationTimestamp
+   * @param string
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -290,9 +184,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * [Output Only] An optional description of the resource.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -306,9 +198,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
-   *
-   * @param string $facilityProvider
+   * @param string
    */
   public function setFacilityProvider($facilityProvider)
   {
@@ -322,10 +212,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->facilityProvider;
   }
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
-   * Ashburn-DC1).
-   *
-   * @param string $facilityProviderFacilityId
+   * @param string
    */
   public function setFacilityProviderFacilityId($facilityProviderFacilityId)
   {
@@ -339,10 +226,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->facilityProviderFacilityId;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
-   *
-   * @param string $id
+   * @param string
    */
   public function setId($id)
   {
@@ -356,10 +240,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource.
-   * Alwayscompute#interconnectRemoteLocation for interconnect remote locations.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -373,30 +254,21 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which
-   * can take one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
-   *
-   * Accepted values: LACP_SUPPORTED, LACP_UNSUPPORTED
-   *
-   * @param self::LACP_* $lacp
+   * @param string
    */
   public function setLacp($lacp)
   {
     $this->lacp = $lacp;
   }
   /**
-   * @return self::LACP_*
+   * @return string
    */
   public function getLacp()
   {
     return $this->lacp;
   }
   /**
-   * [Output Only] The maximum number of 100 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 100 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_100_gbps.
-   *
-   * @param int $maxLagSize100Gbps
+   * @param int
    */
   public function setMaxLagSize100Gbps($maxLagSize100Gbps)
   {
@@ -410,11 +282,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->maxLagSize100Gbps;
   }
   /**
-   * [Output Only] The maximum number of 10 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 10 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_10_gbps.
-   *
-   * @param int $maxLagSize10Gbps
+   * @param int
    */
   public function setMaxLagSize10Gbps($maxLagSize10Gbps)
   {
@@ -428,11 +296,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->maxLagSize10Gbps;
   }
   /**
-   * [Output Only] The maximum number of 400 Gbps ports supported in a link
-   * aggregation group (LAG). When linkType is 400 Gbps, requestedLinkCount
-   * cannot exceed max_lag_size_400_gbps.
-   *
-   * @param int $maxLagSize400Gbps
+   * @param int
    */
   public function setMaxLagSize400Gbps($maxLagSize400Gbps)
   {
@@ -446,9 +310,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->maxLagSize400Gbps;
   }
   /**
-   * [Output Only] Name of the resource.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -462,10 +324,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding
-   * with a netfac type in peeringdb).
-   *
-   * @param string $peeringdbFacilityId
+   * @param string
    */
   public function setPeeringdbFacilityId($peeringdbFacilityId)
   {
@@ -479,9 +338,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->peeringdbFacilityId;
   }
   /**
-   * [Output Only] Permitted connections.
-   *
-   * @param InterconnectRemoteLocationPermittedConnections[] $permittedConnections
+   * @param InterconnectRemoteLocationPermittedConnections[]
    */
   public function setPermittedConnections($permittedConnections)
   {
@@ -495,10 +352,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->permittedConnections;
   }
   /**
-   * [Output Only] Indicates the service provider present at the remote
-   * location. Example values: "Amazon Web Services", "Microsoft Azure".
-   *
-   * @param string $remoteService
+   * @param string
    */
   public function setRemoteService($remoteService)
   {
@@ -512,9 +366,7 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->remoteService;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
-   *
-   * @param string $selfLink
+   * @param string
    */
   public function setSelfLink($selfLink)
   {
@@ -528,23 +380,14 @@ class InterconnectRemoteLocation extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] The status of this InterconnectRemoteLocation, which can take
-   * one of the following values:        - CLOSED: The
-   * InterconnectRemoteLocation is closed and is unavailable    for provisioning
-   * new Cross-Cloud Interconnects.     - AVAILABLE: The
-   * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud
-   * Interconnects.
-   *
-   * Accepted values: AVAILABLE, CLOSED
-   *
-   * @param self::STATUS_* $status
+   * @param string
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return self::STATUS_*
+   * @return string
    */
   public function getStatus()
   {

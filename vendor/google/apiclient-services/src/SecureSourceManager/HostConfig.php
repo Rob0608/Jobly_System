@@ -20,34 +20,24 @@ namespace Google\Service\SecureSourceManager;
 class HostConfig extends \Google\Model
 {
   /**
-   * Output only. API hostname.
-   *
    * @var string
    */
   public $api;
   /**
-   * Output only. Git HTTP hostname.
-   *
    * @var string
    */
   public $gitHttp;
   /**
-   * Output only. Git SSH hostname.
-   *
    * @var string
    */
   public $gitSsh;
   /**
-   * Output only. HTML hostname.
-   *
    * @var string
    */
   public $html;
 
   /**
-   * Output only. API hostname.
-   *
-   * @param string $api
+   * @param string
    */
   public function setApi($api)
   {
@@ -61,9 +51,7 @@ class HostConfig extends \Google\Model
     return $this->api;
   }
   /**
-   * Output only. Git HTTP hostname.
-   *
-   * @param string $gitHttp
+   * @param string
    */
   public function setGitHttp($gitHttp)
   {
@@ -77,9 +65,7 @@ class HostConfig extends \Google\Model
     return $this->gitHttp;
   }
   /**
-   * Output only. Git SSH hostname.
-   *
-   * @param string $gitSsh
+   * @param string
    */
   public function setGitSsh($gitSsh)
   {
@@ -93,9 +79,7 @@ class HostConfig extends \Google\Model
     return $this->gitSsh;
   }
   /**
-   * Output only. HTML hostname.
-   *
-   * @param string $html
+   * @param string
    */
   public function setHtml($html)
   {

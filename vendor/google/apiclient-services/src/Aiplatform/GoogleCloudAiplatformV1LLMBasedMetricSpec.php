@@ -20,16 +20,12 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
 {
   /**
-   * Optional. Optional additional configuration for the metric.
-   *
    * @var array[]
    */
   public $additionalConfig;
   protected $judgeAutoraterConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
   protected $judgeAutoraterConfigDataType = '';
   /**
-   * Required. Template for the prompt sent to the judge model.
-   *
    * @var string
    */
   public $metricPromptTemplate;
@@ -38,23 +34,16 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
   protected $rubricGenerationSpecType = GoogleCloudAiplatformV1RubricGenerationSpec::class;
   protected $rubricGenerationSpecDataType = '';
   /**
-   * Use a pre-defined group of rubrics associated with the input. Refers to a
-   * key in the rubric_groups map of EvaluationInstance.
-   *
    * @var string
    */
   public $rubricGroupKey;
   /**
-   * Optional. System instructions for the judge model.
-   *
    * @var string
    */
   public $systemInstruction;
 
   /**
-   * Optional. Optional additional configuration for the metric.
-   *
-   * @param array[] $additionalConfig
+   * @param array[]
    */
   public function setAdditionalConfig($additionalConfig)
   {
@@ -68,9 +57,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->additionalConfig;
   }
   /**
-   * Optional. Optional configuration for the judge LLM (Autorater).
-   *
-   * @param GoogleCloudAiplatformV1AutoraterConfig $judgeAutoraterConfig
+   * @param GoogleCloudAiplatformV1AutoraterConfig
    */
   public function setJudgeAutoraterConfig(GoogleCloudAiplatformV1AutoraterConfig $judgeAutoraterConfig)
   {
@@ -84,9 +71,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->judgeAutoraterConfig;
   }
   /**
-   * Required. Template for the prompt sent to the judge model.
-   *
-   * @param string $metricPromptTemplate
+   * @param string
    */
   public function setMetricPromptTemplate($metricPromptTemplate)
   {
@@ -100,9 +85,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->metricPromptTemplate;
   }
   /**
-   * Dynamically generate rubrics using a predefined spec.
-   *
-   * @param GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedRubricGenerationSpec
+   * @param GoogleCloudAiplatformV1PredefinedMetricSpec
    */
   public function setPredefinedRubricGenerationSpec(GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedRubricGenerationSpec)
   {
@@ -116,9 +99,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->predefinedRubricGenerationSpec;
   }
   /**
-   * Dynamically generate rubrics using this specification.
-   *
-   * @param GoogleCloudAiplatformV1RubricGenerationSpec $rubricGenerationSpec
+   * @param GoogleCloudAiplatformV1RubricGenerationSpec
    */
   public function setRubricGenerationSpec(GoogleCloudAiplatformV1RubricGenerationSpec $rubricGenerationSpec)
   {
@@ -132,10 +113,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->rubricGenerationSpec;
   }
   /**
-   * Use a pre-defined group of rubrics associated with the input. Refers to a
-   * key in the rubric_groups map of EvaluationInstance.
-   *
-   * @param string $rubricGroupKey
+   * @param string
    */
   public function setRubricGroupKey($rubricGroupKey)
   {
@@ -149,9 +127,7 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
     return $this->rubricGroupKey;
   }
   /**
-   * Optional. System instructions for the judge model.
-   *
-   * @param string $systemInstruction
+   * @param string
    */
   public function setSystemInstruction($systemInstruction)
   {

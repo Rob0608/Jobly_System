@@ -20,9 +20,6 @@ namespace Google\Service\OracleDatabase;
 class DbVersion extends \Google\Model
 {
   /**
-   * Output only. The name of the DbVersion resource in the following format:
-   * projects/{project}/locations/{region}/dbVersions/{db_version}
-   *
    * @var string
    */
   public $name;
@@ -30,10 +27,7 @@ class DbVersion extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * Output only. The name of the DbVersion resource in the following format:
-   * projects/{project}/locations/{region}/dbVersions/{db_version}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -47,9 +41,7 @@ class DbVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. The properties of the DbVersion.
-   *
-   * @param DbVersionProperties $properties
+   * @param DbVersionProperties
    */
   public function setProperties(DbVersionProperties $properties)
   {

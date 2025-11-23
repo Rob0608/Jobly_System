@@ -23,16 +23,12 @@ class ListDbSystemInitialStorageSizesResponse extends \Google\Collection
   protected $dbSystemInitialStorageSizesType = DbSystemInitialStorageSize::class;
   protected $dbSystemInitialStorageSizesDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The list of DbSystemInitialStorageSizes.
-   *
-   * @param DbSystemInitialStorageSize[] $dbSystemInitialStorageSizes
+   * @param DbSystemInitialStorageSize[]
    */
   public function setDbSystemInitialStorageSizes($dbSystemInitialStorageSizes)
   {
@@ -46,9 +42,7 @@ class ListDbSystemInitialStorageSizesResponse extends \Google\Collection
     return $this->dbSystemInitialStorageSizes;
   }
   /**
-   * A token identifying a page of results the server should return.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

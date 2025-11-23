@@ -23,25 +23,18 @@ class GoogleCloudAiplatformV1MetricResult extends \Google\Collection
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
-   * Output only. The explanation for the metric result.
-   *
    * @var string
    */
   public $explanation;
   protected $rubricVerdictsType = GoogleCloudAiplatformV1RubricVerdict::class;
   protected $rubricVerdictsDataType = 'array';
   /**
-   * Output only. The score for the metric. Please refer to each metric's
-   * documentation for the meaning of the score.
-   *
    * @var float
    */
   public $score;
 
   /**
-   * Output only. The error status for the metric result.
-   *
-   * @param GoogleRpcStatus $error
+   * @param GoogleRpcStatus
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -55,9 +48,7 @@ class GoogleCloudAiplatformV1MetricResult extends \Google\Collection
     return $this->error;
   }
   /**
-   * Output only. The explanation for the metric result.
-   *
-   * @param string $explanation
+   * @param string
    */
   public function setExplanation($explanation)
   {
@@ -71,9 +62,7 @@ class GoogleCloudAiplatformV1MetricResult extends \Google\Collection
     return $this->explanation;
   }
   /**
-   * Output only. For rubric-based metrics, the verdicts for each rubric.
-   *
-   * @param GoogleCloudAiplatformV1RubricVerdict[] $rubricVerdicts
+   * @param GoogleCloudAiplatformV1RubricVerdict[]
    */
   public function setRubricVerdicts($rubricVerdicts)
   {
@@ -87,10 +76,7 @@ class GoogleCloudAiplatformV1MetricResult extends \Google\Collection
     return $this->rubricVerdicts;
   }
   /**
-   * Output only. The score for the metric. Please refer to each metric's
-   * documentation for the meaning of the score.
-   *
-   * @param float $score
+   * @param float
    */
   public function setScore($score)
   {

@@ -20,16 +20,12 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequestAgentSource extends \Google\Model
 {
   /**
-   * Required. Agent id to query performance overview for.
-   *
    * @var string
    */
   public $agentId;
 
   /**
-   * Required. Agent id to query performance overview for.
-   *
-   * @param string $agentId
+   * @param string
    */
   public function setAgentId($agentId)
   {

@@ -19,54 +19,24 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1RubricGenerationSpec extends \Google\Collection
 {
-  /**
-   * The content type to generate is not specified.
-   */
-  public const RUBRIC_CONTENT_TYPE_RUBRIC_CONTENT_TYPE_UNSPECIFIED = 'RUBRIC_CONTENT_TYPE_UNSPECIFIED';
-  /**
-   * Generate rubrics based on properties.
-   */
-  public const RUBRIC_CONTENT_TYPE_PROPERTY = 'PROPERTY';
-  /**
-   * Generate rubrics in an NL question answer format.
-   */
-  public const RUBRIC_CONTENT_TYPE_NL_QUESTION_ANSWER = 'NL_QUESTION_ANSWER';
-  /**
-   * Generate rubrics in a unit test format.
-   */
-  public const RUBRIC_CONTENT_TYPE_PYTHON_CODE_ASSERTION = 'PYTHON_CODE_ASSERTION';
   protected $collection_key = 'rubricTypeOntology';
   protected $modelConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
   protected $modelConfigDataType = '';
   /**
-   * Template for the prompt used to generate rubrics. The details should be
-   * updated based on the most-recent recipe requirements.
-   *
    * @var string
    */
   public $promptTemplate;
   /**
-   * The type of rubric content to be generated.
-   *
    * @var string
    */
   public $rubricContentType;
   /**
-   * Optional. An optional, pre-defined list of allowed types for generated
-   * rubrics. If this field is provided, it implies `include_rubric_type` should
-   * be true, and the generated rubric types should be chosen from this
-   * ontology.
-   *
    * @var string[]
    */
   public $rubricTypeOntology;
 
   /**
-   * Configuration for the model used in rubric generation. Configs including
-   * sampling count and base model can be specified here. Flipping is not
-   * supported for rubric generation.
-   *
-   * @param GoogleCloudAiplatformV1AutoraterConfig $modelConfig
+   * @param GoogleCloudAiplatformV1AutoraterConfig
    */
   public function setModelConfig(GoogleCloudAiplatformV1AutoraterConfig $modelConfig)
   {
@@ -80,10 +50,7 @@ class GoogleCloudAiplatformV1RubricGenerationSpec extends \Google\Collection
     return $this->modelConfig;
   }
   /**
-   * Template for the prompt used to generate rubrics. The details should be
-   * updated based on the most-recent recipe requirements.
-   *
-   * @param string $promptTemplate
+   * @param string
    */
   public function setPromptTemplate($promptTemplate)
   {
@@ -97,31 +64,21 @@ class GoogleCloudAiplatformV1RubricGenerationSpec extends \Google\Collection
     return $this->promptTemplate;
   }
   /**
-   * The type of rubric content to be generated.
-   *
-   * Accepted values: RUBRIC_CONTENT_TYPE_UNSPECIFIED, PROPERTY,
-   * NL_QUESTION_ANSWER, PYTHON_CODE_ASSERTION
-   *
-   * @param self::RUBRIC_CONTENT_TYPE_* $rubricContentType
+   * @param string
    */
   public function setRubricContentType($rubricContentType)
   {
     $this->rubricContentType = $rubricContentType;
   }
   /**
-   * @return self::RUBRIC_CONTENT_TYPE_*
+   * @return string
    */
   public function getRubricContentType()
   {
     return $this->rubricContentType;
   }
   /**
-   * Optional. An optional, pre-defined list of allowed types for generated
-   * rubrics. If this field is provided, it implies `include_rubric_type` should
-   * be true, and the generated rubric types should be chosen from this
-   * ontology.
-   *
-   * @param string[] $rubricTypeOntology
+   * @param string[]
    */
   public function setRubricTypeOntology($rubricTypeOntology)
   {

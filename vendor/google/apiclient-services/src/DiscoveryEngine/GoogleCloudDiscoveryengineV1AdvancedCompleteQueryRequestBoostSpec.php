@@ -24,12 +24,7 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpec extends 
   protected $conditionBoostSpecsDataType = 'array';
 
   /**
-   * Condition boost specifications. If a suggestion matches multiple conditions
-   * in the specifications, boost values from these specifications are all
-   * applied and combined in a non-linear way. Maximum number of specifications
-   * is 20. Note: Currently only support language condition boost.
-   *
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpecConditionBoostSpec[] $conditionBoostSpecs
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpecConditionBoostSpec[]
    */
   public function setConditionBoostSpecs($conditionBoostSpecs)
   {

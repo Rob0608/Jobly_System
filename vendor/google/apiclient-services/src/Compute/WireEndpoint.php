@@ -29,7 +29,7 @@ class WireEndpoint extends \Google\Model
   public $vlanTag;
 
   /**
-   * @param string $interconnect
+   * @param string
    */
   public function setInterconnect($interconnect)
   {
@@ -43,7 +43,7 @@ class WireEndpoint extends \Google\Model
     return $this->interconnect;
   }
   /**
-   * @param int $vlanTag
+   * @param int
    */
   public function setVlanTag($vlanTag)
   {

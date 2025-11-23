@@ -22,30 +22,18 @@ class Input extends \Google\Model
   protected $attributesType = InputAttributes::class;
   protected $attributesDataType = '';
   /**
-   * A unique key for this input. Must be specified when using advanced mapping
-   * and edit lists.
-   *
    * @var string
    */
   public $key;
   protected $preprocessingConfigType = PreprocessingConfig::class;
   protected $preprocessingConfigDataType = '';
   /**
-   * URI of the media. Input files must be at least 5 seconds in duration and
-   * stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If
-   * empty, the value is populated from Job.input_uri. See [Supported input and
-   * output
-   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-
-   * and-output-formats).
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * Optional. Input Attributes.
-   *
-   * @param InputAttributes $attributes
+   * @param InputAttributes
    */
   public function setAttributes(InputAttributes $attributes)
   {
@@ -59,10 +47,7 @@ class Input extends \Google\Model
     return $this->attributes;
   }
   /**
-   * A unique key for this input. Must be specified when using advanced mapping
-   * and edit lists.
-   *
-   * @param string $key
+   * @param string
    */
   public function setKey($key)
   {
@@ -76,9 +61,7 @@ class Input extends \Google\Model
     return $this->key;
   }
   /**
-   * Preprocessing configurations.
-   *
-   * @param PreprocessingConfig $preprocessingConfig
+   * @param PreprocessingConfig
    */
   public function setPreprocessingConfig(PreprocessingConfig $preprocessingConfig)
   {
@@ -92,14 +75,7 @@ class Input extends \Google\Model
     return $this->preprocessingConfig;
   }
   /**
-   * URI of the media. Input files must be at least 5 seconds in duration and
-   * stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If
-   * empty, the value is populated from Job.input_uri. See [Supported input and
-   * output
-   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-
-   * and-output-formats).
-   *
-   * @param string $uri
+   * @param string
    */
   public function setUri($uri)
   {

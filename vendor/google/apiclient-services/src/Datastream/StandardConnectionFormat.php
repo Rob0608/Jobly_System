@@ -20,18 +20,12 @@ namespace Google\Service\Datastream;
 class StandardConnectionFormat extends \Google\Model
 {
   /**
-   * Optional. Specifies whether the client connects directly to the host[:port]
-   * in the connection URI.
-   *
    * @var bool
    */
   public $directConnection;
 
   /**
-   * Optional. Specifies whether the client connects directly to the host[:port]
-   * in the connection URI.
-   *
-   * @param bool $directConnection
+   * @param bool
    */
   public function setDirectConnection($directConnection)
   {

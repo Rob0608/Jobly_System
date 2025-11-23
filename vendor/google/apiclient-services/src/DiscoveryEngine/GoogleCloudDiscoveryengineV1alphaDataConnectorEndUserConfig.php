@@ -20,21 +20,14 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Google\Model
 {
   /**
-   * Optional. Any additional parameters needed for EUA.
-   *
    * @var array[]
    */
   public $additionalParams;
   /**
-   * Optional. Any authentication parameters specific to EUA connectors.
-   *
    * @var array[]
    */
   public $authParams;
   /**
-   * Optional. Any authentication parameters specific to EUA connectors in json
-   * string format.
-   *
    * @var string
    */
   public $jsonAuthParams;
@@ -42,9 +35,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
   protected $tenantDataType = '';
 
   /**
-   * Optional. Any additional parameters needed for EUA.
-   *
-   * @param array[] $additionalParams
+   * @param array[]
    */
   public function setAdditionalParams($additionalParams)
   {
@@ -58,9 +49,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
     return $this->additionalParams;
   }
   /**
-   * Optional. Any authentication parameters specific to EUA connectors.
-   *
-   * @param array[] $authParams
+   * @param array[]
    */
   public function setAuthParams($authParams)
   {
@@ -74,10 +63,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
     return $this->authParams;
   }
   /**
-   * Optional. Any authentication parameters specific to EUA connectors in json
-   * string format.
-   *
-   * @param string $jsonAuthParams
+   * @param string
    */
   public function setJsonAuthParams($jsonAuthParams)
   {
@@ -91,9 +77,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
     return $this->jsonAuthParams;
   }
   /**
-   * Optional. The tenant project the connector is connected to.
-   *
-   * @param GoogleCloudDiscoveryengineV1alphaTenant $tenant
+   * @param GoogleCloudDiscoveryengineV1alphaTenant
    */
   public function setTenant(GoogleCloudDiscoveryengineV1alphaTenant $tenant)
   {

@@ -25,14 +25,7 @@ class TypicalFlightEmissions extends \Google\Model
   protected $marketDataType = '';
 
   /**
-   * Optional. Typical flight emissions per passenger for requested market. Will
-   * not be present if a typical emissions could not be computed. For the list
-   * of reasons why typical flight emissions could not be computed, see
-   * [GitHub](https://github.com/google/travel-impact-
-   * model/blob/main/projects/typical_flight_emissions.md#step-7-validate-
-   * dataset).
-   *
-   * @param EmissionsGramsPerPax $emissionsGramsPerPax
+   * @param EmissionsGramsPerPax
    */
   public function setEmissionsGramsPerPax(EmissionsGramsPerPax $emissionsGramsPerPax)
   {
@@ -46,10 +39,7 @@ class TypicalFlightEmissions extends \Google\Model
     return $this->emissionsGramsPerPax;
   }
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA
-   * codes are capitalized.
-   *
-   * @param Market $market
+   * @param Market
    */
   public function setMarket(Market $market)
   {

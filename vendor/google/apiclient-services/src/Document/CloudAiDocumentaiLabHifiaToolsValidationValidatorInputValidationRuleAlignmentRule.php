@@ -19,38 +19,31 @@ namespace Google\Service\Document;
 
 class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleAlignmentRule extends \Google\Model
 {
-  public const ALIGNMENT_TYPE_ALIGNMENT_TYPE_UNSPECIFIED = 'ALIGNMENT_TYPE_UNSPECIFIED';
-  public const ALIGNMENT_TYPE_ALIGNMENT_TYPE_HORIZONTAL = 'ALIGNMENT_TYPE_HORIZONTAL';
-  public const ALIGNMENT_TYPE_ALIGNMENT_TYPE_VERTICAL = 'ALIGNMENT_TYPE_VERTICAL';
   /**
    * @var string
    */
   public $alignmentType;
   /**
-   * The tolerance to use when comparing coordinates.
-   *
    * @var float
    */
   public $tolerance;
 
   /**
-   * @param self::ALIGNMENT_TYPE_* $alignmentType
+   * @param string
    */
   public function setAlignmentType($alignmentType)
   {
     $this->alignmentType = $alignmentType;
   }
   /**
-   * @return self::ALIGNMENT_TYPE_*
+   * @return string
    */
   public function getAlignmentType()
   {
     return $this->alignmentType;
   }
   /**
-   * The tolerance to use when comparing coordinates.
-   *
-   * @param float $tolerance
+   * @param float
    */
   public function setTolerance($tolerance)
   {

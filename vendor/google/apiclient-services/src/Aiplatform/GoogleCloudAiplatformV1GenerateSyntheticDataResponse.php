@@ -24,9 +24,7 @@ class GoogleCloudAiplatformV1GenerateSyntheticDataResponse extends \Google\Colle
   protected $syntheticExamplesDataType = 'array';
 
   /**
-   * A list of generated synthetic examples.
-   *
-   * @param GoogleCloudAiplatformV1SyntheticExample[] $syntheticExamples
+   * @param GoogleCloudAiplatformV1SyntheticExample[]
    */
   public function setSyntheticExamples($syntheticExamples)
   {

@@ -23,9 +23,7 @@ class GoogleCloudDiscoveryengineV1AssistAnswerReply extends \Google\Model
   protected $groundedContentDataType = '';
 
   /**
-   * Possibly grounded response text or media from the assistant.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContent $groundedContent
+   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContent
    */
   public function setGroundedContent(GoogleCloudDiscoveryengineV1AssistantGroundedContent $groundedContent)
   {

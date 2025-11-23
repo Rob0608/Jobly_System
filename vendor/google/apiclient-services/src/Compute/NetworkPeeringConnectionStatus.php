@@ -19,42 +19,17 @@ namespace Google\Service\Compute;
 
 class NetworkPeeringConnectionStatus extends \Google\Model
 {
-  /**
-   * Updates are reflected in the local peering but aren't applied to the
-   * peering connection until a complementary change is made to the matching
-   * peering. To delete a peering with the consensus update strategy, both the
-   * peerings must request the deletion of the peering before the peering can be
-   * deleted.
-   */
-  public const UPDATE_STRATEGY_CONSENSUS = 'CONSENSUS';
-  /**
-   * In this mode, changes to the peering configuration can be unilaterally
-   * altered by changing either side of the peering. This is the default value
-   * if the field is unspecified.
-   */
-  public const UPDATE_STRATEGY_INDEPENDENT = 'INDEPENDENT';
-  /**
-   * Peerings with update strategy UNSPECIFIED are created with update strategy
-   * INDEPENDENT.
-   */
-  public const UPDATE_STRATEGY_UNSPECIFIED = 'UNSPECIFIED';
   protected $consensusStateType = NetworkPeeringConnectionStatusConsensusState::class;
   protected $consensusStateDataType = '';
   protected $trafficConfigurationType = NetworkPeeringConnectionStatusTrafficConfiguration::class;
   protected $trafficConfigurationDataType = '';
   /**
-   * The update strategy determines the update/delete semantics for this peering
-   * connection.
-   *
    * @var string
    */
   public $updateStrategy;
 
   /**
-   * The consensus state contains information about the status of update and
-   * delete for a consensus peering connection.
-   *
-   * @param NetworkPeeringConnectionStatusConsensusState $consensusState
+   * @param NetworkPeeringConnectionStatusConsensusState
    */
   public function setConsensusState(NetworkPeeringConnectionStatusConsensusState $consensusState)
   {
@@ -68,10 +43,7 @@ class NetworkPeeringConnectionStatus extends \Google\Model
     return $this->consensusState;
   }
   /**
-   * The active connectivity settings for the peering connection based on the
-   * settings of the network peerings.
-   *
-   * @param NetworkPeeringConnectionStatusTrafficConfiguration $trafficConfiguration
+   * @param NetworkPeeringConnectionStatusTrafficConfiguration
    */
   public function setTrafficConfiguration(NetworkPeeringConnectionStatusTrafficConfiguration $trafficConfiguration)
   {
@@ -85,19 +57,14 @@ class NetworkPeeringConnectionStatus extends \Google\Model
     return $this->trafficConfiguration;
   }
   /**
-   * The update strategy determines the update/delete semantics for this peering
-   * connection.
-   *
-   * Accepted values: CONSENSUS, INDEPENDENT, UNSPECIFIED
-   *
-   * @param self::UPDATE_STRATEGY_* $updateStrategy
+   * @param string
    */
   public function setUpdateStrategy($updateStrategy)
   {
     $this->updateStrategy = $updateStrategy;
   }
   /**
-   * @return self::UPDATE_STRATEGY_*
+   * @return string
    */
   public function getUpdateStrategy()
   {

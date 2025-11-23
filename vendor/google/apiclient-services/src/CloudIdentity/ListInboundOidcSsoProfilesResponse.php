@@ -23,17 +23,12 @@ class ListInboundOidcSsoProfilesResponse extends \Google\Collection
   protected $inboundOidcSsoProfilesType = InboundOidcSsoProfile::class;
   protected $inboundOidcSsoProfilesDataType = 'array';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * List of InboundOidcSsoProfiles.
-   *
-   * @param InboundOidcSsoProfile[] $inboundOidcSsoProfiles
+   * @param InboundOidcSsoProfile[]
    */
   public function setInboundOidcSsoProfiles($inboundOidcSsoProfiles)
   {
@@ -47,10 +42,7 @@ class ListInboundOidcSsoProfilesResponse extends \Google\Collection
     return $this->inboundOidcSsoProfiles;
   }
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -22,28 +22,12 @@ class LocationData extends \Google\Model
   protected $addressType = PostalAddress::class;
   protected $addressDataType = '';
   /**
-   * Immutable. Name should reflect your business's real-world name, as used
-   * consistently on your storefront, website, and stationery, and as known to
-   * customers. Any additional information, when relevant, can be included in
-   * other fields of the resource (for example, `Address`, `Categories`). Don't
-   * add unnecessary information to your name (for example, prefer "Google" over
-   * "Google Inc. - Mountain View Corporate Headquarters"). Don't include
-   * marketing taglines, store codes, special characters, hours or closed/open
-   * status, phone numbers, website URLs, service/product information,
-   * location/address or directions, or containment information (for example,
-   * "Chase ATM in Duane Reade").
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Immutable. A precise, accurate address to describe your business location.
-   * PO boxes or mailboxes located at remote locations are not acceptable. At
-   * this time, you can specify a maximum of five `address_lines` values in the
-   * address.
-   *
-   * @param PostalAddress $address
+   * @param PostalAddress
    */
   public function setAddress(PostalAddress $address)
   {
@@ -57,18 +41,7 @@ class LocationData extends \Google\Model
     return $this->address;
   }
   /**
-   * Immutable. Name should reflect your business's real-world name, as used
-   * consistently on your storefront, website, and stationery, and as known to
-   * customers. Any additional information, when relevant, can be included in
-   * other fields of the resource (for example, `Address`, `Categories`). Don't
-   * add unnecessary information to your name (for example, prefer "Google" over
-   * "Google Inc. - Mountain View Corporate Headquarters"). Don't include
-   * marketing taglines, store codes, special characters, hours or closed/open
-   * status, phone numbers, website URLs, service/product information,
-   * location/address or directions, or containment information (for example,
-   * "Chase ATM in Duane Reade").
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {

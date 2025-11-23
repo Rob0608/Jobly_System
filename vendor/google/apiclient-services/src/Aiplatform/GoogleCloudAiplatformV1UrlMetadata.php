@@ -20,34 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1UrlMetadata extends \Google\Model
 {
   /**
-   * Default value. This value is unused.
-   */
-  public const URL_RETRIEVAL_STATUS_URL_RETRIEVAL_STATUS_UNSPECIFIED = 'URL_RETRIEVAL_STATUS_UNSPECIFIED';
-  /**
-   * The URL was retrieved successfully.
-   */
-  public const URL_RETRIEVAL_STATUS_URL_RETRIEVAL_STATUS_SUCCESS = 'URL_RETRIEVAL_STATUS_SUCCESS';
-  /**
-   * The URL retrieval failed.
-   */
-  public const URL_RETRIEVAL_STATUS_URL_RETRIEVAL_STATUS_ERROR = 'URL_RETRIEVAL_STATUS_ERROR';
-  /**
-   * The URL retrieved by the tool.
-   *
    * @var string
    */
   public $retrievedUrl;
   /**
-   * The status of the URL retrieval.
-   *
    * @var string
    */
   public $urlRetrievalStatus;
 
   /**
-   * The URL retrieved by the tool.
-   *
-   * @param string $retrievedUrl
+   * @param string
    */
   public function setRetrievedUrl($retrievedUrl)
   {
@@ -61,19 +43,14 @@ class GoogleCloudAiplatformV1UrlMetadata extends \Google\Model
     return $this->retrievedUrl;
   }
   /**
-   * The status of the URL retrieval.
-   *
-   * Accepted values: URL_RETRIEVAL_STATUS_UNSPECIFIED,
-   * URL_RETRIEVAL_STATUS_SUCCESS, URL_RETRIEVAL_STATUS_ERROR
-   *
-   * @param self::URL_RETRIEVAL_STATUS_* $urlRetrievalStatus
+   * @param string
    */
   public function setUrlRetrievalStatus($urlRetrievalStatus)
   {
     $this->urlRetrievalStatus = $urlRetrievalStatus;
   }
   /**
-   * @return self::URL_RETRIEVAL_STATUS_*
+   * @return string
    */
   public function getUrlRetrievalStatus()
   {

@@ -19,13 +19,7 @@ namespace Google\Service\Compute;
 
 class PreviewFeatureStatusReleaseStatus extends \Google\Model
 {
-  public const STAGE_DEPRECATED = 'DEPRECATED';
-  public const STAGE_GA = 'GA';
-  public const STAGE_PREVIEW = 'PREVIEW';
-  public const STAGE_STAGE_UNSPECIFIED = 'STAGE_UNSPECIFIED';
   /**
-   * [Output Only] The stage of the feature.
-   *
    * @var string
    */
   public $stage;
@@ -33,28 +27,21 @@ class PreviewFeatureStatusReleaseStatus extends \Google\Model
   protected $updateDateDataType = '';
 
   /**
-   * [Output Only] The stage of the feature.
-   *
-   * Accepted values: DEPRECATED, GA, PREVIEW, STAGE_UNSPECIFIED
-   *
-   * @param self::STAGE_* $stage
+   * @param string
    */
   public function setStage($stage)
   {
     $this->stage = $stage;
   }
   /**
-   * @return self::STAGE_*
+   * @return string
    */
   public function getStage()
   {
     return $this->stage;
   }
   /**
-   * Output only. The last date when a feature transitioned between
-   * ReleaseStatuses.
-   *
-   * @param Date $updateDate
+   * @param Date
    */
   public function setUpdateDate(Date $updateDate)
   {

@@ -25,10 +25,7 @@ class DownloadRestrictionsMetadata extends \Google\Model
   protected $itemDownloadRestrictionDataType = '';
 
   /**
-   * Output only. The effective download restriction applied to this file. This
-   * considers all restriction settings and DLP rules.
-   *
-   * @param DownloadRestriction $effectiveDownloadRestrictionWithContext
+   * @param DownloadRestriction
    */
   public function setEffectiveDownloadRestrictionWithContext(DownloadRestriction $effectiveDownloadRestrictionWithContext)
   {
@@ -42,11 +39,7 @@ class DownloadRestrictionsMetadata extends \Google\Model
     return $this->effectiveDownloadRestrictionWithContext;
   }
   /**
-   * The download restriction of the file applied directly by the owner or
-   * organizer. This doesn't take into account shared drive settings or DLP
-   * rules.
-   *
-   * @param DownloadRestriction $itemDownloadRestriction
+   * @param DownloadRestriction
    */
   public function setItemDownloadRestriction(DownloadRestriction $itemDownloadRestriction)
   {

@@ -24,16 +24,12 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
   protected $bigtableMetadataType = GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata::class;
   protected $bigtableMetadataDataType = '';
   /**
-   * Optional. It true, enable direct access to the Bigtable instance.
-   *
    * @var bool
    */
   public $enableDirectBigtableAccess;
 
   /**
-   * Required. Autoscaling config applied to Bigtable Instance.
-   *
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling $autoScaling
+   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling
    */
   public function setAutoScaling(GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling $autoScaling)
   {
@@ -47,9 +43,7 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
     return $this->autoScaling;
   }
   /**
-   * Output only. Metadata of the Bigtable instance. Output only.
-   *
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata $bigtableMetadata
+   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata
    */
   public function setBigtableMetadata(GoogleCloudAiplatformV1FeatureOnlineStoreBigtableBigtableMetadata $bigtableMetadata)
   {
@@ -63,9 +57,7 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
     return $this->bigtableMetadata;
   }
   /**
-   * Optional. It true, enable direct access to the Bigtable instance.
-   *
-   * @param bool $enableDirectBigtableAccess
+   * @param bool
    */
   public function setEnableDirectBigtableAccess($enableDirectBigtableAccess)
   {

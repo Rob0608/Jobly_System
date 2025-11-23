@@ -24,9 +24,7 @@ class McpEnableRule extends \Google\Collection
   protected $mcpServicesDataType = 'array';
 
   /**
-   * List of enabled MCP services.
-   *
-   * @param McpService[] $mcpServices
+   * @param McpService[]
    */
   public function setMcpServices($mcpServices)
   {

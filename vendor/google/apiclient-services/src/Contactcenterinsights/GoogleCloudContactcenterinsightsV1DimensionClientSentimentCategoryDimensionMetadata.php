@@ -20,16 +20,12 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1DimensionClientSentimentCategoryDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The client sentiment category.
-   *
    * @var string
    */
   public $sentimentCategory;
 
   /**
-   * Optional. The client sentiment category.
-   *
-   * @param string $sentimentCategory
+   * @param string
    */
   public function setSentimentCategory($sentimentCategory)
   {

@@ -21,28 +21,18 @@ class ListRolloutKindsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
-   * If present, the next page token can be provided to a subsequent
-   * ListRolloutKinds call to list the next page. If empty, there are no more
-   * pages.
-   *
    * @var string
    */
   public $nextPageToken;
   protected $rolloutKindsType = RolloutKind::class;
   protected $rolloutKindsDataType = 'array';
   /**
-   * Locations that could not be reached.
-   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * If present, the next page token can be provided to a subsequent
-   * ListRolloutKinds call to list the next page. If empty, there are no more
-   * pages.
-   *
-   * @param string $nextPageToken
+   * @param string
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -56,9 +46,7 @@ class ListRolloutKindsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The resulting rollout kinds.
-   *
-   * @param RolloutKind[] $rolloutKinds
+   * @param RolloutKind[]
    */
   public function setRolloutKinds($rolloutKinds)
   {
@@ -72,9 +60,7 @@ class ListRolloutKindsResponse extends \Google\Collection
     return $this->rolloutKinds;
   }
   /**
-   * Locations that could not be reached.
-   *
-   * @param string[] $unreachable
+   * @param string[]
    */
   public function setUnreachable($unreachable)
   {

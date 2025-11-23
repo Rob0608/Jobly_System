@@ -21,16 +21,12 @@ class AdPolicyTopicEvidenceCounterfeit extends \Google\Collection
 {
   protected $collection_key = 'owners';
   /**
-   * The content or product owners that made a complaint.
-   *
    * @var string[]
    */
   public $owners;
 
   /**
-   * The content or product owners that made a complaint.
-   *
-   * @param string[] $owners
+   * @param string[]
    */
   public function setOwners($owners)
   {

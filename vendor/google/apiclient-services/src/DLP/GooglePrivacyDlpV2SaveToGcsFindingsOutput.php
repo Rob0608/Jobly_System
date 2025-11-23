@@ -24,9 +24,7 @@ class GooglePrivacyDlpV2SaveToGcsFindingsOutput extends \Google\Collection
   protected $findingsDataType = 'array';
 
   /**
-   * List of findings.
-   *
-   * @param GooglePrivacyDlpV2Finding[] $findings
+   * @param GooglePrivacyDlpV2Finding[]
    */
   public function setFindings($findings)
   {

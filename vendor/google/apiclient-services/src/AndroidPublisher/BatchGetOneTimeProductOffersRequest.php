@@ -24,10 +24,7 @@ class BatchGetOneTimeProductOffersRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * Required. A list of get requests of up to 100 elements. All requests must
-   * retrieve different offers.
-   *
-   * @param GetOneTimeProductOfferRequest[] $requests
+   * @param GetOneTimeProductOfferRequest[]
    */
   public function setRequests($requests)
   {

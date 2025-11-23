@@ -21,44 +21,24 @@ class LdapConfig extends \Google\Collection
 {
   protected $collection_key = 'servers';
   /**
-   * Required. The LDAP domain name in the format of `my-domain.com`.
-   *
    * @var string
    */
   public $domain;
   /**
-   * Optional. The groups Organizational Unit (OU) is optional. This parameter
-   * is a hint to allow faster lookup in the LDAP namespace. In case that this
-   * parameter is not provided, Filestore instance will query the whole LDAP
-   * namespace.
-   *
    * @var string
    */
   public $groupsOu;
   /**
-   * Required. The servers names are used for specifying the LDAP servers names.
-   * The LDAP servers names can come with two formats: 1. DNS name, for example:
-   * `ldap.example1.com`, `ldap.example2.com`. 2. IP address, for example:
-   * `10.0.0.1`, `10.0.0.2`, `10.0.0.3`. All servers names must be in the same
-   * format: either all DNS names or all IP addresses.
-   *
    * @var string[]
    */
   public $servers;
   /**
-   * Optional. The users Organizational Unit (OU) is optional. This parameter is
-   * a hint to allow faster lookup in the LDAP namespace. In case that this
-   * parameter is not provided, Filestore instance will query the whole LDAP
-   * namespace.
-   *
    * @var string
    */
   public $usersOu;
 
   /**
-   * Required. The LDAP domain name in the format of `my-domain.com`.
-   *
-   * @param string $domain
+   * @param string
    */
   public function setDomain($domain)
   {
@@ -72,12 +52,7 @@ class LdapConfig extends \Google\Collection
     return $this->domain;
   }
   /**
-   * Optional. The groups Organizational Unit (OU) is optional. This parameter
-   * is a hint to allow faster lookup in the LDAP namespace. In case that this
-   * parameter is not provided, Filestore instance will query the whole LDAP
-   * namespace.
-   *
-   * @param string $groupsOu
+   * @param string
    */
   public function setGroupsOu($groupsOu)
   {
@@ -91,13 +66,7 @@ class LdapConfig extends \Google\Collection
     return $this->groupsOu;
   }
   /**
-   * Required. The servers names are used for specifying the LDAP servers names.
-   * The LDAP servers names can come with two formats: 1. DNS name, for example:
-   * `ldap.example1.com`, `ldap.example2.com`. 2. IP address, for example:
-   * `10.0.0.1`, `10.0.0.2`, `10.0.0.3`. All servers names must be in the same
-   * format: either all DNS names or all IP addresses.
-   *
-   * @param string[] $servers
+   * @param string[]
    */
   public function setServers($servers)
   {
@@ -111,12 +80,7 @@ class LdapConfig extends \Google\Collection
     return $this->servers;
   }
   /**
-   * Optional. The users Organizational Unit (OU) is optional. This parameter is
-   * a hint to allow faster lookup in the LDAP namespace. In case that this
-   * parameter is not provided, Filestore instance will query the whole LDAP
-   * namespace.
-   *
-   * @param string $usersOu
+   * @param string
    */
   public function setUsersOu($usersOu)
   {

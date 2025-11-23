@@ -24,10 +24,7 @@ class GoogleCloudAiplatformV1UrlContextMetadata extends \Google\Collection
   protected $urlMetadataDataType = 'array';
 
   /**
-   * Output only. A list of URL metadata, with one entry for each URL retrieved
-   * by the tool.
-   *
-   * @param GoogleCloudAiplatformV1UrlMetadata[] $urlMetadata
+   * @param GoogleCloudAiplatformV1UrlMetadata[]
    */
   public function setUrlMetadata($urlMetadata)
   {

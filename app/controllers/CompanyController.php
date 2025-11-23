@@ -7,7 +7,7 @@ require_once 'app/third_party/PHPMailer/src/Exception.php';
 require_once 'app/third_party/PHPMailer/src/PHPMailer.php';
 require_once 'app/third_party/PHPMailer/src/SMTP.php';
 require_once __DIR__ . '/../../vendor/autoload.php'; // ✅ make sure autoload works
-require_once __DIR__ . '/../helpers/phpmailer_helper.php';
+require_once 'app/helpers/phpmailer_helper.php';
 
 class CompanyController extends Controller
 {
@@ -84,6 +84,12 @@ class CompanyController extends Controller
             exit;
         }
 
+        // Prevent duplicate by company name (friendly check before insert)
+        if (!empty($companyName) && $companyModel->existsByName($companyName)) {
+            echo "<script>alert('A company with that name already exists. Please choose a different name.'); window.history.back();</script>";
+            exit;
+        }
+
         // Handle business permit upload
         $businessPermitPath = '';
         if (isset($_FILES['business_permit']) && $_FILES['business_permit']['error'] === UPLOAD_ERR_OK) {
@@ -157,23 +163,21 @@ class CompanyController extends Controller
     // ✅ Send verification email
     private function sendVerificationMail(array $data)
     {
-        $subject = 'Your Company Verification Code';
-        $body = "
-            <h3>Hello, {$data['company_name']}!</h3>
-            <p>Thank you for registering your company.</p>
-            <p>Your 4-digit verification code is:</p>
-            <h2 style='letter-spacing:5px;'>{$data['verification_code']}</h2>
-            <p>Enter this code on the verification page to activate your account.</p>
-        ";
+        $body = '<h3>Hello, ' . htmlspecialchars($data['company_name'] ?? '') . '!</h3>'
+            . '<p>Thank you for registering your company.</p>'
+            . '<p>Your 4-digit verification code is:</p>'
+            . '<h2 style="letter-spacing:5px;">' . htmlspecialchars((string)($data['verification_code'] ?? '')) . '</h2>'
+            . '<p>Enter this code on the verification page to activate your account.</p>';
 
         $res = phpmailer_send([
-            'to' => [$data['email'] => $data['company_name']],
-            'subject' => $subject,
+            'to' => $data['email'],
+            'to_name' => $data['company_name'] ?? '',
+            'subject' => 'Your Company Verification Code',
             'body' => $body,
-            'from_name' => 'Company Verification'
+            'is_html' => true,
         ]);
         if (!$res['success']) {
-            error_log('Company verification email failed: ' . ($res['error'] ?? json_encode($res)));
+            error_log('Company verification email failed: ' . ($res['error'] ?? 'unknown'));
         }
     }
 
@@ -338,94 +342,35 @@ class CompanyController extends Controller
     // Send email notification when applicant passes
     private function sendPassedNotificationEmail($applicantEmail)
     {
-        $subject = 'Congratulations! You Passed the Interview Round';
-        $body = "
-            <html>
-            <head>
-                <style>
-                    body { font-family: Poppins, Arial; background: #f3f4f6; padding: 20px; }
-                    .container { background: #fff; padding: 30px; border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-                    h2 { color: #16a34a; margin-top: 0; }
-                    p { color: #334155; line-height: 1.6; }
-                    .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 12px; }
-                </style>
-            </head>
-            <body>
-                <div class='container'>
-                    <h2>🎉 Congratulations!</h2>
-                    <p>Dear Applicant,</p>
-                    <p>We're excited to inform you that you have <strong>passed</strong> the interview round with our company!</p>
-                    <p>This is a great achievement and shows that you have the skills and qualities we're looking for. We look forward to the next steps in the hiring process.</p>
-                    <p>Thank you for your interest in joining our team. If you have any questions, please don't hesitate to contact us.</p>
-                    <p><strong>Best regards,</strong><br/>Job Portal Team</p>
-                    <div class='footer'>
-                        <p>This is an automated email. Please do not reply directly to this message.</p>
-                    </div>
-                </div>
-            </body>
-            </html>";
+        $body = "<html><head><style>body{font-family:Poppins,Arial;background:#f3f4f6;padding:20px}.container{background:#fff;padding:30px;border-radius:15px;max-width:600px;margin:0 auto;box-shadow:0 4px 15px rgba(0,0,0,0.1)}h2{color:#16a34a;margin-top:0}p{color:#334155;line-height:1.6}.footer{margin-top:30px;padding-top:20px;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px}</style></head><body><div class='container'><h2>🎉 Congratulations!</h2><p>Dear Applicant,</p><p>We're excited to inform you that you have <strong>passed</strong> the interview round with our company!</p><p>This is a great achievement and shows that you have the skills and qualities we're looking for. We look forward to the next steps in the hiring process.</p><p>Thank you for your interest in joining our team. If you have any questions, please don't hesitate to contact us.</p><p><strong>Best regards,</strong><br/>Job Portal Team</p><div class='footer'><p>This is an automated email. Please do not reply directly to this message.</p></div></div></body></html>";
 
         $res = phpmailer_send([
             'to' => $applicantEmail,
-            'subject' => $subject,
+            'subject' => 'Congratulations! You Passed the Interview Round',
             'body' => $body,
-            'from_name' => 'Job Portal'
+            'is_html' => true,
         ]);
         if (!$res['success']) {
-            error_log('Passed notification email failed: ' . ($res['error'] ?? json_encode($res)));
+            error_log('Passed notification failed: ' . ($res['error'] ?? 'unknown'));
         }
     }
 
     // Send interview schedule notification email
     private function sendInterviewNotificationEmail($applicantEmail, $scheduleDate, $position)
     {
-        // Format the schedule date for display
         $dateObj = new DateTime($scheduleDate, new DateTimeZone('Asia/Manila'));
         $formattedDate = $dateObj->format('F d, Y h:i A');
 
-        $subject = 'Interview Schedule Notification - Job Portal';
-        $body = "
-            <html>
-            <head>
-                <style>
-                    body { font-family: Poppins, Arial; background: #f3f4f6; padding: 20px; }
-                    .container { background: #fff; padding: 30px; border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-                    h2 { color: #2563eb; margin-top: 0; }
-                    p { color: #334155; line-height: 1.6; }
-                    .event-box { background: #f0f9ff; border-left: 4px solid #2563eb; padding: 15px; margin: 20px 0; border-radius: 8px; }
-                    .event-box strong { color: #1e40af; }
-                    .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 12px; }
-                </style>
-            </head>
-            <body>
-                <div class='container'>
-                    <h2>📅 Interview Scheduled</h2>
-                    <p>Dear Applicant,</p>
-                    <p>Great news! Your interview has been scheduled for the position of <strong>{$position}</strong>.</p>
-                    <div class='event-box'>
-                        <p><strong>📍 Interview Details:</strong></p>
-                        <p><strong>Position:</strong> {$position}</p>
-                        <p><strong>Date & Time:</strong> {$formattedDate}</p>
-                        <p style='margin-bottom: 0;'><strong>Timezone:</strong> Asia/Manila (UTC+8)</p>
-                    </div>
-                    <p>The interview details have also been added to your Google Calendar. Make sure to check your email for the calendar invite.</p>
-                    <p>If you have any questions or need to reschedule, please contact us as soon as possible.</p>
-                    <p><strong>Best regards,</strong><br/>Job Portal Team</p>
-                    <div class='footer'>
-                        <p>This is an automated email. Please do not reply directly to this message.</p>
-                    </div>
-                </div>
-            </body>
-            </html>";
+        $body = "<html><head><style>body{font-family:Poppins,Arial;background:#f3f4f6;padding:20px}.container{background:#fff;padding:30px;border-radius:15px;max-width:600px;margin:0 auto;box-shadow:0 4px 15px rgba(0,0,0,0.1)}h2{color:#2563eb;margin-top:0}p{color:#334155;line-height:1.6}.event-box{background:#f0f9ff;border-left:4px solid #2563eb;padding:15px;margin:20px 0;border-radius:8px}.footer{margin-top:30px;padding-top:20px;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px}</style></head><body><div class='container'><h2>📅 Interview Scheduled</h2><p>Dear Applicant,</p><p>Great news! Your interview has been scheduled for the position of <strong>" . htmlspecialchars($position) . "</strong>.</p><div class='event-box'><p><strong>📍 Interview Details:</strong></p><p><strong>Position:</strong> " . htmlspecialchars($position) . "</p><p><strong>Date & Time:</strong> " . htmlspecialchars($formattedDate) . "</p><p style='margin-bottom:0;'><strong>Timezone:</strong> Asia/Manila (UTC+8)</p></div><p>The interview details have also been added to your Google Calendar. Make sure to check your email for the calendar invite.</p><p>If you have any questions or need to reschedule, please contact us as soon as possible.</p><p><strong>Best regards,</strong><br/>Job Portal Team</p><div class='footer'><p>This is an automated email. Please do not reply directly to this message.</p></div></div></body></html>";
 
         $res = phpmailer_send([
             'to' => $applicantEmail,
-            'subject' => $subject,
+            'subject' => 'Interview Schedule Notification - Job Portal',
             'body' => $body,
-            'from_name' => 'Job Portal'
+            'is_html' => true,
         ]);
         if (!$res['success']) {
-            error_log('Interview notification email failed: ' . ($res['error'] ?? json_encode($res)));
+            error_log('Interview notification failed: ' . ($res['error'] ?? 'unknown'));
         }
     }
 
@@ -537,6 +482,13 @@ class CompanyController extends Controller
             } else {
                 $_SESSION['error'] = 'Invalid logo file (type/size). Max 2MB; jpg, png, gif, webp.';
             }
+        }
+
+        // If company name changed, ensure it's not already used by another company
+        if ($company_name !== ($company['company_name'] ?? '') && $companyModel->existsByName($company_name, $id)) {
+            $_SESSION['error'] = 'Company name already in use by another account.';
+            redirect('company/employer?tab=settings&sub=profile');
+            return;
         }
 
         $companyModel->updateProfile($id, [

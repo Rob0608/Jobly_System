@@ -19,52 +19,19 @@ namespace Google\Service\DisplayVideo;
 
 class YoutubeAssetAssociation extends \Google\Model
 {
-  /**
-   * YouTube asset type is not specified or is unknown in this version.
-   */
-  public const YOUTUBE_ASSET_TYPE_YOUTUBE_ASSET_TYPE_UNSPECIFIED = 'YOUTUBE_ASSET_TYPE_UNSPECIFIED';
-  /**
-   * Location asset.
-   */
-  public const YOUTUBE_ASSET_TYPE_YOUTUBE_ASSET_TYPE_LOCATION = 'YOUTUBE_ASSET_TYPE_LOCATION';
-  /**
-   * Affiliate location asset.
-   */
-  public const YOUTUBE_ASSET_TYPE_YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION = 'YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION';
-  /**
-   * Sitelink asset.
-   */
-  public const YOUTUBE_ASSET_TYPE_YOUTUBE_ASSET_TYPE_SITELINK = 'YOUTUBE_ASSET_TYPE_SITELINK';
   protected $linkedYoutubeAssetType = YoutubeAssetAssociationLinkedYouTubeAsset::class;
   protected $linkedYoutubeAssetDataType = '';
   /**
-   * Identifier. The resource name of the association. For line item-level
-   * associations: The name pattern is `advertisers/{advertiser_id}/lineItems/{l
-   * ine_item_id}/youtubeAssetTypes/{youtube_asset_type}/youtubeAssetAssociation
-   * s/{youtube_asset_association_id}`. For ad group-level associations: The
-   * name pattern is `advertisers/{advertiser_id}/adGroups/{ad_group_id}/youtube
-   * AssetTypes/{youtube_asset_type}/youtubeAssetAssociations/{youtube_asset_ass
-   * ociation_id}`. For `YOUTUBE_ASSET_TYPE_LOCATION` and
-   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations:
-   * `youtube_asset_association_id` is the ID of the asset set linked, or 0 if
-   * the location_matching_type or affiliate_location_matching_type is
-   * `DISABLED`. For `YOUTUBE_ASSET_TYPE_SITELINK` associations:
-   * `youtube_asset_association_id` is be the ID of the sitelink asset linked.
-   *
    * @var string
    */
   public $name;
   /**
-   * Required. The type of YouTube asset associated with the resource.
-   *
    * @var string
    */
   public $youtubeAssetType;
 
   /**
-   * Required. The YouTube asset associated with the resource.
-   *
-   * @param YoutubeAssetAssociationLinkedYouTubeAsset $linkedYoutubeAsset
+   * @param YoutubeAssetAssociationLinkedYouTubeAsset
    */
   public function setLinkedYoutubeAsset(YoutubeAssetAssociationLinkedYouTubeAsset $linkedYoutubeAsset)
   {
@@ -78,20 +45,7 @@ class YoutubeAssetAssociation extends \Google\Model
     return $this->linkedYoutubeAsset;
   }
   /**
-   * Identifier. The resource name of the association. For line item-level
-   * associations: The name pattern is `advertisers/{advertiser_id}/lineItems/{l
-   * ine_item_id}/youtubeAssetTypes/{youtube_asset_type}/youtubeAssetAssociation
-   * s/{youtube_asset_association_id}`. For ad group-level associations: The
-   * name pattern is `advertisers/{advertiser_id}/adGroups/{ad_group_id}/youtube
-   * AssetTypes/{youtube_asset_type}/youtubeAssetAssociations/{youtube_asset_ass
-   * ociation_id}`. For `YOUTUBE_ASSET_TYPE_LOCATION` and
-   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations:
-   * `youtube_asset_association_id` is the ID of the asset set linked, or 0 if
-   * the location_matching_type or affiliate_location_matching_type is
-   * `DISABLED`. For `YOUTUBE_ASSET_TYPE_SITELINK` associations:
-   * `youtube_asset_association_id` is be the ID of the sitelink asset linked.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -105,20 +59,14 @@ class YoutubeAssetAssociation extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The type of YouTube asset associated with the resource.
-   *
-   * Accepted values: YOUTUBE_ASSET_TYPE_UNSPECIFIED,
-   * YOUTUBE_ASSET_TYPE_LOCATION, YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION,
-   * YOUTUBE_ASSET_TYPE_SITELINK
-   *
-   * @param self::YOUTUBE_ASSET_TYPE_* $youtubeAssetType
+   * @param string
    */
   public function setYoutubeAssetType($youtubeAssetType)
   {
     $this->youtubeAssetType = $youtubeAssetType;
   }
   /**
-   * @return self::YOUTUBE_ASSET_TYPE_*
+   * @return string
    */
   public function getYoutubeAssetType()
   {

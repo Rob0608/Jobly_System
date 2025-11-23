@@ -22,27 +22,18 @@ class CreateSubscriptionIntent extends \Google\Model
   protected $cycleOptionsType = CycleOptions::class;
   protected $cycleOptionsDataType = '';
   /**
-   * Required. The parent resource name, which is the identifier of the partner.
-   *
    * @var string
    */
   public $parent;
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
   /**
-   * Required. Identifies the subscription resource on the Partner side. The
-   * value is restricted to 63 ASCII characters at the maximum. If a
-   * subscription was previously created with the same subscription_id, we will
-   * directly return that one.
-   *
    * @var string
    */
   public $subscriptionId;
 
   /**
-   * Optional. The cycle options for the subscription.
-   *
-   * @param CycleOptions $cycleOptions
+   * @param CycleOptions
    */
   public function setCycleOptions(CycleOptions $cycleOptions)
   {
@@ -56,9 +47,7 @@ class CreateSubscriptionIntent extends \Google\Model
     return $this->cycleOptions;
   }
   /**
-   * Required. The parent resource name, which is the identifier of the partner.
-   *
-   * @param string $parent
+   * @param string
    */
   public function setParent($parent)
   {
@@ -72,9 +61,7 @@ class CreateSubscriptionIntent extends \Google\Model
     return $this->parent;
   }
   /**
-   * Required. The Subscription to be created.
-   *
-   * @param Subscription $subscription
+   * @param Subscription
    */
   public function setSubscription(Subscription $subscription)
   {
@@ -88,12 +75,7 @@ class CreateSubscriptionIntent extends \Google\Model
     return $this->subscription;
   }
   /**
-   * Required. Identifies the subscription resource on the Partner side. The
-   * value is restricted to 63 ASCII characters at the maximum. If a
-   * subscription was previously created with the same subscription_id, we will
-   * directly return that one.
-   *
-   * @param string $subscriptionId
+   * @param string
    */
   public function setSubscriptionId($subscriptionId)
   {

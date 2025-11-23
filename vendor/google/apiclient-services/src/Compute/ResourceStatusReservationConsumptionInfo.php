@@ -20,18 +20,12 @@ namespace Google\Service\Compute;
 class ResourceStatusReservationConsumptionInfo extends \Google\Model
 {
   /**
-   * [Output Only] The full resource name of the reservation that this instance
-   * is consuming from.
-   *
    * @var string
    */
   public $consumedReservation;
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance
-   * is consuming from.
-   *
-   * @param string $consumedReservation
+   * @param string
    */
   public function setConsumedReservation($consumedReservation)
   {

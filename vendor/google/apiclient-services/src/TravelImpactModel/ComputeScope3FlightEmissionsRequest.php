@@ -26,9 +26,7 @@ class ComputeScope3FlightEmissionsRequest extends \Google\Collection
   protected $modelVersionDataType = '';
 
   /**
-   * Required. Flights to return emission estimates for.
-   *
-   * @param Scope3FlightSegment[] $flights
+   * @param Scope3FlightSegment[]
    */
   public function setFlights($flights)
   {
@@ -42,10 +40,7 @@ class ComputeScope3FlightEmissionsRequest extends \Google\Collection
     return $this->flights;
   }
   /**
-   * Optional. The model version under which emission estimates for all flights
-   * in this request were computed.
-   *
-   * @param ModelVersion $modelVersion
+   * @param ModelVersion
    */
   public function setModelVersion(ModelVersion $modelVersion)
   {

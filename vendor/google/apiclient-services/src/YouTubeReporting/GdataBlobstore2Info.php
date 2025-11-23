@@ -20,40 +20,28 @@ namespace Google\Service\YouTubeReporting;
 class GdataBlobstore2Info extends \Google\Model
 {
   /**
-   * gdata
-   *
    * @var string
    */
   public $blobGeneration;
   /**
-   * gdata
-   *
    * @var string
    */
   public $blobId;
   /**
-   * gdata
-   *
    * @var string
    */
   public $downloadReadHandle;
   /**
-   * gdata
-   *
    * @var string
    */
   public $readToken;
   /**
-   * gdata
-   *
    * @var string
    */
   public $uploadMetadataContainer;
 
   /**
-   * gdata
-   *
-   * @param string $blobGeneration
+   * @param string
    */
   public function setBlobGeneration($blobGeneration)
   {
@@ -67,9 +55,7 @@ class GdataBlobstore2Info extends \Google\Model
     return $this->blobGeneration;
   }
   /**
-   * gdata
-   *
-   * @param string $blobId
+   * @param string
    */
   public function setBlobId($blobId)
   {
@@ -83,9 +69,7 @@ class GdataBlobstore2Info extends \Google\Model
     return $this->blobId;
   }
   /**
-   * gdata
-   *
-   * @param string $downloadReadHandle
+   * @param string
    */
   public function setDownloadReadHandle($downloadReadHandle)
   {
@@ -99,9 +83,7 @@ class GdataBlobstore2Info extends \Google\Model
     return $this->downloadReadHandle;
   }
   /**
-   * gdata
-   *
-   * @param string $readToken
+   * @param string
    */
   public function setReadToken($readToken)
   {
@@ -115,9 +97,7 @@ class GdataBlobstore2Info extends \Google\Model
     return $this->readToken;
   }
   /**
-   * gdata
-   *
-   * @param string $uploadMetadataContainer
+   * @param string
    */
   public function setUploadMetadataContainer($uploadMetadataContainer)
   {

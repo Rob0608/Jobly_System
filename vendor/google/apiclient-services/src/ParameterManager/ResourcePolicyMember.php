@@ -20,35 +20,16 @@ namespace Google\Service\ParameterManager;
 class ResourcePolicyMember extends \Google\Model
 {
   /**
-   * Output only. IAM policy binding member referring to a Google Cloud resource
-   * by user-assigned name (https://google.aip.dev/122). If a resource is
-   * deleted and recreated with the same name, the binding will be applicable to
-   * the new resource. Example: `principal://parametermanager.googleapis.com/pro
-   * jects/12345/name/locations/us-central1-a/parameters/my-parameter`
-   *
    * @var string
    */
   public $iamPolicyNamePrincipal;
   /**
-   * Output only. IAM policy binding member referring to a Google Cloud resource
-   * by system-assigned unique identifier (https://google.aip.dev/148#uid). If a
-   * resource is deleted and recreated with the same name, the binding will not
-   * be applicable to the new resource Example: `principal://parametermanager.go
-   * ogleapis.com/projects/12345/uid/locations/us-
-   * central1-a/parameters/a918fed5`
-   *
    * @var string
    */
   public $iamPolicyUidPrincipal;
 
   /**
-   * Output only. IAM policy binding member referring to a Google Cloud resource
-   * by user-assigned name (https://google.aip.dev/122). If a resource is
-   * deleted and recreated with the same name, the binding will be applicable to
-   * the new resource. Example: `principal://parametermanager.googleapis.com/pro
-   * jects/12345/name/locations/us-central1-a/parameters/my-parameter`
-   *
-   * @param string $iamPolicyNamePrincipal
+   * @param string
    */
   public function setIamPolicyNamePrincipal($iamPolicyNamePrincipal)
   {
@@ -62,14 +43,7 @@ class ResourcePolicyMember extends \Google\Model
     return $this->iamPolicyNamePrincipal;
   }
   /**
-   * Output only. IAM policy binding member referring to a Google Cloud resource
-   * by system-assigned unique identifier (https://google.aip.dev/148#uid). If a
-   * resource is deleted and recreated with the same name, the binding will not
-   * be applicable to the new resource Example: `principal://parametermanager.go
-   * ogleapis.com/projects/12345/uid/locations/us-
-   * central1-a/parameters/a918fed5`
-   *
-   * @param string $iamPolicyUidPrincipal
+   * @param string
    */
   public function setIamPolicyUidPrincipal($iamPolicyUidPrincipal)
   {

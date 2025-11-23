@@ -239,45 +239,8 @@ class Database {
         );
 
         try {
-            // Pre-flight TCP check for MySQL host/port to provide a clearer
-            // error message when the DB server is unreachable (connection refused).
-            if ($driver === 'mysql') {
-                $checkHost = $host ?: '127.0.0.1';
-                $checkPort = is_numeric($port) ? (int) $port : 3306;
-                $fp = @fsockopen($checkHost, $checkPort, $errno, $errstr, 3);
-                if ($fp === false) {
-                    // If host is 'localhost', try 127.0.0.1 to rule out socket vs TCP issues
-                    if (trim($checkHost) === 'localhost') {
-                        $fp2 = @fsockopen('127.0.0.1', $checkPort, $e2, $s2, 3);
-                        if ($fp2 !== false) {
-                            fclose($fp2);
-                        } else {
-                            throw new PDOException("Cannot reach MySQL at {$checkHost}:{$checkPort} (connection refused). Check DB host/port, firewall, and that MySQL is running.");
-                        }
-                    } else {
-                        throw new PDOException("Cannot reach MySQL at {$checkHost}:{$checkPort} (connection refused). Check DB host/port, network access, and that MySQL is running.");
-                    }
-                } else {
-                    fclose($fp);
-                }
-            }
-
             $this->db = new PDO($dsn, $username, $password, $options);
-            $this->driver = $this->db->getAttribute(PDO::ATTR_DRIVER_NAME);
-            // Ensure connection uses a consistent charset and collation to avoid
-            // "Illegal mix of collations" errors when the server or tables
-            // use different collations. Prefer a collation provided in the
-            // configuration, otherwise default to utf8mb4_unicode_ci.
-            if ($this->driver === 'mysql') {
-                $collation = isset($database_config['collation']) ? $database_config['collation'] : 'utf8mb4_unicode_ci';
-                try {
-                    $this->db->exec("SET NAMES utf8mb4 COLLATE " . $this->db->quote($collation));
-                    $this->db->exec("SET collation_connection = " . $this->db->quote($collation));
-                } catch (Exception $e) {
-                    // Log but don't break the app at connection time
-                    error_log('Database: failed to set connection collation: ' . $e->getMessage());
-                }
-            }
+             $this->driver = $this->db->getAttribute(PDO::ATTR_DRIVER_NAME);
         } catch (Exception $e) {
             throw new PDOException($e->getMessage());
         }
@@ -286,7 +249,8 @@ class Database {
     /**
      * Get Database Instance
      *
-     * @return instance
+     * @param string|null $dbname The named database configuration to use (or null for default)
+     * @return Database
      */
     public static function instance($dbname)
     {
@@ -1171,7 +1135,7 @@ class Database {
      *
      * @param int $records_per_page
      * @param int $page
-     * @return void
+     * @return $this
      */
     public function pagination($records_per_page, $page)
     {

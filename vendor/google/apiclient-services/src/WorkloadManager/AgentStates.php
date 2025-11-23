@@ -20,23 +20,16 @@ namespace Google\Service\WorkloadManager;
 class AgentStates extends \Google\Model
 {
   /**
-   * Optional. The available version of the agent in artifact registry.
-   *
    * @var string
    */
   public $availableVersion;
   protected $hanaMonitoringType = ServiceStates::class;
   protected $hanaMonitoringDataType = '';
   /**
-   * Optional. The installed version of the agent on the host.
-   *
    * @var string
    */
   public $installedVersion;
   /**
-   * Optional. Whether the agent is fully enabled. If false, the agent is has
-   * some issues.
-   *
    * @var bool
    */
   public $isFullyEnabled;
@@ -46,9 +39,7 @@ class AgentStates extends \Google\Model
   protected $systemDiscoveryDataType = '';
 
   /**
-   * Optional. The available version of the agent in artifact registry.
-   *
-   * @param string $availableVersion
+   * @param string
    */
   public function setAvailableVersion($availableVersion)
   {
@@ -62,9 +53,7 @@ class AgentStates extends \Google\Model
     return $this->availableVersion;
   }
   /**
-   * Optional. HANA monitoring metrics of the agent.
-   *
-   * @param ServiceStates $hanaMonitoring
+   * @param ServiceStates
    */
   public function setHanaMonitoring(ServiceStates $hanaMonitoring)
   {
@@ -78,9 +67,7 @@ class AgentStates extends \Google\Model
     return $this->hanaMonitoring;
   }
   /**
-   * Optional. The installed version of the agent on the host.
-   *
-   * @param string $installedVersion
+   * @param string
    */
   public function setInstalledVersion($installedVersion)
   {
@@ -94,10 +81,7 @@ class AgentStates extends \Google\Model
     return $this->installedVersion;
   }
   /**
-   * Optional. Whether the agent is fully enabled. If false, the agent is has
-   * some issues.
-   *
-   * @param bool $isFullyEnabled
+   * @param bool
    */
   public function setIsFullyEnabled($isFullyEnabled)
   {
@@ -111,9 +95,7 @@ class AgentStates extends \Google\Model
     return $this->isFullyEnabled;
   }
   /**
-   * Optional. The Process metrics of the agent.
-   *
-   * @param ServiceStates $processMetrics
+   * @param ServiceStates
    */
   public function setProcessMetrics(ServiceStates $processMetrics)
   {
@@ -127,9 +109,7 @@ class AgentStates extends \Google\Model
     return $this->processMetrics;
   }
   /**
-   * Optional. The System discovery metrics of the agent.
-   *
-   * @param ServiceStates $systemDiscovery
+   * @param ServiceStates
    */
   public function setSystemDiscovery(ServiceStates $systemDiscovery)
   {

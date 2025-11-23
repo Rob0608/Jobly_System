@@ -19,65 +19,26 @@ namespace Google\Service\VMMigrationService;
 
 class ComputeEngineDisk extends \Google\Collection
 {
-  /**
-   * An unspecified disk type. Will be used as STANDARD.
-   */
-  public const DISK_TYPE_COMPUTE_ENGINE_DISK_TYPE_UNSPECIFIED = 'COMPUTE_ENGINE_DISK_TYPE_UNSPECIFIED';
-  /**
-   * A Standard disk type.
-   */
-  public const DISK_TYPE_COMPUTE_ENGINE_DISK_TYPE_STANDARD = 'COMPUTE_ENGINE_DISK_TYPE_STANDARD';
-  /**
-   * SSD hard disk type.
-   */
-  public const DISK_TYPE_COMPUTE_ENGINE_DISK_TYPE_SSD = 'COMPUTE_ENGINE_DISK_TYPE_SSD';
-  /**
-   * An alternative to SSD persistent disks that balance performance and cost.
-   */
-  public const DISK_TYPE_COMPUTE_ENGINE_DISK_TYPE_BALANCED = 'COMPUTE_ENGINE_DISK_TYPE_BALANCED';
-  /**
-   * Hyperdisk balanced disk type.
-   */
-  public const DISK_TYPE_COMPUTE_ENGINE_DISK_TYPE_HYPERDISK_BALANCED = 'COMPUTE_ENGINE_DISK_TYPE_HYPERDISK_BALANCED';
   protected $collection_key = 'replicaZones';
   /**
-   * Optional. Target Compute Engine Disk ID. This is the resource ID segment of
-   * the Compute Engine Disk to create. In the resource name
-   * compute/v1/projects/{project}/zones/{zone}/disks/disk1 "disk1" is the
-   * resource ID for the disk.
-   *
    * @var string
    */
   public $diskId;
   /**
-   * Required. The disk type to use.
-   *
    * @var string
    */
   public $diskType;
   /**
-   * Optional. Replication zones of the regional disk. Should be of the form:
-   * projects/{target-project}/locations/{replica-zone} Currently only one
-   * replica zone is supported.
-   *
    * @var string[]
    */
   public $replicaZones;
   /**
-   * Required. The Compute Engine zone in which to create the disk. Should be of
-   * the form: projects/{target-project}/locations/{zone}
-   *
    * @var string
    */
   public $zone;
 
   /**
-   * Optional. Target Compute Engine Disk ID. This is the resource ID segment of
-   * the Compute Engine Disk to create. In the resource name
-   * compute/v1/projects/{project}/zones/{zone}/disks/disk1 "disk1" is the
-   * resource ID for the disk.
-   *
-   * @param string $diskId
+   * @param string
    */
   public function setDiskId($diskId)
   {
@@ -91,32 +52,21 @@ class ComputeEngineDisk extends \Google\Collection
     return $this->diskId;
   }
   /**
-   * Required. The disk type to use.
-   *
-   * Accepted values: COMPUTE_ENGINE_DISK_TYPE_UNSPECIFIED,
-   * COMPUTE_ENGINE_DISK_TYPE_STANDARD, COMPUTE_ENGINE_DISK_TYPE_SSD,
-   * COMPUTE_ENGINE_DISK_TYPE_BALANCED,
-   * COMPUTE_ENGINE_DISK_TYPE_HYPERDISK_BALANCED
-   *
-   * @param self::DISK_TYPE_* $diskType
+   * @param string
    */
   public function setDiskType($diskType)
   {
     $this->diskType = $diskType;
   }
   /**
-   * @return self::DISK_TYPE_*
+   * @return string
    */
   public function getDiskType()
   {
     return $this->diskType;
   }
   /**
-   * Optional. Replication zones of the regional disk. Should be of the form:
-   * projects/{target-project}/locations/{replica-zone} Currently only one
-   * replica zone is supported.
-   *
-   * @param string[] $replicaZones
+   * @param string[]
    */
   public function setReplicaZones($replicaZones)
   {
@@ -130,10 +80,7 @@ class ComputeEngineDisk extends \Google\Collection
     return $this->replicaZones;
   }
   /**
-   * Required. The Compute Engine zone in which to create the disk. Should be of
-   * the form: projects/{target-project}/locations/{zone}
-   *
-   * @param string $zone
+   * @param string
    */
   public function setZone($zone)
   {

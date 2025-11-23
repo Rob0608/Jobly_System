@@ -20,18 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class SchemaBundle extends \Google\Model
 {
   /**
-   * Optional. The etag for this schema bundle. This may be sent on update and
-   * delete requests to ensure the client has an up-to-date value before
-   * proceeding. The server returns an ABORTED error on a mismatched etag.
-   *
    * @var string
    */
   public $etag;
   /**
-   * Identifier. The unique name identifying this schema bundle. Values are of
-   * the form `projects/{project}/instances/{instance}/tables/{table}/schemaBund
-   * les/{schema_bundle}`
-   *
    * @var string
    */
   public $name;
@@ -39,11 +31,7 @@ class SchemaBundle extends \Google\Model
   protected $protoSchemaDataType = '';
 
   /**
-   * Optional. The etag for this schema bundle. This may be sent on update and
-   * delete requests to ensure the client has an up-to-date value before
-   * proceeding. The server returns an ABORTED error on a mismatched etag.
-   *
-   * @param string $etag
+   * @param string
    */
   public function setEtag($etag)
   {
@@ -57,11 +45,7 @@ class SchemaBundle extends \Google\Model
     return $this->etag;
   }
   /**
-   * Identifier. The unique name identifying this schema bundle. Values are of
-   * the form `projects/{project}/instances/{instance}/tables/{table}/schemaBund
-   * les/{schema_bundle}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -75,9 +59,7 @@ class SchemaBundle extends \Google\Model
     return $this->name;
   }
   /**
-   * Schema for Protobufs.
-   *
-   * @param ProtoSchema $protoSchema
+   * @param ProtoSchema
    */
   public function setProtoSchema(ProtoSchema $protoSchema)
   {

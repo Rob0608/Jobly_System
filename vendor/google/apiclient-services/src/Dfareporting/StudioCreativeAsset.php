@@ -19,75 +19,35 @@ namespace Google\Service\Dfareporting;
 
 class StudioCreativeAsset extends \Google\Model
 {
-  /**
-   * Unknown type of asset.
-   */
-  public const TYPE_UNKNOWN_TYPE = 'UNKNOWN_TYPE';
-  /**
-   * The asset is an HTML file.
-   */
-  public const TYPE_HTML = 'HTML';
-  /**
-   * The asset is a video file.
-   */
-  public const TYPE_VIDEO = 'VIDEO';
-  /**
-   * The asset is an image file.
-   */
-  public const TYPE_IMAGE = 'IMAGE';
-  /**
-   * The asset is a font file.
-   */
-  public const TYPE_FONT = 'FONT';
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   /**
-   * The filename of the studio creative asset. It is default to the original
-   * filename of the asset.
-   *
    * @var string
    */
   public $filename;
   /**
-   * The filesize of the studio creative asset. This is a read-only field.
-   *
    * @var string
    */
   public $filesize;
   /**
-   * Output only. Unique ID of this studio creative asset. This is a read-only,
-   * auto-generated field.
-   *
    * @var string
    */
   public $id;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
-   * Studio account ID of this studio creative asset. This field, if left unset,
-   * will be auto-populated..
-   *
    * @var string
    */
   public $studioAccountId;
   /**
-   * Studio advertiser ID of this studio creative asset. This is a required
-   * field on insertion.
-   *
    * @var string
    */
   public $studioAdvertiserId;
   /**
-   * Studio creative ID of this studio creative asset. The asset will be
-   * associated to the creative if creative id is set.
-   *
    * @var string
    */
   public $studioCreativeId;
   /**
-   * The type of the studio creative asset. It is a auto-generated, read-only
-   * field.
-   *
    * @var string
    */
   public $type;
@@ -95,10 +55,7 @@ class StudioCreativeAsset extends \Google\Model
   protected $videoProcessingDataDataType = '';
 
   /**
-   * Output only. The creation timestamp of the studio creative asset. This is a
-   * read-only field.
-   *
-   * @param LastModifiedInfo $createInfo
+   * @param LastModifiedInfo
    */
   public function setCreateInfo(LastModifiedInfo $createInfo)
   {
@@ -112,10 +69,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->createInfo;
   }
   /**
-   * The filename of the studio creative asset. It is default to the original
-   * filename of the asset.
-   *
-   * @param string $filename
+   * @param string
    */
   public function setFilename($filename)
   {
@@ -129,9 +83,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->filename;
   }
   /**
-   * The filesize of the studio creative asset. This is a read-only field.
-   *
-   * @param string $filesize
+   * @param string
    */
   public function setFilesize($filesize)
   {
@@ -145,10 +97,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->filesize;
   }
   /**
-   * Output only. Unique ID of this studio creative asset. This is a read-only,
-   * auto-generated field.
-   *
-   * @param string $id
+   * @param string
    */
   public function setId($id)
   {
@@ -162,10 +111,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->id;
   }
   /**
-   * Output only. The last modified timestamp of the studio creative asset. This
-   * is a read-only field.
-   *
-   * @param LastModifiedInfo $lastModifiedInfo
+   * @param LastModifiedInfo
    */
   public function setLastModifiedInfo(LastModifiedInfo $lastModifiedInfo)
   {
@@ -179,10 +125,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->lastModifiedInfo;
   }
   /**
-   * Studio account ID of this studio creative asset. This field, if left unset,
-   * will be auto-populated..
-   *
-   * @param string $studioAccountId
+   * @param string
    */
   public function setStudioAccountId($studioAccountId)
   {
@@ -196,10 +139,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->studioAccountId;
   }
   /**
-   * Studio advertiser ID of this studio creative asset. This is a required
-   * field on insertion.
-   *
-   * @param string $studioAdvertiserId
+   * @param string
    */
   public function setStudioAdvertiserId($studioAdvertiserId)
   {
@@ -213,10 +153,7 @@ class StudioCreativeAsset extends \Google\Model
     return $this->studioAdvertiserId;
   }
   /**
-   * Studio creative ID of this studio creative asset. The asset will be
-   * associated to the creative if creative id is set.
-   *
-   * @param string $studioCreativeId
+   * @param string
    */
   public function setStudioCreativeId($studioCreativeId)
   {
@@ -230,29 +167,21 @@ class StudioCreativeAsset extends \Google\Model
     return $this->studioCreativeId;
   }
   /**
-   * The type of the studio creative asset. It is a auto-generated, read-only
-   * field.
-   *
-   * Accepted values: UNKNOWN_TYPE, HTML, VIDEO, IMAGE, FONT
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * The processing data of the studio creative asset. This is a read-only
-   * field.
-   *
-   * @param VideoProcessingData $videoProcessingData
+   * @param VideoProcessingData
    */
   public function setVideoProcessingData(VideoProcessingData $videoProcessingData)
   {

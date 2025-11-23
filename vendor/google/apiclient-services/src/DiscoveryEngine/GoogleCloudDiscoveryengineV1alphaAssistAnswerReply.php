@@ -22,21 +22,12 @@ class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends \Google\Model
   protected $groundedContentType = GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent::class;
   protected $groundedContentDataType = '';
   /**
-   * Output only. When set, uniquely identifies a reply within the
-   * `AssistAnswer` resource. During an AssistantService.StreamAssist call,
-   * multiple `Reply` messages with the same ID can occur within the response
-   * stream (across multiple AssistantService.StreamAssistResponse messages).
-   * These represent parts of a single `Reply` message in the final
-   * `AssistAnswer` resource.
-   *
    * @var string
    */
   public $replyId;
 
   /**
-   * Possibly grounded response text or media from the assistant.
-   *
-   * @param GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent $groundedContent
+   * @param GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent
    */
   public function setGroundedContent(GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent $groundedContent)
   {
@@ -50,14 +41,7 @@ class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends \Google\Model
     return $this->groundedContent;
   }
   /**
-   * Output only. When set, uniquely identifies a reply within the
-   * `AssistAnswer` resource. During an AssistantService.StreamAssist call,
-   * multiple `Reply` messages with the same ID can occur within the response
-   * stream (across multiple AssistantService.StreamAssistResponse messages).
-   * These represent parts of a single `Reply` message in the final
-   * `AssistAnswer` resource.
-   *
-   * @param string $replyId
+   * @param string
    */
   public function setReplyId($replyId)
   {

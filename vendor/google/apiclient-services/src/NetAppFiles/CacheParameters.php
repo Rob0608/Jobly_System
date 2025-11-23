@@ -19,100 +19,52 @@ namespace Google\Service\NetAppFiles;
 
 class CacheParameters extends \Google\Collection
 {
-  /**
-   * Default unspecified state.
-   */
-  public const CACHE_STATE_CACHE_STATE_UNSPECIFIED = 'CACHE_STATE_UNSPECIFIED';
-  /**
-   * State indicating waiting for cluster peering to be established.
-   */
-  public const CACHE_STATE_PENDING_CLUSTER_PEERING = 'PENDING_CLUSTER_PEERING';
-  /**
-   * State indicating waiting for SVM peering to be established.
-   */
-  public const CACHE_STATE_PENDING_SVM_PEERING = 'PENDING_SVM_PEERING';
-  /**
-   * State indicating successful establishment of peering with origin volumes's
-   * ONTAP cluster.
-   */
-  public const CACHE_STATE_PEERED = 'PEERED';
-  /**
-   * Terminal state wherein peering with origin volume's ONTAP cluster has
-   * failed.
-   */
-  public const CACHE_STATE_ERROR = 'ERROR';
   protected $collection_key = 'peerIpAddresses';
   protected $cacheConfigType = CacheConfig::class;
   protected $cacheConfigDataType = '';
   /**
-   * Output only. State of the cache volume indicating the peering status.
-   *
    * @var string
    */
   public $cacheState;
   /**
-   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept
-   * peering requests.
-   *
    * @var string
    */
   public $command;
   /**
-   * Optional. Field indicating whether cache volume as global file lock
-   * enabled.
-   *
    * @var bool
    */
   public $enableGlobalFileLock;
   /**
-   * Output only. Temporary passphrase generated to accept cluster peering
-   * command.
-   *
    * @var string
    */
   public $passphrase;
   /**
-   * Required. Name of the origin volume's ONTAP cluster.
-   *
    * @var string
    */
   public $peerClusterName;
   /**
-   * Required. List of IC LIF addresses of the origin volume's ONTAP cluster.
-   *
    * @var string[]
    */
   public $peerIpAddresses;
   /**
-   * Required. Name of the origin volume's SVM.
-   *
    * @var string
    */
   public $peerSvmName;
   /**
-   * Required. Name of the origin volume for the cache volume.
-   *
    * @var string
    */
   public $peerVolumeName;
   /**
-   * Optional. Expiration time for the peering command to be executed on user's
-   * ONTAP.
-   *
    * @var string
    */
   public $peeringCommandExpiryTime;
   /**
-   * Output only. Detailed description of the current cache state.
-   *
    * @var string
    */
   public $stateDetails;
 
   /**
-   * Optional. Configuration of the cache volume.
-   *
-   * @param CacheConfig $cacheConfig
+   * @param CacheConfig
    */
   public function setCacheConfig(CacheConfig $cacheConfig)
   {
@@ -126,29 +78,21 @@ class CacheParameters extends \Google\Collection
     return $this->cacheConfig;
   }
   /**
-   * Output only. State of the cache volume indicating the peering status.
-   *
-   * Accepted values: CACHE_STATE_UNSPECIFIED, PENDING_CLUSTER_PEERING,
-   * PENDING_SVM_PEERING, PEERED, ERROR
-   *
-   * @param self::CACHE_STATE_* $cacheState
+   * @param string
    */
   public function setCacheState($cacheState)
   {
     $this->cacheState = $cacheState;
   }
   /**
-   * @return self::CACHE_STATE_*
+   * @return string
    */
   public function getCacheState()
   {
     return $this->cacheState;
   }
   /**
-   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept
-   * peering requests.
-   *
-   * @param string $command
+   * @param string
    */
   public function setCommand($command)
   {
@@ -162,10 +106,7 @@ class CacheParameters extends \Google\Collection
     return $this->command;
   }
   /**
-   * Optional. Field indicating whether cache volume as global file lock
-   * enabled.
-   *
-   * @param bool $enableGlobalFileLock
+   * @param bool
    */
   public function setEnableGlobalFileLock($enableGlobalFileLock)
   {
@@ -179,10 +120,7 @@ class CacheParameters extends \Google\Collection
     return $this->enableGlobalFileLock;
   }
   /**
-   * Output only. Temporary passphrase generated to accept cluster peering
-   * command.
-   *
-   * @param string $passphrase
+   * @param string
    */
   public function setPassphrase($passphrase)
   {
@@ -196,9 +134,7 @@ class CacheParameters extends \Google\Collection
     return $this->passphrase;
   }
   /**
-   * Required. Name of the origin volume's ONTAP cluster.
-   *
-   * @param string $peerClusterName
+   * @param string
    */
   public function setPeerClusterName($peerClusterName)
   {
@@ -212,9 +148,7 @@ class CacheParameters extends \Google\Collection
     return $this->peerClusterName;
   }
   /**
-   * Required. List of IC LIF addresses of the origin volume's ONTAP cluster.
-   *
-   * @param string[] $peerIpAddresses
+   * @param string[]
    */
   public function setPeerIpAddresses($peerIpAddresses)
   {
@@ -228,9 +162,7 @@ class CacheParameters extends \Google\Collection
     return $this->peerIpAddresses;
   }
   /**
-   * Required. Name of the origin volume's SVM.
-   *
-   * @param string $peerSvmName
+   * @param string
    */
   public function setPeerSvmName($peerSvmName)
   {
@@ -244,9 +176,7 @@ class CacheParameters extends \Google\Collection
     return $this->peerSvmName;
   }
   /**
-   * Required. Name of the origin volume for the cache volume.
-   *
-   * @param string $peerVolumeName
+   * @param string
    */
   public function setPeerVolumeName($peerVolumeName)
   {
@@ -260,10 +190,7 @@ class CacheParameters extends \Google\Collection
     return $this->peerVolumeName;
   }
   /**
-   * Optional. Expiration time for the peering command to be executed on user's
-   * ONTAP.
-   *
-   * @param string $peeringCommandExpiryTime
+   * @param string
    */
   public function setPeeringCommandExpiryTime($peeringCommandExpiryTime)
   {
@@ -277,9 +204,7 @@ class CacheParameters extends \Google\Collection
     return $this->peeringCommandExpiryTime;
   }
   /**
-   * Output only. Detailed description of the current cache state.
-   *
-   * @param string $stateDetails
+   * @param string
    */
   public function setStateDetails($stateDetails)
   {

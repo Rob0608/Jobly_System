@@ -24,10 +24,7 @@ class GooglePrivacyDlpV2TagFilters extends \Google\Collection
   protected $tagFiltersDataType = 'array';
 
   /**
-   * Required. A resource must match ALL of the specified tag filters to be
-   * included in the collection.
-   *
-   * @param GooglePrivacyDlpV2TagFilter[] $tagFilters
+   * @param GooglePrivacyDlpV2TagFilter[]
    */
   public function setTagFilters($tagFilters)
   {

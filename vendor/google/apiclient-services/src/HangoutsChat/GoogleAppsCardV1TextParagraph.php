@@ -20,51 +20,20 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1TextParagraph extends \Google\Model
 {
   /**
-   * The text is rendered as HTML if unspecified.
-   */
-  public const TEXT_SYNTAX_TEXT_SYNTAX_UNSPECIFIED = 'TEXT_SYNTAX_UNSPECIFIED';
-  /**
-   * The text is rendered as HTML. This is the default value.
-   */
-  public const TEXT_SYNTAX_HTML = 'HTML';
-  /**
-   * The text is rendered as Markdown.
-   */
-  public const TEXT_SYNTAX_MARKDOWN = 'MARKDOWN';
-  /**
-   * The maximum number of lines of text that are displayed in the widget. If
-   * the text exceeds the specified maximum number of lines, the excess content
-   * is concealed behind a **show more** button. If the text is equal or shorter
-   * than the specified maximum number of lines, a **show more** button isn't
-   * displayed. The default value is 0, in which case all context is displayed.
-   * Negative values are ignored.
-   *
    * @var int
    */
   public $maxLines;
   /**
-   * The text that's shown in the widget.
-   *
    * @var string
    */
   public $text;
   /**
-   * The syntax of the text. If not set, the text is rendered as HTML. [Google
-   * Chat apps](https://developers.google.com/workspace/chat):
-   *
    * @var string
    */
   public $textSyntax;
 
   /**
-   * The maximum number of lines of text that are displayed in the widget. If
-   * the text exceeds the specified maximum number of lines, the excess content
-   * is concealed behind a **show more** button. If the text is equal or shorter
-   * than the specified maximum number of lines, a **show more** button isn't
-   * displayed. The default value is 0, in which case all context is displayed.
-   * Negative values are ignored.
-   *
-   * @param int $maxLines
+   * @param int
    */
   public function setMaxLines($maxLines)
   {
@@ -78,9 +47,7 @@ class GoogleAppsCardV1TextParagraph extends \Google\Model
     return $this->maxLines;
   }
   /**
-   * The text that's shown in the widget.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -94,19 +61,14 @@ class GoogleAppsCardV1TextParagraph extends \Google\Model
     return $this->text;
   }
   /**
-   * The syntax of the text. If not set, the text is rendered as HTML. [Google
-   * Chat apps](https://developers.google.com/workspace/chat):
-   *
-   * Accepted values: TEXT_SYNTAX_UNSPECIFIED, HTML, MARKDOWN
-   *
-   * @param self::TEXT_SYNTAX_* $textSyntax
+   * @param string
    */
   public function setTextSyntax($textSyntax)
   {
     $this->textSyntax = $textSyntax;
   }
   /**
-   * @return self::TEXT_SYNTAX_*
+   * @return string
    */
   public function getTextSyntax()
   {

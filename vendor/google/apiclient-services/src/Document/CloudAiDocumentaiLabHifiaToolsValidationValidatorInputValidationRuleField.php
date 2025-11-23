@@ -22,20 +22,12 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField 
   protected $defaultValueType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleConstant::class;
   protected $defaultValueDataType = '';
   /**
-   * The field name to validate. This can be a simple field name or a nested
-   * field one using the ':' (meant as an aggregator) or '*' (meant as foreach)
-   * operators.
-   *
    * @var string
    */
   public $fieldName;
 
   /**
-   * Default value to use if the field is not present. If the field is missing
-   * and the default value is not set, the validation run as if the field is not
-   * present in the validation logic.
-   *
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleConstant $defaultValue
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleConstant
    */
   public function setDefaultValue(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleConstant $defaultValue)
   {
@@ -49,11 +41,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField 
     return $this->defaultValue;
   }
   /**
-   * The field name to validate. This can be a simple field name or a nested
-   * field one using the ':' (meant as an aggregator) or '*' (meant as foreach)
-   * operators.
-   *
-   * @param string $fieldName
+   * @param string
    */
   public function setFieldName($fieldName)
   {

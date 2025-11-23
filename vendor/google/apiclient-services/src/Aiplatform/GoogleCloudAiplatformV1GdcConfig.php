@@ -20,18 +20,12 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GdcConfig extends \Google\Model
 {
   /**
-   * GDC zone. A cluster will be designated for the Vertex AI workload in this
-   * zone.
-   *
    * @var string
    */
   public $zone;
 
   /**
-   * GDC zone. A cluster will be designated for the Vertex AI workload in this
-   * zone.
-   *
-   * @param string $zone
+   * @param string
    */
   public function setZone($zone)
   {

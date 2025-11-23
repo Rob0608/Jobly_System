@@ -21,8 +21,6 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfo extends \Google\Collectio
 {
   protected $collection_key = 'infoPerTopologyStates';
   /**
-   * The accelerator topology.
-   *
    * @var string
    */
   public $acceleratorTopology;
@@ -30,9 +28,7 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfo extends \Google\Collectio
   protected $infoPerTopologyStatesDataType = 'array';
 
   /**
-   * The accelerator topology.
-   *
-   * @param string $acceleratorTopology
+   * @param string
    */
   public function setAcceleratorTopology($acceleratorTopology)
   {
@@ -46,9 +42,7 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfo extends \Google\Collectio
     return $this->acceleratorTopology;
   }
   /**
-   * Info for each topology state.
-   *
-   * @param AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState[] $infoPerTopologyStates
+   * @param AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState[]
    */
   public function setInfoPerTopologyStates($infoPerTopologyStates)
   {

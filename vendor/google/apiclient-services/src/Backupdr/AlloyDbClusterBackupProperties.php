@@ -20,39 +20,24 @@ namespace Google\Service\Backupdr;
 class AlloyDbClusterBackupProperties extends \Google\Model
 {
   /**
-   * Output only. The chain id of this backup. Backups belonging to the same
-   * chain are sharing the same chain id. This property is calculated and
-   * maintained by BackupDR.
-   *
    * @var string
    */
   public $chainId;
   /**
-   * Output only. The PostgreSQL major version of the AlloyDB cluster when the
-   * backup was taken.
-   *
    * @var string
    */
   public $databaseVersion;
   /**
-   * An optional text description for the backup.
-   *
    * @var string
    */
   public $description;
   /**
-   * Output only. Storage usage of this particular backup
-   *
    * @var string
    */
   public $storedBytes;
 
   /**
-   * Output only. The chain id of this backup. Backups belonging to the same
-   * chain are sharing the same chain id. This property is calculated and
-   * maintained by BackupDR.
-   *
-   * @param string $chainId
+   * @param string
    */
   public function setChainId($chainId)
   {
@@ -66,10 +51,7 @@ class AlloyDbClusterBackupProperties extends \Google\Model
     return $this->chainId;
   }
   /**
-   * Output only. The PostgreSQL major version of the AlloyDB cluster when the
-   * backup was taken.
-   *
-   * @param string $databaseVersion
+   * @param string
    */
   public function setDatabaseVersion($databaseVersion)
   {
@@ -83,9 +65,7 @@ class AlloyDbClusterBackupProperties extends \Google\Model
     return $this->databaseVersion;
   }
   /**
-   * An optional text description for the backup.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -99,9 +79,7 @@ class AlloyDbClusterBackupProperties extends \Google\Model
     return $this->description;
   }
   /**
-   * Output only. Storage usage of this particular backup
-   *
-   * @param string $storedBytes
+   * @param string
    */
   public function setStoredBytes($storedBytes)
   {

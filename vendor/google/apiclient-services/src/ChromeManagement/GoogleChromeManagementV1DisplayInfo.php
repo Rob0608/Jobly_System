@@ -20,58 +20,40 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1DisplayInfo extends \Google\Model
 {
   /**
-   * Output only. Represents the graphics card device id.
-   *
    * @var string
    */
   public $deviceId;
   /**
-   * Output only. Display device name.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Output only. EDID version.
-   *
    * @var string
    */
   public $edidVersion;
   /**
-   * Output only. Indicates if display is internal or not.
-   *
    * @var bool
    */
   public $isInternal;
   /**
-   * Output only. Refresh rate in Hz.
-   *
    * @var int
    */
   public $refreshRate;
   /**
-   * Output only. Resolution height in pixels.
-   *
    * @var int
    */
   public $resolutionHeight;
   /**
-   * Output only. Resolution width in pixels.
-   *
    * @var int
    */
   public $resolutionWidth;
   /**
-   * Output only. Serial number.
-   *
    * @var int
    */
   public $serialNumber;
 
   /**
-   * Output only. Represents the graphics card device id.
-   *
-   * @param string $deviceId
+   * @param string
    */
   public function setDeviceId($deviceId)
   {
@@ -85,9 +67,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * Output only. Display device name.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -101,9 +81,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Output only. EDID version.
-   *
-   * @param string $edidVersion
+   * @param string
    */
   public function setEdidVersion($edidVersion)
   {
@@ -117,9 +95,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->edidVersion;
   }
   /**
-   * Output only. Indicates if display is internal or not.
-   *
-   * @param bool $isInternal
+   * @param bool
    */
   public function setIsInternal($isInternal)
   {
@@ -133,9 +109,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->isInternal;
   }
   /**
-   * Output only. Refresh rate in Hz.
-   *
-   * @param int $refreshRate
+   * @param int
    */
   public function setRefreshRate($refreshRate)
   {
@@ -149,9 +123,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->refreshRate;
   }
   /**
-   * Output only. Resolution height in pixels.
-   *
-   * @param int $resolutionHeight
+   * @param int
    */
   public function setResolutionHeight($resolutionHeight)
   {
@@ -165,9 +137,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->resolutionHeight;
   }
   /**
-   * Output only. Resolution width in pixels.
-   *
-   * @param int $resolutionWidth
+   * @param int
    */
   public function setResolutionWidth($resolutionWidth)
   {
@@ -181,9 +151,7 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
     return $this->resolutionWidth;
   }
   /**
-   * Output only. Serial number.
-   *
-   * @param int $serialNumber
+   * @param int
    */
   public function setSerialNumber($serialNumber)
   {

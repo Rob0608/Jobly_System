@@ -20,31 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig extends \Google\Model
 {
   /**
-   * Optional. The resource name of the Model Armor Template for sanitizing LLM
-   * responses. Format:
-   * projects/{project}/locations/{location}/templates/{template_id} If not
-   * specified, no sanitization will be applied to the LLM response.
-   *
    * @var string
    */
   public $responseTemplate;
   /**
-   * Optional. The resource name of the Model Armor Template for sanitizing user
-   * prompts. Format:
-   * projects/{project}/locations/{location}/templates/{template_id} If not
-   * specified, no sanitization will be applied to the user prompt.
-   *
    * @var string
    */
   public $userPromptTemplate;
 
   /**
-   * Optional. The resource name of the Model Armor Template for sanitizing LLM
-   * responses. Format:
-   * projects/{project}/locations/{location}/templates/{template_id} If not
-   * specified, no sanitization will be applied to the LLM response.
-   *
-   * @param string $responseTemplate
+   * @param string
    */
   public function setResponseTemplate($responseTemplate)
   {
@@ -58,12 +43,7 @@ class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigM
     return $this->responseTemplate;
   }
   /**
-   * Optional. The resource name of the Model Armor Template for sanitizing user
-   * prompts. Format:
-   * projects/{project}/locations/{location}/templates/{template_id} If not
-   * specified, no sanitization will be applied to the user prompt.
-   *
-   * @param string $userPromptTemplate
+   * @param string
    */
   public function setUserPromptTemplate($userPromptTemplate)
   {

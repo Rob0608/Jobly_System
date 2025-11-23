@@ -24,17 +24,12 @@ class SapDiscoveryResourceInstancePropertiesKernelVersion extends \Google\Model
   protected $osKernelType = SapDiscoveryResourceInstancePropertiesKernelVersionVersion::class;
   protected $osKernelDataType = '';
   /**
-   * Optional. Raw string of the kernel version.
-   *
    * @var string
    */
   public $rawString;
 
   /**
-   * Optional. Captures the distro-specific kernel version, the portion of the
-   * string following the first dash.
-   *
-   * @param SapDiscoveryResourceInstancePropertiesKernelVersionVersion $distroKernel
+   * @param SapDiscoveryResourceInstancePropertiesKernelVersionVersion
    */
   public function setDistroKernel(SapDiscoveryResourceInstancePropertiesKernelVersionVersion $distroKernel)
   {
@@ -48,10 +43,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersion extends \Google\Model
     return $this->distroKernel;
   }
   /**
-   * Optional. Captures the OS-specific kernel version, the portion of the
-   * string up to the first dash.
-   *
-   * @param SapDiscoveryResourceInstancePropertiesKernelVersionVersion $osKernel
+   * @param SapDiscoveryResourceInstancePropertiesKernelVersionVersion
    */
   public function setOsKernel(SapDiscoveryResourceInstancePropertiesKernelVersionVersion $osKernel)
   {
@@ -65,9 +57,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersion extends \Google\Model
     return $this->osKernel;
   }
   /**
-   * Optional. Raw string of the kernel version.
-   *
-   * @param string $rawString
+   * @param string
    */
   public function setRawString($rawString)
   {

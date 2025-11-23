@@ -22,22 +22,16 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
   protected $llmBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec::class;
   protected $llmBasedMetricSpecDataType = '';
   /**
-   * Required. The name of the metric.
-   *
    * @var string
    */
   public $metric;
-  protected $metricConfigType = GoogleCloudAiplatformV1Metric::class;
-  protected $metricConfigDataType = '';
   protected $predefinedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec::class;
   protected $predefinedMetricSpecDataType = '';
   protected $rubricBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec::class;
   protected $rubricBasedMetricSpecDataType = '';
 
   /**
-   * Spec for an LLM based metric.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec $llmBasedMetricSpec
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec
    */
   public function setLlmBasedMetricSpec(GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec $llmBasedMetricSpec)
   {
@@ -51,9 +45,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
     return $this->llmBasedMetricSpec;
   }
   /**
-   * Required. The name of the metric.
-   *
-   * @param string $metric
+   * @param string
    */
   public function setMetric($metric)
   {
@@ -67,25 +59,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
     return $this->metric;
   }
   /**
-   * The metric config.
-   *
-   * @param GoogleCloudAiplatformV1Metric $metricConfig
-   */
-  public function setMetricConfig(GoogleCloudAiplatformV1Metric $metricConfig)
-  {
-    $this->metricConfig = $metricConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1Metric
-   */
-  public function getMetricConfig()
-  {
-    return $this->metricConfig;
-  }
-  /**
-   * Spec for a pre-defined metric.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec $predefinedMetricSpec
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec
    */
   public function setPredefinedMetricSpec(GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec $predefinedMetricSpec)
   {
@@ -99,9 +73,7 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
     return $this->predefinedMetricSpec;
   }
   /**
-   * Spec for rubric based metric.
-   *
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec $rubricBasedMetricSpec
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec
    */
   public function setRubricBasedMetricSpec(GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec $rubricBasedMetricSpec)
   {

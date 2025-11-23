@@ -21,14 +21,10 @@ class ReservationBlockPhysicalTopology extends \Google\Collection
 {
   protected $collection_key = 'instances';
   /**
-   * The hash of the capacity block within the cluster.
-   *
    * @var string
    */
   public $block;
   /**
-   * The cluster name of the reservation block.
-   *
    * @var string
    */
   public $cluster;
@@ -36,9 +32,7 @@ class ReservationBlockPhysicalTopology extends \Google\Collection
   protected $instancesDataType = 'array';
 
   /**
-   * The hash of the capacity block within the cluster.
-   *
-   * @param string $block
+   * @param string
    */
   public function setBlock($block)
   {
@@ -52,9 +46,7 @@ class ReservationBlockPhysicalTopology extends \Google\Collection
     return $this->block;
   }
   /**
-   * The cluster name of the reservation block.
-   *
-   * @param string $cluster
+   * @param string
    */
   public function setCluster($cluster)
   {
@@ -68,9 +60,7 @@ class ReservationBlockPhysicalTopology extends \Google\Collection
     return $this->cluster;
   }
   /**
-   * The detailed instances information for a given Block
-   *
-   * @param ReservationBlockPhysicalTopologyInstance[] $instances
+   * @param ReservationBlockPhysicalTopologyInstance[]
    */
   public function setInstances($instances)
   {

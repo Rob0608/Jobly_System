@@ -20,58 +20,36 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData extends \Google\Model
 {
   /**
-   * The name of the answer record. Format:
-   * projects/{project}/locations/{location}/answerRecords/{answer_record}
-   *
    * @var string
    */
   public $answerRecord;
   /**
-   * The confidence score of the summarization.
-   *
    * @var float
    */
   public $confidence;
   /**
-   * The name of the model that generates this summary. Format: projects/{projec
-   * t}/locations/{location}/conversationModels/{conversation_model}
-   *
    * @var string
    */
   public $conversationModel;
   /**
-   * Agent Assist generator ID.
-   *
    * @var string
    */
   public $generatorId;
   /**
-   * A map that contains metadata about the summarization and the document from
-   * which it originates.
-   *
    * @var string[]
    */
   public $metadata;
   /**
-   * The summarization content that is concatenated into one string.
-   *
    * @var string
    */
   public $text;
   /**
-   * The summarization content that is divided into sections. The key is the
-   * section's name and the value is the section's content. There is no specific
-   * format for the key or value.
-   *
    * @var string[]
    */
   public $textSections;
 
   /**
-   * The name of the answer record. Format:
-   * projects/{project}/locations/{location}/answerRecords/{answer_record}
-   *
-   * @param string $answerRecord
+   * @param string
    */
   public function setAnswerRecord($answerRecord)
   {
@@ -85,9 +63,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->answerRecord;
   }
   /**
-   * The confidence score of the summarization.
-   *
-   * @param float $confidence
+   * @param float
    */
   public function setConfidence($confidence)
   {
@@ -101,10 +77,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->confidence;
   }
   /**
-   * The name of the model that generates this summary. Format: projects/{projec
-   * t}/locations/{location}/conversationModels/{conversation_model}
-   *
-   * @param string $conversationModel
+   * @param string
    */
   public function setConversationModel($conversationModel)
   {
@@ -118,9 +91,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->conversationModel;
   }
   /**
-   * Agent Assist generator ID.
-   *
-   * @param string $generatorId
+   * @param string
    */
   public function setGeneratorId($generatorId)
   {
@@ -134,10 +105,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->generatorId;
   }
   /**
-   * A map that contains metadata about the summarization and the document from
-   * which it originates.
-   *
-   * @param string[] $metadata
+   * @param string[]
    */
   public function setMetadata($metadata)
   {
@@ -151,9 +119,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->metadata;
   }
   /**
-   * The summarization content that is concatenated into one string.
-   *
-   * @param string $text
+   * @param string
    */
   public function setText($text)
   {
@@ -167,11 +133,7 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
     return $this->text;
   }
   /**
-   * The summarization content that is divided into sections. The key is the
-   * section's name and the value is the section's content. There is no specific
-   * format for the key or value.
-   *
-   * @param string[] $textSections
+   * @param string[]
    */
   public function setTextSections($textSections)
   {

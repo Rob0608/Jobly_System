@@ -20,71 +20,38 @@ namespace Google\Service\OracleDatabase;
 class ExadbVmCluster extends \Google\Model
 {
   /**
-   * Required. Immutable. The name of the backup OdbSubnet associated with the
-   * ExadbVmCluster. Format: projects/{project}/locations/{location}/odbNetworks
-   * /{odb_network}/odbSubnets/{odb_subnet}
-   *
    * @var string
    */
   public $backupOdbSubnet;
   /**
-   * Output only. The date and time that the ExadbVmCluster was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Required. Immutable. The display name for the ExadbVmCluster. The name does
-   * not have to be unique within your project. The name must be 1-255
-   * characters long and can only contain alphanumeric characters.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * ExadbVmCluster.
-   *
    * @var string
    */
   public $entitlementId;
   /**
-   * Output only. Immutable. The GCP Oracle zone where Oracle ExadbVmCluster is
-   * hosted. Example: us-east4-b-r2. During creation, the system will pick the
-   * zone assigned to the ExascaleDbStorageVault.
-   *
    * @var string
    */
   public $gcpOracleZone;
   /**
-   * Optional. The labels or tags associated with the ExadbVmCluster.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The name of the ExadbVmCluster resource in the following
-   * format:
-   * projects/{project}/locations/{region}/exadbVmClusters/{exadb_vm_cluster}
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. Immutable. The name of the OdbNetwork associated with the
-   * ExadbVmCluster. Format:
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
-   * optional but if specified, this should match the parent ODBNetwork of the
-   * OdbSubnet.
-   *
    * @var string
    */
   public $odbNetwork;
   /**
-   * Required. Immutable. The name of the OdbSubnet associated with the
-   * ExadbVmCluster for IP allocation. Format: projects/{project}/locations/{loc
-   * ation}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
-   *
    * @var string
    */
   public $odbSubnet;
@@ -92,11 +59,7 @@ class ExadbVmCluster extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * Required. Immutable. The name of the backup OdbSubnet associated with the
-   * ExadbVmCluster. Format: projects/{project}/locations/{location}/odbNetworks
-   * /{odb_network}/odbSubnets/{odb_subnet}
-   *
-   * @param string $backupOdbSubnet
+   * @param string
    */
   public function setBackupOdbSubnet($backupOdbSubnet)
   {
@@ -110,9 +73,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->backupOdbSubnet;
   }
   /**
-   * Output only. The date and time that the ExadbVmCluster was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -126,11 +87,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. Immutable. The display name for the ExadbVmCluster. The name does
-   * not have to be unique within your project. The name must be 1-255
-   * characters long and can only contain alphanumeric characters.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -144,10 +101,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * ExadbVmCluster.
-   *
-   * @param string $entitlementId
+   * @param string
    */
   public function setEntitlementId($entitlementId)
   {
@@ -161,11 +115,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Output only. Immutable. The GCP Oracle zone where Oracle ExadbVmCluster is
-   * hosted. Example: us-east4-b-r2. During creation, the system will pick the
-   * zone assigned to the ExascaleDbStorageVault.
-   *
-   * @param string $gcpOracleZone
+   * @param string
    */
   public function setGcpOracleZone($gcpOracleZone)
   {
@@ -179,9 +129,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->gcpOracleZone;
   }
   /**
-   * Optional. The labels or tags associated with the ExadbVmCluster.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -195,11 +143,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. The name of the ExadbVmCluster resource in the following
-   * format:
-   * projects/{project}/locations/{region}/exadbVmClusters/{exadb_vm_cluster}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -213,13 +157,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. Immutable. The name of the OdbNetwork associated with the
-   * ExadbVmCluster. Format:
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
-   * optional but if specified, this should match the parent ODBNetwork of the
-   * OdbSubnet.
-   *
-   * @param string $odbNetwork
+   * @param string
    */
   public function setOdbNetwork($odbNetwork)
   {
@@ -233,11 +171,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * Required. Immutable. The name of the OdbSubnet associated with the
-   * ExadbVmCluster for IP allocation. Format: projects/{project}/locations/{loc
-   * ation}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
-   *
-   * @param string $odbSubnet
+   * @param string
    */
   public function setOdbSubnet($odbSubnet)
   {
@@ -251,9 +185,7 @@ class ExadbVmCluster extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * Required. The properties of the ExadbVmCluster.
-   *
-   * @param ExadbVmClusterProperties $properties
+   * @param ExadbVmClusterProperties
    */
   public function setProperties(ExadbVmClusterProperties $properties)
   {

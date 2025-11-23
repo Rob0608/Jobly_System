@@ -20,59 +20,28 @@ namespace Google\Service\SecureSourceManager;
 class TreeEntry extends \Google\Model
 {
   /**
-   * Default value, indicating the object type is unspecified.
-   */
-  public const TYPE_OBJECT_TYPE_UNSPECIFIED = 'OBJECT_TYPE_UNSPECIFIED';
-  /**
-   * Represents a directory (folder).
-   */
-  public const TYPE_TREE = 'TREE';
-  /**
-   * Represents a file (contains file data).
-   */
-  public const TYPE_BLOB = 'BLOB';
-  /**
-   * Represents a pointer to another repository (submodule).
-   */
-  public const TYPE_COMMIT = 'COMMIT';
-  /**
-   * Output only. The file mode as a string (e.g., "100644"). Indicates file
-   * type. Output-only.
-   *
    * @var string
    */
   public $mode;
   /**
-   * Output only. The path of the file or directory within the tree (e.g.,
-   * "src/main/java/MyClass.java"). Output-only.
-   *
    * @var string
    */
   public $path;
   /**
-   * Output only. The SHA-1 hash of the object (unique identifier). Output-only.
-   *
    * @var string
    */
   public $sha;
   /**
-   * Output only. The size of the object in bytes (only for blobs). Output-only.
-   *
    * @var string
    */
   public $size;
   /**
-   * Output only. The type of the object (TREE, BLOB, COMMIT). Output-only.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Output only. The file mode as a string (e.g., "100644"). Indicates file
-   * type. Output-only.
-   *
-   * @param string $mode
+   * @param string
    */
   public function setMode($mode)
   {
@@ -86,10 +55,7 @@ class TreeEntry extends \Google\Model
     return $this->mode;
   }
   /**
-   * Output only. The path of the file or directory within the tree (e.g.,
-   * "src/main/java/MyClass.java"). Output-only.
-   *
-   * @param string $path
+   * @param string
    */
   public function setPath($path)
   {
@@ -103,9 +69,7 @@ class TreeEntry extends \Google\Model
     return $this->path;
   }
   /**
-   * Output only. The SHA-1 hash of the object (unique identifier). Output-only.
-   *
-   * @param string $sha
+   * @param string
    */
   public function setSha($sha)
   {
@@ -119,9 +83,7 @@ class TreeEntry extends \Google\Model
     return $this->sha;
   }
   /**
-   * Output only. The size of the object in bytes (only for blobs). Output-only.
-   *
-   * @param string $size
+   * @param string
    */
   public function setSize($size)
   {
@@ -135,18 +97,14 @@ class TreeEntry extends \Google\Model
     return $this->size;
   }
   /**
-   * Output only. The type of the object (TREE, BLOB, COMMIT). Output-only.
-   *
-   * Accepted values: OBJECT_TYPE_UNSPECIFIED, TREE, BLOB, COMMIT
-   *
-   * @param self::TYPE_* $type
+   * @param string
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return self::TYPE_*
+   * @return string
    */
   public function getType()
   {

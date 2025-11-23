@@ -22,19 +22,12 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to
-   * use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Endpoint
-   * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
    * @var string
    */
   public $model;
 
   /**
-   * Optional. Generation config.
-   *
-   * @param GoogleCloudAiplatformV1GenerationConfig $generationConfig
+   * @param GoogleCloudAiplatformV1GenerationConfig
    */
   public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
   {
@@ -48,12 +41,7 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
     return $this->generationConfig;
   }
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to
-   * use. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Endpoint
-   * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   *
-   * @param string $model
+   * @param string
    */
   public function setModel($model)
   {

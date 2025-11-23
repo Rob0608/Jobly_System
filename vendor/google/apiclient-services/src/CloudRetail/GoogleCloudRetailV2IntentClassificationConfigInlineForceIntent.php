@@ -20,44 +20,20 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent extends \Google\Model
 {
   /**
-   * Unspecified match operation.
-   */
-  public const OPERATION_OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED';
-  /**
-   * Exact match.
-   */
-  public const OPERATION_EXACT_MATCH = 'EXACT_MATCH';
-  /**
-   * Contains match.
-   */
-  public const OPERATION_CONTAINS = 'CONTAINS';
-  /**
-   * Optional. The intent_type must match one of the predefined intent types
-   * defined at https://cloud.google.com/retail/docs/reference/rpc/google.cloud.
-   * retail.v2alpha#querytype
-   *
    * @var string
    */
   public $intentType;
   /**
-   * Optional. The operation to perform for the query.
-   *
    * @var string
    */
   public $operation;
   /**
-   * Optional. A example query.
-   *
    * @var string
    */
   public $query;
 
   /**
-   * Optional. The intent_type must match one of the predefined intent types
-   * defined at https://cloud.google.com/retail/docs/reference/rpc/google.cloud.
-   * retail.v2alpha#querytype
-   *
-   * @param string $intentType
+   * @param string
    */
   public function setIntentType($intentType)
   {
@@ -71,27 +47,21 @@ class GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent extends \Go
     return $this->intentType;
   }
   /**
-   * Optional. The operation to perform for the query.
-   *
-   * Accepted values: OPERATION_UNSPECIFIED, EXACT_MATCH, CONTAINS
-   *
-   * @param self::OPERATION_* $operation
+   * @param string
    */
   public function setOperation($operation)
   {
     $this->operation = $operation;
   }
   /**
-   * @return self::OPERATION_*
+   * @return string
    */
   public function getOperation()
   {
     return $this->operation;
   }
   /**
-   * Optional. A example query.
-   *
-   * @param string $query
+   * @param string
    */
   public function setQuery($query)
   {

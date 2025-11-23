@@ -21,40 +21,28 @@ class ResourceChangeTerraformInfo extends \Google\Collection
 {
   protected $collection_key = 'actions';
   /**
-   * Output only. TF resource actions.
-   *
    * @var string[]
    */
   public $actions;
   /**
-   * Output only. TF resource address that uniquely identifies the resource.
-   *
    * @var string
    */
   public $address;
   /**
-   * Output only. TF resource provider.
-   *
    * @var string
    */
   public $provider;
   /**
-   * Output only. TF resource name.
-   *
    * @var string
    */
   public $resourceName;
   /**
-   * Output only. TF resource type.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Output only. TF resource actions.
-   *
-   * @param string[] $actions
+   * @param string[]
    */
   public function setActions($actions)
   {
@@ -68,9 +56,7 @@ class ResourceChangeTerraformInfo extends \Google\Collection
     return $this->actions;
   }
   /**
-   * Output only. TF resource address that uniquely identifies the resource.
-   *
-   * @param string $address
+   * @param string
    */
   public function setAddress($address)
   {
@@ -84,9 +70,7 @@ class ResourceChangeTerraformInfo extends \Google\Collection
     return $this->address;
   }
   /**
-   * Output only. TF resource provider.
-   *
-   * @param string $provider
+   * @param string
    */
   public function setProvider($provider)
   {
@@ -100,9 +84,7 @@ class ResourceChangeTerraformInfo extends \Google\Collection
     return $this->provider;
   }
   /**
-   * Output only. TF resource name.
-   *
-   * @param string $resourceName
+   * @param string
    */
   public function setResourceName($resourceName)
   {
@@ -116,9 +98,7 @@ class ResourceChangeTerraformInfo extends \Google\Collection
     return $this->resourceName;
   }
   /**
-   * Output only. TF resource type.
-   *
-   * @param string $type
+   * @param string
    */
   public function setType($type)
   {

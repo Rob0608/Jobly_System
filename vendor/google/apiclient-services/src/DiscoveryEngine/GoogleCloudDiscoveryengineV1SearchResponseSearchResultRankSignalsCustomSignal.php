@@ -20,22 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignalsCustomSignal extends \Google\Model
 {
   /**
-   * Optional. Name of the signal.
-   *
    * @var string
    */
   public $name;
   /**
-   * Optional. Float value representing the ranking signal (e.g. 1.25 for BM25).
-   *
    * @var float
    */
   public $value;
 
   /**
-   * Optional. Name of the signal.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -49,9 +43,7 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignalsCustomSig
     return $this->name;
   }
   /**
-   * Optional. Float value representing the ranking signal (e.g. 1.25 for BM25).
-   *
-   * @param float $value
+   * @param float
    */
   public function setValue($value)
   {

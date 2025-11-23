@@ -20,9 +20,6 @@ namespace Google\Service\OracleDatabase;
 class EncryptionKeyHistoryEntry extends \Google\Model
 {
   /**
-   * Output only. The date and time when the encryption key was activated on the
-   * Autonomous Database..
-   *
    * @var string
    */
   public $activationTime;
@@ -30,10 +27,7 @@ class EncryptionKeyHistoryEntry extends \Google\Model
   protected $encryptionKeyDataType = '';
 
   /**
-   * Output only. The date and time when the encryption key was activated on the
-   * Autonomous Database..
-   *
-   * @param string $activationTime
+   * @param string
    */
   public function setActivationTime($activationTime)
   {
@@ -47,9 +41,7 @@ class EncryptionKeyHistoryEntry extends \Google\Model
     return $this->activationTime;
   }
   /**
-   * Output only. The encryption key used to encrypt the Autonomous Database.
-   *
-   * @param EncryptionKey $encryptionKey
+   * @param EncryptionKey
    */
   public function setEncryptionKey(EncryptionKey $encryptionKey)
   {

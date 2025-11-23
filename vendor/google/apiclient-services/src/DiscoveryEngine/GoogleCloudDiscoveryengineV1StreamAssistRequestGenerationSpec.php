@@ -20,18 +20,12 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1StreamAssistRequestGenerationSpec extends \Google\Model
 {
   /**
-   * Optional. The Vertex AI model_id used for the generative model. If not set,
-   * the default Assistant model will be used.
-   *
    * @var string
    */
   public $modelId;
 
   /**
-   * Optional. The Vertex AI model_id used for the generative model. If not set,
-   * the default Assistant model will be used.
-   *
-   * @param string $modelId
+   * @param string
    */
   public function setModelId($modelId)
   {

@@ -20,18 +20,12 @@ namespace Google\Service\ServiceUsage;
 class McpService extends \Google\Model
 {
   /**
-   * The names of the services that are enabled for MCP. Example:
-   * `services/library-example.googleapis.com`
-   *
    * @var string
    */
   public $service;
 
   /**
-   * The names of the services that are enabled for MCP. Example:
-   * `services/library-example.googleapis.com`
-   *
-   * @param string $service
+   * @param string
    */
   public function setService($service)
   {

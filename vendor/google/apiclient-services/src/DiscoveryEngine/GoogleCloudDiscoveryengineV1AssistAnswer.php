@@ -19,57 +19,26 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
 {
-  /**
-   * Unknown.
-   */
-  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * Assist operation is currently in progress.
-   */
-  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
-  /**
-   * Assist operation has failed.
-   */
-  public const STATE_FAILED = 'FAILED';
-  /**
-   * Assist operation has succeeded.
-   */
-  public const STATE_SUCCEEDED = 'SUCCEEDED';
-  /**
-   * Assist operation has been skipped.
-   */
-  public const STATE_SKIPPED = 'SKIPPED';
   protected $collection_key = 'replies';
   /**
-   * Reasons for not answering the assist call.
-   *
    * @var string[]
    */
   public $assistSkippedReasons;
   protected $customerPolicyEnforcementResultType = GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult::class;
   protected $customerPolicyEnforcementResultDataType = '';
   /**
-   * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projec
-   * ts/{project}/locations/{location}/collections/{collection}/engines/{engine}
-   * /sessions/{session}/assistAnswers/{assist_answer}` This field must be a
-   * UTF-8 encoded string with a length limit of 1024 characters.
-   *
    * @var string
    */
   public $name;
   protected $repliesType = GoogleCloudDiscoveryengineV1AssistAnswerReply::class;
   protected $repliesDataType = 'array';
   /**
-   * State of the answer generation.
-   *
    * @var string
    */
   public $state;
 
   /**
-   * Reasons for not answering the assist call.
-   *
-   * @param string[] $assistSkippedReasons
+   * @param string[]
    */
   public function setAssistSkippedReasons($assistSkippedReasons)
   {
@@ -83,11 +52,7 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
     return $this->assistSkippedReasons;
   }
   /**
-   * Optional. The field contains information about the various policy checks'
-   * results like the banned phrases or the Model Armor checks. This field is
-   * populated only if the assist call was skipped due to a policy violation.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult $customerPolicyEnforcementResult
+   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult
    */
   public function setCustomerPolicyEnforcementResult(GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult $customerPolicyEnforcementResult)
   {
@@ -101,12 +66,7 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
     return $this->customerPolicyEnforcementResult;
   }
   /**
-   * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projec
-   * ts/{project}/locations/{location}/collections/{collection}/engines/{engine}
-   * /sessions/{session}/assistAnswers/{assist_answer}` This field must be a
-   * UTF-8 encoded string with a length limit of 1024 characters.
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -120,9 +80,7 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
     return $this->name;
   }
   /**
-   * Replies of the assistant.
-   *
-   * @param GoogleCloudDiscoveryengineV1AssistAnswerReply[] $replies
+   * @param GoogleCloudDiscoveryengineV1AssistAnswerReply[]
    */
   public function setReplies($replies)
   {
@@ -136,18 +94,14 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
     return $this->replies;
   }
   /**
-   * State of the answer generation.
-   *
-   * Accepted values: STATE_UNSPECIFIED, IN_PROGRESS, FAILED, SUCCEEDED, SKIPPED
-   *
-   * @param self::STATE_* $state
+   * @param string
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return self::STATE_*
+   * @return string
    */
   public function getState()
   {

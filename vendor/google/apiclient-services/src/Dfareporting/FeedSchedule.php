@@ -20,47 +20,28 @@ namespace Google\Service\Dfareporting;
 class FeedSchedule extends \Google\Model
 {
   /**
-   * Optional. The number of times the feed retransforms within one day. This is
-   * a required field if the schedule is enabled. Acceptable values are between
-   * 1 to 6, inclusive.
-   *
    * @var string
    */
   public $repeatValue;
   /**
-   * Optional. Whether the schedule is enabled.
-   *
    * @var bool
    */
   public $scheduleEnabled;
   /**
-   * Optional. The hour of the day to start the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is 0.
-   *
    * @var string
    */
   public $startHour;
   /**
-   * Optional. The minute of the hour to start the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is 0.
-   *
    * @var string
    */
   public $startMinute;
   /**
-   * Optional. The time zone to schedule the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is "America/Los_Angeles".
-   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * Optional. The number of times the feed retransforms within one day. This is
-   * a required field if the schedule is enabled. Acceptable values are between
-   * 1 to 6, inclusive.
-   *
-   * @param string $repeatValue
+   * @param string
    */
   public function setRepeatValue($repeatValue)
   {
@@ -74,9 +55,7 @@ class FeedSchedule extends \Google\Model
     return $this->repeatValue;
   }
   /**
-   * Optional. Whether the schedule is enabled.
-   *
-   * @param bool $scheduleEnabled
+   * @param bool
    */
   public function setScheduleEnabled($scheduleEnabled)
   {
@@ -90,10 +69,7 @@ class FeedSchedule extends \Google\Model
     return $this->scheduleEnabled;
   }
   /**
-   * Optional. The hour of the day to start the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is 0.
-   *
-   * @param string $startHour
+   * @param string
    */
   public function setStartHour($startHour)
   {
@@ -107,10 +83,7 @@ class FeedSchedule extends \Google\Model
     return $this->startHour;
   }
   /**
-   * Optional. The minute of the hour to start the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is 0.
-   *
-   * @param string $startMinute
+   * @param string
    */
   public function setStartMinute($startMinute)
   {
@@ -124,10 +97,7 @@ class FeedSchedule extends \Google\Model
     return $this->startMinute;
   }
   /**
-   * Optional. The time zone to schedule the feed. It is applicable if the
-   * repeat value is equal to 1. Default value is "America/Los_Angeles".
-   *
-   * @param string $timeZone
+   * @param string
    */
   public function setTimeZone($timeZone)
   {

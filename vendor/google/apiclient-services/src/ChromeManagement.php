@@ -424,29 +424,7 @@ class ChromeManagement extends \Google\Service
         'reports',
         [
           'methods' => [
-            'countActiveDevices' => [
-              'path' => 'v1/{+customer}/reports:countActiveDevices',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'customer' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'date.day' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.month' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.year' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'countChromeBrowsersNeedingAttention' => [
+            'countChromeBrowsersNeedingAttention' => [
               'path' => 'v1/{+customer}/reports:countChromeBrowsersNeedingAttention',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -564,50 +542,6 @@ class ChromeManagement extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'countDevicesPerBootType' => [
-              'path' => 'v1/{+customer}/reports:countDevicesPerBootType',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'customer' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'date.day' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.month' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.year' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'countDevicesPerReleaseChannel' => [
-              'path' => 'v1/{+customer}/reports:countDevicesPerReleaseChannel',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'customer' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'date.day' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.month' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'date.year' => [
-                  'location' => 'query',
-                  'type' => 'integer',
                 ],
               ],
             ],'countInstalledApps' => [

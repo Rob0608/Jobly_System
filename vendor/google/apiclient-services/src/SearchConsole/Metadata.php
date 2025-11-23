@@ -20,37 +20,16 @@ namespace Google\Service\SearchConsole;
 class Metadata extends \Google\Model
 {
   /**
-   * The first date for which the data is still being collected and processed,
-   * presented in `YYYY-MM-DD` format (ISO-8601 extended local date format).
-   * This field is populated only when the request's `dataState` is "`all`",
-   * data is grouped by "`DATE`", and the requested date range contains
-   * incomplete data points. All values after the `first_incomplete_date` may
-   * still change noticeably.
-   *
    * @var string
    */
   public $firstIncompleteDate;
   /**
-   * The first hour for which the data is still being collected and processed,
-   * presented in `YYYY-MM-DDThh:mm:ss[+|-]hh:mm` format (ISO-8601 extended
-   * offset date-time format). This field is populated only when the request's
-   * `dataState` is "`hourly_all`", data is grouped by "`HOUR`" and the
-   * requested date range contains incomplete data points. All values after the
-   * `first_incomplete_hour` may still change noticeably.
-   *
    * @var string
    */
   public $firstIncompleteHour;
 
   /**
-   * The first date for which the data is still being collected and processed,
-   * presented in `YYYY-MM-DD` format (ISO-8601 extended local date format).
-   * This field is populated only when the request's `dataState` is "`all`",
-   * data is grouped by "`DATE`", and the requested date range contains
-   * incomplete data points. All values after the `first_incomplete_date` may
-   * still change noticeably.
-   *
-   * @param string $firstIncompleteDate
+   * @param string
    */
   public function setFirstIncompleteDate($firstIncompleteDate)
   {
@@ -64,14 +43,7 @@ class Metadata extends \Google\Model
     return $this->firstIncompleteDate;
   }
   /**
-   * The first hour for which the data is still being collected and processed,
-   * presented in `YYYY-MM-DDThh:mm:ss[+|-]hh:mm` format (ISO-8601 extended
-   * offset date-time format). This field is populated only when the request's
-   * `dataState` is "`hourly_all`", data is grouped by "`HOUR`" and the
-   * requested date range contains incomplete data points. All values after the
-   * `first_incomplete_hour` may still change noticeably.
-   *
-   * @param string $firstIncompleteHour
+   * @param string
    */
   public function setFirstIncompleteHour($firstIncompleteHour)
   {

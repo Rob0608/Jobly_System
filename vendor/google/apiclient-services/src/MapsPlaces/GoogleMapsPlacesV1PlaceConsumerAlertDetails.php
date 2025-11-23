@@ -22,22 +22,16 @@ class GoogleMapsPlacesV1PlaceConsumerAlertDetails extends \Google\Model
   protected $aboutLinkType = GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink::class;
   protected $aboutLinkDataType = '';
   /**
-   * The description of the consumer alert message.
-   *
    * @var string
    */
   public $description;
   /**
-   * The title to show together with the description.
-   *
    * @var string
    */
   public $title;
 
   /**
-   * The link to show together with the description to provide more information.
-   *
-   * @param GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink $aboutLink
+   * @param GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink
    */
   public function setAboutLink(GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink $aboutLink)
   {
@@ -51,9 +45,7 @@ class GoogleMapsPlacesV1PlaceConsumerAlertDetails extends \Google\Model
     return $this->aboutLink;
   }
   /**
-   * The description of the consumer alert message.
-   *
-   * @param string $description
+   * @param string
    */
   public function setDescription($description)
   {
@@ -67,9 +59,7 @@ class GoogleMapsPlacesV1PlaceConsumerAlertDetails extends \Google\Model
     return $this->description;
   }
   /**
-   * The title to show together with the description.
-   *
-   * @param string $title
+   * @param string
    */
   public function setTitle($title)
   {

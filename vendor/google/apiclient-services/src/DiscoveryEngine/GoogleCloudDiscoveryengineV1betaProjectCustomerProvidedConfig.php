@@ -23,9 +23,7 @@ class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig extends \Goo
   protected $notebooklmConfigDataType = '';
 
   /**
-   * Optional. Configuration for NotebookLM settings.
-   *
-   * @param GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig $notebooklmConfig
+   * @param GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig
    */
   public function setNotebooklmConfig(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig $notebooklmConfig)
   {

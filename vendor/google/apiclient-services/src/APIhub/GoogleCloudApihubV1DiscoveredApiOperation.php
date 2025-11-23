@@ -19,92 +19,58 @@ namespace Google\Service\APIhub;
 
 class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
 {
-  /**
-   * Operation is not classified as known or unknown.
-   */
-  public const CLASSIFICATION_CLASSIFICATION_UNSPECIFIED = 'CLASSIFICATION_UNSPECIFIED';
-  /**
-   * Operation has a matched catalog operation.
-   */
-  public const CLASSIFICATION_KNOWN = 'KNOWN';
-  /**
-   * Operation does not have a matched catalog operation.
-   */
-  public const CLASSIFICATION_UNKNOWN = 'UNKNOWN';
   protected $collection_key = 'matchResults';
   /**
-   * Output only. The classification of the discovered API operation.
-   *
    * @var string
    */
   public $classification;
   /**
-   * Optional. The number of occurrences of this API Operation.
-   *
    * @var string
    */
   public $count;
   /**
-   * Output only. Create time stamp of the discovered API operation in API Hub.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. First seen time stamp
-   *
    * @var string
    */
   public $firstSeenTime;
   protected $httpOperationType = GoogleCloudApihubV1HttpOperationDetails::class;
   protected $httpOperationDataType = '';
   /**
-   * Optional. Last seen time stamp
-   *
    * @var string
    */
   public $lastSeenTime;
   protected $matchResultsType = GoogleCloudApihubV1MatchResult::class;
   protected $matchResultsDataType = 'array';
   /**
-   * Identifier. The name of the discovered API Operation. Format: `projects/{pr
-   * oject}/locations/{location}/discoveredApiObservations/{discovered_api_obser
-   * vation}/discoveredApiOperations/{discovered_api_operation}`
-   *
    * @var string
    */
   public $name;
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = '';
   /**
-   * Output only. Update time stamp of the discovered API operation in API Hub.
-   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. The classification of the discovered API operation.
-   *
-   * Accepted values: CLASSIFICATION_UNSPECIFIED, KNOWN, UNKNOWN
-   *
-   * @param self::CLASSIFICATION_* $classification
+   * @param string
    */
   public function setClassification($classification)
   {
     $this->classification = $classification;
   }
   /**
-   * @return self::CLASSIFICATION_*
+   * @return string
    */
   public function getClassification()
   {
     return $this->classification;
   }
   /**
-   * Optional. The number of occurrences of this API Operation.
-   *
-   * @param string $count
+   * @param string
    */
   public function setCount($count)
   {
@@ -118,9 +84,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->count;
   }
   /**
-   * Output only. Create time stamp of the discovered API operation in API Hub.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -134,9 +98,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. First seen time stamp
-   *
-   * @param string $firstSeenTime
+   * @param string
    */
   public function setFirstSeenTime($firstSeenTime)
   {
@@ -150,9 +112,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->firstSeenTime;
   }
   /**
-   * Optional. An HTTP Operation.
-   *
-   * @param GoogleCloudApihubV1HttpOperationDetails $httpOperation
+   * @param GoogleCloudApihubV1HttpOperationDetails
    */
   public function setHttpOperation(GoogleCloudApihubV1HttpOperationDetails $httpOperation)
   {
@@ -166,9 +126,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->httpOperation;
   }
   /**
-   * Optional. Last seen time stamp
-   *
-   * @param string $lastSeenTime
+   * @param string
    */
   public function setLastSeenTime($lastSeenTime)
   {
@@ -182,12 +140,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->lastSeenTime;
   }
   /**
-   * Output only. The list of matched results for the discovered API operation.
-   * This will be populated only if the classification is known. The current
-   * usecase is for a single match. Keeping it repeated to support multiple
-   * matches in future.
-   *
-   * @param GoogleCloudApihubV1MatchResult[] $matchResults
+   * @param GoogleCloudApihubV1MatchResult[]
    */
   public function setMatchResults($matchResults)
   {
@@ -201,11 +154,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->matchResults;
   }
   /**
-   * Identifier. The name of the discovered API Operation. Format: `projects/{pr
-   * oject}/locations/{location}/discoveredApiObservations/{discovered_api_obser
-   * vation}/discoveredApiOperations/{discovered_api_operation}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -219,10 +168,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. The metadata of the source from which the api operation was
-   * collected.
-   *
-   * @param GoogleCloudApihubV1SourceMetadata $sourceMetadata
+   * @param GoogleCloudApihubV1SourceMetadata
    */
   public function setSourceMetadata(GoogleCloudApihubV1SourceMetadata $sourceMetadata)
   {
@@ -236,9 +182,7 @@ class GoogleCloudApihubV1DiscoveredApiOperation extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * Output only. Update time stamp of the discovered API operation in API Hub.
-   *
-   * @param string $updateTime
+   * @param string
    */
   public function setUpdateTime($updateTime)
   {

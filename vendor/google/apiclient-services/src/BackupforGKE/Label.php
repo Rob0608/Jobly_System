@@ -20,22 +20,16 @@ namespace Google\Service\BackupforGKE;
 class Label extends \Google\Model
 {
   /**
-   * Optional. The key/name of the label.
-   *
    * @var string
    */
   public $key;
   /**
-   * Optional. The value of the label.
-   *
    * @var string
    */
   public $value;
 
   /**
-   * Optional. The key/name of the label.
-   *
-   * @param string $key
+   * @param string
    */
   public function setKey($key)
   {
@@ -49,9 +43,7 @@ class Label extends \Google\Model
     return $this->key;
   }
   /**
-   * Optional. The value of the label.
-   *
-   * @param string $value
+   * @param string
    */
   public function setValue($value)
   {

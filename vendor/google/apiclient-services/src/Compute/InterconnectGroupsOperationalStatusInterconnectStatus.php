@@ -19,34 +19,23 @@ namespace Google\Service\Compute;
 
 class InterconnectGroupsOperationalStatusInterconnectStatus extends \Google\Model
 {
-  public const IS_ACTIVE_ACTIVE = 'ACTIVE';
-  public const IS_ACTIVE_INACTIVE = 'INACTIVE';
-  public const IS_ACTIVE_IS_ACTIVE_UNSPECIFIED = 'IS_ACTIVE_UNSPECIFIED';
   /**
-   * Whether the Interconnect is enabled.
-   *
    * @var bool
    */
   public $adminEnabled;
   protected $diagnosticsType = InterconnectDiagnostics::class;
   protected $diagnosticsDataType = '';
   /**
-   * The URL of the Interconnect being described.
-   *
    * @var string
    */
   public $interconnect;
   /**
-   * Whether this interconnect is participating in the redundant configuration.
-   *
    * @var string
    */
   public $isActive;
 
   /**
-   * Whether the Interconnect is enabled.
-   *
-   * @param bool $adminEnabled
+   * @param bool
    */
   public function setAdminEnabled($adminEnabled)
   {
@@ -60,10 +49,7 @@ class InterconnectGroupsOperationalStatusInterconnectStatus extends \Google\Mode
     return $this->adminEnabled;
   }
   /**
-   * The diagnostics of the Interconnect, as returned by the existing get-
-   * diagnostics method.
-   *
-   * @param InterconnectDiagnostics $diagnostics
+   * @param InterconnectDiagnostics
    */
   public function setDiagnostics(InterconnectDiagnostics $diagnostics)
   {
@@ -77,9 +63,7 @@ class InterconnectGroupsOperationalStatusInterconnectStatus extends \Google\Mode
     return $this->diagnostics;
   }
   /**
-   * The URL of the Interconnect being described.
-   *
-   * @param string $interconnect
+   * @param string
    */
   public function setInterconnect($interconnect)
   {
@@ -93,18 +77,14 @@ class InterconnectGroupsOperationalStatusInterconnectStatus extends \Google\Mode
     return $this->interconnect;
   }
   /**
-   * Whether this interconnect is participating in the redundant configuration.
-   *
-   * Accepted values: ACTIVE, INACTIVE, IS_ACTIVE_UNSPECIFIED
-   *
-   * @param self::IS_ACTIVE_* $isActive
+   * @param string
    */
   public function setIsActive($isActive)
   {
     $this->isActive = $isActive;
   }
   /**
-   * @return self::IS_ACTIVE_*
+   * @return string
    */
   public function getIsActive()
   {

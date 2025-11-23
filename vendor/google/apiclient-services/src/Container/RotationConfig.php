@@ -20,23 +20,16 @@ namespace Google\Service\Container;
 class RotationConfig extends \Google\Model
 {
   /**
-   * Whether the rotation is enabled.
-   *
    * @var bool
    */
   public $enabled;
   /**
-   * The interval between two consecutive rotations. Default rotation interval
-   * is 2 minutes.
-   *
    * @var string
    */
   public $rotationInterval;
 
   /**
-   * Whether the rotation is enabled.
-   *
-   * @param bool $enabled
+   * @param bool
    */
   public function setEnabled($enabled)
   {
@@ -50,10 +43,7 @@ class RotationConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * The interval between two consecutive rotations. Default rotation interval
-   * is 2 minutes.
-   *
-   * @param string $rotationInterval
+   * @param string
    */
   public function setRotationInterval($rotationInterval)
   {

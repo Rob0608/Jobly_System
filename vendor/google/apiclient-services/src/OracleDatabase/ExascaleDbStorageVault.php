@@ -20,45 +20,26 @@ namespace Google\Service\OracleDatabase;
 class ExascaleDbStorageVault extends \Google\Model
 {
   /**
-   * Output only. The date and time when the ExascaleDbStorageVault was created.
-   *
    * @var string
    */
   public $createTime;
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does
-   * not have to be unique within your project. The name must be 1-255
-   * characters long and can only contain alphanumeric characters.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * ExascaleDbStorageVault.
-   *
    * @var string
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
-   *
    * @var string
    */
   public $gcpOracleZone;
   /**
-   * Optional. The labels or tags associated with the ExascaleDbStorageVault.
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The resource name of the ExascaleDbStorageVault. Format: projec
-   * ts/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_stor
-   * age_vault}
-   *
    * @var string
    */
   public $name;
@@ -66,9 +47,7 @@ class ExascaleDbStorageVault extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * Output only. The date and time when the ExascaleDbStorageVault was created.
-   *
-   * @param string $createTime
+   * @param string
    */
   public function setCreateTime($createTime)
   {
@@ -82,11 +61,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does
-   * not have to be unique within your project. The name must be 1-255
-   * characters long and can only contain alphanumeric characters.
-   *
-   * @param string $displayName
+   * @param string
    */
   public function setDisplayName($displayName)
   {
@@ -100,10 +75,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Output only. The ID of the subscription entitlement associated with the
-   * ExascaleDbStorageVault.
-   *
-   * @param string $entitlementId
+   * @param string
    */
   public function setEntitlementId($entitlementId)
   {
@@ -117,11 +89,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
-   *
-   * @param string $gcpOracleZone
+   * @param string
    */
   public function setGcpOracleZone($gcpOracleZone)
   {
@@ -135,9 +103,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->gcpOracleZone;
   }
   /**
-   * Optional. The labels or tags associated with the ExascaleDbStorageVault.
-   *
-   * @param string[] $labels
+   * @param string[]
    */
   public function setLabels($labels)
   {
@@ -151,11 +117,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->labels;
   }
   /**
-   * Identifier. The resource name of the ExascaleDbStorageVault. Format: projec
-   * ts/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_stor
-   * age_vault}
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -169,9 +131,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The properties of the ExascaleDbStorageVault.
-   *
-   * @param ExascaleDbStorageVaultProperties $properties
+   * @param ExascaleDbStorageVaultProperties
    */
   public function setProperties(ExascaleDbStorageVaultProperties $properties)
   {

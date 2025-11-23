@@ -19,26 +19,6 @@ namespace Google\Service\DataManager;
 
 class RequestStatusPerDestination extends \Google\Model
 {
-  /**
-   * The request status is unknown.
-   */
-  public const REQUEST_STATUS_REQUEST_STATUS_UNKNOWN = 'REQUEST_STATUS_UNKNOWN';
-  /**
-   * The request succeeded.
-   */
-  public const REQUEST_STATUS_SUCCESS = 'SUCCESS';
-  /**
-   * The request is processing.
-   */
-  public const REQUEST_STATUS_PROCESSING = 'PROCESSING';
-  /**
-   * The request failed.
-   */
-  public const REQUEST_STATUS_FAILED = 'FAILED';
-  /**
-   * The request partially succeeded.
-   */
-  public const REQUEST_STATUS_PARTIAL_SUCCESS = 'PARTIAL_SUCCESS';
   protected $audienceMembersIngestionStatusType = IngestAudienceMembersStatus::class;
   protected $audienceMembersIngestionStatusDataType = '';
   protected $audienceMembersRemovalStatusType = RemoveAudienceMembersStatus::class;
@@ -50,8 +30,6 @@ class RequestStatusPerDestination extends \Google\Model
   protected $eventsIngestionStatusType = IngestEventsStatus::class;
   protected $eventsIngestionStatusDataType = '';
   /**
-   * The request status of the destination.
-   *
    * @var string
    */
   public $requestStatus;
@@ -59,9 +37,7 @@ class RequestStatusPerDestination extends \Google\Model
   protected $warningInfoDataType = '';
 
   /**
-   * The status of the ingest audience members request.
-   *
-   * @param IngestAudienceMembersStatus $audienceMembersIngestionStatus
+   * @param IngestAudienceMembersStatus
    */
   public function setAudienceMembersIngestionStatus(IngestAudienceMembersStatus $audienceMembersIngestionStatus)
   {
@@ -75,9 +51,7 @@ class RequestStatusPerDestination extends \Google\Model
     return $this->audienceMembersIngestionStatus;
   }
   /**
-   * The status of the remove audience members request.
-   *
-   * @param RemoveAudienceMembersStatus $audienceMembersRemovalStatus
+   * @param RemoveAudienceMembersStatus
    */
   public function setAudienceMembersRemovalStatus(RemoveAudienceMembersStatus $audienceMembersRemovalStatus)
   {
@@ -91,9 +65,7 @@ class RequestStatusPerDestination extends \Google\Model
     return $this->audienceMembersRemovalStatus;
   }
   /**
-   * A destination within a DM API request.
-   *
-   * @param Destination $destination
+   * @param Destination
    */
   public function setDestination(Destination $destination)
   {
@@ -107,10 +79,7 @@ class RequestStatusPerDestination extends \Google\Model
     return $this->destination;
   }
   /**
-   * An error info error containing the error reason and error counts related to
-   * the upload.
-   *
-   * @param ErrorInfo $errorInfo
+   * @param ErrorInfo
    */
   public function setErrorInfo(ErrorInfo $errorInfo)
   {
@@ -124,9 +93,7 @@ class RequestStatusPerDestination extends \Google\Model
     return $this->errorInfo;
   }
   /**
-   * The status of the ingest events request.
-   *
-   * @param IngestEventsStatus $eventsIngestionStatus
+   * @param IngestEventsStatus
    */
   public function setEventsIngestionStatus(IngestEventsStatus $eventsIngestionStatus)
   {
@@ -140,29 +107,21 @@ class RequestStatusPerDestination extends \Google\Model
     return $this->eventsIngestionStatus;
   }
   /**
-   * The request status of the destination.
-   *
-   * Accepted values: REQUEST_STATUS_UNKNOWN, SUCCESS, PROCESSING, FAILED,
-   * PARTIAL_SUCCESS
-   *
-   * @param self::REQUEST_STATUS_* $requestStatus
+   * @param string
    */
   public function setRequestStatus($requestStatus)
   {
     $this->requestStatus = $requestStatus;
   }
   /**
-   * @return self::REQUEST_STATUS_*
+   * @return string
    */
   public function getRequestStatus()
   {
     return $this->requestStatus;
   }
   /**
-   * A warning info containing the warning reason and warning counts related to
-   * the upload.
-   *
-   * @param WarningInfo $warningInfo
+   * @param WarningInfo
    */
   public function setWarningInfo(WarningInfo $warningInfo)
   {

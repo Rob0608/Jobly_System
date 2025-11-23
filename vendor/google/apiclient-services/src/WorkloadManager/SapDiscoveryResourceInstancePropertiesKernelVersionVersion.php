@@ -20,41 +20,28 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryResourceInstancePropertiesKernelVersionVersion extends \Google\Model
 {
   /**
-   * Optional. The build version number.
-   *
    * @var int
    */
   public $build;
   /**
-   * Optional. The major version number.
-   *
    * @var int
    */
   public $major;
   /**
-   * Optional. The minor version number.
-   *
    * @var int
    */
   public $minor;
   /**
-   * Optional. The patch version number.
-   *
    * @var int
    */
   public $patch;
   /**
-   * Optional. A catch-all for any unparsed version components. This is in case
-   * the number of points in the version string exceeds the expected count of 4.
-   *
    * @var string
    */
   public $remainder;
 
   /**
-   * Optional. The build version number.
-   *
-   * @param int $build
+   * @param int
    */
   public function setBuild($build)
   {
@@ -68,9 +55,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersionVersion extends \Google
     return $this->build;
   }
   /**
-   * Optional. The major version number.
-   *
-   * @param int $major
+   * @param int
    */
   public function setMajor($major)
   {
@@ -84,9 +69,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersionVersion extends \Google
     return $this->major;
   }
   /**
-   * Optional. The minor version number.
-   *
-   * @param int $minor
+   * @param int
    */
   public function setMinor($minor)
   {
@@ -100,9 +83,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersionVersion extends \Google
     return $this->minor;
   }
   /**
-   * Optional. The patch version number.
-   *
-   * @param int $patch
+   * @param int
    */
   public function setPatch($patch)
   {
@@ -116,10 +97,7 @@ class SapDiscoveryResourceInstancePropertiesKernelVersionVersion extends \Google
     return $this->patch;
   }
   /**
-   * Optional. A catch-all for any unparsed version components. This is in case
-   * the number of points in the version string exceeds the expected count of 4.
-   *
-   * @param string $remainder
+   * @param string
    */
   public function setRemainder($remainder)
   {

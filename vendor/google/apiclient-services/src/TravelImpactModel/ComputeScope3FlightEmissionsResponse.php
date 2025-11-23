@@ -26,9 +26,7 @@ class ComputeScope3FlightEmissionsResponse extends \Google\Collection
   protected $modelVersionDataType = '';
 
   /**
-   * List of flight segments with emission estimates.
-   *
-   * @param Scope3FlightEmissions[] $flightEmissions
+   * @param Scope3FlightEmissions[]
    */
   public function setFlightEmissions($flightEmissions)
   {
@@ -42,10 +40,7 @@ class ComputeScope3FlightEmissionsResponse extends \Google\Collection
     return $this->flightEmissions;
   }
   /**
-   * The model version under which emission estimates for all flights in this
-   * response were computed.
-   *
-   * @param ModelVersion $modelVersion
+   * @param ModelVersion
    */
   public function setModelVersion(ModelVersion $modelVersion)
   {

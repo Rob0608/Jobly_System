@@ -20,61 +20,36 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The agent's deployment display name. Only applicable to automated
-   * agents. This will be populated for AGENT_DEPLOYMENT_ID dimensions.
-   *
    * @var string
    */
   public $agentDeploymentDisplayName;
   /**
-   * Optional. The agent's deployment ID. Only applicable to automated agents.
-   * This will be populated for AGENT and AGENT_DEPLOYMENT_ID dimensions.
-   *
    * @var string
    */
   public $agentDeploymentId;
   /**
-   * Optional. The agent's name This will be populated for AGENT, AGENT_TEAM,
-   * AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
-   *
    * @var string
    */
   public $agentDisplayName;
   /**
-   * Optional. A user-specified string representing the agent. This will be
-   * populated for AGENT, AGENT_TEAM, AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID
-   * dimensions.
-   *
    * @var string
    */
   public $agentId;
   /**
-   * Optional. A user-specified string representing the agent's team.
-   *
    * @var string
    */
   public $agentTeam;
   /**
-   * Optional. The agent's version display name. Only applicable to automated
-   * agents. This will be populated for AGENT_VERSION_ID, and
-   * AGENT_DEPLOYMENT_ID dimensions.
-   *
    * @var string
    */
   public $agentVersionDisplayName;
   /**
-   * Optional. The agent's version ID. Only applicable to automated agents. This
-   * will be populated for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
-   *
    * @var string
    */
   public $agentVersionId;
 
   /**
-   * Optional. The agent's deployment display name. Only applicable to automated
-   * agents. This will be populated for AGENT_DEPLOYMENT_ID dimensions.
-   *
-   * @param string $agentDeploymentDisplayName
+   * @param string
    */
   public function setAgentDeploymentDisplayName($agentDeploymentDisplayName)
   {
@@ -88,10 +63,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentDeploymentDisplayName;
   }
   /**
-   * Optional. The agent's deployment ID. Only applicable to automated agents.
-   * This will be populated for AGENT and AGENT_DEPLOYMENT_ID dimensions.
-   *
-   * @param string $agentDeploymentId
+   * @param string
    */
   public function setAgentDeploymentId($agentDeploymentId)
   {
@@ -105,10 +77,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentDeploymentId;
   }
   /**
-   * Optional. The agent's name This will be populated for AGENT, AGENT_TEAM,
-   * AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
-   *
-   * @param string $agentDisplayName
+   * @param string
    */
   public function setAgentDisplayName($agentDisplayName)
   {
@@ -122,11 +91,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentDisplayName;
   }
   /**
-   * Optional. A user-specified string representing the agent. This will be
-   * populated for AGENT, AGENT_TEAM, AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID
-   * dimensions.
-   *
-   * @param string $agentId
+   * @param string
    */
   public function setAgentId($agentId)
   {
@@ -140,9 +105,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentId;
   }
   /**
-   * Optional. A user-specified string representing the agent's team.
-   *
-   * @param string $agentTeam
+   * @param string
    */
   public function setAgentTeam($agentTeam)
   {
@@ -156,11 +119,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentTeam;
   }
   /**
-   * Optional. The agent's version display name. Only applicable to automated
-   * agents. This will be populated for AGENT_VERSION_ID, and
-   * AGENT_DEPLOYMENT_ID dimensions.
-   *
-   * @param string $agentVersionDisplayName
+   * @param string
    */
   public function setAgentVersionDisplayName($agentVersionDisplayName)
   {
@@ -174,10 +133,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
     return $this->agentVersionDisplayName;
   }
   /**
-   * Optional. The agent's version ID. Only applicable to automated agents. This
-   * will be populated for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
-   *
-   * @param string $agentVersionId
+   * @param string
    */
   public function setAgentVersionId($agentVersionId)
   {

@@ -20,20 +20,12 @@ namespace Google\Service\SaaSServiceManagement;
 class RunRolloutActionParams extends \Google\Model
 {
   /**
-   * Required. If true, the rollout will retry failed operations when resumed.
-   * This is applicable only the current state of the Rollout is PAUSED and the
-   * requested action is RUN.
-   *
    * @var bool
    */
   public $retryFailedOperations;
 
   /**
-   * Required. If true, the rollout will retry failed operations when resumed.
-   * This is applicable only the current state of the Rollout is PAUSED and the
-   * requested action is RUN.
-   *
-   * @param bool $retryFailedOperations
+   * @param bool
    */
   public function setRetryFailedOperations($retryFailedOperations)
   {

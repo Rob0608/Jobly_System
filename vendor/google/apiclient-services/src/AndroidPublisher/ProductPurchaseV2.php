@@ -19,76 +19,36 @@ namespace Google\Service\AndroidPublisher;
 
 class ProductPurchaseV2 extends \Google\Collection
 {
-  /**
-   * Unspecified acknowledgement state.
-   */
-  public const ACKNOWLEDGEMENT_STATE_ACKNOWLEDGEMENT_STATE_UNSPECIFIED = 'ACKNOWLEDGEMENT_STATE_UNSPECIFIED';
-  /**
-   * The purchase is not acknowledged yet.
-   */
-  public const ACKNOWLEDGEMENT_STATE_ACKNOWLEDGEMENT_STATE_PENDING = 'ACKNOWLEDGEMENT_STATE_PENDING';
-  /**
-   * The purchase is acknowledged.
-   */
-  public const ACKNOWLEDGEMENT_STATE_ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED = 'ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED';
   protected $collection_key = 'productLineItem';
   /**
-   * Output only. The acknowledgement state of the purchase.
-   *
    * @var string
    */
   public $acknowledgementState;
   /**
-   * This kind represents a ProductPurchaseV2 object in the androidpublisher
-   * service.
-   *
    * @var string
    */
   public $kind;
   /**
-   * An obfuscated version of the id that is uniquely associated with the user's
-   * account in your app. Only present if specified using https://developer.andr
-   * oid.com/reference/com/android/billingclient/api/BillingFlowParams.Builder#s
-   * etobfuscatedaccountid when the purchase was made.
-   *
    * @var string
    */
   public $obfuscatedExternalAccountId;
   /**
-   * An obfuscated version of the id that is uniquely associated with the user's
-   * profile in your app. Only present if specified using https://developer.andr
-   * oid.com/reference/com/android/billingclient/api/BillingFlowParams.Builder#s
-   * etobfuscatedprofileid when the purchase was made.
-   *
    * @var string
    */
   public $obfuscatedExternalProfileId;
   /**
-   * The order id associated with the purchase of the inapp product. May not be
-   * set if there is no order associated with the purchase.
-   *
    * @var string
    */
   public $orderId;
   protected $productLineItemType = ProductLineItem::class;
   protected $productLineItemDataType = 'array';
   /**
-   * The time when the purchase was successful, i.e., when the PurchaseState has
-   * changed to PURCHASED. This field will not be present until the payment is
-   * complete. For example, if the user initiated a pending transaction
-   * (https://developer.android.com/google/play/billing/integrate#pending), this
-   * field will not be populated until the user successfully completes the steps
-   * required to complete the transaction.
-   *
    * @var string
    */
   public $purchaseCompletionTime;
   protected $purchaseStateContextType = PurchaseStateContext::class;
   protected $purchaseStateContextDataType = '';
   /**
-   * ISO 3166-1 alpha-2 billing region code of the user at the time the product
-   * was granted.
-   *
    * @var string
    */
   public $regionCode;
@@ -96,29 +56,21 @@ class ProductPurchaseV2 extends \Google\Collection
   protected $testPurchaseContextDataType = '';
 
   /**
-   * Output only. The acknowledgement state of the purchase.
-   *
-   * Accepted values: ACKNOWLEDGEMENT_STATE_UNSPECIFIED,
-   * ACKNOWLEDGEMENT_STATE_PENDING, ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED
-   *
-   * @param self::ACKNOWLEDGEMENT_STATE_* $acknowledgementState
+   * @param string
    */
   public function setAcknowledgementState($acknowledgementState)
   {
     $this->acknowledgementState = $acknowledgementState;
   }
   /**
-   * @return self::ACKNOWLEDGEMENT_STATE_*
+   * @return string
    */
   public function getAcknowledgementState()
   {
     return $this->acknowledgementState;
   }
   /**
-   * This kind represents a ProductPurchaseV2 object in the androidpublisher
-   * service.
-   *
-   * @param string $kind
+   * @param string
    */
   public function setKind($kind)
   {
@@ -132,12 +84,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->kind;
   }
   /**
-   * An obfuscated version of the id that is uniquely associated with the user's
-   * account in your app. Only present if specified using https://developer.andr
-   * oid.com/reference/com/android/billingclient/api/BillingFlowParams.Builder#s
-   * etobfuscatedaccountid when the purchase was made.
-   *
-   * @param string $obfuscatedExternalAccountId
+   * @param string
    */
   public function setObfuscatedExternalAccountId($obfuscatedExternalAccountId)
   {
@@ -151,12 +98,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->obfuscatedExternalAccountId;
   }
   /**
-   * An obfuscated version of the id that is uniquely associated with the user's
-   * profile in your app. Only present if specified using https://developer.andr
-   * oid.com/reference/com/android/billingclient/api/BillingFlowParams.Builder#s
-   * etobfuscatedprofileid when the purchase was made.
-   *
-   * @param string $obfuscatedExternalProfileId
+   * @param string
    */
   public function setObfuscatedExternalProfileId($obfuscatedExternalProfileId)
   {
@@ -170,10 +112,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->obfuscatedExternalProfileId;
   }
   /**
-   * The order id associated with the purchase of the inapp product. May not be
-   * set if there is no order associated with the purchase.
-   *
-   * @param string $orderId
+   * @param string
    */
   public function setOrderId($orderId)
   {
@@ -187,9 +126,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->orderId;
   }
   /**
-   * Contains item-level info for a ProductPurchaseV2.
-   *
-   * @param ProductLineItem[] $productLineItem
+   * @param ProductLineItem[]
    */
   public function setProductLineItem($productLineItem)
   {
@@ -203,14 +140,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->productLineItem;
   }
   /**
-   * The time when the purchase was successful, i.e., when the PurchaseState has
-   * changed to PURCHASED. This field will not be present until the payment is
-   * complete. For example, if the user initiated a pending transaction
-   * (https://developer.android.com/google/play/billing/integrate#pending), this
-   * field will not be populated until the user successfully completes the steps
-   * required to complete the transaction.
-   *
-   * @param string $purchaseCompletionTime
+   * @param string
    */
   public function setPurchaseCompletionTime($purchaseCompletionTime)
   {
@@ -224,9 +154,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->purchaseCompletionTime;
   }
   /**
-   * Information about the purchase state of the purchase.
-   *
-   * @param PurchaseStateContext $purchaseStateContext
+   * @param PurchaseStateContext
    */
   public function setPurchaseStateContext(PurchaseStateContext $purchaseStateContext)
   {
@@ -240,10 +168,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->purchaseStateContext;
   }
   /**
-   * ISO 3166-1 alpha-2 billing region code of the user at the time the product
-   * was granted.
-   *
-   * @param string $regionCode
+   * @param string
    */
   public function setRegionCode($regionCode)
   {
@@ -257,10 +182,7 @@ class ProductPurchaseV2 extends \Google\Collection
     return $this->regionCode;
   }
   /**
-   * Information related to test purchases. This will only be set for test
-   * purchases.
-   *
-   * @param TestPurchaseContext $testPurchaseContext
+   * @param TestPurchaseContext
    */
   public function setTestPurchaseContext(TestPurchaseContext $testPurchaseContext)
   {

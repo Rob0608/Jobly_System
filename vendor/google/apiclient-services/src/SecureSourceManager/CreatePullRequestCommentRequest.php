@@ -20,10 +20,6 @@ namespace Google\Service\SecureSourceManager;
 class CreatePullRequestCommentRequest extends \Google\Model
 {
   /**
-   * Required. The pull request in which to create the pull request comment.
-   * Format: `projects/{project_number}/locations/{location_id}/repositories/{re
-   * pository_id}/pullRequests/{pull_request_id}`
-   *
    * @var string
    */
   public $parent;
@@ -31,11 +27,7 @@ class CreatePullRequestCommentRequest extends \Google\Model
   protected $pullRequestCommentDataType = '';
 
   /**
-   * Required. The pull request in which to create the pull request comment.
-   * Format: `projects/{project_number}/locations/{location_id}/repositories/{re
-   * pository_id}/pullRequests/{pull_request_id}`
-   *
-   * @param string $parent
+   * @param string
    */
   public function setParent($parent)
   {
@@ -49,9 +41,7 @@ class CreatePullRequestCommentRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * Required. The pull request comment to create.
-   *
-   * @param PullRequestComment $pullRequestComment
+   * @param PullRequestComment
    */
   public function setPullRequestComment(PullRequestComment $pullRequestComment)
   {

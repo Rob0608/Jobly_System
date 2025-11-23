@@ -20,25 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductRentPurchaseOption extends \Google\Model
 {
   /**
-   * Optional. The amount of time the user has after starting consuming the
-   * entitlement before it is revoked. Specified in ISO 8601 format.
-   *
    * @var string
    */
   public $expirationPeriod;
   /**
-   * Required. The amount of time a user has the entitlement for. Starts at
-   * purchase flow completion. Specified in ISO 8601 format.
-   *
    * @var string
    */
   public $rentalPeriod;
 
   /**
-   * Optional. The amount of time the user has after starting consuming the
-   * entitlement before it is revoked. Specified in ISO 8601 format.
-   *
-   * @param string $expirationPeriod
+   * @param string
    */
   public function setExpirationPeriod($expirationPeriod)
   {
@@ -52,10 +43,7 @@ class OneTimeProductRentPurchaseOption extends \Google\Model
     return $this->expirationPeriod;
   }
   /**
-   * Required. The amount of time a user has the entitlement for. Starts at
-   * purchase flow completion. Specified in ISO 8601 format.
-   *
-   * @param string $rentalPeriod
+   * @param string
    */
   public function setRentalPeriod($rentalPeriod)
   {

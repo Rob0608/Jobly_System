@@ -20,22 +20,16 @@ namespace Google\Service\SaaSServiceManagement;
 class Dependency extends \Google\Model
 {
   /**
-   * Required. An alias for the dependency. Used for input variable mapping.
-   *
    * @var string
    */
   public $alias;
   /**
-   * Required. Immutable. The unit kind of the dependency.
-   *
    * @var string
    */
   public $unitKind;
 
   /**
-   * Required. An alias for the dependency. Used for input variable mapping.
-   *
-   * @param string $alias
+   * @param string
    */
   public function setAlias($alias)
   {
@@ -49,9 +43,7 @@ class Dependency extends \Google\Model
     return $this->alias;
   }
   /**
-   * Required. Immutable. The unit kind of the dependency.
-   *
-   * @param string $unitKind
+   * @param string
    */
   public function setUnitKind($unitKind)
   {

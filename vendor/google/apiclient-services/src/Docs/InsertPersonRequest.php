@@ -27,10 +27,7 @@ class InsertPersonRequest extends \Google\Model
   protected $personPropertiesDataType = '';
 
   /**
-   * Inserts the person mention at the end of a header, footer, footnote or the
-   * document body.
-   *
-   * @param EndOfSegmentLocation $endOfSegmentLocation
+   * @param EndOfSegmentLocation
    */
   public function setEndOfSegmentLocation(EndOfSegmentLocation $endOfSegmentLocation)
   {
@@ -44,13 +41,7 @@ class InsertPersonRequest extends \Google\Model
     return $this->endOfSegmentLocation;
   }
   /**
-   * Inserts the person mention at a specific index in the document. The person
-   * mention must be inserted inside the bounds of an existing Paragraph. For
-   * instance, it cannot be inserted at a table's start index (i.e. between the
-   * table and its preceding paragraph). People cannot be inserted inside an
-   * equation.
-   *
-   * @param Location $location
+   * @param Location
    */
   public function setLocation(Location $location)
   {
@@ -64,9 +55,7 @@ class InsertPersonRequest extends \Google\Model
     return $this->location;
   }
   /**
-   * The properties of the person mention to insert.
-   *
-   * @param PersonProperties $personProperties
+   * @param PersonProperties
    */
   public function setPersonProperties(PersonProperties $personProperties)
   {

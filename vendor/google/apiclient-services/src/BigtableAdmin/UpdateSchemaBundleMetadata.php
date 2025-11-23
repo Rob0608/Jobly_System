@@ -20,30 +20,20 @@ namespace Google\Service\BigtableAdmin;
 class UpdateSchemaBundleMetadata extends \Google\Model
 {
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
    * @var string
    */
   public $finishTime;
   /**
-   * The unique name identifying this schema bundle. Values are of the form `pro
-   * jects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_b
-   * undle}`
-   *
    * @var string
    */
   public $name;
   /**
-   * The time at which the original request was received.
-   *
    * @var string
    */
   public $requestTime;
 
   /**
-   * The time at which the operation failed or was completed successfully.
-   *
-   * @param string $finishTime
+   * @param string
    */
   public function setFinishTime($finishTime)
   {
@@ -57,11 +47,7 @@ class UpdateSchemaBundleMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * The unique name identifying this schema bundle. Values are of the form `pro
-   * jects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_b
-   * undle}`
-   *
-   * @param string $name
+   * @param string
    */
   public function setName($name)
   {
@@ -75,9 +61,7 @@ class UpdateSchemaBundleMetadata extends \Google\Model
     return $this->name;
   }
   /**
-   * The time at which the original request was received.
-   *
-   * @param string $requestTime
+   * @param string
    */
   public function setRequestTime($requestTime)
   {

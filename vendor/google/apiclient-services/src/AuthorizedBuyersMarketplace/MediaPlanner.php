@@ -20,25 +20,18 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class MediaPlanner extends \Google\Model
 {
   /**
-   * Output only. Account ID of the media planner.
-   *
-   * @deprecated
    * @var string
    */
   public $accountId;
 
   /**
-   * Output only. Account ID of the media planner.
-   *
-   * @deprecated
-   * @param string $accountId
+   * @param string
    */
   public function setAccountId($accountId)
   {
     $this->accountId = $accountId;
   }
   /**
-   * @deprecated
    * @return string
    */
   public function getAccountId()
