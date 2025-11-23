@@ -55,7 +55,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 // Load Google OAuth credentials from environment to avoid committing secrets.
 // In production set these in Render / your host environment variables.
-$config['google_client_id'] = getenv('GOOGLE_CLIENT_ID') ?: '1064821785950-f68i3up7vmq0m73ondq0v0r7n3q9rk8b.apps.googleusercontent.com';
+$config['google_client_id'] = getenv('GOOGLE_CLIENT_ID') ?: '1000422010753-ro6eirfnt491jqrg2184l6sdlr2t7bav.apps.googleusercontent.com';
 $config['google_client_secret'] = getenv('GOOGLE_CLIENT_SECRET') ?: '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';
 $config['google_redirect_uri'] = getenv('GOOGLE_REDIRECT_URI') ?: 'https://jobly-system.onrender.com/index.php/auth/google/callback';
 /*
