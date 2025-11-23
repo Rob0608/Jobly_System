@@ -59,11 +59,12 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 $database['main'] = array(
     'driver'	=> 'mysql',
-    'hostname'	=> getenv('DB_HOST'),
-    'port'		=> '3306',
-    'username'	=> getenv('DB_USERNAME'),
-    'password'	=> getenv('DB_PASSWORD'),
-    'database'	=> getenv('DB_DATABASE'),
+        // Prefer explicit environment values; if DB_HOST is empty, use 127.0.0.1 (avoids socket lookup on some systems)
+        'hostname'	=> getenv('DB_HOST') ?: '127.0.0.1',
+        'port'		=> getenv('DB_PORT') ?: '3306',
+        'username'	=> getenv('DB_USERNAME') ?: '',
+        'password'	=> getenv('DB_PASSWORD') ?: '',
+        'database'	=> getenv('DB_DATABASE') ?: '',
     'charset'	=> 'utf8mb4',
     'dbprefix'	=> '',
     // Optional for SQLite

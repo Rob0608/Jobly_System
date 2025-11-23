@@ -58,8 +58,10 @@ $config['google_client_secret'] = getenv('GOOGLE_CLIENT_SECRET');
 $config['google_redirect_uri'] = getenv('GOOGLE_REDIRECT_URI');
 
 // Fail-fast in production if Google OAuth config is missing
+// Determine environment: prefer explicit getenv, fall back to configured value, otherwise default to 'development'
+$env_mode = getenv('ENVIRONMENT') ?: (isset($config['ENVIRONMENT']) ? $config['ENVIRONMENT'] : 'development');
 if (empty($config['google_client_id']) || empty($config['google_client_secret']) || empty($config['google_redirect_uri'])) {
-	if ($config['ENVIRONMENT'] === 'production') {
+	if (strtolower($env_mode) === 'production') {
 		// In production, throw so misconfiguration is addressed immediately
 		throw new RuntimeException('Google OAuth configuration missing. Set GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET and GOOGLE_REDIRECT_URI in environment.');
 	}
